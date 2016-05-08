@@ -16,6 +16,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+      [self setNavBarTitleWithText:@"电话簿" withFontSize:20 withTextColor:[UIColor blackColor]];
     // Do any additional setup after loading the view.
 }
 

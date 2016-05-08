@@ -39,6 +39,7 @@
 		52A5283D1CDEDBBB00499AE7 /* WBForumViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 52A5283C1CDEDBBB00499AE7 /* WBForumViewController.m */; };
 		52A528411CDEDD8200499AE7 /* WBTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 52A528401CDEDD8200499AE7 /* WBTools.m */; };
 		52A528431CDEDDCC00499AE7 /* navbar_back@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 52A528421CDEDDCC00499AE7 /* navbar_back@3x.png */; };
+		52A528451CDEE81E00499AE7 /* tabbar_books@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 52A528441CDEE81E00499AE7 /* tabbar_books@3x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -124,6 +125,7 @@
 		52A5283F1CDEDD8200499AE7 /* WBTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WBTools.h; sourceTree = "<group>"; };
 		52A528401CDEDD8200499AE7 /* WBTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WBTools.m; sourceTree = "<group>"; };
 		52A528421CDEDDCC00499AE7 /* navbar_back@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "navbar_back@3x.png"; sourceTree = "<group>"; };
+		52A528441CDEE81E00499AE7 /* tabbar_books@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tabbar_books@3x.png"; sourceTree = "<group>"; };
 		5ABD5ADE04E1BB1D4220B79C /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		F0D535423ED6E61946912108 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -179,6 +181,7 @@
 		5216DB6D1CDECB5C00B06B3B /* kedashixunDemo */ = {
 			isa = PBXGroup;
 			children = (
+				52A528441CDEE81E00499AE7 /* tabbar_books@3x.png */,
 				52A528421CDEDDCC00499AE7 /* navbar_back@3x.png */,
 				52A5281E1CDECD4000499AE7 /* Const.h */,
 				52A5281F1CDED5D700499AE7 /* 其他 */,
@@ -768,6 +771,7 @@
 			files = (
 				5216DB7E1CDECB5C00B06B3B /* LaunchScreen.storyboard in Resources */,
 				5216DB7B1CDECB5C00B06B3B /* Assets.xcassets in Resources */,
+				52A528451CDEE81E00499AE7 /* tabbar_books@3x.png in Resources */,
 				52A528431CDEDDCC00499AE7 /* navbar_back@3x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

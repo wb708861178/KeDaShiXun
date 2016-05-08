@@ -38,10 +38,10 @@
    
     
     self.view.backgroundColor = [UIColor cyanColor];
-    [self addViewController:[[WBMainViewController alloc] initWithViewControllerNavItemStyle:ViewControllerNavItemStyleMain] withTitle:@"首页" withImageName:@"navbar_back" withSelectImageName:@"navbar_back"];
-    [self addViewController:[[WBForumViewController alloc] initWithViewControllerNavItemStyle:ViewControllerNavItemStyleForum] withTitle:@"论坛" withImageName:@"navbar_back" withSelectImageName:@"navbar_back"];
-    [self addViewController:[[WBGuidanceViewController alloc] initWithViewControllerNavItemStyle:ViewControllerNavItemStyleGuidance] withTitle:@"导航" withImageName:@"navbar_back" withSelectImageName:@"navbar_back"];
-    [self addViewController:[[WBPhoneBookViewController alloc] initWithViewControllerNavItemStyle:ViewControllerNavItemStylePhoneBook] withTitle:@"电话簿" withImageName:@"navbar_back" withSelectImageName:@"navbar_back"];
+    [self addViewController:[[WBMainViewController alloc] initWithViewControllerNavItemStyle:ViewControllerNavItemStyleMain] withTitle:@"首页" withImageName:@"tabbar_books" withSelectImageName:@"tabbar_books"];
+    [self addViewController:[[WBForumViewController alloc] initWithViewControllerNavItemStyle:ViewControllerNavItemStyleForum] withTitle:@"论坛" withImageName:@"tabbar_books" withSelectImageName:@"tabbar_books"];
+    [self addViewController:[[WBGuidanceViewController alloc] initWithViewControllerNavItemStyle:ViewControllerNavItemStyleGuidance] withTitle:@"导航" withImageName:@"tabbar_books" withSelectImageName:@"tabbar_books"];
+    [self addViewController:[[WBPhoneBookViewController alloc] initWithViewControllerNavItemStyle:ViewControllerNavItemStylePhoneBook] withTitle:@"电话簿" withImageName:@"tabbar_books" withSelectImageName:@"tabbar_books"];
     
 }
 
@@ -64,7 +64,7 @@
     vc.tabBarItem.image = [UIImage imageNamed:imageName];
     vc.tabBarItem.selectedImage = [UIImage imageNamed:selectImageName];
     //设置tabBarItem的属性
-    NSDictionary *normalAttributes = @{NSFontAttributeName : [UIFont systemFontOfSize:15],NSForegroundColorAttributeName: [UIColor lightGrayColor]};
+    NSDictionary *normalAttributes = @{NSFontAttributeName : [UIFont systemFontOfSize:12],NSForegroundColorAttributeName: [UIColor lightGrayColor]};
     NSDictionary *selectAttributes = @{NSForegroundColorAttributeName: [UIColor blackColor]};
     
     [vc.tabBarItem setTitleTextAttributes:normalAttributes forState:UIControlStateNormal];
