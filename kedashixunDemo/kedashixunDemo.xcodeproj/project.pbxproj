@@ -22,9 +22,6 @@
 		52A528101CDECD2000499AE7 /* UIView+WBLocation.m in Sources */ = {isa = PBXBuildFile; fileRef = 52A527D91CDECD2000499AE7 /* UIView+WBLocation.m */; };
 		52A528111CDECD2000499AE7 /* WBBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 52A527E21CDECD2000499AE7 /* WBBaseViewController.m */; };
 		52A528121CDECD2000499AE7 /* WBNavViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 52A527E51CDECD2000499AE7 /* WBNavViewController.m */; };
-		52A528131CDECD2000499AE7 /* RECommonFunctions.m in Sources */ = {isa = PBXBuildFile; fileRef = 52A527E81CDECD2000499AE7 /* RECommonFunctions.m */; };
-		52A528141CDECD2000499AE7 /* RESideMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 52A527EA1CDECD2000499AE7 /* RESideMenu.m */; };
-		52A528151CDECD2000499AE7 /* UIViewController+RESideMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 52A527EC1CDECD2000499AE7 /* UIViewController+RESideMenu.m */; };
 		52A528161CDECD2000499AE7 /* WBDetailTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 52A527EF1CDECD2000499AE7 /* WBDetailTabBarViewController.m */; };
 		52A528181CDECD2000499AE7 /* WBDBHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 52A527FA1CDECD2000499AE7 /* WBDBHelper.m */; };
 		52A528191CDECD2000499AE7 /* WBDBModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 52A527FC1CDECD2000499AE7 /* WBDBModel.m */; };
@@ -35,6 +32,12 @@
 		52A528281CDED65B00499AE7 /* RECommonFunctions.m in Sources */ = {isa = PBXBuildFile; fileRef = 52A528231CDED65B00499AE7 /* RECommonFunctions.m */; };
 		52A528291CDED65B00499AE7 /* RESideMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 52A528251CDED65B00499AE7 /* RESideMenu.m */; };
 		52A5282A1CDED65B00499AE7 /* UIViewController+RESideMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 52A528271CDED65B00499AE7 /* UIViewController+RESideMenu.m */; };
+		52A5282D1CDED74700499AE7 /* WBMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 52A5282C1CDED74700499AE7 /* WBMainViewController.m */; };
+		52A528301CDED76500499AE7 /* WBMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 52A5282F1CDED76500499AE7 /* WBMenuViewController.m */; };
+		52A528371CDEDB6500499AE7 /* WBGuidanceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 52A528361CDEDB6500499AE7 /* WBGuidanceViewController.m */; };
+		52A5283A1CDEDB8B00499AE7 /* WBPhoneBookViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 52A528391CDEDB8B00499AE7 /* WBPhoneBookViewController.m */; };
+		52A5283D1CDEDBBB00499AE7 /* WBForumViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 52A5283C1CDEDBBB00499AE7 /* WBForumViewController.m */; };
+		52A528411CDEDD8200499AE7 /* WBTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 52A528401CDEDD8200499AE7 /* WBTools.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -85,12 +88,6 @@
 		52A527E21CDECD2000499AE7 /* WBBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WBBaseViewController.m; sourceTree = "<group>"; };
 		52A527E41CDECD2000499AE7 /* WBNavViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WBNavViewController.h; sourceTree = "<group>"; };
 		52A527E51CDECD2000499AE7 /* WBNavViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WBNavViewController.m; sourceTree = "<group>"; };
-		52A527E71CDECD2000499AE7 /* RECommonFunctions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RECommonFunctions.h; sourceTree = "<group>"; };
-		52A527E81CDECD2000499AE7 /* RECommonFunctions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RECommonFunctions.m; sourceTree = "<group>"; };
-		52A527E91CDECD2000499AE7 /* RESideMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RESideMenu.h; sourceTree = "<group>"; };
-		52A527EA1CDECD2000499AE7 /* RESideMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RESideMenu.m; sourceTree = "<group>"; };
-		52A527EB1CDECD2000499AE7 /* UIViewController+RESideMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+RESideMenu.h"; sourceTree = "<group>"; };
-		52A527EC1CDECD2000499AE7 /* UIViewController+RESideMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+RESideMenu.m"; sourceTree = "<group>"; };
 		52A527EE1CDECD2000499AE7 /* WBDetailTabBarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WBDetailTabBarViewController.h; sourceTree = "<group>"; };
 		52A527EF1CDECD2000499AE7 /* WBDetailTabBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WBDetailTabBarViewController.m; sourceTree = "<group>"; };
 		52A527F91CDECD2000499AE7 /* WBDBHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WBDBHelper.h; sourceTree = "<group>"; };
@@ -113,6 +110,18 @@
 		52A528251CDED65B00499AE7 /* RESideMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RESideMenu.m; sourceTree = "<group>"; };
 		52A528261CDED65B00499AE7 /* UIViewController+RESideMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+RESideMenu.h"; sourceTree = "<group>"; };
 		52A528271CDED65B00499AE7 /* UIViewController+RESideMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+RESideMenu.m"; sourceTree = "<group>"; };
+		52A5282B1CDED74700499AE7 /* WBMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WBMainViewController.h; sourceTree = "<group>"; };
+		52A5282C1CDED74700499AE7 /* WBMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WBMainViewController.m; sourceTree = "<group>"; };
+		52A5282E1CDED76500499AE7 /* WBMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WBMenuViewController.h; sourceTree = "<group>"; };
+		52A5282F1CDED76500499AE7 /* WBMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WBMenuViewController.m; sourceTree = "<group>"; };
+		52A528351CDEDB6500499AE7 /* WBGuidanceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WBGuidanceViewController.h; sourceTree = "<group>"; };
+		52A528361CDEDB6500499AE7 /* WBGuidanceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WBGuidanceViewController.m; sourceTree = "<group>"; };
+		52A528381CDEDB8B00499AE7 /* WBPhoneBookViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WBPhoneBookViewController.h; sourceTree = "<group>"; };
+		52A528391CDEDB8B00499AE7 /* WBPhoneBookViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WBPhoneBookViewController.m; sourceTree = "<group>"; };
+		52A5283B1CDEDBBB00499AE7 /* WBForumViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WBForumViewController.h; sourceTree = "<group>"; };
+		52A5283C1CDEDBBB00499AE7 /* WBForumViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WBForumViewController.m; sourceTree = "<group>"; };
+		52A5283F1CDEDD8200499AE7 /* WBTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WBTools.h; sourceTree = "<group>"; };
+		52A528401CDEDD8200499AE7 /* WBTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WBTools.m; sourceTree = "<group>"; };
 		5ABD5ADE04E1BB1D4220B79C /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		F0D535423ED6E61946912108 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -169,14 +178,15 @@
 			isa = PBXGroup;
 			children = (
 				52A5281E1CDECD4000499AE7 /* Const.h */,
+				52A5283E1CDEDD8200499AE7 /* Tools */,
+				52A527DF1CDECD2000499AE7 /* 全局类 */,
+				52A527C71CDECD2000499AE7 /* 分类 */,
 				52A528201CDED63400499AE7 /* 三方 */,
 				52A5281F1CDED5D700499AE7 /* 其他 */,
 				52A527B81CDECD2000499AE7 /* 侧滑页 */,
 				52A527BD1CDECD2000499AE7 /* 导航 */,
 				52A527C21CDECD2000499AE7 /* 电话簿 */,
-				52A527C71CDECD2000499AE7 /* 分类 */,
 				52A527DA1CDECD2000499AE7 /* 论坛 */,
-				52A527DF1CDECD2000499AE7 /* 全局类 */,
 				52A527F01CDECD2000499AE7 /* 首页 */,
 				52A527F51CDECD2000499AE7 /* 数据库 */,
 				52A527FD1CDECD2000499AE7 /* 网络 */,
@@ -233,6 +243,8 @@
 		52A527BA1CDECD2000499AE7 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				52A5282E1CDED76500499AE7 /* WBMenuViewController.h */,
+				52A5282F1CDED76500499AE7 /* WBMenuViewController.m */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -272,6 +284,8 @@
 		52A527BF1CDECD2000499AE7 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				52A528351CDEDB6500499AE7 /* WBGuidanceViewController.h */,
+				52A528361CDEDB6500499AE7 /* WBGuidanceViewController.m */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -311,6 +325,8 @@
 		52A527C41CDECD2000499AE7 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				52A528381CDEDB8B00499AE7 /* WBPhoneBookViewController.h */,
+				52A528391CDEDB8B00499AE7 /* WBPhoneBookViewController.m */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -417,6 +433,8 @@
 		52A527DC1CDECD2000499AE7 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				52A5283B1CDEDBBB00499AE7 /* WBForumViewController.h */,
+				52A5283C1CDEDBBB00499AE7 /* WBForumViewController.m */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -440,7 +458,6 @@
 			children = (
 				52A527E01CDECD2000499AE7 /* Base */,
 				52A527E31CDECD2000499AE7 /* Nav */,
-				52A527E61CDECD2000499AE7 /* RESideMenu */,
 				52A527ED1CDECD2000499AE7 /* TabBar */,
 			);
 			path = "全局类";
@@ -462,19 +479,6 @@
 				52A527E51CDECD2000499AE7 /* WBNavViewController.m */,
 			);
 			path = Nav;
-			sourceTree = "<group>";
-		};
-		52A527E61CDECD2000499AE7 /* RESideMenu */ = {
-			isa = PBXGroup;
-			children = (
-				52A527E71CDECD2000499AE7 /* RECommonFunctions.h */,
-				52A527E81CDECD2000499AE7 /* RECommonFunctions.m */,
-				52A527E91CDECD2000499AE7 /* RESideMenu.h */,
-				52A527EA1CDECD2000499AE7 /* RESideMenu.m */,
-				52A527EB1CDECD2000499AE7 /* UIViewController+RESideMenu.h */,
-				52A527EC1CDECD2000499AE7 /* UIViewController+RESideMenu.m */,
-			);
-			path = RESideMenu;
 			sourceTree = "<group>";
 		};
 		52A527ED1CDECD2000499AE7 /* TabBar */ = {
@@ -507,6 +511,8 @@
 		52A527F21CDECD2000499AE7 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				52A5282B1CDED74700499AE7 /* WBMainViewController.h */,
+				52A5282C1CDED74700499AE7 /* WBMainViewController.m */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -624,6 +630,15 @@
 			path = RESideMenu;
 			sourceTree = "<group>";
 		};
+		52A5283E1CDEDD8200499AE7 /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				52A5283F1CDEDD8200499AE7 /* WBTools.h */,
+				52A528401CDEDD8200499AE7 /* WBTools.m */,
+			);
+			path = Tools;
+			sourceTree = "<group>";
+		};
 		59E59F729B36E56D7B03D9D5 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -706,6 +721,7 @@
 		5216DB631CDECB5C00B06B3B /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = WB;
 				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = wangbing;
 				TargetAttributes = {
@@ -822,27 +838,30 @@
 			buildActionMask = 2147483647;
 			files = (
 				52A528191CDECD2000499AE7 /* WBDBModel.m in Sources */,
+				52A528371CDEDB6500499AE7 /* WBGuidanceViewController.m in Sources */,
 				52A5280E1CDECD2000499AE7 /* UIColor+HexColor.m in Sources */,
 				52A528181CDECD2000499AE7 /* WBDBHelper.m in Sources */,
+				52A5283D1CDEDBBB00499AE7 /* WBForumViewController.m in Sources */,
 				52A5281C1CDECD2000499AE7 /* WBMessageRequest.m in Sources */,
 				52A5280C1CDECD2000499AE7 /* UINavigationBar+NavBar_WBCustomBackgroudImage.m in Sources */,
 				52A5281A1CDECD2000499AE7 /* WBRequestManager.m in Sources */,
 				52A528121CDECD2000499AE7 /* WBNavViewController.m in Sources */,
 				52A5282A1CDED65B00499AE7 /* UIViewController+RESideMenu.m in Sources */,
+				52A528411CDEDD8200499AE7 /* WBTools.m in Sources */,
 				52A5281D1CDECD2000499AE7 /* WBUserRequest.m in Sources */,
 				52A5280F1CDECD2000499AE7 /* UIImage+WBGetWithColor.m in Sources */,
-				52A528151CDECD2000499AE7 /* UIViewController+RESideMenu.m in Sources */,
-				52A528141CDECD2000499AE7 /* RESideMenu.m in Sources */,
+				52A5283A1CDEDB8B00499AE7 /* WBPhoneBookViewController.m in Sources */,
+				52A528301CDED76500499AE7 /* WBMenuViewController.m in Sources */,
 				52A528111CDECD2000499AE7 /* WBBaseViewController.m in Sources */,
 				52A528101CDECD2000499AE7 /* UIView+WBLocation.m in Sources */,
 				52A528281CDED65B00499AE7 /* RECommonFunctions.m in Sources */,
 				52A528291CDED65B00499AE7 /* RESideMenu.m in Sources */,
-				52A528131CDECD2000499AE7 /* RECommonFunctions.m in Sources */,
 				52A5280D1CDECD2000499AE7 /* UIBarButtonItem+WBCustomButton.m in Sources */,
 				52A528161CDECD2000499AE7 /* WBDetailTabBarViewController.m in Sources */,
 				5216DB731CDECB5C00B06B3B /* AppDelegate.m in Sources */,
 				52A5280B1CDECD2000499AE7 /* CATransition+PageChangeAnimation.m in Sources */,
 				5216DB701CDECB5C00B06B3B /* main.m in Sources */,
+				52A5282D1CDED74700499AE7 /* WBMainViewController.m in Sources */,
 				52A5281B1CDECD2000499AE7 /* WBBaseRequest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

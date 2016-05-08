@@ -14,10 +14,11 @@
 
 typedef NS_ENUM(NSInteger, ViewControllerNavItemStyle) {
     
-    ViewControllerNavItemStyleBookcase = 0 ,//加载主界面右边
-        ViewControllerNavItemStyleDetail = 1,
+    ViewControllerNavItemStyleMain = 0 ,//加载主界面
+        ViewControllerNavItemStyleForum = 1,
     //加载详情里面的右边的
-     ViewControllerNavItemStyleRead = 2
+     ViewControllerNavItemStyleGuidance = 2,
+    ViewControllerNavItemStylePhoneBook = 3
     
     
     

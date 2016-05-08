@@ -7,24 +7,25 @@
 //
 
 #import "WBDetailTabBarViewController.h"
-#import "WBRankingListViewController.h"
-#import "WBClassifyViewController.h"
-#import "WBSearchViewController.h"
+
 #import "WBNavViewController.h"
+#import "WBMainViewController.h"
+#import "WBForumViewController.h"
+#import "WBGuidanceViewController.h"
+#import "WBPhoneBookViewController.h"
+
 
 @interface WBDetailTabBarViewController ()
 
 @end
 
 @implementation WBDetailTabBarViewController
-/**
- navBar是在viewController 初始化之后加进来的  隐藏必须在中
- */
+
 -(void)viewWillAppear:(BOOL)animated
 {
    
     [super viewWillAppear:animated];
-    self.navigationController.navigationBarHidden = YES;
+//    self.navigationController.navigationBarHidden = YES;
     
 }
 

@@ -7,6 +7,11 @@
 //
 
 #import "AppDelegate.h"
+#import "RESideMenu.h"
+#import "WBMainViewController.h"
+#import "WBMenuViewController.h"
+#import "WBDetailTabBarViewController.h"
+
 
 @interface AppDelegate ()
 
@@ -16,6 +21,22 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    
+    self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+    
+    
+    WBDetailTabBarViewController *tabBarVC = [[WBDetailTabBarViewController alloc] init];
+    WBMenuViewController *menuVC = [[WBMenuViewController alloc] init];
+    
+    
+    RESideMenu *sideMenu = [[RESideMenu alloc] initWithContentViewController:tabBarVC leftMenuViewController:menuVC rightMenuViewController:nil];
+    
+    self.window.rootViewController = sideMenu;
+    
+    [self.window makeKeyAndVisible];
+    
+    
+    
     
     return YES;
 }

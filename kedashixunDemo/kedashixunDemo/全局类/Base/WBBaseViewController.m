@@ -27,20 +27,18 @@
         
         self.automaticallyAdjustsScrollViewInsets = NO;
         switch (viewControllerNavItemStyle) {
-            case ViewControllerNavItemStyleBookcase:
+            case ViewControllerNavItemStyleMain:
             {
                
                 self.navigationItem.leftBarButtonItems = [UIBarButtonItem barButtonItemWithImageName:@"navbar_chapter" withHighlightedImageName:nil withTarget:self withAction:@selector(menuBtnAction) WithNegativeSpacerWidth:-10];
-//
-//                self.navigationItem.leftBarButtonItems = [UIBarButtonItem barButtonItemWithNum:2 WithImageNameArr:@[@"navbar_chapter",@"navbar_chapter"] withHighlightedImageNameArr:nil withTarget:self withAction0:@selector(menuBtnAction) withAction1:@selector(menuBtnAction) withAction2:@selector(menuBtnAction) WithNegativeSpacerWidthArr:@[@"10",@"10"]];
+    
                 
-                
-                self.navigationItem.rightBarButtonItems = [UIBarButtonItem barButtonItemWithImageName:@"navbar_chapter" withHighlightedImageName:nil withTarget:self withAction:@selector(detailBtnAction) WithNegativeSpacerWidth:-10];
+                self.navigationItem.rightBarButtonItems = [UIBarButtonItem barButtonItemWithImageName:@"navbar_chapter" withHighlightedImageName:nil withTarget:self withAction:@selector(searchBtnAction:) WithNegativeSpacerWidth:-10];
 
             }
                 break;
            
-            case ViewControllerNavItemStyleDetail:
+            case ViewControllerNavItemStyleForum:
             {
                 self.navigationItem.rightBarButtonItems = [UIBarButtonItem barButtonItemWithImageName:@"navbar_chapter" withHighlightedImageName:nil withTarget:self withAction:@selector(returnBookcaseBtnAction)  WithNegativeSpacerWidth:-10];
 
@@ -48,7 +46,7 @@
                 break;
                 
                 
-            case ViewControllerNavItemStyleRead:
+            case ViewControllerNavItemStyleGuidance:
             {
 
                 
@@ -64,6 +62,23 @@
                 
             }
                 break;
+            case ViewControllerNavItemStylePhoneBook:
+            {
+                
+                
+                self.navigationItem.leftBarButtonItems = [UIBarButtonItem barButtonItemWithNum:1 WithImageNameArr:@[@"navbar_chapter"] withHighlightedImageNameArr:nil withTarget:self withAction0:@selector(readNavBarReturnbtnAction:) withAction1:nil withAction2:nil WithNegativeSpacerWidthArr:@[@"-10"]];
+                
+                
+                self.navigationItem.rightBarButtonItems = [UIBarButtonItem barButtonItemWithNum:3 WithImageNameArr:@[@"navbar_chapter",@"navbar_chapter",@"navbar_chapter"] withHighlightedImageNameArr:nil withTarget:self withAction0:@selector(readNavBarRightBtn1Action) withAction1:@selector(readNavBarRightBtn2Action) withAction2:@selector(readNavBarRightBtn3Action) WithNegativeSpacerWidthArr:@[@"-10",@"10",@"10"]];
+                
+                
+                
+                
+                
+                
+            }
+                break;
+
 
                 
             default:
@@ -83,23 +98,6 @@
 }
 
 #pragma mark----navBar按钮单击事件
-- (void)readNavBarReturnbtnAction:(UIButton *)btn
-{
-    [self.navigationController popViewControllerAnimated:YES];
-}
-
-- (void)readNavBarRightBtn1Action
-{
-    NSLog(@"1111111111111");
-}
-- (void)readNavBarRightBtn2Action
-{
-     NSLog(@"222222222");
-}
-- (void)readNavBarRightBtn3Action
-{
-     NSLog(@"3333333333");
-}
 
 
 - (void)menuBtnAction
@@ -107,22 +105,14 @@
     [self.sideMenuViewController presentLeftMenuViewController];
 }
 
-- (void)detailBtnAction
+- (void)searchBtnAction:(UIButton *)sender
 {
-    
-    WBDetailTabBarViewController *detailTabBarVC = [[WBDetailTabBarViewController alloc] init];
-    [CATransition transitionWithAnimationType:OglFlip WithSubtype:kCATransitionFromLeft ForView:self.navigationController.view];
-     [self.navigationController pushViewController:detailTabBarVC animated:YES];
+   
   
    
 }
 
-- (void)returnBookcaseBtnAction
-{
-     [CATransition transitionWithAnimationType:OglFlip WithSubtype:kCATransitionFromRight ForView:self.parentViewController.navigationController.view];
-    self.parentViewController.navigationController.navigationBarHidden = NO;
-    [self.parentViewController.navigationController popViewControllerAnimated:YES];
-}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
