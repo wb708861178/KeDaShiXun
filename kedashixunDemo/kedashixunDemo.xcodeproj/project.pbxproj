@@ -29,19 +29,25 @@
 		52A528281CDED65B00499AE7 /* RECommonFunctions.m in Sources */ = {isa = PBXBuildFile; fileRef = 52A528231CDED65B00499AE7 /* RECommonFunctions.m */; };
 		52A528291CDED65B00499AE7 /* RESideMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 52A528251CDED65B00499AE7 /* RESideMenu.m */; };
 		52A5282A1CDED65B00499AE7 /* UIViewController+RESideMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 52A528271CDED65B00499AE7 /* UIViewController+RESideMenu.m */; };
-		52A5282D1CDED74700499AE7 /* WBMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 52A5282C1CDED74700499AE7 /* WBMainViewController.m */; };
-		52A528301CDED76500499AE7 /* WBMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 52A5282F1CDED76500499AE7 /* WBMenuViewController.m */; };
-		52A528371CDEDB6500499AE7 /* WBGuidanceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 52A528361CDEDB6500499AE7 /* WBGuidanceViewController.m */; };
-		52A5283A1CDEDB8B00499AE7 /* WBPhoneBookViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 52A528391CDEDB8B00499AE7 /* WBPhoneBookViewController.m */; };
-		52A5283D1CDEDBBB00499AE7 /* WBForumViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 52A5283C1CDEDBBB00499AE7 /* WBForumViewController.m */; };
 		52A528411CDEDD8200499AE7 /* WBTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 52A528401CDEDD8200499AE7 /* WBTools.m */; };
 		52A528431CDEDDCC00499AE7 /* navbar_back@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 52A528421CDEDDCC00499AE7 /* navbar_back@3x.png */; };
 		52A528451CDEE81E00499AE7 /* tabbar_books@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 52A528441CDEE81E00499AE7 /* tabbar_books@3x.png */; };
-		52A528481CDF248600499AE7 /* WBMenuHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 52A528471CDF248600499AE7 /* WBMenuHeaderView.m */; };
-		52A5284A1CDF249C00499AE7 /* WBMenuHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 52A528491CDF249C00499AE7 /* WBMenuHeaderView.xib */; };
 		52A5284E1CDF300500499AE7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 52A5284C1CDF300500499AE7 /* AppDelegate.m */; };
 		52A5284F1CDF300500499AE7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 52A5284D1CDF300500499AE7 /* Assets.xcassets */; };
 		52A528511CDF301900499AE7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52A528501CDF301900499AE7 /* LaunchScreen.storyboard */; };
+		52A5288B1CDF3A6700499AE7 /* WBMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 52A528561CDF3A6600499AE7 /* WBMenuViewController.m */; };
+		52A5288C1CDF3A6700499AE7 /* WBMenuHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 52A5285A1CDF3A6600499AE7 /* WBMenuHeaderView.m */; };
+		52A5288D1CDF3A6700499AE7 /* WBMenuHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 52A5285B1CDF3A6600499AE7 /* WBMenuHeaderView.xib */; };
+		52A5288E1CDF3A6700499AE7 /* WBGuidanceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 52A528601CDF3A6600499AE7 /* WBGuidanceViewController.m */; };
+		52A5288F1CDF3A6700499AE7 /* WBPhoneBookViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 52A528671CDF3A6700499AE7 /* WBPhoneBookViewController.m */; };
+		52A528901CDF3A6700499AE7 /* CATransition+PageChangeAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 52A5286D1CDF3A6700499AE7 /* CATransition+PageChangeAnimation.m */; };
+		52A528911CDF3A6700499AE7 /* UINavigationBar+NavBar_WBCustomBackgroudImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 52A528701CDF3A6700499AE7 /* UINavigationBar+NavBar_WBCustomBackgroudImage.m */; };
+		52A528921CDF3A6700499AE7 /* UIBarButtonItem+WBCustomButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 52A528731CDF3A6700499AE7 /* UIBarButtonItem+WBCustomButton.m */; };
+		52A528931CDF3A6700499AE7 /* UIColor+HexColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 52A528761CDF3A6700499AE7 /* UIColor+HexColor.m */; };
+		52A528941CDF3A6700499AE7 /* UIImage+WBGetWithColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 52A528791CDF3A6700499AE7 /* UIImage+WBGetWithColor.m */; };
+		52A528951CDF3A6700499AE7 /* UIView+WBLocation.m in Sources */ = {isa = PBXBuildFile; fileRef = 52A5287C1CDF3A6700499AE7 /* UIView+WBLocation.m */; };
+		52A528961CDF3A6700499AE7 /* WBForumViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 52A528811CDF3A6700499AE7 /* WBForumViewController.m */; };
+		52A528971CDF3A6700499AE7 /* WBMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 52A528881CDF3A6700499AE7 /* WBMainViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -110,27 +116,39 @@
 		52A528251CDED65B00499AE7 /* RESideMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RESideMenu.m; sourceTree = "<group>"; };
 		52A528261CDED65B00499AE7 /* UIViewController+RESideMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+RESideMenu.h"; sourceTree = "<group>"; };
 		52A528271CDED65B00499AE7 /* UIViewController+RESideMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+RESideMenu.m"; sourceTree = "<group>"; };
-		52A5282B1CDED74700499AE7 /* WBMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WBMainViewController.h; sourceTree = "<group>"; };
-		52A5282C1CDED74700499AE7 /* WBMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WBMainViewController.m; sourceTree = "<group>"; };
-		52A5282E1CDED76500499AE7 /* WBMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WBMenuViewController.h; sourceTree = "<group>"; };
-		52A5282F1CDED76500499AE7 /* WBMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WBMenuViewController.m; sourceTree = "<group>"; };
-		52A528351CDEDB6500499AE7 /* WBGuidanceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WBGuidanceViewController.h; sourceTree = "<group>"; };
-		52A528361CDEDB6500499AE7 /* WBGuidanceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WBGuidanceViewController.m; sourceTree = "<group>"; };
-		52A528381CDEDB8B00499AE7 /* WBPhoneBookViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WBPhoneBookViewController.h; sourceTree = "<group>"; };
-		52A528391CDEDB8B00499AE7 /* WBPhoneBookViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WBPhoneBookViewController.m; sourceTree = "<group>"; };
-		52A5283B1CDEDBBB00499AE7 /* WBForumViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WBForumViewController.h; sourceTree = "<group>"; };
-		52A5283C1CDEDBBB00499AE7 /* WBForumViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WBForumViewController.m; sourceTree = "<group>"; };
 		52A5283F1CDEDD8200499AE7 /* WBTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WBTools.h; sourceTree = "<group>"; };
 		52A528401CDEDD8200499AE7 /* WBTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WBTools.m; sourceTree = "<group>"; };
 		52A528421CDEDDCC00499AE7 /* navbar_back@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "navbar_back@3x.png"; sourceTree = "<group>"; };
 		52A528441CDEE81E00499AE7 /* tabbar_books@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tabbar_books@3x.png"; sourceTree = "<group>"; };
-		52A528461CDF248600499AE7 /* WBMenuHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WBMenuHeaderView.h; sourceTree = "<group>"; };
-		52A528471CDF248600499AE7 /* WBMenuHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WBMenuHeaderView.m; sourceTree = "<group>"; };
-		52A528491CDF249C00499AE7 /* WBMenuHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WBMenuHeaderView.xib; sourceTree = "<group>"; };
 		52A5284B1CDF300500499AE7 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		52A5284C1CDF300500499AE7 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		52A5284D1CDF300500499AE7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		52A528501CDF301900499AE7 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		52A528551CDF3A6600499AE7 /* WBMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WBMenuViewController.h; sourceTree = "<group>"; };
+		52A528561CDF3A6600499AE7 /* WBMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WBMenuViewController.m; sourceTree = "<group>"; };
+		52A528591CDF3A6600499AE7 /* WBMenuHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WBMenuHeaderView.h; sourceTree = "<group>"; };
+		52A5285A1CDF3A6600499AE7 /* WBMenuHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WBMenuHeaderView.m; sourceTree = "<group>"; };
+		52A5285B1CDF3A6600499AE7 /* WBMenuHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WBMenuHeaderView.xib; sourceTree = "<group>"; };
+		52A5285F1CDF3A6600499AE7 /* WBGuidanceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WBGuidanceViewController.h; sourceTree = "<group>"; };
+		52A528601CDF3A6600499AE7 /* WBGuidanceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WBGuidanceViewController.m; sourceTree = "<group>"; };
+		52A528661CDF3A6700499AE7 /* WBPhoneBookViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WBPhoneBookViewController.h; sourceTree = "<group>"; };
+		52A528671CDF3A6700499AE7 /* WBPhoneBookViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WBPhoneBookViewController.m; sourceTree = "<group>"; };
+		52A5286C1CDF3A6700499AE7 /* CATransition+PageChangeAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CATransition+PageChangeAnimation.h"; sourceTree = "<group>"; };
+		52A5286D1CDF3A6700499AE7 /* CATransition+PageChangeAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CATransition+PageChangeAnimation.m"; sourceTree = "<group>"; };
+		52A5286F1CDF3A6700499AE7 /* UINavigationBar+NavBar_WBCustomBackgroudImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationBar+NavBar_WBCustomBackgroudImage.h"; sourceTree = "<group>"; };
+		52A528701CDF3A6700499AE7 /* UINavigationBar+NavBar_WBCustomBackgroudImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationBar+NavBar_WBCustomBackgroudImage.m"; sourceTree = "<group>"; };
+		52A528721CDF3A6700499AE7 /* UIBarButtonItem+WBCustomButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+WBCustomButton.h"; sourceTree = "<group>"; };
+		52A528731CDF3A6700499AE7 /* UIBarButtonItem+WBCustomButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+WBCustomButton.m"; sourceTree = "<group>"; };
+		52A528751CDF3A6700499AE7 /* UIColor+HexColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+HexColor.h"; sourceTree = "<group>"; };
+		52A528761CDF3A6700499AE7 /* UIColor+HexColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+HexColor.m"; sourceTree = "<group>"; };
+		52A528781CDF3A6700499AE7 /* UIImage+WBGetWithColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+WBGetWithColor.h"; sourceTree = "<group>"; };
+		52A528791CDF3A6700499AE7 /* UIImage+WBGetWithColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+WBGetWithColor.m"; sourceTree = "<group>"; };
+		52A5287B1CDF3A6700499AE7 /* UIView+WBLocation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+WBLocation.h"; sourceTree = "<group>"; };
+		52A5287C1CDF3A6700499AE7 /* UIView+WBLocation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+WBLocation.m"; sourceTree = "<group>"; };
+		52A528801CDF3A6700499AE7 /* WBForumViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WBForumViewController.h; sourceTree = "<group>"; };
+		52A528811CDF3A6700499AE7 /* WBForumViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WBForumViewController.m; sourceTree = "<group>"; };
+		52A528871CDF3A6700499AE7 /* WBMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WBMainViewController.h; sourceTree = "<group>"; };
+		52A528881CDF3A6700499AE7 /* WBMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WBMainViewController.m; sourceTree = "<group>"; };
 		5ABD5ADE04E1BB1D4220B79C /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		F0D535423ED6E61946912108 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -189,16 +207,17 @@
 				52A528441CDEE81E00499AE7 /* tabbar_books@3x.png */,
 				52A528421CDEDDCC00499AE7 /* navbar_back@3x.png */,
 				52A5281E1CDECD4000499AE7 /* Const.h */,
+				52A528521CDF3A6600499AE7 /* 侧滑页 */,
+				52A5285C1CDF3A6600499AE7 /* 导航 */,
+				52A528631CDF3A6700499AE7 /* 电话簿 */,
+				52A5286A1CDF3A6700499AE7 /* 分类 */,
+				52A5287D1CDF3A6700499AE7 /* 论坛 */,
+				52A528841CDF3A6700499AE7 /* 首页 */,
 				52A5281F1CDED5D700499AE7 /* 其他 */,
 				52A5283E1CDEDD8200499AE7 /* Tools */,
 				52A527DF1CDECD2000499AE7 /* 全局类 */,
 				52A527C71CDECD2000499AE7 /* 分类 */,
 				52A528201CDED63400499AE7 /* 三方 */,
-				52A527B81CDECD2000499AE7 /* 侧滑页 */,
-				52A527BD1CDECD2000499AE7 /* 导航 */,
-				52A527C21CDECD2000499AE7 /* 电话簿 */,
-				52A527DA1CDECD2000499AE7 /* 论坛 */,
-				52A527F01CDECD2000499AE7 /* 首页 */,
 				52A527F51CDECD2000499AE7 /* 数据库 */,
 				52A527FD1CDECD2000499AE7 /* 网络 */,
 				5216DB6E1CDECB5C00B06B3B /* Supporting Files */,
@@ -231,132 +250,6 @@
 				5216DB951CDECB5C00B06B3B /* Info.plist */,
 			);
 			path = kedashixunDemoUITests;
-			sourceTree = "<group>";
-		};
-		52A527B81CDECD2000499AE7 /* 侧滑页 */ = {
-			isa = PBXGroup;
-			children = (
-				52A527B91CDECD2000499AE7 /* cells */,
-				52A527BA1CDECD2000499AE7 /* Controllers */,
-				52A527BB1CDECD2000499AE7 /* models */,
-				52A527BC1CDECD2000499AE7 /* views */,
-			);
-			path = "侧滑页";
-			sourceTree = "<group>";
-		};
-		52A527B91CDECD2000499AE7 /* cells */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = cells;
-			sourceTree = "<group>";
-		};
-		52A527BA1CDECD2000499AE7 /* Controllers */ = {
-			isa = PBXGroup;
-			children = (
-				52A5282E1CDED76500499AE7 /* WBMenuViewController.h */,
-				52A5282F1CDED76500499AE7 /* WBMenuViewController.m */,
-			);
-			path = Controllers;
-			sourceTree = "<group>";
-		};
-		52A527BB1CDECD2000499AE7 /* models */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = models;
-			sourceTree = "<group>";
-		};
-		52A527BC1CDECD2000499AE7 /* views */ = {
-			isa = PBXGroup;
-			children = (
-				52A528461CDF248600499AE7 /* WBMenuHeaderView.h */,
-				52A528471CDF248600499AE7 /* WBMenuHeaderView.m */,
-				52A528491CDF249C00499AE7 /* WBMenuHeaderView.xib */,
-			);
-			path = views;
-			sourceTree = "<group>";
-		};
-		52A527BD1CDECD2000499AE7 /* 导航 */ = {
-			isa = PBXGroup;
-			children = (
-				52A527BE1CDECD2000499AE7 /* cells */,
-				52A527BF1CDECD2000499AE7 /* Controllers */,
-				52A527C01CDECD2000499AE7 /* models */,
-				52A527C11CDECD2000499AE7 /* views */,
-			);
-			path = "导航";
-			sourceTree = "<group>";
-		};
-		52A527BE1CDECD2000499AE7 /* cells */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = cells;
-			sourceTree = "<group>";
-		};
-		52A527BF1CDECD2000499AE7 /* Controllers */ = {
-			isa = PBXGroup;
-			children = (
-				52A528351CDEDB6500499AE7 /* WBGuidanceViewController.h */,
-				52A528361CDEDB6500499AE7 /* WBGuidanceViewController.m */,
-			);
-			path = Controllers;
-			sourceTree = "<group>";
-		};
-		52A527C01CDECD2000499AE7 /* models */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = models;
-			sourceTree = "<group>";
-		};
-		52A527C11CDECD2000499AE7 /* views */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = views;
-			sourceTree = "<group>";
-		};
-		52A527C21CDECD2000499AE7 /* 电话簿 */ = {
-			isa = PBXGroup;
-			children = (
-				52A527C31CDECD2000499AE7 /* cells */,
-				52A527C41CDECD2000499AE7 /* Controllers */,
-				52A527C51CDECD2000499AE7 /* models */,
-				52A527C61CDECD2000499AE7 /* views */,
-			);
-			path = "电话簿";
-			sourceTree = "<group>";
-		};
-		52A527C31CDECD2000499AE7 /* cells */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = cells;
-			sourceTree = "<group>";
-		};
-		52A527C41CDECD2000499AE7 /* Controllers */ = {
-			isa = PBXGroup;
-			children = (
-				52A528381CDEDB8B00499AE7 /* WBPhoneBookViewController.h */,
-				52A528391CDEDB8B00499AE7 /* WBPhoneBookViewController.m */,
-			);
-			path = Controllers;
-			sourceTree = "<group>";
-		};
-		52A527C51CDECD2000499AE7 /* models */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = models;
-			sourceTree = "<group>";
-		};
-		52A527C61CDECD2000499AE7 /* views */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = views;
 			sourceTree = "<group>";
 		};
 		52A527C71CDECD2000499AE7 /* 分类 */ = {
@@ -426,47 +319,6 @@
 			path = "UIView+WBLocation";
 			sourceTree = "<group>";
 		};
-		52A527DA1CDECD2000499AE7 /* 论坛 */ = {
-			isa = PBXGroup;
-			children = (
-				52A527DB1CDECD2000499AE7 /* cells */,
-				52A527DC1CDECD2000499AE7 /* Controllers */,
-				52A527DD1CDECD2000499AE7 /* models */,
-				52A527DE1CDECD2000499AE7 /* views */,
-			);
-			path = "论坛";
-			sourceTree = "<group>";
-		};
-		52A527DB1CDECD2000499AE7 /* cells */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = cells;
-			sourceTree = "<group>";
-		};
-		52A527DC1CDECD2000499AE7 /* Controllers */ = {
-			isa = PBXGroup;
-			children = (
-				52A5283B1CDEDBBB00499AE7 /* WBForumViewController.h */,
-				52A5283C1CDEDBBB00499AE7 /* WBForumViewController.m */,
-			);
-			path = Controllers;
-			sourceTree = "<group>";
-		};
-		52A527DD1CDECD2000499AE7 /* models */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = models;
-			sourceTree = "<group>";
-		};
-		52A527DE1CDECD2000499AE7 /* views */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = views;
-			sourceTree = "<group>";
-		};
 		52A527DF1CDECD2000499AE7 /* 全局类 */ = {
 			isa = PBXGroup;
 			children = (
@@ -502,47 +354,6 @@
 				52A527EF1CDECD2000499AE7 /* WBTabBarViewController.m */,
 			);
 			path = TabBar;
-			sourceTree = "<group>";
-		};
-		52A527F01CDECD2000499AE7 /* 首页 */ = {
-			isa = PBXGroup;
-			children = (
-				52A527F11CDECD2000499AE7 /* cells */,
-				52A527F21CDECD2000499AE7 /* Controllers */,
-				52A527F31CDECD2000499AE7 /* models */,
-				52A527F41CDECD2000499AE7 /* views */,
-			);
-			path = "首页";
-			sourceTree = "<group>";
-		};
-		52A527F11CDECD2000499AE7 /* cells */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = cells;
-			sourceTree = "<group>";
-		};
-		52A527F21CDECD2000499AE7 /* Controllers */ = {
-			isa = PBXGroup;
-			children = (
-				52A5282B1CDED74700499AE7 /* WBMainViewController.h */,
-				52A5282C1CDED74700499AE7 /* WBMainViewController.m */,
-			);
-			path = Controllers;
-			sourceTree = "<group>";
-		};
-		52A527F31CDECD2000499AE7 /* models */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = models;
-			sourceTree = "<group>";
-		};
-		52A527F41CDECD2000499AE7 /* views */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = views;
 			sourceTree = "<group>";
 		};
 		52A527F51CDECD2000499AE7 /* 数据库 */ = {
@@ -651,6 +462,281 @@
 				52A528401CDEDD8200499AE7 /* WBTools.m */,
 			);
 			path = Tools;
+			sourceTree = "<group>";
+		};
+		52A528521CDF3A6600499AE7 /* 侧滑页 */ = {
+			isa = PBXGroup;
+			children = (
+				52A528531CDF3A6600499AE7 /* cells */,
+				52A528541CDF3A6600499AE7 /* Controllers */,
+				52A528571CDF3A6600499AE7 /* models */,
+				52A528581CDF3A6600499AE7 /* views */,
+			);
+			path = "侧滑页";
+			sourceTree = "<group>";
+		};
+		52A528531CDF3A6600499AE7 /* cells */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = cells;
+			sourceTree = "<group>";
+		};
+		52A528541CDF3A6600499AE7 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				52A528551CDF3A6600499AE7 /* WBMenuViewController.h */,
+				52A528561CDF3A6600499AE7 /* WBMenuViewController.m */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		52A528571CDF3A6600499AE7 /* models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = models;
+			sourceTree = "<group>";
+		};
+		52A528581CDF3A6600499AE7 /* views */ = {
+			isa = PBXGroup;
+			children = (
+				52A528591CDF3A6600499AE7 /* WBMenuHeaderView.h */,
+				52A5285A1CDF3A6600499AE7 /* WBMenuHeaderView.m */,
+				52A5285B1CDF3A6600499AE7 /* WBMenuHeaderView.xib */,
+			);
+			path = views;
+			sourceTree = "<group>";
+		};
+		52A5285C1CDF3A6600499AE7 /* 导航 */ = {
+			isa = PBXGroup;
+			children = (
+				52A5285D1CDF3A6600499AE7 /* cells */,
+				52A5285E1CDF3A6600499AE7 /* Controllers */,
+				52A528611CDF3A6600499AE7 /* models */,
+				52A528621CDF3A6600499AE7 /* views */,
+			);
+			path = "导航";
+			sourceTree = "<group>";
+		};
+		52A5285D1CDF3A6600499AE7 /* cells */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = cells;
+			sourceTree = "<group>";
+		};
+		52A5285E1CDF3A6600499AE7 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				52A5285F1CDF3A6600499AE7 /* WBGuidanceViewController.h */,
+				52A528601CDF3A6600499AE7 /* WBGuidanceViewController.m */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		52A528611CDF3A6600499AE7 /* models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = models;
+			sourceTree = "<group>";
+		};
+		52A528621CDF3A6600499AE7 /* views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = views;
+			sourceTree = "<group>";
+		};
+		52A528631CDF3A6700499AE7 /* 电话簿 */ = {
+			isa = PBXGroup;
+			children = (
+				52A528641CDF3A6700499AE7 /* cells */,
+				52A528651CDF3A6700499AE7 /* Controllers */,
+				52A528681CDF3A6700499AE7 /* models */,
+				52A528691CDF3A6700499AE7 /* views */,
+			);
+			path = "电话簿";
+			sourceTree = "<group>";
+		};
+		52A528641CDF3A6700499AE7 /* cells */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = cells;
+			sourceTree = "<group>";
+		};
+		52A528651CDF3A6700499AE7 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				52A528661CDF3A6700499AE7 /* WBPhoneBookViewController.h */,
+				52A528671CDF3A6700499AE7 /* WBPhoneBookViewController.m */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		52A528681CDF3A6700499AE7 /* models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = models;
+			sourceTree = "<group>";
+		};
+		52A528691CDF3A6700499AE7 /* views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = views;
+			sourceTree = "<group>";
+		};
+		52A5286A1CDF3A6700499AE7 /* 分类 */ = {
+			isa = PBXGroup;
+			children = (
+				52A5286B1CDF3A6700499AE7 /* CATransition+PageChangeAnimation */,
+				52A5286E1CDF3A6700499AE7 /* NavBar+WBCustomBackgroud */,
+				52A528711CDF3A6700499AE7 /* UIBarButtonItem+WBCustomButton */,
+				52A528741CDF3A6700499AE7 /* UIColor+HexColor */,
+				52A528771CDF3A6700499AE7 /* UIImage+GetWithColor */,
+				52A5287A1CDF3A6700499AE7 /* UIView+WBLocation */,
+			);
+			path = "分类";
+			sourceTree = "<group>";
+		};
+		52A5286B1CDF3A6700499AE7 /* CATransition+PageChangeAnimation */ = {
+			isa = PBXGroup;
+			children = (
+				52A5286C1CDF3A6700499AE7 /* CATransition+PageChangeAnimation.h */,
+				52A5286D1CDF3A6700499AE7 /* CATransition+PageChangeAnimation.m */,
+			);
+			path = "CATransition+PageChangeAnimation";
+			sourceTree = "<group>";
+		};
+		52A5286E1CDF3A6700499AE7 /* NavBar+WBCustomBackgroud */ = {
+			isa = PBXGroup;
+			children = (
+				52A5286F1CDF3A6700499AE7 /* UINavigationBar+NavBar_WBCustomBackgroudImage.h */,
+				52A528701CDF3A6700499AE7 /* UINavigationBar+NavBar_WBCustomBackgroudImage.m */,
+			);
+			path = "NavBar+WBCustomBackgroud";
+			sourceTree = "<group>";
+		};
+		52A528711CDF3A6700499AE7 /* UIBarButtonItem+WBCustomButton */ = {
+			isa = PBXGroup;
+			children = (
+				52A528721CDF3A6700499AE7 /* UIBarButtonItem+WBCustomButton.h */,
+				52A528731CDF3A6700499AE7 /* UIBarButtonItem+WBCustomButton.m */,
+			);
+			path = "UIBarButtonItem+WBCustomButton";
+			sourceTree = "<group>";
+		};
+		52A528741CDF3A6700499AE7 /* UIColor+HexColor */ = {
+			isa = PBXGroup;
+			children = (
+				52A528751CDF3A6700499AE7 /* UIColor+HexColor.h */,
+				52A528761CDF3A6700499AE7 /* UIColor+HexColor.m */,
+			);
+			path = "UIColor+HexColor";
+			sourceTree = "<group>";
+		};
+		52A528771CDF3A6700499AE7 /* UIImage+GetWithColor */ = {
+			isa = PBXGroup;
+			children = (
+				52A528781CDF3A6700499AE7 /* UIImage+WBGetWithColor.h */,
+				52A528791CDF3A6700499AE7 /* UIImage+WBGetWithColor.m */,
+			);
+			path = "UIImage+GetWithColor";
+			sourceTree = "<group>";
+		};
+		52A5287A1CDF3A6700499AE7 /* UIView+WBLocation */ = {
+			isa = PBXGroup;
+			children = (
+				52A5287B1CDF3A6700499AE7 /* UIView+WBLocation.h */,
+				52A5287C1CDF3A6700499AE7 /* UIView+WBLocation.m */,
+			);
+			path = "UIView+WBLocation";
+			sourceTree = "<group>";
+		};
+		52A5287D1CDF3A6700499AE7 /* 论坛 */ = {
+			isa = PBXGroup;
+			children = (
+				52A5287E1CDF3A6700499AE7 /* cells */,
+				52A5287F1CDF3A6700499AE7 /* Controllers */,
+				52A528821CDF3A6700499AE7 /* models */,
+				52A528831CDF3A6700499AE7 /* views */,
+			);
+			path = "论坛";
+			sourceTree = "<group>";
+		};
+		52A5287E1CDF3A6700499AE7 /* cells */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = cells;
+			sourceTree = "<group>";
+		};
+		52A5287F1CDF3A6700499AE7 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				52A528801CDF3A6700499AE7 /* WBForumViewController.h */,
+				52A528811CDF3A6700499AE7 /* WBForumViewController.m */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		52A528821CDF3A6700499AE7 /* models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = models;
+			sourceTree = "<group>";
+		};
+		52A528831CDF3A6700499AE7 /* views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = views;
+			sourceTree = "<group>";
+		};
+		52A528841CDF3A6700499AE7 /* 首页 */ = {
+			isa = PBXGroup;
+			children = (
+				52A528851CDF3A6700499AE7 /* cells */,
+				52A528861CDF3A6700499AE7 /* Controllers */,
+				52A528891CDF3A6700499AE7 /* models */,
+				52A5288A1CDF3A6700499AE7 /* views */,
+			);
+			path = "首页";
+			sourceTree = "<group>";
+		};
+		52A528851CDF3A6700499AE7 /* cells */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = cells;
+			sourceTree = "<group>";
+		};
+		52A528861CDF3A6700499AE7 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				52A528871CDF3A6700499AE7 /* WBMainViewController.h */,
+				52A528881CDF3A6700499AE7 /* WBMainViewController.m */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		52A528891CDF3A6700499AE7 /* models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = models;
+			sourceTree = "<group>";
+		};
+		52A5288A1CDF3A6700499AE7 /* views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = views;
 			sourceTree = "<group>";
 		};
 		59E59F729B36E56D7B03D9D5 /* Frameworks */ = {
@@ -778,9 +864,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				52A528451CDEE81E00499AE7 /* tabbar_books@3x.png in Resources */,
-				52A5284A1CDF249C00499AE7 /* WBMenuHeaderView.xib in Resources */,
 				52A5284F1CDF300500499AE7 /* Assets.xcassets in Resources */,
 				52A528511CDF301900499AE7 /* LaunchScreen.storyboard in Resources */,
+				52A5288D1CDF3A6700499AE7 /* WBMenuHeaderView.xib in Resources */,
 				52A528431CDEDDCC00499AE7 /* navbar_back@3x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -855,31 +941,37 @@
 			buildActionMask = 2147483647;
 			files = (
 				52A528191CDECD2000499AE7 /* WBDBModel.m in Sources */,
-				52A528371CDEDB6500499AE7 /* WBGuidanceViewController.m in Sources */,
+				52A528941CDF3A6700499AE7 /* UIImage+WBGetWithColor.m in Sources */,
+				52A528931CDF3A6700499AE7 /* UIColor+HexColor.m in Sources */,
 				52A5284E1CDF300500499AE7 /* AppDelegate.m in Sources */,
+				52A528951CDF3A6700499AE7 /* UIView+WBLocation.m in Sources */,
 				52A5280E1CDECD2000499AE7 /* UIColor+HexColor.m in Sources */,
 				52A528181CDECD2000499AE7 /* WBDBHelper.m in Sources */,
-				52A5283D1CDEDBBB00499AE7 /* WBForumViewController.m in Sources */,
+				52A528921CDF3A6700499AE7 /* UIBarButtonItem+WBCustomButton.m in Sources */,
 				52A5281C1CDECD2000499AE7 /* WBMessageRequest.m in Sources */,
+				52A5288E1CDF3A6700499AE7 /* WBGuidanceViewController.m in Sources */,
 				52A5280C1CDECD2000499AE7 /* UINavigationBar+NavBar_WBCustomBackgroudImage.m in Sources */,
 				52A5281A1CDECD2000499AE7 /* WBRequestManager.m in Sources */,
-				52A528481CDF248600499AE7 /* WBMenuHeaderView.m in Sources */,
 				52A528121CDECD2000499AE7 /* WBNavViewController.m in Sources */,
+				52A5288F1CDF3A6700499AE7 /* WBPhoneBookViewController.m in Sources */,
 				52A5282A1CDED65B00499AE7 /* UIViewController+RESideMenu.m in Sources */,
 				52A528411CDEDD8200499AE7 /* WBTools.m in Sources */,
 				52A5281D1CDECD2000499AE7 /* WBUserRequest.m in Sources */,
+				52A528911CDF3A6700499AE7 /* UINavigationBar+NavBar_WBCustomBackgroudImage.m in Sources */,
 				52A5280F1CDECD2000499AE7 /* UIImage+WBGetWithColor.m in Sources */,
-				52A5283A1CDEDB8B00499AE7 /* WBPhoneBookViewController.m in Sources */,
-				52A528301CDED76500499AE7 /* WBMenuViewController.m in Sources */,
+				52A528961CDF3A6700499AE7 /* WBForumViewController.m in Sources */,
+				52A5288B1CDF3A6700499AE7 /* WBMenuViewController.m in Sources */,
 				52A528111CDECD2000499AE7 /* WBBaseViewController.m in Sources */,
+				52A528971CDF3A6700499AE7 /* WBMainViewController.m in Sources */,
+				52A528901CDF3A6700499AE7 /* CATransition+PageChangeAnimation.m in Sources */,
 				52A528101CDECD2000499AE7 /* UIView+WBLocation.m in Sources */,
 				52A528281CDED65B00499AE7 /* RECommonFunctions.m in Sources */,
 				52A528291CDED65B00499AE7 /* RESideMenu.m in Sources */,
+				52A5288C1CDF3A6700499AE7 /* WBMenuHeaderView.m in Sources */,
 				52A5280D1CDECD2000499AE7 /* UIBarButtonItem+WBCustomButton.m in Sources */,
 				52A528161CDECD2000499AE7 /* WBTabBarViewController.m in Sources */,
 				52A5280B1CDECD2000499AE7 /* CATransition+PageChangeAnimation.m in Sources */,
 				5216DB701CDECB5C00B06B3B /* main.m in Sources */,
-				52A5282D1CDED74700499AE7 /* WBMainViewController.m in Sources */,
 				52A5281B1CDECD2000499AE7 /* WBBaseRequest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

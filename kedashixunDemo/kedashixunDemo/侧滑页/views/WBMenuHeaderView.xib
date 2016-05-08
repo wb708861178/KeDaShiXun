@@ -10,7 +10,20 @@
         <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="WBMenuHeaderView">
             <rect key="frame" x="0.0" y="0.0" width="293" height="124"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ifp-Ia-Q2E">
+                    <rect key="frame" x="15" y="53" width="56" height="56"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="56" id="Nw3-ve-wyL"/>
+                        <constraint firstAttribute="width" constant="56" id="qLZ-iv-fHS"/>
+                    </constraints>
+                </imageView>
+            </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="ifp-Ia-Q2E" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="15" id="TfK-Im-FWp"/>
+                <constraint firstAttribute="bottom" secondItem="ifp-Ia-Q2E" secondAttribute="bottom" constant="15" id="YC2-Rq-lcm"/>
+            </constraints>
             <nil key="simulatedStatusBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <point key="canvasLocation" x="264.5" y="203"/>
