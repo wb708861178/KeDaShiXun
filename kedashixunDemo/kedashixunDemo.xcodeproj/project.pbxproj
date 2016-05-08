@@ -15,6 +15,25 @@
 		5216DB7E1CDECB5C00B06B3B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5216DB7C1CDECB5C00B06B3B /* LaunchScreen.storyboard */; };
 		5216DB891CDECB5C00B06B3B /* kedashixunDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5216DB881CDECB5C00B06B3B /* kedashixunDemoTests.m */; };
 		5216DB941CDECB5C00B06B3B /* kedashixunDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5216DB931CDECB5C00B06B3B /* kedashixunDemoUITests.m */; };
+		52A5280B1CDECD2000499AE7 /* CATransition+PageChangeAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 52A527CA1CDECD2000499AE7 /* CATransition+PageChangeAnimation.m */; };
+		52A5280C1CDECD2000499AE7 /* UINavigationBar+NavBar_WBCustomBackgroudImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 52A527CD1CDECD2000499AE7 /* UINavigationBar+NavBar_WBCustomBackgroudImage.m */; };
+		52A5280D1CDECD2000499AE7 /* UIBarButtonItem+WBCustomButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 52A527D01CDECD2000499AE7 /* UIBarButtonItem+WBCustomButton.m */; };
+		52A5280E1CDECD2000499AE7 /* UIColor+HexColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 52A527D31CDECD2000499AE7 /* UIColor+HexColor.m */; };
+		52A5280F1CDECD2000499AE7 /* UIImage+WBGetWithColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 52A527D61CDECD2000499AE7 /* UIImage+WBGetWithColor.m */; };
+		52A528101CDECD2000499AE7 /* UIView+WBLocation.m in Sources */ = {isa = PBXBuildFile; fileRef = 52A527D91CDECD2000499AE7 /* UIView+WBLocation.m */; };
+		52A528111CDECD2000499AE7 /* WBBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 52A527E21CDECD2000499AE7 /* WBBaseViewController.m */; };
+		52A528121CDECD2000499AE7 /* WBNavViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 52A527E51CDECD2000499AE7 /* WBNavViewController.m */; };
+		52A528131CDECD2000499AE7 /* RECommonFunctions.m in Sources */ = {isa = PBXBuildFile; fileRef = 52A527E81CDECD2000499AE7 /* RECommonFunctions.m */; };
+		52A528141CDECD2000499AE7 /* RESideMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 52A527EA1CDECD2000499AE7 /* RESideMenu.m */; };
+		52A528151CDECD2000499AE7 /* UIViewController+RESideMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 52A527EC1CDECD2000499AE7 /* UIViewController+RESideMenu.m */; };
+		52A528161CDECD2000499AE7 /* WBDetailTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 52A527EF1CDECD2000499AE7 /* WBDetailTabBarViewController.m */; };
+		52A528171CDECD2000499AE7 /* ghjg.m in Sources */ = {isa = PBXBuildFile; fileRef = 52A527F81CDECD2000499AE7 /* ghjg.m */; };
+		52A528181CDECD2000499AE7 /* WBDBHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 52A527FA1CDECD2000499AE7 /* WBDBHelper.m */; };
+		52A528191CDECD2000499AE7 /* WBDBModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 52A527FC1CDECD2000499AE7 /* WBDBModel.m */; };
+		52A5281A1CDECD2000499AE7 /* WBRequestManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 52A528011CDECD2000499AE7 /* WBRequestManager.m */; };
+		52A5281B1CDECD2000499AE7 /* WBBaseRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 52A528041CDECD2000499AE7 /* WBBaseRequest.m */; };
+		52A5281C1CDECD2000499AE7 /* WBMessageRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 52A528071CDECD2000499AE7 /* WBMessageRequest.m */; };
+		52A5281D1CDECD2000499AE7 /* WBUserRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 52A5280A1CDECD2000499AE7 /* WBUserRequest.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +70,46 @@
 		5216DB8F1CDECB5C00B06B3B /* kedashixunDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = kedashixunDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5216DB931CDECB5C00B06B3B /* kedashixunDemoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = kedashixunDemoUITests.m; sourceTree = "<group>"; };
 		5216DB951CDECB5C00B06B3B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		52A527C91CDECD2000499AE7 /* CATransition+PageChangeAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CATransition+PageChangeAnimation.h"; sourceTree = "<group>"; };
+		52A527CA1CDECD2000499AE7 /* CATransition+PageChangeAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CATransition+PageChangeAnimation.m"; sourceTree = "<group>"; };
+		52A527CC1CDECD2000499AE7 /* UINavigationBar+NavBar_WBCustomBackgroudImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationBar+NavBar_WBCustomBackgroudImage.h"; sourceTree = "<group>"; };
+		52A527CD1CDECD2000499AE7 /* UINavigationBar+NavBar_WBCustomBackgroudImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationBar+NavBar_WBCustomBackgroudImage.m"; sourceTree = "<group>"; };
+		52A527CF1CDECD2000499AE7 /* UIBarButtonItem+WBCustomButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+WBCustomButton.h"; sourceTree = "<group>"; };
+		52A527D01CDECD2000499AE7 /* UIBarButtonItem+WBCustomButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+WBCustomButton.m"; sourceTree = "<group>"; };
+		52A527D21CDECD2000499AE7 /* UIColor+HexColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+HexColor.h"; sourceTree = "<group>"; };
+		52A527D31CDECD2000499AE7 /* UIColor+HexColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+HexColor.m"; sourceTree = "<group>"; };
+		52A527D51CDECD2000499AE7 /* UIImage+WBGetWithColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+WBGetWithColor.h"; sourceTree = "<group>"; };
+		52A527D61CDECD2000499AE7 /* UIImage+WBGetWithColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+WBGetWithColor.m"; sourceTree = "<group>"; };
+		52A527D81CDECD2000499AE7 /* UIView+WBLocation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+WBLocation.h"; sourceTree = "<group>"; };
+		52A527D91CDECD2000499AE7 /* UIView+WBLocation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+WBLocation.m"; sourceTree = "<group>"; };
+		52A527E11CDECD2000499AE7 /* WBBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WBBaseViewController.h; sourceTree = "<group>"; };
+		52A527E21CDECD2000499AE7 /* WBBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WBBaseViewController.m; sourceTree = "<group>"; };
+		52A527E41CDECD2000499AE7 /* WBNavViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WBNavViewController.h; sourceTree = "<group>"; };
+		52A527E51CDECD2000499AE7 /* WBNavViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WBNavViewController.m; sourceTree = "<group>"; };
+		52A527E71CDECD2000499AE7 /* RECommonFunctions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RECommonFunctions.h; sourceTree = "<group>"; };
+		52A527E81CDECD2000499AE7 /* RECommonFunctions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RECommonFunctions.m; sourceTree = "<group>"; };
+		52A527E91CDECD2000499AE7 /* RESideMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RESideMenu.h; sourceTree = "<group>"; };
+		52A527EA1CDECD2000499AE7 /* RESideMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RESideMenu.m; sourceTree = "<group>"; };
+		52A527EB1CDECD2000499AE7 /* UIViewController+RESideMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+RESideMenu.h"; sourceTree = "<group>"; };
+		52A527EC1CDECD2000499AE7 /* UIViewController+RESideMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+RESideMenu.m"; sourceTree = "<group>"; };
+		52A527EE1CDECD2000499AE7 /* WBDetailTabBarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WBDetailTabBarViewController.h; sourceTree = "<group>"; };
+		52A527EF1CDECD2000499AE7 /* WBDetailTabBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WBDetailTabBarViewController.m; sourceTree = "<group>"; };
+		52A527F71CDECD2000499AE7 /* ghjg.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ghjg.h; sourceTree = "<group>"; };
+		52A527F81CDECD2000499AE7 /* ghjg.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ghjg.m; sourceTree = "<group>"; };
+		52A527F91CDECD2000499AE7 /* WBDBHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WBDBHelper.h; sourceTree = "<group>"; };
+		52A527FA1CDECD2000499AE7 /* WBDBHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WBDBHelper.m; sourceTree = "<group>"; };
+		52A527FB1CDECD2000499AE7 /* WBDBModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WBDBModel.h; sourceTree = "<group>"; };
+		52A527FC1CDECD2000499AE7 /* WBDBModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WBDBModel.m; sourceTree = "<group>"; };
+		52A527FE1CDECD2000499AE7 /* WBRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WBRequest.h; sourceTree = "<group>"; };
+		52A528001CDECD2000499AE7 /* WBRequestManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WBRequestManager.h; sourceTree = "<group>"; };
+		52A528011CDECD2000499AE7 /* WBRequestManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WBRequestManager.m; sourceTree = "<group>"; };
+		52A528031CDECD2000499AE7 /* WBBaseRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WBBaseRequest.h; sourceTree = "<group>"; };
+		52A528041CDECD2000499AE7 /* WBBaseRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WBBaseRequest.m; sourceTree = "<group>"; };
+		52A528061CDECD2000499AE7 /* WBMessageRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WBMessageRequest.h; sourceTree = "<group>"; };
+		52A528071CDECD2000499AE7 /* WBMessageRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WBMessageRequest.m; sourceTree = "<group>"; };
+		52A528091CDECD2000499AE7 /* WBUserRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WBUserRequest.h; sourceTree = "<group>"; };
+		52A5280A1CDECD2000499AE7 /* WBUserRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WBUserRequest.m; sourceTree = "<group>"; };
+		52A5281E1CDECD4000499AE7 /* Const.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Const.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +160,16 @@
 		5216DB6D1CDECB5C00B06B3B /* kedashixunDemo */ = {
 			isa = PBXGroup;
 			children = (
+				52A5281E1CDECD4000499AE7 /* Const.h */,
+				52A527B81CDECD2000499AE7 /* 侧滑页 */,
+				52A527BD1CDECD2000499AE7 /* 导航 */,
+				52A527C21CDECD2000499AE7 /* 电话簿 */,
+				52A527C71CDECD2000499AE7 /* 分类 */,
+				52A527DA1CDECD2000499AE7 /* 论坛 */,
+				52A527DF1CDECD2000499AE7 /* 全局类 */,
+				52A527F01CDECD2000499AE7 /* 首页 */,
+				52A527F51CDECD2000499AE7 /* 数据库 */,
+				52A527FD1CDECD2000499AE7 /* 网络 */,
 				5216DB711CDECB5C00B06B3B /* AppDelegate.h */,
 				5216DB721CDECB5C00B06B3B /* AppDelegate.m */,
 				5216DB741CDECB5C00B06B3B /* ViewController.h */,
@@ -138,6 +207,388 @@
 				5216DB951CDECB5C00B06B3B /* Info.plist */,
 			);
 			path = kedashixunDemoUITests;
+			sourceTree = "<group>";
+		};
+		52A527B81CDECD2000499AE7 /* 侧滑页 */ = {
+			isa = PBXGroup;
+			children = (
+				52A527B91CDECD2000499AE7 /* cells */,
+				52A527BA1CDECD2000499AE7 /* Controllers */,
+				52A527BB1CDECD2000499AE7 /* models */,
+				52A527BC1CDECD2000499AE7 /* views */,
+			);
+			path = "侧滑页";
+			sourceTree = "<group>";
+		};
+		52A527B91CDECD2000499AE7 /* cells */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = cells;
+			sourceTree = "<group>";
+		};
+		52A527BA1CDECD2000499AE7 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		52A527BB1CDECD2000499AE7 /* models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = models;
+			sourceTree = "<group>";
+		};
+		52A527BC1CDECD2000499AE7 /* views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = views;
+			sourceTree = "<group>";
+		};
+		52A527BD1CDECD2000499AE7 /* 导航 */ = {
+			isa = PBXGroup;
+			children = (
+				52A527BE1CDECD2000499AE7 /* cells */,
+				52A527BF1CDECD2000499AE7 /* Controllers */,
+				52A527C01CDECD2000499AE7 /* models */,
+				52A527C11CDECD2000499AE7 /* views */,
+			);
+			path = "导航";
+			sourceTree = "<group>";
+		};
+		52A527BE1CDECD2000499AE7 /* cells */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = cells;
+			sourceTree = "<group>";
+		};
+		52A527BF1CDECD2000499AE7 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		52A527C01CDECD2000499AE7 /* models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = models;
+			sourceTree = "<group>";
+		};
+		52A527C11CDECD2000499AE7 /* views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = views;
+			sourceTree = "<group>";
+		};
+		52A527C21CDECD2000499AE7 /* 电话簿 */ = {
+			isa = PBXGroup;
+			children = (
+				52A527C31CDECD2000499AE7 /* cells */,
+				52A527C41CDECD2000499AE7 /* Controllers */,
+				52A527C51CDECD2000499AE7 /* models */,
+				52A527C61CDECD2000499AE7 /* views */,
+			);
+			path = "电话簿";
+			sourceTree = "<group>";
+		};
+		52A527C31CDECD2000499AE7 /* cells */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = cells;
+			sourceTree = "<group>";
+		};
+		52A527C41CDECD2000499AE7 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		52A527C51CDECD2000499AE7 /* models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = models;
+			sourceTree = "<group>";
+		};
+		52A527C61CDECD2000499AE7 /* views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = views;
+			sourceTree = "<group>";
+		};
+		52A527C71CDECD2000499AE7 /* 分类 */ = {
+			isa = PBXGroup;
+			children = (
+				52A527C81CDECD2000499AE7 /* CATransition+PageChangeAnimation */,
+				52A527CB1CDECD2000499AE7 /* NavBar+WBCustomBackgroud */,
+				52A527CE1CDECD2000499AE7 /* UIBarButtonItem+WBCustomButton */,
+				52A527D11CDECD2000499AE7 /* UIColor+HexColor */,
+				52A527D41CDECD2000499AE7 /* UIImage+GetWithColor */,
+				52A527D71CDECD2000499AE7 /* UIView+WBLocation */,
+			);
+			path = "分类";
+			sourceTree = "<group>";
+		};
+		52A527C81CDECD2000499AE7 /* CATransition+PageChangeAnimation */ = {
+			isa = PBXGroup;
+			children = (
+				52A527C91CDECD2000499AE7 /* CATransition+PageChangeAnimation.h */,
+				52A527CA1CDECD2000499AE7 /* CATransition+PageChangeAnimation.m */,
+			);
+			path = "CATransition+PageChangeAnimation";
+			sourceTree = "<group>";
+		};
+		52A527CB1CDECD2000499AE7 /* NavBar+WBCustomBackgroud */ = {
+			isa = PBXGroup;
+			children = (
+				52A527CC1CDECD2000499AE7 /* UINavigationBar+NavBar_WBCustomBackgroudImage.h */,
+				52A527CD1CDECD2000499AE7 /* UINavigationBar+NavBar_WBCustomBackgroudImage.m */,
+			);
+			path = "NavBar+WBCustomBackgroud";
+			sourceTree = "<group>";
+		};
+		52A527CE1CDECD2000499AE7 /* UIBarButtonItem+WBCustomButton */ = {
+			isa = PBXGroup;
+			children = (
+				52A527CF1CDECD2000499AE7 /* UIBarButtonItem+WBCustomButton.h */,
+				52A527D01CDECD2000499AE7 /* UIBarButtonItem+WBCustomButton.m */,
+			);
+			path = "UIBarButtonItem+WBCustomButton";
+			sourceTree = "<group>";
+		};
+		52A527D11CDECD2000499AE7 /* UIColor+HexColor */ = {
+			isa = PBXGroup;
+			children = (
+				52A527D21CDECD2000499AE7 /* UIColor+HexColor.h */,
+				52A527D31CDECD2000499AE7 /* UIColor+HexColor.m */,
+			);
+			path = "UIColor+HexColor";
+			sourceTree = "<group>";
+		};
+		52A527D41CDECD2000499AE7 /* UIImage+GetWithColor */ = {
+			isa = PBXGroup;
+			children = (
+				52A527D51CDECD2000499AE7 /* UIImage+WBGetWithColor.h */,
+				52A527D61CDECD2000499AE7 /* UIImage+WBGetWithColor.m */,
+			);
+			path = "UIImage+GetWithColor";
+			sourceTree = "<group>";
+		};
+		52A527D71CDECD2000499AE7 /* UIView+WBLocation */ = {
+			isa = PBXGroup;
+			children = (
+				52A527D81CDECD2000499AE7 /* UIView+WBLocation.h */,
+				52A527D91CDECD2000499AE7 /* UIView+WBLocation.m */,
+			);
+			path = "UIView+WBLocation";
+			sourceTree = "<group>";
+		};
+		52A527DA1CDECD2000499AE7 /* 论坛 */ = {
+			isa = PBXGroup;
+			children = (
+				52A527DB1CDECD2000499AE7 /* cells */,
+				52A527DC1CDECD2000499AE7 /* Controllers */,
+				52A527DD1CDECD2000499AE7 /* models */,
+				52A527DE1CDECD2000499AE7 /* views */,
+			);
+			path = "论坛";
+			sourceTree = "<group>";
+		};
+		52A527DB1CDECD2000499AE7 /* cells */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = cells;
+			sourceTree = "<group>";
+		};
+		52A527DC1CDECD2000499AE7 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		52A527DD1CDECD2000499AE7 /* models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = models;
+			sourceTree = "<group>";
+		};
+		52A527DE1CDECD2000499AE7 /* views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = views;
+			sourceTree = "<group>";
+		};
+		52A527DF1CDECD2000499AE7 /* 全局类 */ = {
+			isa = PBXGroup;
+			children = (
+				52A527E01CDECD2000499AE7 /* Base */,
+				52A527E31CDECD2000499AE7 /* Nav */,
+				52A527E61CDECD2000499AE7 /* RESideMenu */,
+				52A527ED1CDECD2000499AE7 /* TabBar */,
+			);
+			path = "全局类";
+			sourceTree = "<group>";
+		};
+		52A527E01CDECD2000499AE7 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				52A527E11CDECD2000499AE7 /* WBBaseViewController.h */,
+				52A527E21CDECD2000499AE7 /* WBBaseViewController.m */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		52A527E31CDECD2000499AE7 /* Nav */ = {
+			isa = PBXGroup;
+			children = (
+				52A527E41CDECD2000499AE7 /* WBNavViewController.h */,
+				52A527E51CDECD2000499AE7 /* WBNavViewController.m */,
+			);
+			path = Nav;
+			sourceTree = "<group>";
+		};
+		52A527E61CDECD2000499AE7 /* RESideMenu */ = {
+			isa = PBXGroup;
+			children = (
+				52A527E71CDECD2000499AE7 /* RECommonFunctions.h */,
+				52A527E81CDECD2000499AE7 /* RECommonFunctions.m */,
+				52A527E91CDECD2000499AE7 /* RESideMenu.h */,
+				52A527EA1CDECD2000499AE7 /* RESideMenu.m */,
+				52A527EB1CDECD2000499AE7 /* UIViewController+RESideMenu.h */,
+				52A527EC1CDECD2000499AE7 /* UIViewController+RESideMenu.m */,
+			);
+			path = RESideMenu;
+			sourceTree = "<group>";
+		};
+		52A527ED1CDECD2000499AE7 /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+				52A527EE1CDECD2000499AE7 /* WBDetailTabBarViewController.h */,
+				52A527EF1CDECD2000499AE7 /* WBDetailTabBarViewController.m */,
+			);
+			path = TabBar;
+			sourceTree = "<group>";
+		};
+		52A527F01CDECD2000499AE7 /* 首页 */ = {
+			isa = PBXGroup;
+			children = (
+				52A527F11CDECD2000499AE7 /* cells */,
+				52A527F21CDECD2000499AE7 /* Controllers */,
+				52A527F31CDECD2000499AE7 /* models */,
+				52A527F41CDECD2000499AE7 /* views */,
+			);
+			path = "首页";
+			sourceTree = "<group>";
+		};
+		52A527F11CDECD2000499AE7 /* cells */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = cells;
+			sourceTree = "<group>";
+		};
+		52A527F21CDECD2000499AE7 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		52A527F31CDECD2000499AE7 /* models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = models;
+			sourceTree = "<group>";
+		};
+		52A527F41CDECD2000499AE7 /* views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = views;
+			sourceTree = "<group>";
+		};
+		52A527F51CDECD2000499AE7 /* 数据库 */ = {
+			isa = PBXGroup;
+			children = (
+				52A527F61CDECD2000499AE7 /* DBModel */,
+			);
+			path = "数据库";
+			sourceTree = "<group>";
+		};
+		52A527F61CDECD2000499AE7 /* DBModel */ = {
+			isa = PBXGroup;
+			children = (
+				52A527F71CDECD2000499AE7 /* ghjg.h */,
+				52A527F81CDECD2000499AE7 /* ghjg.m */,
+				52A527F91CDECD2000499AE7 /* WBDBHelper.h */,
+				52A527FA1CDECD2000499AE7 /* WBDBHelper.m */,
+				52A527FB1CDECD2000499AE7 /* WBDBModel.h */,
+				52A527FC1CDECD2000499AE7 /* WBDBModel.m */,
+			);
+			path = DBModel;
+			sourceTree = "<group>";
+		};
+		52A527FD1CDECD2000499AE7 /* 网络 */ = {
+			isa = PBXGroup;
+			children = (
+				52A527FE1CDECD2000499AE7 /* WBRequest.h */,
+				52A527FF1CDECD2000499AE7 /* 管理类 */,
+				52A528021CDECD2000499AE7 /* 请求类 */,
+			);
+			path = "网络";
+			sourceTree = "<group>";
+		};
+		52A527FF1CDECD2000499AE7 /* 管理类 */ = {
+			isa = PBXGroup;
+			children = (
+				52A528001CDECD2000499AE7 /* WBRequestManager.h */,
+				52A528011CDECD2000499AE7 /* WBRequestManager.m */,
+			);
+			path = "管理类";
+			sourceTree = "<group>";
+		};
+		52A528021CDECD2000499AE7 /* 请求类 */ = {
+			isa = PBXGroup;
+			children = (
+				52A528031CDECD2000499AE7 /* WBBaseRequest.h */,
+				52A528041CDECD2000499AE7 /* WBBaseRequest.m */,
+				52A528051CDECD2000499AE7 /* 信息请求 */,
+				52A528081CDECD2000499AE7 /* 用户请求 */,
+			);
+			path = "请求类";
+			sourceTree = "<group>";
+		};
+		52A528051CDECD2000499AE7 /* 信息请求 */ = {
+			isa = PBXGroup;
+			children = (
+				52A528061CDECD2000499AE7 /* WBMessageRequest.h */,
+				52A528071CDECD2000499AE7 /* WBMessageRequest.m */,
+			);
+			path = "信息请求";
+			sourceTree = "<group>";
+		};
+		52A528081CDECD2000499AE7 /* 用户请求 */ = {
+			isa = PBXGroup;
+			children = (
+				52A528091CDECD2000499AE7 /* WBUserRequest.h */,
+				52A5280A1CDECD2000499AE7 /* WBUserRequest.m */,
+			);
+			path = "用户请求";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -270,9 +721,28 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				52A528191CDECD2000499AE7 /* WBDBModel.m in Sources */,
+				52A5280E1CDECD2000499AE7 /* UIColor+HexColor.m in Sources */,
+				52A528171CDECD2000499AE7 /* ghjg.m in Sources */,
+				52A528181CDECD2000499AE7 /* WBDBHelper.m in Sources */,
+				52A5281C1CDECD2000499AE7 /* WBMessageRequest.m in Sources */,
 				5216DB761CDECB5C00B06B3B /* ViewController.m in Sources */,
+				52A5280C1CDECD2000499AE7 /* UINavigationBar+NavBar_WBCustomBackgroudImage.m in Sources */,
+				52A5281A1CDECD2000499AE7 /* WBRequestManager.m in Sources */,
+				52A528121CDECD2000499AE7 /* WBNavViewController.m in Sources */,
+				52A5281D1CDECD2000499AE7 /* WBUserRequest.m in Sources */,
+				52A5280F1CDECD2000499AE7 /* UIImage+WBGetWithColor.m in Sources */,
+				52A528151CDECD2000499AE7 /* UIViewController+RESideMenu.m in Sources */,
+				52A528141CDECD2000499AE7 /* RESideMenu.m in Sources */,
+				52A528111CDECD2000499AE7 /* WBBaseViewController.m in Sources */,
+				52A528101CDECD2000499AE7 /* UIView+WBLocation.m in Sources */,
+				52A528131CDECD2000499AE7 /* RECommonFunctions.m in Sources */,
+				52A5280D1CDECD2000499AE7 /* UIBarButtonItem+WBCustomButton.m in Sources */,
+				52A528161CDECD2000499AE7 /* WBDetailTabBarViewController.m in Sources */,
 				5216DB731CDECB5C00B06B3B /* AppDelegate.m in Sources */,
+				52A5280B1CDECD2000499AE7 /* CATransition+PageChangeAnimation.m in Sources */,
 				5216DB701CDECB5C00B06B3B /* main.m in Sources */,
+				52A5281B1CDECD2000499AE7 /* WBBaseRequest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -496,6 +966,7 @@
 				5216DB9A1CDECB5C00B06B3B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		5216DB9B1CDECB5C00B06B3B /* Build configuration list for PBXNativeTarget "kedashixunDemoTests" */ = {
 			isa = XCConfigurationList;
@@ -504,6 +975,7 @@
 				5216DB9D1CDECB5C00B06B3B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		5216DB9E1CDECB5C00B06B3B /* Build configuration list for PBXNativeTarget "kedashixunDemoUITests" */ = {
 			isa = XCConfigurationList;
@@ -512,6 +984,7 @@
 				5216DBA01CDECB5C00B06B3B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
