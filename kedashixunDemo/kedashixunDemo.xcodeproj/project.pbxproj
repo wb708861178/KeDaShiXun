@@ -10,7 +10,6 @@
 		25B72F0CD143B850B112A130 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F0D535423ED6E61946912108 /* libPods.a */; };
 		5216DB701CDECB5C00B06B3B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5216DB6F1CDECB5C00B06B3B /* main.m */; };
 		5216DB731CDECB5C00B06B3B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5216DB721CDECB5C00B06B3B /* AppDelegate.m */; };
-		5216DB791CDECB5C00B06B3B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5216DB771CDECB5C00B06B3B /* Main.storyboard */; };
 		5216DB7B1CDECB5C00B06B3B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5216DB7A1CDECB5C00B06B3B /* Assets.xcassets */; };
 		5216DB7E1CDECB5C00B06B3B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5216DB7C1CDECB5C00B06B3B /* LaunchScreen.storyboard */; };
 		5216DB891CDECB5C00B06B3B /* kedashixunDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5216DB881CDECB5C00B06B3B /* kedashixunDemoTests.m */; };
@@ -33,6 +32,9 @@
 		52A5281B1CDECD2000499AE7 /* WBBaseRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 52A528041CDECD2000499AE7 /* WBBaseRequest.m */; };
 		52A5281C1CDECD2000499AE7 /* WBMessageRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 52A528071CDECD2000499AE7 /* WBMessageRequest.m */; };
 		52A5281D1CDECD2000499AE7 /* WBUserRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 52A5280A1CDECD2000499AE7 /* WBUserRequest.m */; };
+		52A528281CDED65B00499AE7 /* RECommonFunctions.m in Sources */ = {isa = PBXBuildFile; fileRef = 52A528231CDED65B00499AE7 /* RECommonFunctions.m */; };
+		52A528291CDED65B00499AE7 /* RESideMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 52A528251CDED65B00499AE7 /* RESideMenu.m */; };
+		52A5282A1CDED65B00499AE7 /* UIViewController+RESideMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 52A528271CDED65B00499AE7 /* UIViewController+RESideMenu.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,10 +58,9 @@
 		0F1BB20647A92F384047403D /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		5216DB6B1CDECB5C00B06B3B /* kedashixunDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = kedashixunDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5216DB6F1CDECB5C00B06B3B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		5216DB711CDECB5C00B06B3B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		5216DB721CDECB5C00B06B3B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		5216DB781CDECB5C00B06B3B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		5216DB7A1CDECB5C00B06B3B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		5216DB711CDECB5C00B06B3B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = ../AppDelegate.h; sourceTree = "<group>"; };
+		5216DB721CDECB5C00B06B3B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = ../AppDelegate.m; sourceTree = "<group>"; };
+		5216DB7A1CDECB5C00B06B3B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = ../Assets.xcassets; sourceTree = "<group>"; };
 		5216DB7D1CDECB5C00B06B3B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5216DB7F1CDECB5C00B06B3B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5216DB841CDECB5C00B06B3B /* kedashixunDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = kedashixunDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -106,6 +107,12 @@
 		52A528091CDECD2000499AE7 /* WBUserRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WBUserRequest.h; sourceTree = "<group>"; };
 		52A5280A1CDECD2000499AE7 /* WBUserRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WBUserRequest.m; sourceTree = "<group>"; };
 		52A5281E1CDECD4000499AE7 /* Const.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Const.h; sourceTree = "<group>"; };
+		52A528221CDED65B00499AE7 /* RECommonFunctions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RECommonFunctions.h; sourceTree = "<group>"; };
+		52A528231CDED65B00499AE7 /* RECommonFunctions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RECommonFunctions.m; sourceTree = "<group>"; };
+		52A528241CDED65B00499AE7 /* RESideMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RESideMenu.h; sourceTree = "<group>"; };
+		52A528251CDED65B00499AE7 /* RESideMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RESideMenu.m; sourceTree = "<group>"; };
+		52A528261CDED65B00499AE7 /* UIViewController+RESideMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+RESideMenu.h"; sourceTree = "<group>"; };
+		52A528271CDED65B00499AE7 /* UIViewController+RESideMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+RESideMenu.m"; sourceTree = "<group>"; };
 		5ABD5ADE04E1BB1D4220B79C /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		F0D535423ED6E61946912108 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -162,6 +169,8 @@
 			isa = PBXGroup;
 			children = (
 				52A5281E1CDECD4000499AE7 /* Const.h */,
+				52A528201CDED63400499AE7 /* 三方 */,
+				52A5281F1CDED5D700499AE7 /* 其他 */,
 				52A527B81CDECD2000499AE7 /* 侧滑页 */,
 				52A527BD1CDECD2000499AE7 /* 导航 */,
 				52A527C21CDECD2000499AE7 /* 电话簿 */,
@@ -171,12 +180,6 @@
 				52A527F01CDECD2000499AE7 /* 首页 */,
 				52A527F51CDECD2000499AE7 /* 数据库 */,
 				52A527FD1CDECD2000499AE7 /* 网络 */,
-				5216DB711CDECB5C00B06B3B /* AppDelegate.h */,
-				5216DB721CDECB5C00B06B3B /* AppDelegate.m */,
-				5216DB771CDECB5C00B06B3B /* Main.storyboard */,
-				5216DB7A1CDECB5C00B06B3B /* Assets.xcassets */,
-				5216DB7C1CDECB5C00B06B3B /* LaunchScreen.storyboard */,
-				5216DB7F1CDECB5C00B06B3B /* Info.plist */,
 				5216DB6E1CDECB5C00B06B3B /* Supporting Files */,
 			);
 			path = kedashixunDemo;
@@ -185,6 +188,7 @@
 		5216DB6E1CDECB5C00B06B3B /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				5216DB7F1CDECB5C00B06B3B /* Info.plist */,
 				5216DB6F1CDECB5C00B06B3B /* main.m */,
 			);
 			name = "Supporting Files";
@@ -588,6 +592,38 @@
 			path = "用户请求";
 			sourceTree = "<group>";
 		};
+		52A5281F1CDED5D700499AE7 /* 其他 */ = {
+			isa = PBXGroup;
+			children = (
+				5216DB7A1CDECB5C00B06B3B /* Assets.xcassets */,
+				5216DB7C1CDECB5C00B06B3B /* LaunchScreen.storyboard */,
+				5216DB711CDECB5C00B06B3B /* AppDelegate.h */,
+				5216DB721CDECB5C00B06B3B /* AppDelegate.m */,
+			);
+			path = "其他";
+			sourceTree = "<group>";
+		};
+		52A528201CDED63400499AE7 /* 三方 */ = {
+			isa = PBXGroup;
+			children = (
+				52A528211CDED65B00499AE7 /* RESideMenu */,
+			);
+			path = "三方";
+			sourceTree = "<group>";
+		};
+		52A528211CDED65B00499AE7 /* RESideMenu */ = {
+			isa = PBXGroup;
+			children = (
+				52A528221CDED65B00499AE7 /* RECommonFunctions.h */,
+				52A528231CDED65B00499AE7 /* RECommonFunctions.m */,
+				52A528241CDED65B00499AE7 /* RESideMenu.h */,
+				52A528251CDED65B00499AE7 /* RESideMenu.m */,
+				52A528261CDED65B00499AE7 /* UIViewController+RESideMenu.h */,
+				52A528271CDED65B00499AE7 /* UIViewController+RESideMenu.m */,
+			);
+			path = RESideMenu;
+			sourceTree = "<group>";
+		};
 		59E59F729B36E56D7B03D9D5 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -713,7 +749,6 @@
 			files = (
 				5216DB7E1CDECB5C00B06B3B /* LaunchScreen.storyboard in Resources */,
 				5216DB7B1CDECB5C00B06B3B /* Assets.xcassets in Resources */,
-				5216DB791CDECB5C00B06B3B /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -793,12 +828,15 @@
 				52A5280C1CDECD2000499AE7 /* UINavigationBar+NavBar_WBCustomBackgroudImage.m in Sources */,
 				52A5281A1CDECD2000499AE7 /* WBRequestManager.m in Sources */,
 				52A528121CDECD2000499AE7 /* WBNavViewController.m in Sources */,
+				52A5282A1CDED65B00499AE7 /* UIViewController+RESideMenu.m in Sources */,
 				52A5281D1CDECD2000499AE7 /* WBUserRequest.m in Sources */,
 				52A5280F1CDECD2000499AE7 /* UIImage+WBGetWithColor.m in Sources */,
 				52A528151CDECD2000499AE7 /* UIViewController+RESideMenu.m in Sources */,
 				52A528141CDECD2000499AE7 /* RESideMenu.m in Sources */,
 				52A528111CDECD2000499AE7 /* WBBaseViewController.m in Sources */,
 				52A528101CDECD2000499AE7 /* UIView+WBLocation.m in Sources */,
+				52A528281CDED65B00499AE7 /* RECommonFunctions.m in Sources */,
+				52A528291CDED65B00499AE7 /* RESideMenu.m in Sources */,
 				52A528131CDECD2000499AE7 /* RECommonFunctions.m in Sources */,
 				52A5280D1CDECD2000499AE7 /* UIBarButtonItem+WBCustomButton.m in Sources */,
 				52A528161CDECD2000499AE7 /* WBDetailTabBarViewController.m in Sources */,
@@ -841,20 +879,13 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		5216DB771CDECB5C00B06B3B /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				5216DB781CDECB5C00B06B3B /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		5216DB7C1CDECB5C00B06B3B /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				5216DB7D1CDECB5C00B06B3B /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			path = ..;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
