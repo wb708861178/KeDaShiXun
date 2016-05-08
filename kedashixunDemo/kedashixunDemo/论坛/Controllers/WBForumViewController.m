@@ -17,7 +17,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-     [self setNavBarTitleWithText:@"我的论坛" withFontSize:20 withTextColor:[UIColor blackColor]];
+    
     // Do any additional setup after loading the view.
 
      [self setNavBarTitleWithText:@"科大论坛" withFontSize:20 withTextColor:[UIColor blackColor]];
