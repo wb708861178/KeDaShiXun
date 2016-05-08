@@ -30,7 +30,7 @@
     
     
     RESideMenu *sideMenu = [[RESideMenu alloc] initWithContentViewController:tabBarVC leftMenuViewController:menuVC rightMenuViewController:nil];
-    
+    sideMenu.panFromEdge = NO;
     self.window.rootViewController = sideMenu;
     
     [self.window makeKeyAndVisible];

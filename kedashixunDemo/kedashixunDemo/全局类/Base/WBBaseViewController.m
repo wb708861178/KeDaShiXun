@@ -8,6 +8,8 @@
 
 #import "WBBaseViewController.h"
 #import "UIBarButtonItem+WBCustomButton.h"
+#import "UIViewController+RESideMenu.h"
+#import "RESideMenu.h"
 
 
 @interface WBBaseViewController ()
@@ -79,7 +81,7 @@
 
 - (void)MainMenuBtnAction:(UIButton *)sender
 {
-    NSLog(@"MainMenuBtnAction");
+    [self.sideMenuViewController presentLeftMenuViewController];
 }
 
 - (void)mainSearchBtnAction:(UIButton *)sender

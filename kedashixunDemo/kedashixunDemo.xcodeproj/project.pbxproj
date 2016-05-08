@@ -40,6 +40,8 @@
 		52A528411CDEDD8200499AE7 /* WBTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 52A528401CDEDD8200499AE7 /* WBTools.m */; };
 		52A528431CDEDDCC00499AE7 /* navbar_back@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 52A528421CDEDDCC00499AE7 /* navbar_back@3x.png */; };
 		52A528451CDEE81E00499AE7 /* tabbar_books@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 52A528441CDEE81E00499AE7 /* tabbar_books@3x.png */; };
+		52A528481CDF248600499AE7 /* WBMenuHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 52A528471CDF248600499AE7 /* WBMenuHeaderView.m */; };
+		52A5284A1CDF249C00499AE7 /* WBMenuHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 52A528491CDF249C00499AE7 /* WBMenuHeaderView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -126,6 +128,9 @@
 		52A528401CDEDD8200499AE7 /* WBTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WBTools.m; sourceTree = "<group>"; };
 		52A528421CDEDDCC00499AE7 /* navbar_back@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "navbar_back@3x.png"; sourceTree = "<group>"; };
 		52A528441CDEE81E00499AE7 /* tabbar_books@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tabbar_books@3x.png"; sourceTree = "<group>"; };
+		52A528461CDF248600499AE7 /* WBMenuHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WBMenuHeaderView.h; sourceTree = "<group>"; };
+		52A528471CDF248600499AE7 /* WBMenuHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WBMenuHeaderView.m; sourceTree = "<group>"; };
+		52A528491CDF249C00499AE7 /* WBMenuHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WBMenuHeaderView.xib; sourceTree = "<group>"; };
 		5ABD5ADE04E1BB1D4220B79C /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		F0D535423ED6E61946912108 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -265,6 +270,9 @@
 		52A527BC1CDECD2000499AE7 /* views */ = {
 			isa = PBXGroup;
 			children = (
+				52A528461CDF248600499AE7 /* WBMenuHeaderView.h */,
+				52A528471CDF248600499AE7 /* WBMenuHeaderView.m */,
+				52A528491CDF249C00499AE7 /* WBMenuHeaderView.xib */,
 			);
 			path = views;
 			sourceTree = "<group>";
@@ -772,6 +780,7 @@
 				5216DB7E1CDECB5C00B06B3B /* LaunchScreen.storyboard in Resources */,
 				5216DB7B1CDECB5C00B06B3B /* Assets.xcassets in Resources */,
 				52A528451CDEE81E00499AE7 /* tabbar_books@3x.png in Resources */,
+				52A5284A1CDF249C00499AE7 /* WBMenuHeaderView.xib in Resources */,
 				52A528431CDEDDCC00499AE7 /* navbar_back@3x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -853,6 +862,7 @@
 				52A5281C1CDECD2000499AE7 /* WBMessageRequest.m in Sources */,
 				52A5280C1CDECD2000499AE7 /* UINavigationBar+NavBar_WBCustomBackgroudImage.m in Sources */,
 				52A5281A1CDECD2000499AE7 /* WBRequestManager.m in Sources */,
+				52A528481CDF248600499AE7 /* WBMenuHeaderView.m in Sources */,
 				52A528121CDECD2000499AE7 /* WBNavViewController.m in Sources */,
 				52A5282A1CDED65B00499AE7 /* UIViewController+RESideMenu.m in Sources */,
 				52A528411CDEDD8200499AE7 /* WBTools.m in Sources */,

@@ -37,7 +37,7 @@
     
    
     
-    self.view.backgroundColor = [UIColor cyanColor];
+    self.view.backgroundColor = [UIColor whiteColor];
     [self addViewController:[[WBMainViewController alloc] initWithViewControllerNavItemStyle:ViewControllerNavItemStyleMain] withTitle:@"首页" withImageName:@"tabbar_books" withSelectImageName:@"tabbar_books"];
     [self addViewController:[[WBForumViewController alloc] initWithViewControllerNavItemStyle:ViewControllerNavItemStyleForum] withTitle:@"论坛" withImageName:@"tabbar_books" withSelectImageName:@"tabbar_books"];
     [self addViewController:[[WBGuidanceViewController alloc] initWithViewControllerNavItemStyle:ViewControllerNavItemStyleGuidance] withTitle:@"导航" withImageName:@"tabbar_books" withSelectImageName:@"tabbar_books"];
