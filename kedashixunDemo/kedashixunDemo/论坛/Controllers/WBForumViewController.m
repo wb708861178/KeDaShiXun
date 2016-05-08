@@ -7,8 +7,18 @@
 //
 
 #import "WBForumViewController.h"
+#import "WBCustonSegment.h"
+#import "Const.h"
 
-@interface WBForumViewController ()
+@interface WBForumViewController () <UITableViewDataSource,UITableViewDelegate>
+
+@property (nonatomic, strong) WBCustonSegment *topSegment;
+//帖子类型
+@property (nonatomic, strong) NSArray *typeArr;
+
+
+@property (nonatomic, strong) UITableView *topicTV;
+@property (nonatomic, strong) NSMutableArray *topicsArr;
 
 @end
 
@@ -20,12 +30,54 @@
      [self setNavBarTitleWithText:@"科大论坛" withFontSize:20 withTextColor:[UIColor blackColor]];
 
 
+    [self viewLayout];
 
 
+}
 
 
+- (void)viewLayout{
+    
+    _typeArr = @[@"全部帖子",@"精品帖子",@"我参与的"];
+    
+    _topSegment = [[WBCustonSegment alloc] initWithFrame:CGRectMake(0, 64, kWidth, 44) WithItems:_typeArr WithColor:[UIColor blackColor] WithSelectColor:[UIColor redColor]];
+    
+    _topSegment.touchItemBlock = ^(NSInteger selectedIndex){
+        
+        
+        NSLog(@"%zi",selectedIndex);
+    };
+    [self.view addSubview:_topSegment];
+
+    
+    CGFloat maxY = CGRectGetMaxY(_topSegment.frame);
+    _topicTV = [[UITableView alloc] initWithFrame:CGRectMake(0, maxY, kWidth, kHeight-maxY-49) style:UITableViewStylePlain];
+    _topicTV.delegate = self;
+    _topicTV.dataSource = self;
+    [self.view addSubview:_topicTV];
+    
+}
+
+#pragma mark --- UITableViewDataSource && UITableViewDelegate
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+    
+    
+    return self.topicsArr.count;
+}
 
 
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+    
+    return nil;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+    
+    
+    NSLog(@"点击%ld",indexPath.row);
+    
 }
 
 - (void)didReceiveMemoryWarning {

@@ -16,4 +16,10 @@
 #define Sina_AppKey @"3537448415"
 #define Sina_RedirectURI @"https://api.weibo.com/oauth2/default.html"
 
+
+#define kWidth [UIScreen mainScreen].bounds.size.width
+
+#define kHeight [UIScreen mainScreen].bounds.size.height
+
+
 #endif /* Const_h */
