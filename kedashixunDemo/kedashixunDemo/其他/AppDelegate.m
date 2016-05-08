@@ -11,6 +11,7 @@
 #import "WBMainViewController.h"
 #import "WBMenuViewController.h"
 #import "WBTabBarViewController.h"
+#import "WBNavViewController.h"
 
 
 @interface AppDelegate ()
@@ -24,15 +25,16 @@
     
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     
-    
+   
     WBTabBarViewController *tabBarVC = [[WBTabBarViewController alloc] init];
-    WBMenuViewController *menuVC = [[WBMenuViewController alloc] init];
     
+    WBMenuViewController *menuVC = [[WBMenuViewController alloc] initWithNibName:@"WBMenuViewController" bundle:nil];
+    WBNavViewController *nav = [[WBNavViewController alloc] initWithRootViewController:menuVC];
     
-    RESideMenu *sideMenu = [[RESideMenu alloc] initWithContentViewController:tabBarVC leftMenuViewController:menuVC rightMenuViewController:nil];
+    RESideMenu *sideMenu = [[RESideMenu alloc] initWithContentViewController:tabBarVC leftMenuViewController:nav rightMenuViewController:nil];
     sideMenu.panFromEdge = NO;
     //距离屏幕中心的偏移X
-    sideMenu.contentViewInPortraitOffsetCenterX = [UIScreen mainScreen].bounds.size.width*0.3;
+    sideMenu.contentViewInPortraitOffsetCenterX = [UIScreen mainScreen].bounds.size.width*0.2;
     sideMenu.contentViewShadowEnabled = YES;
     sideMenu.contentViewShadowColor = [UIColor redColor];
     //缩放

@@ -52,6 +52,11 @@
 		52A528951CDF3A6700499AE7 /* UIView+WBLocation.m in Sources */ = {isa = PBXBuildFile; fileRef = 52A5287C1CDF3A6700499AE7 /* UIView+WBLocation.m */; };
 		52A528961CDF3A6700499AE7 /* WBForumViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 52A528811CDF3A6700499AE7 /* WBForumViewController.m */; };
 		52A528971CDF3A6700499AE7 /* WBMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 52A528881CDF3A6700499AE7 /* WBMainViewController.m */; };
+		52A5289B1CDF3DB600499AE7 /* WBMenuTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 52A528991CDF3DB600499AE7 /* WBMenuTableViewCell.m */; };
+		52A5289C1CDF3DB600499AE7 /* WBMenuTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 52A5289A1CDF3DB600499AE7 /* WBMenuTableViewCell.xib */; };
+		52A5289E1CDF414900499AE7 /* WBMenuViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 52A5289D1CDF414900499AE7 /* WBMenuViewController.xib */; };
+		52A528A01CDF4AC600499AE7 /* background_blue@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 52A5289F1CDF4AC600499AE7 /* background_blue@3x.png */; };
+		52A528A21CDF4AE500499AE7 /* background_dream@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 52A528A11CDF4AE500499AE7 /* background_dream@3x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -161,6 +166,12 @@
 		52A528811CDF3A6700499AE7 /* WBForumViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WBForumViewController.m; sourceTree = "<group>"; };
 		52A528871CDF3A6700499AE7 /* WBMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WBMainViewController.h; sourceTree = "<group>"; };
 		52A528881CDF3A6700499AE7 /* WBMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WBMainViewController.m; sourceTree = "<group>"; };
+		52A528981CDF3DB600499AE7 /* WBMenuTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WBMenuTableViewCell.h; sourceTree = "<group>"; };
+		52A528991CDF3DB600499AE7 /* WBMenuTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WBMenuTableViewCell.m; sourceTree = "<group>"; };
+		52A5289A1CDF3DB600499AE7 /* WBMenuTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WBMenuTableViewCell.xib; sourceTree = "<group>"; };
+		52A5289D1CDF414900499AE7 /* WBMenuViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WBMenuViewController.xib; sourceTree = "<group>"; };
+		52A5289F1CDF4AC600499AE7 /* background_blue@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "background_blue@3x.png"; sourceTree = "<group>"; };
+		52A528A11CDF4AE500499AE7 /* background_dream@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "background_dream@3x.png"; sourceTree = "<group>"; };
 		5ABD5ADE04E1BB1D4220B79C /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		F0D535423ED6E61946912108 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -216,16 +227,18 @@
 		5216DB6D1CDECB5C00B06B3B /* kedashixunDemo */ = {
 			isa = PBXGroup;
 			children = (
+				52A528A11CDF4AE500499AE7 /* background_dream@3x.png */,
+				52A5289F1CDF4AC600499AE7 /* background_blue@3x.png */,
 				52A528441CDEE81E00499AE7 /* tabbar_books@3x.png */,
 				52A528421CDEDDCC00499AE7 /* navbar_back@3x.png */,
 				52A5281E1CDECD4000499AE7 /* Const.h */,
+				52A5281F1CDED5D700499AE7 /* 其他 */,
+				52A5286A1CDF3A6700499AE7 /* 分类 */,
 				52A528521CDF3A6600499AE7 /* 侧滑页 */,
 				52A5285C1CDF3A6600499AE7 /* 导航 */,
 				52A528631CDF3A6700499AE7 /* 电话簿 */,
-				52A5286A1CDF3A6700499AE7 /* 分类 */,
 				52A5287D1CDF3A6700499AE7 /* 论坛 */,
 				52A528841CDF3A6700499AE7 /* 首页 */,
-				52A5281F1CDED5D700499AE7 /* 其他 */,
 				52A5283E1CDEDD8200499AE7 /* Tools */,
 				52A527DF1CDECD2000499AE7 /* 全局类 */,
 				52A527C71CDECD2000499AE7 /* 分类 */,
@@ -490,6 +503,9 @@
 		52A528531CDF3A6600499AE7 /* cells */ = {
 			isa = PBXGroup;
 			children = (
+				52A528981CDF3DB600499AE7 /* WBMenuTableViewCell.h */,
+				52A528991CDF3DB600499AE7 /* WBMenuTableViewCell.m */,
+				52A5289A1CDF3DB600499AE7 /* WBMenuTableViewCell.xib */,
 			);
 			path = cells;
 			sourceTree = "<group>";
@@ -499,6 +515,7 @@
 			children = (
 				52A528551CDF3A6600499AE7 /* WBMenuViewController.h */,
 				52A528561CDF3A6600499AE7 /* WBMenuViewController.m */,
+				52A5289D1CDF414900499AE7 /* WBMenuViewController.xib */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -883,7 +900,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				52A5289E1CDF414900499AE7 /* WBMenuViewController.xib in Resources */,
 				52A528451CDEE81E00499AE7 /* tabbar_books@3x.png in Resources */,
+				52A5289C1CDF3DB600499AE7 /* WBMenuTableViewCell.xib in Resources */,
+				52A528A01CDF4AC600499AE7 /* background_blue@3x.png in Resources */,
+				52A528A21CDF4AE500499AE7 /* background_dream@3x.png in Resources */,
 				52A5284F1CDF300500499AE7 /* Assets.xcassets in Resources */,
 				52A528511CDF301900499AE7 /* LaunchScreen.storyboard in Resources */,
 				52A5288D1CDF3A6700499AE7 /* WBMenuHeaderView.xib in Resources */,
@@ -976,6 +997,7 @@
 				52A5280C1CDECD2000499AE7 /* UINavigationBar+NavBar_WBCustomBackgroudImage.m in Sources */,
 				52A5281A1CDECD2000499AE7 /* WBRequestManager.m in Sources */,
 				52A528121CDECD2000499AE7 /* WBNavViewController.m in Sources */,
+				52A5289B1CDF3DB600499AE7 /* WBMenuTableViewCell.m in Sources */,
 				52A5288F1CDF3A6700499AE7 /* WBPhoneBookViewController.m in Sources */,
 				52A5282A1CDED65B00499AE7 /* UIViewController+RESideMenu.m in Sources */,
 				52A528411CDEDD8200499AE7 /* WBTools.m in Sources */,
