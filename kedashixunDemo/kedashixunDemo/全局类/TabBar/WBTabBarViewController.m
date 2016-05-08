@@ -6,7 +6,7 @@
 //  Copyright © 2016年 wangbing. All rights reserved.
 //
 
-#import "WBDetailTabBarViewController.h"
+#import "WBTabBarViewController.h"
 
 #import "WBNavViewController.h"
 #import "WBMainViewController.h"
@@ -15,11 +15,11 @@
 #import "WBPhoneBookViewController.h"
 
 
-@interface WBDetailTabBarViewController ()
+@interface WBTabBarViewController ()
 
 @end
 
-@implementation WBDetailTabBarViewController
+@implementation WBTabBarViewController
 
 -(void)viewWillAppear:(BOOL)animated
 {
@@ -38,9 +38,11 @@
    
     
     self.view.backgroundColor = [UIColor cyanColor];
-    [self addViewController:[[WBRankingListViewController alloc] initWithViewControllerNavItemStyle:ViewControllerNavItemStyleDetail] withTitle:@"排行榜" withImageName:@"navbar_chapter" withSelectImageName:@"navbar_chapter"];
-    [self addViewController:[[WBClassifyViewController alloc] initWithViewControllerNavItemStyle:ViewControllerNavItemStyleDetail] withTitle:@"分类" withImageName:@"navbar_chapter" withSelectImageName:@"navbar_chapter"];
-    [self addViewController:[[WBSearchViewController alloc] initWithViewControllerNavItemStyle:ViewControllerNavItemStyleDetail] withTitle:@"搜索" withImageName:@"navbar_chapter" withSelectImageName:@"navbar_chapter"];
+    [self addViewController:[[WBMainViewController alloc] initWithViewControllerNavItemStyle:ViewControllerNavItemStyleMain] withTitle:@"首页" withImageName:@"navbar_back" withSelectImageName:@"navbar_back"];
+    [self addViewController:[[WBForumViewController alloc] initWithViewControllerNavItemStyle:ViewControllerNavItemStyleForum] withTitle:@"论坛" withImageName:@"navbar_back" withSelectImageName:@"navbar_back"];
+    [self addViewController:[[WBGuidanceViewController alloc] initWithViewControllerNavItemStyle:ViewControllerNavItemStyleGuidance] withTitle:@"导航" withImageName:@"navbar_back" withSelectImageName:@"navbar_back"];
+    [self addViewController:[[WBPhoneBookViewController alloc] initWithViewControllerNavItemStyle:ViewControllerNavItemStylePhoneBook] withTitle:@"电话簿" withImageName:@"navbar_back" withSelectImageName:@"navbar_back"];
+    
 }
 
 

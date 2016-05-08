@@ -8,10 +8,7 @@
 
 #import "WBBaseViewController.h"
 #import "UIBarButtonItem+WBCustomButton.h"
-#import "RESideMenu.h"
-#import "WBMenuViewController.h"
-#import "WBDetailTabBarViewController.h"
-#import "CATransition+PageChangeAnimation.h"
+
 
 @interface WBBaseViewController ()
 
@@ -30,17 +27,17 @@
             case ViewControllerNavItemStyleMain:
             {
                
-                self.navigationItem.leftBarButtonItems = [UIBarButtonItem barButtonItemWithImageName:@"navbar_chapter" withHighlightedImageName:nil withTarget:self withAction:@selector(menuBtnAction) WithNegativeSpacerWidth:-10];
+                self.navigationItem.leftBarButtonItems = [UIBarButtonItem barButtonItemWithImageName:@"navbar_back" withHighlightedImageName:nil withTarget:self withAction:@selector(MainMenuBtnAction:) WithNegativeSpacerWidth:-10];
     
                 
-                self.navigationItem.rightBarButtonItems = [UIBarButtonItem barButtonItemWithImageName:@"navbar_chapter" withHighlightedImageName:nil withTarget:self withAction:@selector(searchBtnAction:) WithNegativeSpacerWidth:-10];
+                self.navigationItem.rightBarButtonItems = [UIBarButtonItem barButtonItemWithImageName:@"navbar_back" withHighlightedImageName:nil withTarget:self withAction:@selector(mainSearchBtnAction:) WithNegativeSpacerWidth:-10];
 
             }
                 break;
            
             case ViewControllerNavItemStyleForum:
             {
-                self.navigationItem.rightBarButtonItems = [UIBarButtonItem barButtonItemWithImageName:@"navbar_chapter" withHighlightedImageName:nil withTarget:self withAction:@selector(returnBookcaseBtnAction)  WithNegativeSpacerWidth:-10];
+                self.navigationItem.rightBarButtonItems = [UIBarButtonItem barButtonItemWithImageName:@"navbar_back" withHighlightedImageName:nil withTarget:self withAction:@selector(ForumPublishBtnAction:)  WithNegativeSpacerWidth:-10];
 
             }
                 break;
@@ -50,30 +47,10 @@
             {
 
                 
-                self.navigationItem.leftBarButtonItems = [UIBarButtonItem barButtonItemWithNum:1 WithImageNameArr:@[@"navbar_chapter"] withHighlightedImageNameArr:nil withTarget:self withAction0:@selector(readNavBarReturnbtnAction:) withAction1:nil withAction2:nil WithNegativeSpacerWidthArr:@[@"-10"]];
-                
-                
-                self.navigationItem.rightBarButtonItems = [UIBarButtonItem barButtonItemWithNum:3 WithImageNameArr:@[@"navbar_chapter",@"navbar_chapter",@"navbar_chapter"] withHighlightedImageNameArr:nil withTarget:self withAction0:@selector(readNavBarRightBtn1Action) withAction1:@selector(readNavBarRightBtn2Action) withAction2:@selector(readNavBarRightBtn3Action) WithNegativeSpacerWidthArr:@[@"-10",@"10",@"10"]];
-                
-                
-                
-                
-               
-                
             }
                 break;
             case ViewControllerNavItemStylePhoneBook:
             {
-                
-                
-                self.navigationItem.leftBarButtonItems = [UIBarButtonItem barButtonItemWithNum:1 WithImageNameArr:@[@"navbar_chapter"] withHighlightedImageNameArr:nil withTarget:self withAction0:@selector(readNavBarReturnbtnAction:) withAction1:nil withAction2:nil WithNegativeSpacerWidthArr:@[@"-10"]];
-                
-                
-                self.navigationItem.rightBarButtonItems = [UIBarButtonItem barButtonItemWithNum:3 WithImageNameArr:@[@"navbar_chapter",@"navbar_chapter",@"navbar_chapter"] withHighlightedImageNameArr:nil withTarget:self withAction0:@selector(readNavBarRightBtn1Action) withAction1:@selector(readNavBarRightBtn2Action) withAction2:@selector(readNavBarRightBtn3Action) WithNegativeSpacerWidthArr:@[@"-10",@"10",@"10"]];
-                
-                
-                
-                
                 
                 
             }
@@ -100,17 +77,21 @@
 #pragma mark----navBar按钮单击事件
 
 
-- (void)menuBtnAction
+- (void)MainMenuBtnAction:(UIButton *)sender
 {
-    [self.sideMenuViewController presentLeftMenuViewController];
+    NSLog(@"MainMenuBtnAction");
 }
 
-- (void)searchBtnAction:(UIButton *)sender
+- (void)mainSearchBtnAction:(UIButton *)sender
 {
-   
-  
-   
+   NSLog(@"mainSearchBtnAction");
 }
+
+- (void)ForumPublishBtnAction:(UIButton *)sender
+{
+    NSLog(@"ForumPublishBtnAction");
+}
+
 
 
 - (void)viewDidLoad {

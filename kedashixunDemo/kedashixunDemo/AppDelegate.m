@@ -10,7 +10,7 @@
 #import "RESideMenu.h"
 #import "WBMainViewController.h"
 #import "WBMenuViewController.h"
-#import "WBDetailTabBarViewController.h"
+#import "WBTabBarViewController.h"
 
 
 @interface AppDelegate ()
@@ -25,7 +25,7 @@
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     
     
-    WBDetailTabBarViewController *tabBarVC = [[WBDetailTabBarViewController alloc] init];
+    WBTabBarViewController *tabBarVC = [[WBTabBarViewController alloc] init];
     WBMenuViewController *menuVC = [[WBMenuViewController alloc] init];
     
     

@@ -22,7 +22,7 @@
 		52A528101CDECD2000499AE7 /* UIView+WBLocation.m in Sources */ = {isa = PBXBuildFile; fileRef = 52A527D91CDECD2000499AE7 /* UIView+WBLocation.m */; };
 		52A528111CDECD2000499AE7 /* WBBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 52A527E21CDECD2000499AE7 /* WBBaseViewController.m */; };
 		52A528121CDECD2000499AE7 /* WBNavViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 52A527E51CDECD2000499AE7 /* WBNavViewController.m */; };
-		52A528161CDECD2000499AE7 /* WBDetailTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 52A527EF1CDECD2000499AE7 /* WBDetailTabBarViewController.m */; };
+		52A528161CDECD2000499AE7 /* WBTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 52A527EF1CDECD2000499AE7 /* WBTabBarViewController.m */; };
 		52A528181CDECD2000499AE7 /* WBDBHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 52A527FA1CDECD2000499AE7 /* WBDBHelper.m */; };
 		52A528191CDECD2000499AE7 /* WBDBModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 52A527FC1CDECD2000499AE7 /* WBDBModel.m */; };
 		52A5281A1CDECD2000499AE7 /* WBRequestManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 52A528011CDECD2000499AE7 /* WBRequestManager.m */; };
@@ -38,6 +38,7 @@
 		52A5283A1CDEDB8B00499AE7 /* WBPhoneBookViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 52A528391CDEDB8B00499AE7 /* WBPhoneBookViewController.m */; };
 		52A5283D1CDEDBBB00499AE7 /* WBForumViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 52A5283C1CDEDBBB00499AE7 /* WBForumViewController.m */; };
 		52A528411CDEDD8200499AE7 /* WBTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 52A528401CDEDD8200499AE7 /* WBTools.m */; };
+		52A528431CDEDDCC00499AE7 /* navbar_back@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 52A528421CDEDDCC00499AE7 /* navbar_back@3x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -88,8 +89,8 @@
 		52A527E21CDECD2000499AE7 /* WBBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WBBaseViewController.m; sourceTree = "<group>"; };
 		52A527E41CDECD2000499AE7 /* WBNavViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WBNavViewController.h; sourceTree = "<group>"; };
 		52A527E51CDECD2000499AE7 /* WBNavViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WBNavViewController.m; sourceTree = "<group>"; };
-		52A527EE1CDECD2000499AE7 /* WBDetailTabBarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WBDetailTabBarViewController.h; sourceTree = "<group>"; };
-		52A527EF1CDECD2000499AE7 /* WBDetailTabBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WBDetailTabBarViewController.m; sourceTree = "<group>"; };
+		52A527EE1CDECD2000499AE7 /* WBTabBarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WBTabBarViewController.h; sourceTree = "<group>"; };
+		52A527EF1CDECD2000499AE7 /* WBTabBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WBTabBarViewController.m; sourceTree = "<group>"; };
 		52A527F91CDECD2000499AE7 /* WBDBHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WBDBHelper.h; sourceTree = "<group>"; };
 		52A527FA1CDECD2000499AE7 /* WBDBHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WBDBHelper.m; sourceTree = "<group>"; };
 		52A527FB1CDECD2000499AE7 /* WBDBModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WBDBModel.h; sourceTree = "<group>"; };
@@ -122,6 +123,7 @@
 		52A5283C1CDEDBBB00499AE7 /* WBForumViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WBForumViewController.m; sourceTree = "<group>"; };
 		52A5283F1CDEDD8200499AE7 /* WBTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WBTools.h; sourceTree = "<group>"; };
 		52A528401CDEDD8200499AE7 /* WBTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WBTools.m; sourceTree = "<group>"; };
+		52A528421CDEDDCC00499AE7 /* navbar_back@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "navbar_back@3x.png"; sourceTree = "<group>"; };
 		5ABD5ADE04E1BB1D4220B79C /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		F0D535423ED6E61946912108 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -177,12 +179,13 @@
 		5216DB6D1CDECB5C00B06B3B /* kedashixunDemo */ = {
 			isa = PBXGroup;
 			children = (
+				52A528421CDEDDCC00499AE7 /* navbar_back@3x.png */,
 				52A5281E1CDECD4000499AE7 /* Const.h */,
+				52A5281F1CDED5D700499AE7 /* 其他 */,
 				52A5283E1CDEDD8200499AE7 /* Tools */,
 				52A527DF1CDECD2000499AE7 /* 全局类 */,
 				52A527C71CDECD2000499AE7 /* 分类 */,
 				52A528201CDED63400499AE7 /* 三方 */,
-				52A5281F1CDED5D700499AE7 /* 其他 */,
 				52A527B81CDECD2000499AE7 /* 侧滑页 */,
 				52A527BD1CDECD2000499AE7 /* 导航 */,
 				52A527C21CDECD2000499AE7 /* 电话簿 */,
@@ -484,8 +487,8 @@
 		52A527ED1CDECD2000499AE7 /* TabBar */ = {
 			isa = PBXGroup;
 			children = (
-				52A527EE1CDECD2000499AE7 /* WBDetailTabBarViewController.h */,
-				52A527EF1CDECD2000499AE7 /* WBDetailTabBarViewController.m */,
+				52A527EE1CDECD2000499AE7 /* WBTabBarViewController.h */,
+				52A527EF1CDECD2000499AE7 /* WBTabBarViewController.m */,
 			);
 			path = TabBar;
 			sourceTree = "<group>";
@@ -765,6 +768,7 @@
 			files = (
 				5216DB7E1CDECB5C00B06B3B /* LaunchScreen.storyboard in Resources */,
 				5216DB7B1CDECB5C00B06B3B /* Assets.xcassets in Resources */,
+				52A528431CDEDDCC00499AE7 /* navbar_back@3x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -857,7 +861,7 @@
 				52A528281CDED65B00499AE7 /* RECommonFunctions.m in Sources */,
 				52A528291CDED65B00499AE7 /* RESideMenu.m in Sources */,
 				52A5280D1CDECD2000499AE7 /* UIBarButtonItem+WBCustomButton.m in Sources */,
-				52A528161CDECD2000499AE7 /* WBDetailTabBarViewController.m in Sources */,
+				52A528161CDECD2000499AE7 /* WBTabBarViewController.m in Sources */,
 				5216DB731CDECB5C00B06B3B /* AppDelegate.m in Sources */,
 				52A5280B1CDECD2000499AE7 /* CATransition+PageChangeAnimation.m in Sources */,
 				5216DB701CDECB5C00B06B3B /* main.m in Sources */,

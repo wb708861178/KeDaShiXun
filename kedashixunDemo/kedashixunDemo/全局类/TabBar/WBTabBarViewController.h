@@ -10,6 +10,6 @@
 
 
 
-@interface WBDetailTabBarViewController : UITabBarController
+@interface WBTabBarViewController : UITabBarController
 
 @end
