@@ -9,9 +9,6 @@
 /* Begin PBXBuildFile section */
 		25B72F0CD143B850B112A130 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F0D535423ED6E61946912108 /* libPods.a */; };
 		5216DB701CDECB5C00B06B3B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5216DB6F1CDECB5C00B06B3B /* main.m */; };
-		5216DB731CDECB5C00B06B3B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5216DB721CDECB5C00B06B3B /* AppDelegate.m */; };
-		5216DB7B1CDECB5C00B06B3B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5216DB7A1CDECB5C00B06B3B /* Assets.xcassets */; };
-		5216DB7E1CDECB5C00B06B3B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5216DB7C1CDECB5C00B06B3B /* LaunchScreen.storyboard */; };
 		5216DB891CDECB5C00B06B3B /* kedashixunDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5216DB881CDECB5C00B06B3B /* kedashixunDemoTests.m */; };
 		5216DB941CDECB5C00B06B3B /* kedashixunDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5216DB931CDECB5C00B06B3B /* kedashixunDemoUITests.m */; };
 		52A5280B1CDECD2000499AE7 /* CATransition+PageChangeAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 52A527CA1CDECD2000499AE7 /* CATransition+PageChangeAnimation.m */; };
@@ -42,6 +39,9 @@
 		52A528451CDEE81E00499AE7 /* tabbar_books@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 52A528441CDEE81E00499AE7 /* tabbar_books@3x.png */; };
 		52A528481CDF248600499AE7 /* WBMenuHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 52A528471CDF248600499AE7 /* WBMenuHeaderView.m */; };
 		52A5284A1CDF249C00499AE7 /* WBMenuHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 52A528491CDF249C00499AE7 /* WBMenuHeaderView.xib */; };
+		52A5284E1CDF300500499AE7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 52A5284C1CDF300500499AE7 /* AppDelegate.m */; };
+		52A5284F1CDF300500499AE7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 52A5284D1CDF300500499AE7 /* Assets.xcassets */; };
+		52A528511CDF301900499AE7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52A528501CDF301900499AE7 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,10 +65,6 @@
 		0F1BB20647A92F384047403D /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		5216DB6B1CDECB5C00B06B3B /* kedashixunDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = kedashixunDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5216DB6F1CDECB5C00B06B3B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		5216DB711CDECB5C00B06B3B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = ../AppDelegate.h; sourceTree = "<group>"; };
-		5216DB721CDECB5C00B06B3B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = ../AppDelegate.m; sourceTree = "<group>"; };
-		5216DB7A1CDECB5C00B06B3B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = ../Assets.xcassets; sourceTree = "<group>"; };
-		5216DB7D1CDECB5C00B06B3B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5216DB7F1CDECB5C00B06B3B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5216DB841CDECB5C00B06B3B /* kedashixunDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = kedashixunDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5216DB881CDECB5C00B06B3B /* kedashixunDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = kedashixunDemoTests.m; sourceTree = "<group>"; };
@@ -131,6 +127,10 @@
 		52A528461CDF248600499AE7 /* WBMenuHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WBMenuHeaderView.h; sourceTree = "<group>"; };
 		52A528471CDF248600499AE7 /* WBMenuHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WBMenuHeaderView.m; sourceTree = "<group>"; };
 		52A528491CDF249C00499AE7 /* WBMenuHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WBMenuHeaderView.xib; sourceTree = "<group>"; };
+		52A5284B1CDF300500499AE7 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		52A5284C1CDF300500499AE7 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		52A5284D1CDF300500499AE7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		52A528501CDF301900499AE7 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5ABD5ADE04E1BB1D4220B79C /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		F0D535423ED6E61946912108 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -615,10 +615,10 @@
 		52A5281F1CDED5D700499AE7 /* 其他 */ = {
 			isa = PBXGroup;
 			children = (
-				5216DB7A1CDECB5C00B06B3B /* Assets.xcassets */,
-				5216DB7C1CDECB5C00B06B3B /* LaunchScreen.storyboard */,
-				5216DB711CDECB5C00B06B3B /* AppDelegate.h */,
-				5216DB721CDECB5C00B06B3B /* AppDelegate.m */,
+				52A5284B1CDF300500499AE7 /* AppDelegate.h */,
+				52A5284C1CDF300500499AE7 /* AppDelegate.m */,
+				52A528501CDF301900499AE7 /* LaunchScreen.storyboard */,
+				52A5284D1CDF300500499AE7 /* Assets.xcassets */,
 			);
 			path = "其他";
 			sourceTree = "<group>";
@@ -777,10 +777,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5216DB7E1CDECB5C00B06B3B /* LaunchScreen.storyboard in Resources */,
-				5216DB7B1CDECB5C00B06B3B /* Assets.xcassets in Resources */,
 				52A528451CDEE81E00499AE7 /* tabbar_books@3x.png in Resources */,
 				52A5284A1CDF249C00499AE7 /* WBMenuHeaderView.xib in Resources */,
+				52A5284F1CDF300500499AE7 /* Assets.xcassets in Resources */,
+				52A528511CDF301900499AE7 /* LaunchScreen.storyboard in Resources */,
 				52A528431CDEDDCC00499AE7 /* navbar_back@3x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -856,6 +856,7 @@
 			files = (
 				52A528191CDECD2000499AE7 /* WBDBModel.m in Sources */,
 				52A528371CDEDB6500499AE7 /* WBGuidanceViewController.m in Sources */,
+				52A5284E1CDF300500499AE7 /* AppDelegate.m in Sources */,
 				52A5280E1CDECD2000499AE7 /* UIColor+HexColor.m in Sources */,
 				52A528181CDECD2000499AE7 /* WBDBHelper.m in Sources */,
 				52A5283D1CDEDBBB00499AE7 /* WBForumViewController.m in Sources */,
@@ -876,7 +877,6 @@
 				52A528291CDED65B00499AE7 /* RESideMenu.m in Sources */,
 				52A5280D1CDECD2000499AE7 /* UIBarButtonItem+WBCustomButton.m in Sources */,
 				52A528161CDECD2000499AE7 /* WBTabBarViewController.m in Sources */,
-				5216DB731CDECB5C00B06B3B /* AppDelegate.m in Sources */,
 				52A5280B1CDECD2000499AE7 /* CATransition+PageChangeAnimation.m in Sources */,
 				5216DB701CDECB5C00B06B3B /* main.m in Sources */,
 				52A5282D1CDED74700499AE7 /* WBMainViewController.m in Sources */,
@@ -914,18 +914,6 @@
 			targetProxy = 5216DB901CDECB5C00B06B3B /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		5216DB7C1CDECB5C00B06B3B /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				5216DB7D1CDECB5C00B06B3B /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			path = ..;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		5216DB961CDECB5C00B06B3B /* Debug */ = {
