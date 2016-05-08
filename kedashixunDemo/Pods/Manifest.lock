@@ -17,13 +17,16 @@ PODS:
   - FMDB (2.6):
     - FMDB/standard (= 2.6)
   - FMDB/standard (2.6)
+  - MJExtension (3.0.10)
 
 DEPENDENCIES:
   - AFNetworking (~> 3.0)
   - FMDB
+  - MJExtension
 
 SPEC CHECKSUMS:
   AFNetworking: a0075feb321559dc78d9d85b55d11caa19eabb93
   FMDB: c1968bab3ab0aed38f66cb778ae1e7fa9a652b6e
+  MJExtension: d86aacb740c87519d20e3cca55b6fa4be6cc7548
 
 COCOAPODS: 0.39.0
