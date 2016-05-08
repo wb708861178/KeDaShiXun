@@ -9,15 +9,34 @@
 #import "WBMenuViewController.h"
 
 @interface WBMenuViewController ()
+@property (nonatomic, strong) UITableView *mainTableView;
+
 
 @end
 
 @implementation WBMenuViewController
 
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    self.navigationController.navigationBarHidden = YES;
+}
+
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor whiteColor];
-    // Do any additional setup after loading the view.
+    
+    [self viewLayout];
+    
+    
+    
+    
+}
+#pragma mark----view布局
+- (void)viewLayout
+{
+   
 }
 
 - (void)didReceiveMemoryWarning {

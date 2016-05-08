@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="WBMenuViewController">
+            <connections>
+                <outlet property="view" destination="iN0-l3-epB" id="U59-JO-izq"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="329" height="517"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background_dream.png" translatesAutoresizingMaskIntoConstraints="NO" id="SjE-65-wSy">
+                    <rect key="frame" x="0.0" y="0.0" width="329" height="517"/>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tabbar_books.png" translatesAutoresizingMaskIntoConstraints="NO" id="LcW-aG-Ihc">
+                    <rect key="frame" x="30" y="60" width="50" height="50"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="1Ug-id-ROg"/>
+                        <constraint firstAttribute="width" constant="50" id="3e1-TG-fzi"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="王兵" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7dQ-41-t9b">
+                    <rect key="frame" x="95" y="60" width="100" height="30"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="100" id="3rq-rD-vqn"/>
+                        <constraint firstAttribute="height" constant="30" id="jHh-uU-F4s"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="我的未来不是梦" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CK1-Cs-i4L">
+                    <rect key="frame" x="95" y="90" width="150" height="20"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="20" id="QCR-Ki-yPs"/>
+                        <constraint firstAttribute="width" constant="150" id="sxb-aX-UEs"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                    <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NBf-bD-Ktf">
+                    <rect key="frame" x="0.0" y="125" width="329" height="2"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="2" id="FZP-BB-DhM"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="SjE-65-wSy" secondAttribute="bottom" id="48J-Hr-de2"/>
+                <constraint firstAttribute="trailing" secondItem="NBf-bD-Ktf" secondAttribute="trailing" id="ECg-JD-jbh"/>
+                <constraint firstItem="CK1-Cs-i4L" firstAttribute="bottom" secondItem="LcW-aG-Ihc" secondAttribute="bottom" id="FGI-Jt-EcC"/>
+                <constraint firstItem="7dQ-41-t9b" firstAttribute="top" secondItem="LcW-aG-Ihc" secondAttribute="top" id="H1i-HL-kFp"/>
+                <constraint firstAttribute="trailing" secondItem="SjE-65-wSy" secondAttribute="trailing" id="Lbn-6B-way"/>
+                <constraint firstItem="7dQ-41-t9b" firstAttribute="leading" secondItem="LcW-aG-Ihc" secondAttribute="trailing" constant="15" id="S7R-1O-J1a"/>
+                <constraint firstItem="LcW-aG-Ihc" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="60" id="WkF-lj-eyw"/>
+                <constraint firstItem="CK1-Cs-i4L" firstAttribute="leading" secondItem="7dQ-41-t9b" secondAttribute="leading" id="cio-2h-ykY"/>
+                <constraint firstItem="SjE-65-wSy" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="p14-Io-egb"/>
+                <constraint firstItem="SjE-65-wSy" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="sej-Ll-l36"/>
+                <constraint firstItem="LcW-aG-Ihc" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="30" id="t0F-8b-xcw"/>
+                <constraint firstItem="NBf-bD-Ktf" firstAttribute="top" secondItem="CK1-Cs-i4L" secondAttribute="bottom" constant="15" id="vJi-Ni-DdN"/>
+                <constraint firstItem="NBf-bD-Ktf" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="zaU-Hi-Mef"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="296.5" y="204.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="background_dream.png" width="320" height="568"/>
+        <image name="tabbar_books.png" width="37" height="37"/>
+    </resources>
+</document>
