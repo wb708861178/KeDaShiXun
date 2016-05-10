@@ -23,14 +23,13 @@
 
 
 @property (nonatomic, readonly) CGRect contentFrame;
-@property (nonatomic, readonly) CGRect image1Frame;
-@property (nonatomic, readonly) CGRect image2Frame;
-@property (nonatomic, readonly) CGRect image3Frame;
+@property (nonatomic, strong) NSMutableArray *imagesFrameArr;
 @property (nonatomic, readonly) CGRect viewCountFrame;
 @property (nonatomic, readonly) CGRect collectFrame;
 @property (nonatomic, readonly) CGRect praiseFrame;
 @property (nonatomic, readonly) CGRect commentFrame;
+@property (nonatomic, readonly) CGFloat cellHeight;
 
 
-
+- (instancetype)initWithDict:(NSDictionary *)dict;
 @end

@@ -8,6 +8,15 @@
 
 #import <UIKit/UIKit.h>
 
+#import "KTopicFrameModel.h"
+
 @interface KTopicCell : UITableViewCell
+
+
+@property (nonatomic, strong) KTopicFrameModel *topicFrameModel;
+
+
+
+
 
 @end

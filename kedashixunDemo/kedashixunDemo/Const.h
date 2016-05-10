@@ -8,6 +8,9 @@
 
 #ifndef Const_h
 #define Const_h
+
+#import "UIColor+HexColor.h"
+
 #define SMS_AppKey @"102d714f16a4e"
 #define SMS_AppSecret @"dc0034e8ab6db42c12bba0c962c839bf"
 
@@ -20,6 +23,13 @@
 #define kWidth [UIScreen mainScreen].bounds.size.width
 
 #define kHeight [UIScreen mainScreen].bounds.size.height
+
+
+
+#define kMainColor [UIColor colorWithHexString:@"#76c6a8"]
+#define kBtnDefaultColor [UIColor colorWithHexString:@"#ffb898"]
+#define kBtnSelectedColor [UIColor colorWithHexString:@"#ed8a57"]
+#define kBGDefaultColor [UIColor colorWithHexString:@"#f5f5f5"]
 
 
 #endif /* Const_h */
