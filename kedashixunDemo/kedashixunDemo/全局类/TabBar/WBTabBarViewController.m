@@ -7,13 +7,12 @@
 //
 
 #import "WBTabBarViewController.h"
-
 #import "WBNavViewController.h"
 #import "WBMainViewController.h"
 #import "WBForumViewController.h"
 #import "WBGuidanceViewController.h"
 #import "WBPhoneBookViewController.h"
-
+#import "Const.h"
 
 @interface WBTabBarViewController ()
 
@@ -38,6 +37,8 @@
    
     
     self.view.backgroundColor = [UIColor whiteColor];
+    self.tabBar.barTintColor = kMainColor;
+    
     [self addViewController:[[WBMainViewController alloc] initWithViewControllerNavItemStyle:ViewControllerNavItemStyleMain] withTitle:@"首页" withImageName:@"tabbar_books" withSelectImageName:@"tabbar_books"];
     [self addViewController:[[WBForumViewController alloc] initWithViewControllerNavItemStyle:ViewControllerNavItemStyleForum] withTitle:@"论坛" withImageName:@"tabbar_books" withSelectImageName:@"tabbar_books"];
     [self addViewController:[[WBGuidanceViewController alloc] initWithViewControllerNavItemStyle:ViewControllerNavItemStyleGuidance] withTitle:@"导航" withImageName:@"tabbar_books" withSelectImageName:@"tabbar_books"];
@@ -64,8 +65,8 @@
     vc.tabBarItem.image = [UIImage imageNamed:imageName];
     vc.tabBarItem.selectedImage = [UIImage imageNamed:selectImageName];
     //设置tabBarItem的属性
-    NSDictionary *normalAttributes = @{NSFontAttributeName : [UIFont systemFontOfSize:12],NSForegroundColorAttributeName: [UIColor lightGrayColor]};
-    NSDictionary *selectAttributes = @{NSForegroundColorAttributeName: [UIColor blackColor]};
+    NSDictionary *normalAttributes = @{NSFontAttributeName : [UIFont systemFontOfSize:12],NSForegroundColorAttributeName: [UIColor colorWithHexString:@"#dddddd"]};
+    NSDictionary *selectAttributes = @{NSForegroundColorAttributeName: [UIColor whiteColor]};
     
     [vc.tabBarItem setTitleTextAttributes:normalAttributes forState:UIControlStateNormal];
     [vc.tabBarItem setTitleTextAttributes:selectAttributes forState:UIControlStateSelected];

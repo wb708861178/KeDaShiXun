@@ -11,7 +11,6 @@
 #import "UIViewController+RESideMenu.h"
 #import "RESideMenu.h"
 
-
 @interface WBBaseViewController ()
 
 @end
@@ -25,6 +24,7 @@
       
         
         self.automaticallyAdjustsScrollViewInsets = NO;
+        
         switch (viewControllerNavItemStyle) {
             case ViewControllerNavItemStyleMain:
             {
@@ -95,6 +95,11 @@
 }
 
 
+- (void)pop{
+    
+    [self.navigationController popViewControllerAnimated:YES];
+    
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];

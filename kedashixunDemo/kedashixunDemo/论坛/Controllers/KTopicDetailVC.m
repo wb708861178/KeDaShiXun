@@ -1,26 +1,28 @@
 //
-//  WBNavViewController.m
-//  FreeShuQiNovel
+//  KTopicDetailVC.m
+//  kedashixunDemo
 //
-//  Created by wangbing on 16/4/19.
+//  Created by KZL on 16/5/10.
 //  Copyright © 2016年 wangbing. All rights reserved.
 //
 
-#import "WBNavViewController.h"
-#import "Const.h"
+#import "KTopicDetailVC.h"
+#import "UIBarButtonItem+WBCustomButton.h"
 
 
-@interface WBNavViewController ()
+@interface KTopicDetailVC ()
 
 @end
 
-@implementation WBNavViewController
+@implementation KTopicDetailVC
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+
+    [self setNavBarTitleWithText:@"话题详情" withFontSize:20 withTextColor:[UIColor whiteColor]];
     
-    self.navigationBar.barTintColor = kMainColor;
-    // Do any additional setup after loading the view.
+    self.navigationItem.leftBarButtonItems = [UIBarButtonItem barButtonItemWithImageName:@"navbar_back"  withHighlightedImageName:@"navbar_back"  withTarget:self withAction:@selector(pop) WithNegativeSpacerWidth:0];
+        
 }
 
 - (void)didReceiveMemoryWarning {

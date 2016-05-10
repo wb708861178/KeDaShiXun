@@ -13,7 +13,7 @@
 #import "KTopicFrameModel.h"
 #import "KTopicCell.h"
 #import <MJExtension.h>
-
+#import "KTopicDetailVC.h"
 
 @interface WBForumViewController () <UITableViewDataSource,UITableViewDelegate>
 
@@ -32,7 +32,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-     [self setNavBarTitleWithText:@"科大论坛" withFontSize:20 withTextColor:[UIColor blackColor]];
+     [self setNavBarTitleWithText:@"科大论坛" withFontSize:20 withTextColor:[UIColor whiteColor]];
 
     [self viewLayout];
 
@@ -107,7 +107,11 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     
+    KTopicDetailVC *topicDetailVC = [[KTopicDetailVC alloc] init];
     
+    topicDetailVC.hidesBottomBarWhenPushed = YES;
+    
+    [self.navigationController pushViewController:topicDetailVC animated:YES];
     
     NSLog(@"点击%ld",indexPath.row);
     

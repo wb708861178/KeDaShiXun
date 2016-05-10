@@ -41,12 +41,6 @@
     CGSize timeSize = [topicModel.time boundingRectWithSize:MaxSize options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName:[UIFont systemFontOfSize:14]} context:nil].size;
     _timeFrame = CGRectMake(CGRectGetMaxX(_iconFrame)+margin, CGRectGetMaxY(_nameFrame), timeSize.width, timeSize.height);
     
-    CGSize locationSize = [topicModel.location boundingRectWithSize:MaxSize options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName:[UIFont systemFontOfSize:14]} context:nil].size;
-    _locationFrame = CGRectMake(CGRectGetMaxX(_timeFrame)+margin, CGRectGetMinY(_timeFrame), locationSize.width, locationSize.height);
-    
-    CGFloat topicTypeW = 60;
-    CGFloat topicTypeH = 30;
-    _topicTypeFrame = CGRectMake(kWidth-space-topicTypeW, space, topicTypeW, topicTypeH);
     
     
     CGSize contentSize = [topicModel.content boundingRectWithSize:MaxSize options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName:[UIFont systemFontOfSize:17]} context:nil].size;
@@ -67,14 +61,24 @@
 
     }
     
+    CGFloat locationW = 20;
+    CGFloat locationH = 20;
+    _locationImgViewFrame = CGRectMake(space,
+                                       topicModel.imagesUrlArr.count?(CGRectGetMaxY(CGRectFromString(self.imagesFrameArr.lastObject))+space):(CGRectGetMaxY(_contentFrame)+space),
+                                       locationW,
+                                       locationH);
+    
+    CGSize locationSize = [topicModel.location boundingRectWithSize:MaxSize options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName:[UIFont systemFontOfSize:14]} context:nil].size;
+    
+    _locationlblFrame = CGRectMake(CGRectGetMaxX(_locationImgViewFrame), CGRectGetMaxY(_locationImgViewFrame)-locationSize.height, locationSize.width, locationSize.height);
+
+    
+    
     NSString *str = [NSString stringWithFormat:@"%@人浏览",topicModel.viewCount];
     
     CGSize viewCountSize = [str boundingRectWithSize:MaxSize options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName:[UIFont systemFontOfSize:14]} context:nil].size;
     
-    _viewCountFrame = CGRectMake(space,
-                                 topicModel.imagesUrlArr.count?(CGRectGetMaxY(CGRectFromString(self.imagesFrameArr.lastObject))+space):(CGRectGetMaxY(_contentFrame)+space) ,
-                                 viewCountSize.width,
-                                 viewCountSize.height);
+    _viewCountFrame = CGRectMake(space,CGRectGetMaxY(_locationImgViewFrame)+margin ,viewCountSize.width,viewCountSize.height);
     
     
     CGFloat btnH = 30;

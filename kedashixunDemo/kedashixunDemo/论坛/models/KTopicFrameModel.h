@@ -18,12 +18,15 @@
 @property (nonatomic, readonly) CGRect iconFrame;
 @property (nonatomic, readonly) CGRect nameFrame;
 @property (nonatomic, readonly) CGRect timeFrame;
-@property (nonatomic, readonly) CGRect locationFrame;
-@property (nonatomic, readonly) CGRect topicTypeFrame;
-
 
 @property (nonatomic, readonly) CGRect contentFrame;
 @property (nonatomic, strong) NSMutableArray *imagesFrameArr;
+
+@property (nonatomic, readonly) CGRect locationImgViewFrame;
+@property (nonatomic, readonly) CGRect locationlblFrame;
+
+
+
 @property (nonatomic, readonly) CGRect viewCountFrame;
 @property (nonatomic, readonly) CGRect collectFrame;
 @property (nonatomic, readonly) CGRect praiseFrame;

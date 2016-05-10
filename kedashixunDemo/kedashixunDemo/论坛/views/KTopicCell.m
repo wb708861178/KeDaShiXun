@@ -14,7 +14,6 @@
 @property (nonatomic, strong) UIImageView *iconImgView;
 @property (nonatomic, strong) UILabel *namelbl;
 @property (nonatomic, strong) UILabel *timelbl;
-@property (nonatomic, strong) UILabel *locationlbl;
 @property (nonatomic, strong) UILabel *contentlbl;
 
 @property (nonatomic, strong) UIImageView *topicTypeImgView;
@@ -22,6 +21,10 @@
 @property (nonatomic, strong) UIImageView *imgView1;
 @property (nonatomic, strong) UIImageView *imgView2;
 @property (nonatomic, strong) UIImageView *imgView3;
+
+@property (nonatomic, strong) UIImageView *locationImgView;
+@property (nonatomic, strong) UILabel *locationlbl;
+
 
 @property (nonatomic, strong) UILabel *viewCountlbl;
 
@@ -49,17 +52,9 @@
         _timelbl.font = [UIFont systemFontOfSize:14];
         [self addSubview:_timelbl];
 
-        
-        _locationlbl = [[UILabel alloc] init];
-        _locationlbl.font = [UIFont systemFontOfSize:14];
-        [self addSubview:_locationlbl];
-
         _contentlbl = [[UILabel alloc] init];
         _contentlbl.font = [UIFont systemFontOfSize:17];
         [self addSubview:_contentlbl];
-
-        _topicTypeImgView = [[UIImageView alloc] init];
-        [self addSubview:_topicTypeImgView];
         
         _imgView1 = [[UIImageView alloc] init];
         [self addSubview:_imgView1];
@@ -69,6 +64,14 @@
 
         _imgView3 = [[UIImageView alloc] init];
         [self addSubview:_imgView3];
+
+        _locationImgView = [[UIImageView alloc] init];
+        _locationImgView.image = nil;
+        [self addSubview:_locationImgView];
+        
+        _locationlbl = [[UILabel alloc] init];
+        _locationlbl.font = [UIFont systemFontOfSize:14];
+        [self addSubview:_locationlbl];
 
         _viewCountlbl = [[UILabel alloc] init];
         _viewCountlbl.font = [UIFont systemFontOfSize:14];
@@ -102,8 +105,6 @@
     _namelbl.text = topicModel.name;
     _timelbl.frame = topicFrameModel.timeFrame;
     _timelbl.text = topicModel.time;
-    _locationlbl.frame = topicFrameModel.locationFrame;
-    _locationlbl.text = topicModel.location;
     _contentlbl.frame = topicFrameModel.contentFrame;
     _contentlbl.text = topicModel.content;
     _contentlbl.numberOfLines = 0;
@@ -142,7 +143,11 @@
         }
     }
     
+    _locationImgView.frame = topicFrameModel.locationImgViewFrame;
     
+    _locationlbl.frame = topicFrameModel.locationlblFrame;
+    _locationlbl.text = topicModel.location;
+
     _viewCountlbl.frame = topicFrameModel.viewCountFrame;
     _viewCountlbl.text = [NSString stringWithFormat:@"%@人浏览",topicModel.viewCount];
     _collectBtn.frame = topicFrameModel.collectFrame;

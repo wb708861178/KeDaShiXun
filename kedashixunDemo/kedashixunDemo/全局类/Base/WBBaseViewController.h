@@ -33,4 +33,7 @@ typedef NS_ENUM(NSInteger, ViewControllerNavItemStyle) {
     设置navBar上面title的文字及属性
  */
 - (void)setNavBarTitleWithText:(NSString *)title withFontSize:(CGFloat)fontSize withTextColor:(UIColor *)color;
+
+//左边返回按钮
+- (void)pop;
 @end
