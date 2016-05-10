@@ -45,7 +45,7 @@
 
 - (void)viewLayout
 {
-    _mainTableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 64,kScreenWidth , kScreenHeight - 64) style:UITableViewStylePlain];
+    _mainTableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 64,kWidth , kHeight - 64) style:UITableViewStylePlain];
     _mainTableView.delegate = self;
     _mainTableView.dataSource = self;
     [self.view addSubview:_mainTableView];

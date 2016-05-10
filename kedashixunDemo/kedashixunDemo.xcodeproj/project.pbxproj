@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		057BDD3A1CDF430300F03911 /* WBCustonSegment.m in Sources */ = {isa = PBXBuildFile; fileRef = 057BDD391CDF430300F03911 /* WBCustonSegment.m */; };
+		057BDD3D1CDF479500F03911 /* KTopicCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 057BDD3C1CDF479500F03911 /* KTopicCell.m */; };
+		057BDD401CDF47B400F03911 /* KTopicModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 057BDD3F1CDF47B400F03911 /* KTopicModel.m */; };
+		057BDD431CDF47C200F03911 /* KTopicFrameModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 057BDD421CDF47C200F03911 /* KTopicFrameModel.m */; };
 		25B72F0CD143B850B112A130 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F0D535423ED6E61946912108 /* libPods.a */; };
 		5216DB701CDECB5C00B06B3B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5216DB6F1CDECB5C00B06B3B /* main.m */; };
 		5216DB891CDECB5C00B06B3B /* kedashixunDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5216DB881CDECB5C00B06B3B /* kedashixunDemoTests.m */; };
@@ -74,6 +78,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		057BDD381CDF430300F03911 /* WBCustonSegment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WBCustonSegment.h; sourceTree = "<group>"; };
+		057BDD391CDF430300F03911 /* WBCustonSegment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WBCustonSegment.m; sourceTree = "<group>"; };
+		057BDD3B1CDF479500F03911 /* KTopicCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KTopicCell.h; sourceTree = "<group>"; };
+		057BDD3C1CDF479500F03911 /* KTopicCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KTopicCell.m; sourceTree = "<group>"; };
+		057BDD3E1CDF47B400F03911 /* KTopicModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KTopicModel.h; sourceTree = "<group>"; };
+		057BDD3F1CDF47B400F03911 /* KTopicModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KTopicModel.m; sourceTree = "<group>"; };
+		057BDD411CDF47C200F03911 /* KTopicFrameModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KTopicFrameModel.h; sourceTree = "<group>"; };
+		057BDD421CDF47C200F03911 /* KTopicFrameModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KTopicFrameModel.m; sourceTree = "<group>"; };
 		0F1BB20647A92F384047403D /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		5216DB6B1CDECB5C00B06B3B /* kedashixunDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = kedashixunDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5216DB6F1CDECB5C00B06B3B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -749,6 +761,10 @@
 		52A528821CDF3A6700499AE7 /* models */ = {
 			isa = PBXGroup;
 			children = (
+				057BDD411CDF47C200F03911 /* KTopicFrameModel.h */,
+				057BDD421CDF47C200F03911 /* KTopicFrameModel.m */,
+				057BDD3E1CDF47B400F03911 /* KTopicModel.h */,
+				057BDD3F1CDF47B400F03911 /* KTopicModel.m */,
 			);
 			path = models;
 			sourceTree = "<group>";
@@ -756,6 +772,10 @@
 		52A528831CDF3A6700499AE7 /* views */ = {
 			isa = PBXGroup;
 			children = (
+				057BDD381CDF430300F03911 /* WBCustonSegment.h */,
+				057BDD391CDF430300F03911 /* WBCustonSegment.m */,
+				057BDD3B1CDF479500F03911 /* KTopicCell.h */,
+				057BDD3C1CDF479500F03911 /* KTopicCell.m */,
 			);
 			path = views;
 			sourceTree = "<group>";
@@ -883,7 +903,7 @@
 		5216DB631CDECB5C00B06B3B /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				CLASSPREFIX = WB;
+				CLASSPREFIX = K;
 				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = wangbing;
 				TargetAttributes = {
@@ -1008,10 +1028,13 @@
 			files = (
 				52A528191CDECD2000499AE7 /* WBDBModel.m in Sources */,
 				52A528941CDF3A6700499AE7 /* UIImage+WBGetWithColor.m in Sources */,
+				057BDD431CDF47C200F03911 /* KTopicFrameModel.m in Sources */,
 				52A528931CDF3A6700499AE7 /* UIColor+HexColor.m in Sources */,
 				52A5284E1CDF300500499AE7 /* AppDelegate.m in Sources */,
+				057BDD3A1CDF430300F03911 /* WBCustonSegment.m in Sources */,
 				52A528951CDF3A6700499AE7 /* UIView+WBLocation.m in Sources */,
 				52A5280E1CDECD2000499AE7 /* UIColor+HexColor.m in Sources */,
+				057BDD401CDF47B400F03911 /* KTopicModel.m in Sources */,
 				52A528181CDECD2000499AE7 /* WBDBHelper.m in Sources */,
 				52A528921CDF3A6700499AE7 /* UIBarButtonItem+WBCustomButton.m in Sources */,
 				52A5281C1CDECD2000499AE7 /* WBMessageRequest.m in Sources */,
@@ -1024,6 +1047,7 @@
 				52A5282A1CDED65B00499AE7 /* UIViewController+RESideMenu.m in Sources */,
 				52A528411CDEDD8200499AE7 /* WBTools.m in Sources */,
 				52A5281D1CDECD2000499AE7 /* WBUserRequest.m in Sources */,
+				057BDD3D1CDF479500F03911 /* KTopicCell.m in Sources */,
 				52A528911CDF3A6700499AE7 /* UINavigationBar+NavBar_WBCustomBackgroudImage.m in Sources */,
 				52A5280F1CDECD2000499AE7 /* UIImage+WBGetWithColor.m in Sources */,
 				52A528961CDF3A6700499AE7 /* WBForumViewController.m in Sources */,
