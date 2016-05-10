@@ -11,6 +11,7 @@
 		5216DB701CDECB5C00B06B3B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5216DB6F1CDECB5C00B06B3B /* main.m */; };
 		5216DB891CDECB5C00B06B3B /* kedashixunDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5216DB881CDECB5C00B06B3B /* kedashixunDemoTests.m */; };
 		5216DB941CDECB5C00B06B3B /* kedashixunDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5216DB931CDECB5C00B06B3B /* kedashixunDemoUITests.m */; };
+		52379EED1CE1DD4900E93767 /* WBPersonalCenterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 52379EEC1CE1DD4900E93767 /* WBPersonalCenterViewController.m */; };
 		52A5280B1CDECD2000499AE7 /* CATransition+PageChangeAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 52A527CA1CDECD2000499AE7 /* CATransition+PageChangeAnimation.m */; };
 		52A5280C1CDECD2000499AE7 /* UINavigationBar+NavBar_WBCustomBackgroudImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 52A527CD1CDECD2000499AE7 /* UINavigationBar+NavBar_WBCustomBackgroudImage.m */; };
 		52A5280D1CDECD2000499AE7 /* UIBarButtonItem+WBCustomButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 52A527D01CDECD2000499AE7 /* UIBarButtonItem+WBCustomButton.m */; };
@@ -83,6 +84,8 @@
 		5216DB8F1CDECB5C00B06B3B /* kedashixunDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = kedashixunDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5216DB931CDECB5C00B06B3B /* kedashixunDemoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = kedashixunDemoUITests.m; sourceTree = "<group>"; };
 		5216DB951CDECB5C00B06B3B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		52379EEB1CE1DD4900E93767 /* WBPersonalCenterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WBPersonalCenterViewController.h; sourceTree = "<group>"; };
+		52379EEC1CE1DD4900E93767 /* WBPersonalCenterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WBPersonalCenterViewController.m; sourceTree = "<group>"; };
 		52A527C91CDECD2000499AE7 /* CATransition+PageChangeAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CATransition+PageChangeAnimation.h"; sourceTree = "<group>"; };
 		52A527CA1CDECD2000499AE7 /* CATransition+PageChangeAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CATransition+PageChangeAnimation.m"; sourceTree = "<group>"; };
 		52A527CC1CDECD2000499AE7 /* UINavigationBar+NavBar_WBCustomBackgroudImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationBar+NavBar_WBCustomBackgroudImage.h"; sourceTree = "<group>"; };
@@ -222,6 +225,7 @@
 				52A5281E1CDECD4000499AE7 /* Const.h */,
 				52A5281F1CDED5D700499AE7 /* 其他 */,
 				52A5286A1CDF3A6700499AE7 /* 分类 */,
+				52379EE61CE1DC8C00E93767 /* 个人中心 */,
 				52A528521CDF3A6600499AE7 /* 侧滑页 */,
 				52A5285C1CDF3A6600499AE7 /* 导航 */,
 				52A528631CDF3A6700499AE7 /* 电话簿 */,
@@ -263,6 +267,47 @@
 				5216DB951CDECB5C00B06B3B /* Info.plist */,
 			);
 			path = kedashixunDemoUITests;
+			sourceTree = "<group>";
+		};
+		52379EE61CE1DC8C00E93767 /* 个人中心 */ = {
+			isa = PBXGroup;
+			children = (
+				52379EEA1CE1DCF000E93767 /* cells */,
+				52379EE91CE1DCE200E93767 /* views */,
+				52379EE81CE1DCD000E93767 /* models */,
+				52379EE71CE1DCB600E93767 /* Controllers */,
+			);
+			path = "个人中心";
+			sourceTree = "<group>";
+		};
+		52379EE71CE1DCB600E93767 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				52379EEB1CE1DD4900E93767 /* WBPersonalCenterViewController.h */,
+				52379EEC1CE1DD4900E93767 /* WBPersonalCenterViewController.m */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		52379EE81CE1DCD000E93767 /* models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = models;
+			sourceTree = "<group>";
+		};
+		52379EE91CE1DCE200E93767 /* views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = views;
+			sourceTree = "<group>";
+		};
+		52379EEA1CE1DCF000E93767 /* cells */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = cells;
 			sourceTree = "<group>";
 		};
 		52A527C71CDECD2000499AE7 /* 分类 */ = {
@@ -989,6 +1034,7 @@
 				52A528101CDECD2000499AE7 /* UIView+WBLocation.m in Sources */,
 				52A528281CDED65B00499AE7 /* RECommonFunctions.m in Sources */,
 				52A528291CDED65B00499AE7 /* RESideMenu.m in Sources */,
+				52379EED1CE1DD4900E93767 /* WBPersonalCenterViewController.m in Sources */,
 				52A5288C1CDF3A6700499AE7 /* WBMenuHeaderView.m in Sources */,
 				52A5280D1CDECD2000499AE7 /* UIBarButtonItem+WBCustomButton.m in Sources */,
 				52A528161CDECD2000499AE7 /* WBTabBarViewController.m in Sources */,
