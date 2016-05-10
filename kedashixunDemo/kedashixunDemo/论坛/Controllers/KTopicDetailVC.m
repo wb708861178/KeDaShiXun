@@ -21,7 +21,7 @@
 
     [self setNavBarTitleWithText:@"话题详情" withFontSize:20 withTextColor:[UIColor whiteColor]];
     
-    self.navigationItem.leftBarButtonItems = [UIBarButtonItem barButtonItemWithImageName:@"navbar_back"  withHighlightedImageName:@"navbar_back"  withTarget:self withAction:@selector(pop) WithNegativeSpacerWidth:0];
+    self.navigationItem.leftBarButtonItems = [UIBarButtonItem barButtonItemWithImageName:@"arrow_left"  withHighlightedImageName:nil  withTarget:self withAction:@selector(pop) WithNegativeSpacerWidth:-10];
         
 }
 
