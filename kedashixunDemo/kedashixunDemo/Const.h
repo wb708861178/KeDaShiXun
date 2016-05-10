@@ -18,8 +18,6 @@
 
 #define Sina_AppKey @"3537448415"
 #define Sina_RedirectURI @"https://api.weibo.com/oauth2/default.html"
-
-
 #define kWidth [UIScreen mainScreen].bounds.size.width
 
 #define kHeight [UIScreen mainScreen].bounds.size.height
@@ -30,6 +28,7 @@
 #define kBtnDefaultColor [UIColor colorWithHexString:@"#ffb898"]
 #define kBtnSelectedColor [UIColor colorWithHexString:@"#ed8a57"]
 #define kBGDefaultColor [UIColor colorWithHexString:@"#f5f5f5"]
+
 
 
 #endif /* Const_h */

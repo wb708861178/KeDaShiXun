@@ -29,9 +29,9 @@
     WBTabBarViewController *tabBarVC = [[WBTabBarViewController alloc] init];
     
     WBMenuViewController *menuVC = [[WBMenuViewController alloc] initWithNibName:@"WBMenuViewController" bundle:nil];
-    WBNavViewController *nav = [[WBNavViewController alloc] initWithRootViewController:menuVC];
+   
     
-    RESideMenu *sideMenu = [[RESideMenu alloc] initWithContentViewController:tabBarVC leftMenuViewController:nav rightMenuViewController:nil];
+    RESideMenu *sideMenu = [[RESideMenu alloc] initWithContentViewController:tabBarVC leftMenuViewController:menuVC rightMenuViewController:nil];
     sideMenu.panFromEdge = NO;
     //距离屏幕中心的偏移X
     sideMenu.contentViewInPortraitOffsetCenterX = [UIScreen mainScreen].bounds.size.width*0.2;
@@ -43,7 +43,10 @@
     //alpha变化
     sideMenu.fadeMenuView = NO;
 
-    self.window.rootViewController = sideMenu;
+    
+    
+     WBNavViewController *sideMenuNav = [[WBNavViewController alloc] initWithRootViewController:sideMenu];
+    self.window.rootViewController = sideMenuNav;
     
     [self.window makeKeyAndVisible];
     
