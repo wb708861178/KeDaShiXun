@@ -38,8 +38,8 @@
     [super viewDidLoad];
     self.automaticallyAdjustsScrollViewInsets = NO;
     
-    self.navigationItem.leftBarButtonItems = [UIBarButtonItem barButtonItemWithImageName:@"tabbar_books@3x" withHighlightedImageName:@"tabbar_books@3x" withTarget:self withAction:@selector(returnSideMenuBtnAction:) WithNegativeSpacerWidth:0];
-    [self setNavBarTitleWithText:@"个人中心" withFontSize:20 withTextColor:[UIColor redColor]];
+    self.navigationItem.leftBarButtonItems = [UIBarButtonItem barButtonItemWithImageName:@"arrow_left" withHighlightedImageName:nil withTarget:self withAction:@selector(returnSideMenuBtnAction:) WithNegativeSpacerWidth:- 10];
+    [self setNavBarTitleWithText:@"个人中心" withFontSize:20 withTextColor:[UIColor whiteColor]];
     [self viewLayout];
 }
 

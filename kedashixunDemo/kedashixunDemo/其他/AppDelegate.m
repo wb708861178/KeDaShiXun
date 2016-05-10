@@ -32,7 +32,7 @@
    
     
     RESideMenu *sideMenu = [[RESideMenu alloc] initWithContentViewController:tabBarVC leftMenuViewController:menuVC rightMenuViewController:nil];
-    sideMenu.panFromEdge = NO;
+    sideMenu.panFromEdge = YES;
     //距离屏幕中心的偏移X
     sideMenu.contentViewInPortraitOffsetCenterX = [UIScreen mainScreen].bounds.size.width*0.2;
     sideMenu.contentViewShadowEnabled = YES;

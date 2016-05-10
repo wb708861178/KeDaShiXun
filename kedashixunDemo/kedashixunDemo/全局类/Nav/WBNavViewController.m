@@ -8,6 +8,7 @@
 
 #import "WBNavViewController.h"
 #import "Const.h"
+#import "UIBarButtonItem+WBCustomButton.h"
 
 
 @interface WBNavViewController ()
@@ -18,9 +19,13 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    self.navigationBar.barTintColor = kMainColor;
+        self.navigationBar.barTintColor = kMainColor;
     // Do any additional setup after loading the view.
+}
+
+- (void)returnBtnAction:(UIButton *)sender
+{
+    [self popViewControllerAnimated:YES];
 }
 
 - (void)didReceiveMemoryWarning {
