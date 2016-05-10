@@ -34,6 +34,7 @@ typedef NS_ENUM(NSInteger, ViewControllerNavItemStyle) {
  */
 - (void)setNavBarTitleWithText:(NSString *)title withFontSize:(CGFloat)fontSize withTextColor:(UIColor *)color;
 
+
 //左边返回按钮
 - (void)pop;
 @end
