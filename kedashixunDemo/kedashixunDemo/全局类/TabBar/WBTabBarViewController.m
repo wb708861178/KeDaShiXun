@@ -35,14 +35,14 @@
     
     
    
-    
+    self.tabBar.tintColor = [UIColor whiteColor];
     self.view.backgroundColor = [UIColor whiteColor];
     self.tabBar.barTintColor = kMainColor;
     
-    [self addViewController:[[WBMainViewController alloc] initWithViewControllerNavItemStyle:ViewControllerNavItemStyleMain] withTitle:@"首页" withImageName:@"tabbar_books" withSelectImageName:@"tabbar_books"];
-    [self addViewController:[[WBForumViewController alloc] initWithViewControllerNavItemStyle:ViewControllerNavItemStyleForum] withTitle:@"论坛" withImageName:@"tabbar_books" withSelectImageName:@"tabbar_books"];
-    [self addViewController:[[WBGuidanceViewController alloc] initWithViewControllerNavItemStyle:ViewControllerNavItemStyleGuidance] withTitle:@"导航" withImageName:@"tabbar_books" withSelectImageName:@"tabbar_books"];
-    [self addViewController:[[WBPhoneBookViewController alloc] initWithViewControllerNavItemStyle:ViewControllerNavItemStylePhoneBook] withTitle:@"电话簿" withImageName:@"tabbar_books" withSelectImageName:@"tabbar_books"];
+    [self addViewController:[[WBMainViewController alloc] initWithViewControllerNavItemStyle:ViewControllerNavItemStyleMain] withTitle:@"首页" withImageName:@"tabber_normal_1" withSelectImageName:@"tabbar_selected_1"];
+    [self addViewController:[[WBForumViewController alloc] initWithViewControllerNavItemStyle:ViewControllerNavItemStyleForum] withTitle:@"论坛" withImageName:@"tabber_normal_2" withSelectImageName:@"tabbar_selected_2"];
+    [self addViewController:[[WBGuidanceViewController alloc] initWithViewControllerNavItemStyle:ViewControllerNavItemStyleGuidance] withTitle:@"导航" withImageName:@"tabber_normal_3" withSelectImageName:@"tabbar_selected_3"];
+    [self addViewController:[[WBPhoneBookViewController alloc] initWithViewControllerNavItemStyle:ViewControllerNavItemStylePhoneBook] withTitle:@"电话簿" withImageName:@"tabber_normal_4" withSelectImageName:@"tabbar_selected_4"];
     
 }
 
@@ -63,6 +63,7 @@
     vc.tabBarItem = [[UITabBarItem alloc] init];
     vc.tabBarItem.title = title;
     vc.tabBarItem.image = [UIImage imageNamed:imageName];
+    
     vc.tabBarItem.selectedImage = [UIImage imageNamed:selectImageName];
     //设置tabBarItem的属性
     NSDictionary *normalAttributes = @{NSFontAttributeName : [UIFont systemFontOfSize:12],NSForegroundColorAttributeName: [UIColor colorWithHexString:@"#dddddd"]};

@@ -79,10 +79,8 @@
         iconImageView.frame = CGRectMake(iconImageViewX, iconImageViewY , 40, 40);
         cell.contentView.backgroundColor = [UIColor cyanColor];
         [cell.contentView addSubview:iconImageView];
-        NSLog(@"--------%@",cell.contentView);
         
-        
-    }else{
+         }else{
         UILabel *contentLbl = [[UILabel alloc] initWithFrame:CGRectMake( cell.contentView.frame.size.width + 45 - 100, 0, 100, 44)];
         contentLbl.text = self.titleArr[indexPath.row];
         contentLbl.font = [UIFont systemFontOfSize:12];

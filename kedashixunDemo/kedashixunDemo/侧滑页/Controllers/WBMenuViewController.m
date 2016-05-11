@@ -9,6 +9,9 @@
 #import "WBMenuViewController.h"
 #import "Const.h"
 #import "WBPersonalCenterViewController.h"
+#import "RESideMenu.h"
+#import "WBTabBarViewController.h"
+
 
 
 
@@ -113,8 +116,11 @@
 
 - (IBAction)jumpToPersonalCenterBtnAction:(id)sender {
     WBPersonalCenterViewController *personalCenterVC = [[WBPersonalCenterViewController alloc] init];
-    
-    [self.parentViewController.navigationController pushViewController:personalCenterVC animated:YES];
+    [self.sideMenuViewController hideMenuViewController];
+    WBTabBarViewController *tabBarVC = (WBTabBarViewController *)self.sideMenuViewController.contentViewController;
+    [tabBarVC.selectedViewController pushViewController:personalCenterVC animated:YES];
+//    
+//    [self.parentViewController.navigationController pushViewController:personalCenterVC animated:NO];
     
 }
 
