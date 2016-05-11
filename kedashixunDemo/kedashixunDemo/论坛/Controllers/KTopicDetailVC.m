@@ -8,9 +8,14 @@
 
 #import "KTopicDetailVC.h"
 #import "UIBarButtonItem+WBCustomButton.h"
+#import "Const.h"
+#import "KTopicDetailHeader.h"
 
+#define space 10
 
-@interface KTopicDetailVC ()
+@interface KTopicDetailVC () <UITableViewDataSource ,UITableViewDelegate>
+
+@property (nonatomic, strong) UITableView *topicDetailTV;
 
 @end
 
@@ -21,8 +26,50 @@
 
     [self setNavBarTitleWithText:@"话题详情" withFontSize:20 withTextColor:[UIColor whiteColor]];
     
-    self.navigationItem.leftBarButtonItems = [UIBarButtonItem barButtonItemWithImageName:@"arrow_left"  withHighlightedImageName:nil  withTarget:self withAction:@selector(pop) WithNegativeSpacerWidth:-10];
+    self.navigationItem.leftBarButtonItems = [UIBarButtonItem barButtonItemWithImageName:@"arrow_left"  withHighlightedImageName:nil  withTarget:self withAction:@selector(pop) WithNegativeSpacerWidth:-16];
+    
+    
+    [self viewLayout];
         
+}
+
+- (void)viewLayout{
+    
+    _topicDetailTV = [[UITableView alloc] initWithFrame:CGRectMake(space, space, kWidth-2*space, kHeight-64-space) style:UITableViewStylePlain];
+    _topicDetailTV.delegate = self;
+    _topicDetailTV.dataSource = self;
+    [self.view addSubview:_topicDetailTV];
+    
+}
+
+#pragma mark --- UITableViewDataSource & UITableViewDelegate
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+    
+    return 20;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+    
+    return nil;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+    
+    return 80;
+}
+
+- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section{
+    
+    
+    return nil;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
+    
+    return 40;
 }
 
 - (void)didReceiveMemoryWarning {

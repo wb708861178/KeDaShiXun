@@ -45,15 +45,15 @@
         [self addSubview:_iconImgView];
         
         _namelbl = [[UILabel alloc] init];
-        _namelbl.font = [UIFont systemFontOfSize:17];
+        _namelbl.font = [UIFont systemFontOfSize:15];
         [self addSubview:_namelbl];
         
         _timelbl = [[UILabel alloc] init];
-        _timelbl.font = [UIFont systemFontOfSize:14];
+        _timelbl.font = [UIFont systemFontOfSize:12];
         [self addSubview:_timelbl];
 
         _contentlbl = [[UILabel alloc] init];
-        _contentlbl.font = [UIFont systemFontOfSize:17];
+        _contentlbl.font = [UIFont systemFontOfSize:14];
         [self addSubview:_contentlbl];
         
         _imgView1 = [[UIImageView alloc] init];
@@ -66,25 +66,28 @@
         [self addSubview:_imgView3];
 
         _locationImgView = [[UIImageView alloc] init];
-        _locationImgView.image = nil;
+        _locationImgView.image = [UIImage imageNamed:@"weizhi"];
         [self addSubview:_locationImgView];
         
         _locationlbl = [[UILabel alloc] init];
-        _locationlbl.font = [UIFont systemFontOfSize:14];
+        _locationlbl.font = [UIFont systemFontOfSize:12];
         [self addSubview:_locationlbl];
 
         _viewCountlbl = [[UILabel alloc] init];
-        _viewCountlbl.font = [UIFont systemFontOfSize:14];
+        _viewCountlbl.font = [UIFont systemFontOfSize:12];
         [self addSubview:_viewCountlbl];
 
         _collectBtn = [[UIButton alloc] init];
+        [_collectBtn setImage:[UIImage imageNamed:@"shoucang"] forState:UIControlStateNormal];
         [self addSubview:_collectBtn];
 
         _praiseBtn = [[UIButton alloc] init];
-        [self addSubview:_collectBtn];
+        [_praiseBtn setImage:[UIImage imageNamed:@"dianzan"] forState:UIControlStateNormal];
+        [self addSubview:_praiseBtn];
 
         _commentBtn = [[UIButton alloc] init];
-        [self addSubview:_collectBtn];
+        [_commentBtn setImage:[UIImage imageNamed:@"pinglun"] forState:UIControlStateNormal];
+        [self addSubview:_commentBtn];
 
         
     }
@@ -101,6 +104,12 @@
     
     _iconImgView.frame = topicFrameModel.iconFrame;
     [_iconImgView sd_setImageWithURL:[NSURL URLWithString:topicModel.iconName]];
+//    ------------------Test
+    
+    _iconImgView.image = [UIImage imageNamed:@"luntan_icon2"];
+//    ------------------Test
+    
+
     _namelbl.frame = topicFrameModel.nameFrame;
     _namelbl.text = topicModel.name;
     _timelbl.frame = topicFrameModel.timeFrame;

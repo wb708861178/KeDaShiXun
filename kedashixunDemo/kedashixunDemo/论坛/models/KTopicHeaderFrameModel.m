@@ -1,42 +1,28 @@
 //
-//  KTopicFrameModel.m
+//  KTopicHeaderFrameModel.m
 //  kedashixunDemo
 //
-//  Created by KZL on 16/5/8.
+//  Created by KZL on 16/5/11.
 //  Copyright © 2016年 wangbing. All rights reserved.
 //
 
-#import "KTopicFrameModel.h"
+#import "KTopicHeaderFrameModel.h"
 #import "Const.h"
-#import <MJExtension.h>
 
 #define space 10
 #define margin 5
-#define MaxSize CGSizeMake(kWidth-2*space,kHeight)
+#define MaxSize CGSizeMake(kWidth-2*space-2*margin,kHeight)
 
-@implementation KTopicFrameModel
+@implementation KTopicHeaderFrameModel
 
-- (instancetype)initWithDict:(NSDictionary *)dict{
-    
-    if (self = [super init]) {
-        
-        self.topicModel = [KTopicModel mj_objectWithKeyValues:dict];
-        
-    }
-    return self;
-}
+
+
+
 
 - (void)setTopicModel:(KTopicModel *)topicModel{
     
     _topicModel = topicModel;
     
-//--------------------Test
-    
-    NSString *str1 = @"QQ邮箱QQ邮箱QQ邮箱QQ邮箱QQ邮箱QQ邮箱QQ邮箱QQ邮箱QQ邮箱QQ邮箱QQ邮箱";
-    CGSize size = [str1 boundingRectWithSize:MaxSize options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName:[UIFont systemFontOfSize:17]} context:nil].size;
-    NSLog(@"--%@",NSStringFromCGSize(size));
-    
-//--------------------
     //计算坐标
     CGFloat iconW = 36,iconH = iconW;
     
@@ -54,19 +40,20 @@
     _contentFrame = CGRectMake(space, CGRectGetMaxY(_iconFrame)+space, contentSize.width, contentSize.height);
     
     //如果有图 则计算图片Frame
-    if (topicModel.imagesUrlArr.count) {
+    NSInteger images = topicModel.imagesUrlArr.count;
+    
+    CGFloat imageW = (kWidth-2*space-4*margin)/3;
+    CGFloat imageH = imageW;
+    for (NSInteger i = 0; i < images; i++) {
         
-        CGFloat imageStartY = CGRectGetMaxY(_contentFrame)+space;
-        CGFloat imageW = (kWidth - 2*space -2*margin)/3,imageH = imageW;
-        for (int i = 0; i < 3; i++) {
-            
-            CGFloat imageX = space+(imageW+margin)*i;
-            
-            CGRect imageFrame = CGRectMake(imageX, imageStartY, imageW, imageH);
-            [self.imagesFrameArr addObject:NSStringFromCGRect(imageFrame)];
-        }
-
+        CGFloat imageX = i%3*(space+imageW)+space+margin;
+        CGFloat imageY = i/3*(space+imageH)+space+CGRectGetMaxY(_contentFrame);
+        
+        CGRect imageFrame = CGRectMake(imageX, imageY, imageH, imageW);
+        
+        [self.imagesFrameArr addObject:NSStringFromCGRect(imageFrame)];
     }
+    
     
     CGFloat locationW = 10;
     CGFloat locationH = 13;
@@ -78,7 +65,7 @@
     CGSize locationSize = [topicModel.location boundingRectWithSize:MaxSize options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName:[UIFont systemFontOfSize:12]} context:nil].size;
     
     _locationlblFrame = CGRectMake(CGRectGetMaxX(_locationImgViewFrame)+2, CGRectGetMaxY(_locationImgViewFrame)-locationSize.height, locationSize.width, locationSize.height);
-
+    
     
     
     NSString *str = [NSString stringWithFormat:@"%@人浏览",topicModel.viewCount];
@@ -93,25 +80,10 @@
     CGFloat btnY = CGRectGetMidY(_viewCountFrame)-btnH/2;
     _commentFrame = CGRectMake(kWidth-space-btnW, btnY, btnW, btnH);
     _praiseFrame = CGRectMake(kWidth-space-btnW*2, btnY, btnW, btnH);
-    _collectFrame = CGRectMake(kWidth-space-btnW*3, btnY, btnW, btnH);
+
     
-    _cellHeight = CGRectGetMaxY(_commentFrame)+space;
+    
 }
-
-
-
-
-- (NSMutableArray *)imagesFrameArr{
-    
-    if (!_imagesFrameArr) {
-        
-        _imagesFrameArr = [NSMutableArray array];
-    }
-    
-    return _imagesFrameArr;
-}
-
-
 
 
 @end

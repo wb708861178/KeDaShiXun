@@ -12,6 +12,8 @@
 		057BDD3D1CDF479500F03911 /* KTopicCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 057BDD3C1CDF479500F03911 /* KTopicCell.m */; };
 		057BDD401CDF47B400F03911 /* KTopicModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 057BDD3F1CDF47B400F03911 /* KTopicModel.m */; };
 		057BDD431CDF47C200F03911 /* KTopicFrameModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 057BDD421CDF47C200F03911 /* KTopicFrameModel.m */; };
+		05C87CC11CE3679800BFBA0F /* KTopicHeaderFrameModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 05C87CC01CE3679800BFBA0F /* KTopicHeaderFrameModel.m */; };
+		05C87CC71CE3681E00BFBA0F /* KTopicDetailHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 05C87CC61CE3681E00BFBA0F /* KTopicDetailHeader.m */; };
 		25B72F0CD143B850B112A130 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F0D535423ED6E61946912108 /* libPods.a */; };
 		5216DB701CDECB5C00B06B3B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5216DB6F1CDECB5C00B06B3B /* main.m */; };
 		5216DB891CDECB5C00B06B3B /* kedashixunDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5216DB881CDECB5C00B06B3B /* kedashixunDemoTests.m */; };
@@ -89,6 +91,10 @@
 		057BDD3F1CDF47B400F03911 /* KTopicModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KTopicModel.m; sourceTree = "<group>"; };
 		057BDD411CDF47C200F03911 /* KTopicFrameModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KTopicFrameModel.h; sourceTree = "<group>"; };
 		057BDD421CDF47C200F03911 /* KTopicFrameModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KTopicFrameModel.m; sourceTree = "<group>"; };
+		05C87CBF1CE3679800BFBA0F /* KTopicHeaderFrameModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KTopicHeaderFrameModel.h; sourceTree = "<group>"; };
+		05C87CC01CE3679800BFBA0F /* KTopicHeaderFrameModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KTopicHeaderFrameModel.m; sourceTree = "<group>"; };
+		05C87CC51CE3681E00BFBA0F /* KTopicDetailHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KTopicDetailHeader.h; sourceTree = "<group>"; };
+		05C87CC61CE3681E00BFBA0F /* KTopicDetailHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KTopicDetailHeader.m; sourceTree = "<group>"; };
 		0F1BB20647A92F384047403D /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		5216DB6B1CDECB5C00B06B3B /* kedashixunDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = kedashixunDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5216DB6F1CDECB5C00B06B3B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -770,6 +776,8 @@
 				057BDD421CDF47C200F03911 /* KTopicFrameModel.m */,
 				057BDD3E1CDF47B400F03911 /* KTopicModel.h */,
 				057BDD3F1CDF47B400F03911 /* KTopicModel.m */,
+				05C87CBF1CE3679800BFBA0F /* KTopicHeaderFrameModel.h */,
+				05C87CC01CE3679800BFBA0F /* KTopicHeaderFrameModel.m */,
 			);
 			path = models;
 			sourceTree = "<group>";
@@ -781,6 +789,8 @@
 				057BDD391CDF430300F03911 /* WBCustonSegment.m */,
 				057BDD3B1CDF479500F03911 /* KTopicCell.h */,
 				057BDD3C1CDF479500F03911 /* KTopicCell.m */,
+				05C87CC51CE3681E00BFBA0F /* KTopicDetailHeader.h */,
+				05C87CC61CE3681E00BFBA0F /* KTopicDetailHeader.m */,
 			);
 			path = views;
 			sourceTree = "<group>";
@@ -1061,7 +1071,9 @@
 				52A5288B1CDF3A6700499AE7 /* WBMenuViewController.m in Sources */,
 				52A528111CDECD2000499AE7 /* WBBaseViewController.m in Sources */,
 				52A528971CDF3A6700499AE7 /* WBMainViewController.m in Sources */,
+				05C87CC11CE3679800BFBA0F /* KTopicHeaderFrameModel.m in Sources */,
 				52A528901CDF3A6700499AE7 /* CATransition+PageChangeAnimation.m in Sources */,
+				05C87CC71CE3681E00BFBA0F /* KTopicDetailHeader.m in Sources */,
 				52A528101CDECD2000499AE7 /* UIView+WBLocation.m in Sources */,
 				52A528281CDED65B00499AE7 /* RECommonFunctions.m in Sources */,
 				52A528291CDED65B00499AE7 /* RESideMenu.m in Sources */,

@@ -20,7 +20,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self setNavBarTitleWithText:@"科大时讯" withFontSize:20 withTextColor:[UIColor whiteColor]];
+    [self setNavBarTitleWithText:@"科大时讯" withFontSize:18 withTextColor:[UIColor whiteColor]];
     // Do any additional setup after loading the view.
 }
 

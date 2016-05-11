@@ -32,11 +32,14 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-     [self setNavBarTitleWithText:@"科大论坛" withFontSize:20 withTextColor:[UIColor whiteColor]];
-
+    [self setNavBarTitleWithText:@"科大论坛" withFontSize:18 withTextColor:[UIColor whiteColor]];
+    
+    self.view.backgroundColor = kBGDefaultColor;
+    
     [self viewLayout];
+    
 
-
+    
 //-------------------------Test
     NSArray *dataArr = @[@{@"iconName":@"",@"name":@"寇忠龙",@"time":@"2016-05-10",@"location":@"河南科技大学开元校区",@"content":@"P2P模式文件的群殴就到期我觉得去我家都快来群文件打开链接请我看了大家去看了文件的情况了解的考虑去叫我来的",@"viewCount":@"100"}];
     
@@ -113,8 +116,8 @@
     
     [self.navigationController pushViewController:topicDetailVC animated:YES];
     
-    NSLog(@"点击%ld",indexPath.row);
-    
+
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
@@ -124,6 +127,8 @@
     return topicFrameModel.cellHeight;
 
 }
+
+
 
 - (NSMutableArray *)topicsArr{
     
