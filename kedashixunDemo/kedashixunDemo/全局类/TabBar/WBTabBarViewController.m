@@ -20,6 +20,11 @@
 
 @implementation WBTabBarViewController
 
+- (UIStatusBarStyle)preferredStatusBarStyle
+{
+    return UIStatusBarStyleLightContent;
+}
+
 -(void)viewWillAppear:(BOOL)animated
 {
    
@@ -35,7 +40,7 @@
     
     
    
-    self.tabBar.tintColor = [UIColor whiteColor];
+//    self.tabBar.tintColor = [UIColor whiteColor];
     self.view.backgroundColor = [UIColor whiteColor];
     self.tabBar.barTintColor = kMainColor;
     
@@ -62,9 +67,15 @@
     
     vc.tabBarItem = [[UITabBarItem alloc] init];
     vc.tabBarItem.title = title;
-    vc.tabBarItem.image = [UIImage imageNamed:imageName];
+    vc.tabBarItem.imageInsets = UIEdgeInsetsMake(0, 0, 0, 0);
     
-    vc.tabBarItem.selectedImage = [UIImage imageNamed:selectImageName];
+    UIImage *normalImage = [UIImage imageNamed:imageName];
+    UIImage *selectImage = [UIImage imageNamed:selectImageName];
+    
+    
+    vc.tabBarItem.image = [normalImage imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    
+    vc.tabBarItem.selectedImage =  [selectImage imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
     //设置tabBarItem的属性
     NSDictionary *normalAttributes = @{NSFontAttributeName : [UIFont systemFontOfSize:11],NSForegroundColorAttributeName: [UIColor colorWithHexString:@"#dddddd"]};
     NSDictionary *selectAttributes = @{NSForegroundColorAttributeName: [UIColor whiteColor]};
