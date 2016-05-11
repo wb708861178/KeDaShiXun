@@ -66,7 +66,7 @@
     
     vc.tabBarItem.selectedImage = [UIImage imageNamed:selectImageName];
     //设置tabBarItem的属性
-    NSDictionary *normalAttributes = @{NSFontAttributeName : [UIFont systemFontOfSize:12],NSForegroundColorAttributeName: [UIColor colorWithHexString:@"#dddddd"]};
+    NSDictionary *normalAttributes = @{NSFontAttributeName : [UIFont systemFontOfSize:11],NSForegroundColorAttributeName: [UIColor colorWithHexString:@"#dddddd"]};
     NSDictionary *selectAttributes = @{NSForegroundColorAttributeName: [UIColor whiteColor]};
     
     [vc.tabBarItem setTitleTextAttributes:normalAttributes forState:UIControlStateNormal];

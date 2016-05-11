@@ -19,8 +19,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-        self.navigationBar.barTintColor = kMainColor;
-    // Do any additional setup after loading the view.
+    self.navigationBar.barTintColor = kMainColor;
+
 }
 
 - (void)returnBtnAction:(UIButton *)sender
