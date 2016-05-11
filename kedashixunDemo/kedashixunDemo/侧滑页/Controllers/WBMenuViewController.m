@@ -118,9 +118,8 @@
     WBPersonalCenterViewController *personalCenterVC = [[WBPersonalCenterViewController alloc] init];
     [self.sideMenuViewController hideMenuViewController];
     WBTabBarViewController *tabBarVC = (WBTabBarViewController *)self.sideMenuViewController.contentViewController;
-    [tabBarVC.selectedViewController pushViewController:personalCenterVC animated:YES];
-//    
-//    [self.parentViewController.navigationController pushViewController:personalCenterVC animated:NO];
+    [tabBarVC.selectedViewController pushViewController:personalCenterVC animated:NO];
+
     
 }
 
