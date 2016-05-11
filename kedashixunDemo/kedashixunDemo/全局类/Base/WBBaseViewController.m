@@ -17,6 +17,12 @@
 
 @implementation WBBaseViewController
 
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    self.navigationController.navigationBarHidden = NO;
+}
+
 - (instancetype)initWithViewControllerNavItemStyle:(ViewControllerNavItemStyle)viewControllerNavItemStyle{
     self = [super init];
     if (self) {
@@ -29,10 +35,10 @@
             case ViewControllerNavItemStyleMain:
             {
                
-                self.navigationItem.leftBarButtonItems = [UIBarButtonItem barButtonItemWithImageName:@"navbar_menu" withHighlightedImageName:nil withTarget:self withAction:@selector(MainMenuBtnAction:) WithNegativeSpacerWidth:-5];
-    
-                
-                self.navigationItem.rightBarButtonItems = [UIBarButtonItem barButtonItemWithImageName:@"navbar_search" withHighlightedImageName:nil withTarget:self withAction:@selector(mainSearchBtnAction:) WithNegativeSpacerWidth:-5];
+//                self.navigationItem.leftBarButtonItems = [UIBarButtonItem barButtonItemWithImageName:@"navbar_menu" withHighlightedImageName:nil withTarget:self withAction:@selector(MainMenuBtnAction:) WithNegativeSpacerWidth:-5];
+//    
+//                
+//                self.navigationItem.rightBarButtonItems = [UIBarButtonItem barButtonItemWithImageName:@"navbar_search" withHighlightedImageName:nil withTarget:self withAction:@selector(mainSearchBtnAction:) WithNegativeSpacerWidth:-5];
 
             }
                 break;
