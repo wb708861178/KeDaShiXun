@@ -45,8 +45,8 @@
 
     
     
-     WBNavViewController *sideMenuNav = [[WBNavViewController alloc] initWithRootViewController:sideMenu];
-    self.window.rootViewController = sideMenuNav;
+    
+    self.window.rootViewController = sideMenu;
     
     [self.window makeKeyAndVisible];
     
