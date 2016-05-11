@@ -17,6 +17,14 @@
 		5216DB891CDECB5C00B06B3B /* kedashixunDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5216DB881CDECB5C00B06B3B /* kedashixunDemoTests.m */; };
 		5216DB941CDECB5C00B06B3B /* kedashixunDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5216DB931CDECB5C00B06B3B /* kedashixunDemoUITests.m */; };
 		52379EED1CE1DD4900E93767 /* WBPersonalCenterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 52379EEC1CE1DD4900E93767 /* WBPersonalCenterViewController.m */; };
+		527156721CE35ED0007F7821 /* WBCustomNavView.m in Sources */ = {isa = PBXBuildFile; fileRef = 527156711CE35ED0007F7821 /* WBCustomNavView.m */; };
+		527156741CE35EEF007F7821 /* WBCustomNavView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 527156731CE35EEF007F7821 /* WBCustomNavView.xib */; };
+		527156781CE36E66007F7821 /* WBMainCell1.m in Sources */ = {isa = PBXBuildFile; fileRef = 527156761CE36E66007F7821 /* WBMainCell1.m */; };
+		527156791CE36E66007F7821 /* WBMainCell1.xib in Resources */ = {isa = PBXBuildFile; fileRef = 527156771CE36E66007F7821 /* WBMainCell1.xib */; };
+		527156821CE36EE9007F7821 /* WBMainCell2.m in Sources */ = {isa = PBXBuildFile; fileRef = 527156801CE36EE9007F7821 /* WBMainCell2.m */; };
+		527156831CE36EE9007F7821 /* WBMainCell2.xib in Resources */ = {isa = PBXBuildFile; fileRef = 527156811CE36EE9007F7821 /* WBMainCell2.xib */; };
+		527156871CE36F0D007F7821 /* WBMainCell3.m in Sources */ = {isa = PBXBuildFile; fileRef = 527156851CE36F0D007F7821 /* WBMainCell3.m */; };
+		527156881CE36F0D007F7821 /* WBMainCell3.xib in Resources */ = {isa = PBXBuildFile; fileRef = 527156861CE36F0D007F7821 /* WBMainCell3.xib */; };
 		52A5280B1CDECD2000499AE7 /* CATransition+PageChangeAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 52A527CA1CDECD2000499AE7 /* CATransition+PageChangeAnimation.m */; };
 		52A5280C1CDECD2000499AE7 /* UINavigationBar+NavBar_WBCustomBackgroudImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 52A527CD1CDECD2000499AE7 /* UINavigationBar+NavBar_WBCustomBackgroudImage.m */; };
 		52A5280D1CDECD2000499AE7 /* UIBarButtonItem+WBCustomButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 52A527D01CDECD2000499AE7 /* UIBarButtonItem+WBCustomButton.m */; };
@@ -101,6 +109,18 @@
 		5216DB951CDECB5C00B06B3B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		52379EEB1CE1DD4900E93767 /* WBPersonalCenterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WBPersonalCenterViewController.h; sourceTree = "<group>"; };
 		52379EEC1CE1DD4900E93767 /* WBPersonalCenterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WBPersonalCenterViewController.m; sourceTree = "<group>"; };
+		527156701CE35ED0007F7821 /* WBCustomNavView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WBCustomNavView.h; sourceTree = "<group>"; };
+		527156711CE35ED0007F7821 /* WBCustomNavView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WBCustomNavView.m; sourceTree = "<group>"; };
+		527156731CE35EEF007F7821 /* WBCustomNavView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WBCustomNavView.xib; sourceTree = "<group>"; };
+		527156751CE36E66007F7821 /* WBMainCell1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WBMainCell1.h; sourceTree = "<group>"; };
+		527156761CE36E66007F7821 /* WBMainCell1.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WBMainCell1.m; sourceTree = "<group>"; };
+		527156771CE36E66007F7821 /* WBMainCell1.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WBMainCell1.xib; sourceTree = "<group>"; };
+		5271567F1CE36EE9007F7821 /* WBMainCell2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WBMainCell2.h; sourceTree = "<group>"; };
+		527156801CE36EE9007F7821 /* WBMainCell2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WBMainCell2.m; sourceTree = "<group>"; };
+		527156811CE36EE9007F7821 /* WBMainCell2.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WBMainCell2.xib; sourceTree = "<group>"; };
+		527156841CE36F0D007F7821 /* WBMainCell3.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WBMainCell3.h; sourceTree = "<group>"; };
+		527156851CE36F0D007F7821 /* WBMainCell3.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WBMainCell3.m; sourceTree = "<group>"; };
+		527156861CE36F0D007F7821 /* WBMainCell3.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WBMainCell3.xib; sourceTree = "<group>"; };
 		52A527C91CDECD2000499AE7 /* CATransition+PageChangeAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CATransition+PageChangeAnimation.h"; sourceTree = "<group>"; };
 		52A527CA1CDECD2000499AE7 /* CATransition+PageChangeAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CATransition+PageChangeAnimation.m"; sourceTree = "<group>"; };
 		52A527CC1CDECD2000499AE7 /* UINavigationBar+NavBar_WBCustomBackgroudImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationBar+NavBar_WBCustomBackgroudImage.h"; sourceTree = "<group>"; };
@@ -799,6 +819,15 @@
 		52A528851CDF3A6700499AE7 /* cells */ = {
 			isa = PBXGroup;
 			children = (
+				527156751CE36E66007F7821 /* WBMainCell1.h */,
+				527156761CE36E66007F7821 /* WBMainCell1.m */,
+				527156771CE36E66007F7821 /* WBMainCell1.xib */,
+				5271567F1CE36EE9007F7821 /* WBMainCell2.h */,
+				527156801CE36EE9007F7821 /* WBMainCell2.m */,
+				527156811CE36EE9007F7821 /* WBMainCell2.xib */,
+				527156841CE36F0D007F7821 /* WBMainCell3.h */,
+				527156851CE36F0D007F7821 /* WBMainCell3.m */,
+				527156861CE36F0D007F7821 /* WBMainCell3.xib */,
 			);
 			path = cells;
 			sourceTree = "<group>";
@@ -822,6 +851,9 @@
 		52A5288A1CDF3A6700499AE7 /* views */ = {
 			isa = PBXGroup;
 			children = (
+				527156701CE35ED0007F7821 /* WBCustomNavView.h */,
+				527156711CE35ED0007F7821 /* WBCustomNavView.m */,
+				527156731CE35EEF007F7821 /* WBCustomNavView.xib */,
 			);
 			path = views;
 			sourceTree = "<group>";
@@ -908,7 +940,7 @@
 		5216DB631CDECB5C00B06B3B /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				CLASSPREFIX = K;
+				CLASSPREFIX = WB;
 				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = wangbing;
 				TargetAttributes = {
@@ -952,13 +984,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				52A5289E1CDF414900499AE7 /* WBMenuViewController.xib in Resources */,
+				527156791CE36E66007F7821 /* WBMainCell1.xib in Resources */,
 				52A528451CDEE81E00499AE7 /* tabbar_books@3x.png in Resources */,
 				52A5289C1CDF3DB600499AE7 /* WBMenuTableViewCell.xib in Resources */,
+				527156831CE36EE9007F7821 /* WBMainCell2.xib in Resources */,
 				52A528A01CDF4AC600499AE7 /* background_blue@3x.png in Resources */,
 				52A528A21CDF4AE500499AE7 /* background_dream@3x.png in Resources */,
 				52A5284F1CDF300500499AE7 /* Assets.xcassets in Resources */,
 				52A528511CDF301900499AE7 /* LaunchScreen.storyboard in Resources */,
 				52A5288D1CDF3A6700499AE7 /* WBMenuHeaderView.xib in Resources */,
+				527156881CE36F0D007F7821 /* WBMainCell3.xib in Resources */,
+				527156741CE35EEF007F7821 /* WBCustomNavView.xib in Resources */,
 				52A528431CDEDDCC00499AE7 /* navbar_back@3x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1039,12 +1075,14 @@
 				52A5284E1CDF300500499AE7 /* AppDelegate.m in Sources */,
 				057BDD3A1CDF430300F03911 /* WBCustonSegment.m in Sources */,
 				52A528951CDF3A6700499AE7 /* UIView+WBLocation.m in Sources */,
+				527156781CE36E66007F7821 /* WBMainCell1.m in Sources */,
 				52A5280E1CDECD2000499AE7 /* UIColor+HexColor.m in Sources */,
 				057BDD401CDF47B400F03911 /* KTopicModel.m in Sources */,
 				52A528181CDECD2000499AE7 /* WBDBHelper.m in Sources */,
 				52A528921CDF3A6700499AE7 /* UIBarButtonItem+WBCustomButton.m in Sources */,
 				52A5281C1CDECD2000499AE7 /* WBMessageRequest.m in Sources */,
 				52A5288E1CDF3A6700499AE7 /* WBGuidanceViewController.m in Sources */,
+				527156821CE36EE9007F7821 /* WBMainCell2.m in Sources */,
 				52A5280C1CDECD2000499AE7 /* UINavigationBar+NavBar_WBCustomBackgroudImage.m in Sources */,
 				52A5281A1CDECD2000499AE7 /* WBRequestManager.m in Sources */,
 				52A528121CDECD2000499AE7 /* WBNavViewController.m in Sources */,
@@ -1055,7 +1093,9 @@
 				52A528411CDEDD8200499AE7 /* WBTools.m in Sources */,
 				52A5281D1CDECD2000499AE7 /* WBUserRequest.m in Sources */,
 				057BDD3D1CDF479500F03911 /* KTopicCell.m in Sources */,
+				527156871CE36F0D007F7821 /* WBMainCell3.m in Sources */,
 				52A528911CDF3A6700499AE7 /* UINavigationBar+NavBar_WBCustomBackgroudImage.m in Sources */,
+				527156721CE35ED0007F7821 /* WBCustomNavView.m in Sources */,
 				52A5280F1CDECD2000499AE7 /* UIImage+WBGetWithColor.m in Sources */,
 				52A528961CDF3A6700499AE7 /* WBForumViewController.m in Sources */,
 				52A5288B1CDF3A6700499AE7 /* WBMenuViewController.m in Sources */,
