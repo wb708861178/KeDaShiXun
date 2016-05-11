@@ -30,6 +30,13 @@
     
     _topicModel = topicModel;
     
+//--------------------Test
+    
+    NSString *str1 = @"QQ邮箱QQ邮箱QQ邮箱QQ邮箱QQ邮箱QQ邮箱QQ邮箱QQ邮箱QQ邮箱QQ邮箱QQ邮箱";
+    CGSize size = [str1 boundingRectWithSize:MaxSize options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName:[UIFont systemFontOfSize:17]} context:nil].size;
+    NSLog(@"--%@",NSStringFromCGSize(size));
+    
+//--------------------
     //计算坐标
     CGFloat iconW = 40,iconH = iconW;
     
