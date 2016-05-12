@@ -8,6 +8,8 @@
 
 #import "KTopicDetailHeader.h"
 #import <UIImageView+WebCache.h>
+#import "KCommentCountView.h"
+
 
 @interface KTopicDetailHeader ()
 
@@ -22,8 +24,7 @@
 @property (nonatomic, strong) UIButton *praiseBtn;
 @property (nonatomic, strong) UIButton *commentBtn;
 
-
-
+@property (nonatomic, strong) KCommentCountView *commentCountView;
 @end
 
 @implementation KTopicDetailHeader
@@ -43,6 +44,8 @@
         _contentlbl.font = [UIFont systemFontOfSize:14];
         _contentlbl.numberOfLines = 0;
         
+
+        
         _locationImgView = [[UIImageView alloc] init];
         _locationImgView.image = [UIImage imageNamed:@"weizhi"];
         
@@ -57,6 +60,8 @@
         _commentBtn = [[UIButton alloc] init];
         [_commentBtn setImage:[UIImage imageNamed:@"pinglun"] forState:UIControlStateNormal];
         
+        _commentCountView = [[NSBundle mainBundle] loadNibNamed:@"KCommentCountView" owner:nil options:nil].firstObject;
+        
         [self addSubview:_iconImgView];
         [self addSubview:_namelbl];
         [self addSubview:_timelbl];
@@ -66,6 +71,7 @@
         [self addSubview:_viewCountlbl];
         [self addSubview:_praiseBtn];
         [self addSubview:_commentBtn];
+        [self addSubview:_commentCountView];
         
     }
     return self;
@@ -97,15 +103,21 @@
     
     for (int i = 0; i < topicModel.imagesUrlArr.count; i++) {
         
-        UIImageView *imageView = [[UIImageView alloc] init];
+        UIImageView *imgView = [[UIImageView alloc] init];
+        imgView.userInteractionEnabled = YES;
+        imgView.contentMode = UIViewContentModeScaleAspectFill;
+        imgView.clipsToBounds = YES;
+        imgView.tag = i;
+        imgView.frame = CGRectFromString(topicHeaderFrameModel.imagesFrameArr[i]);
+        // 添加点按手势
+        UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tap:)];
+        [imgView addGestureRecognizer:tap];
         
-        imageView.frame = CGRectFromString(topicHeaderFrameModel.imagesFrameArr[i]);
-        
-        [imageView sd_setImageWithURL:[NSURL URLWithString:topicHeaderFrameModel.imagesFrameArr[i]]];
-        [self addSubview:imageView];
+        [self addSubview:imgView];
+
+        [imgView sd_setImageWithURL:[NSURL URLWithString:topicModel.imagesUrlArr[i]]];
     }
 
-   
     
     _locationImgView.frame = topicHeaderFrameModel.locationImgViewFrame;
     
@@ -117,9 +129,17 @@
     _praiseBtn.frame = topicHeaderFrameModel.praiseFrame;
     _commentBtn.frame = topicHeaderFrameModel.commentFrame;
 
-    
+
+    _commentCountView.frame = topicHeaderFrameModel.commentViewFrame;
+    _commentCountView.commentCount.text = [NSString stringWithFormat:@"评论 %@",topicModel.viewCount];
 }
 
+//调出图片浏览器
+
+- (void)tap:(id)sender{
+    
+    
+}
 
 /*
 // Only override drawRect: if you perform custom drawing.

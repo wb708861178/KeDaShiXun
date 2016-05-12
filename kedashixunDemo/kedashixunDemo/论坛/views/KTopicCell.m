@@ -18,9 +18,9 @@
 
 @property (nonatomic, strong) UIImageView *topicTypeImgView;
 
+@property (nonatomic, strong) UIImageView *imgView0;
 @property (nonatomic, strong) UIImageView *imgView1;
 @property (nonatomic, strong) UIImageView *imgView2;
-@property (nonatomic, strong) UIImageView *imgView3;
 
 @property (nonatomic, strong) UIImageView *locationImgView;
 @property (nonatomic, strong) UILabel *locationlbl;
@@ -56,14 +56,20 @@
         _contentlbl.font = [UIFont systemFontOfSize:14];
         [self addSubview:_contentlbl];
         
+        _imgView0 = [[UIImageView alloc] init];
+        _imgView0.contentMode = UIViewContentModeScaleAspectFill;
+        _imgView0.clipsToBounds = YES;
+        [self addSubview:_imgView0];
+        
         _imgView1 = [[UIImageView alloc] init];
+        _imgView1.contentMode = UIViewContentModeScaleAspectFill;
+        _imgView1.clipsToBounds = YES;
         [self addSubview:_imgView1];
 
         _imgView2 = [[UIImageView alloc] init];
+        _imgView2.contentMode = UIViewContentModeScaleAspectFill;
+        _imgView2.clipsToBounds = YES;
         [self addSubview:_imgView2];
-
-        _imgView3 = [[UIImageView alloc] init];
-        [self addSubview:_imgView3];
 
         _locationImgView = [[UIImageView alloc] init];
         _locationImgView.image = [UIImage imageNamed:@"weizhi"];
@@ -124,26 +130,26 @@
         
         switch (topicFrameModel.imagesFrameArr.count) {
             case 1:{
-                _imgView1.frame = CGRectFromString(topicFrameModel.imagesFrameArr[1]);
-                [_imgView1 sd_setImageWithURL:[NSURL URLWithString:topicModel.imagesUrlArr[1]]];
+                _imgView0.frame = CGRectFromString(topicFrameModel.imagesFrameArr[0]);
+                [_imgView1 sd_setImageWithURL:[NSURL URLWithString:topicModel.imagesUrlArr[0]]];
                 
             }
                 break;
             case 2:{
+                _imgView0.frame = CGRectFromString(topicFrameModel.imagesFrameArr[0]);
+                [_imgView0 sd_setImageWithURL:[NSURL URLWithString:topicModel.imagesUrlArr[0]]];
                 _imgView1.frame = CGRectFromString(topicFrameModel.imagesFrameArr[1]);
                 [_imgView1 sd_setImageWithURL:[NSURL URLWithString:topicModel.imagesUrlArr[1]]];
-                _imgView2.frame = CGRectFromString(topicFrameModel.imagesFrameArr[2]);
-                [_imgView2 sd_setImageWithURL:[NSURL URLWithString:topicModel.imagesUrlArr[2]]];
                 
             }
                 break;
             case 3:{
+                _imgView0.frame = CGRectFromString(topicFrameModel.imagesFrameArr[0]);
+                [_imgView0 sd_setImageWithURL:[NSURL URLWithString:topicModel.imagesUrlArr[0]]];
                 _imgView1.frame = CGRectFromString(topicFrameModel.imagesFrameArr[1]);
                 [_imgView1 sd_setImageWithURL:[NSURL URLWithString:topicModel.imagesUrlArr[1]]];
                 _imgView2.frame = CGRectFromString(topicFrameModel.imagesFrameArr[2]);
                 [_imgView2 sd_setImageWithURL:[NSURL URLWithString:topicModel.imagesUrlArr[2]]];
-                _imgView3.frame = CGRectFromString(topicFrameModel.imagesFrameArr[3]);
-                [_imgView3 sd_setImageWithURL:[NSURL URLWithString:topicModel.imagesUrlArr[3]]];
             }
                 break;
                 
@@ -171,12 +177,12 @@
     [super prepareForReuse];
     
     //清空图片
+    _imgView0.frame = (CGRect){_imgView1.frame.origin,CGSizeMake(0, 0)};
     _imgView1.frame = (CGRect){_imgView1.frame.origin,CGSizeMake(0, 0)};
     _imgView2.frame = (CGRect){_imgView1.frame.origin,CGSizeMake(0, 0)};
-    _imgView3.frame = (CGRect){_imgView1.frame.origin,CGSizeMake(0, 0)};
+    _imgView0.image = nil;
     _imgView1.image = nil;
     _imgView2.image = nil;
-    _imgView3.image = nil;
     
 }
 

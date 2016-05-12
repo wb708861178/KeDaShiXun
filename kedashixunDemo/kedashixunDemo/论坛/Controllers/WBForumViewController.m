@@ -20,10 +20,12 @@
 @property (nonatomic, strong) WBCustonSegment *topSegment;
 //帖子类型
 @property (nonatomic, strong) NSArray *topicTypeArr;
-
-
 @property (nonatomic, strong) UITableView *topicTV;
+//话题列表数组
 @property (nonatomic, strong) NSMutableArray *topicsArr;
+
+//数据数组
+@property (nonatomic, strong) NSArray *dataArr;
 
 @end
 
@@ -41,9 +43,9 @@
 
     
 //-------------------------Test
-    NSArray *dataArr = @[@{@"iconName":@"",@"name":@"寇忠龙",@"time":@"2016-05-10",@"location":@"河南科技大学开元校区",@"content":@"P2P模式文件的群殴就到期我觉得去我家都快来群文件打开链接请我看了大家去看了文件的情况了解的考虑去叫我来的",@"viewCount":@"100"}];
+    _dataArr = @[@{@"iconName":@"",@"name":@"寇忠龙",@"time":@"2016-05-10",@"location":@"河南科技大学开元校区",@"content":@"P2P模式文件的群殴就到期我觉得去我家都快来群文件打开链接请我看了大家去看了文件的情况了解的考虑去叫我来的",@"viewCount":@"100",@"imagesUrlArr":@[@"http://easyread.ph.126.net/m01ZnaivFu8yR-lVjO62vg==/7917012585080905357.jpg",@"http://easyread.ph.126.net/m01ZnaivFu8yR-lVjO62vg==/7917012585080905357.jpg",@"http://easyread.ph.126.net/m01ZnaivFu8yR-lVjO62vg==/7917012585080905357.jpg",@"http://easyread.ph.126.net/m01ZnaivFu8yR-lVjO62vg==/7917012585080905357.jpg",@"http://easyread.ph.126.net/m01ZnaivFu8yR-lVjO62vg==/7917012585080905357.jpg",@"http://easyread.ph.126.net/m01ZnaivFu8yR-lVjO62vg==/7917012585080905357.jpg"]}];
     
-    KTopicFrameModel *topicFrameModel = [[KTopicFrameModel alloc] initWithDict:dataArr.firstObject];
+    KTopicFrameModel *topicFrameModel = [[KTopicFrameModel alloc] initWithDict:_dataArr.firstObject];
     
     [self.topicsArr addObject:topicFrameModel];
 }
@@ -114,6 +116,10 @@
     
     topicDetailVC.hidesBottomBarWhenPushed = YES;
     
+    //------数据 传递
+    topicDetailVC.topicHeaderFrameModel = [[KTopicHeaderFrameModel alloc] initWithDict:_dataArr.firstObject];
+    
+    // -------------
     [self.navigationController pushViewController:topicDetailVC animated:YES];
     
 

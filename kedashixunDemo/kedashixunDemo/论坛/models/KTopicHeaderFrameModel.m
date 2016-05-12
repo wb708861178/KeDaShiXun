@@ -7,6 +7,7 @@
 //
 
 #import "KTopicHeaderFrameModel.h"
+#import <MJExtension.h>
 #import "Const.h"
 
 #define space 10
@@ -15,6 +16,15 @@
 
 @implementation KTopicHeaderFrameModel
 
+- (instancetype)initWithDict:(NSDictionary *)dict{
+    
+    if (self = [super init]) {
+        
+        self.topicModel = [KTopicModel mj_objectWithKeyValues:dict];
+        
+    }
+    return self;
+}
 
 
 
@@ -46,7 +56,7 @@
     CGFloat imageH = imageW;
     for (NSInteger i = 0; i < images; i++) {
         
-        CGFloat imageX = i%3*(space+imageW)+space+margin;
+        CGFloat imageX = i%3*(space+imageW)+space;
         CGFloat imageY = i/3*(space+imageH)+space+CGRectGetMaxY(_contentFrame);
         
         CGRect imageFrame = CGRectMake(imageX, imageY, imageH, imageW);
@@ -82,8 +92,21 @@
     _praiseFrame = CGRectMake(kWidth-space-btnW*2, btnY, btnW, btnH);
 
     
+    CGFloat commentViewH = 30;
+    _commentViewFrame = CGRectMake(0, CGRectGetMaxY(_praiseFrame)+space, kWidth, commentViewH);
     
+    _headerHeight = CGRectGetMaxY(_commentViewFrame)+space;
 }
 
+
+- (NSMutableArray *)imagesFrameArr{
+    
+    if (!_imagesFrameArr) {
+        
+        _imagesFrameArr = [NSMutableArray array];
+    }
+    
+    return _imagesFrameArr;
+}
 
 @end

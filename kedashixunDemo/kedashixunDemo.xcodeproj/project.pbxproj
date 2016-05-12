@@ -14,6 +14,13 @@
 		057BDD431CDF47C200F03911 /* KTopicFrameModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 057BDD421CDF47C200F03911 /* KTopicFrameModel.m */; };
 		05C87CC11CE3679800BFBA0F /* KTopicHeaderFrameModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 05C87CC01CE3679800BFBA0F /* KTopicHeaderFrameModel.m */; };
 		05C87CC71CE3681E00BFBA0F /* KTopicDetailHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 05C87CC61CE3681E00BFBA0F /* KTopicDetailHeader.m */; };
+		05ECD8611CE45E6B00A0582A /* KCommentCountView.m in Sources */ = {isa = PBXBuildFile; fileRef = 05ECD8601CE45E6B00A0582A /* KCommentCountView.m */; };
+		05ECD8631CE45E7A00A0582A /* KCommentCountView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 05ECD8621CE45E7A00A0582A /* KCommentCountView.xib */; };
+		05ECD8661CE4627F00A0582A /* KBottomCommentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 05ECD8651CE4627F00A0582A /* KBottomCommentView.m */; };
+		05ECD8681CE4629000A0582A /* KBottomCommentView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 05ECD8671CE4629000A0582A /* KBottomCommentView.xib */; };
+		05ECD86C1CE462BC00A0582A /* KCommentCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 05ECD86A1CE462BC00A0582A /* KCommentCell.m */; };
+		05ECD86D1CE462BC00A0582A /* KCommentCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 05ECD86B1CE462BC00A0582A /* KCommentCell.xib */; };
+		05ECD8701CE4666500A0582A /* KCommentModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 05ECD86F1CE4666500A0582A /* KCommentModel.m */; };
 		25B72F0CD143B850B112A130 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F0D535423ED6E61946912108 /* libPods.a */; };
 		5216DB701CDECB5C00B06B3B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5216DB6F1CDECB5C00B06B3B /* main.m */; };
 		5216DB891CDECB5C00B06B3B /* kedashixunDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5216DB881CDECB5C00B06B3B /* kedashixunDemoTests.m */; };
@@ -103,6 +110,17 @@
 		05C87CC01CE3679800BFBA0F /* KTopicHeaderFrameModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KTopicHeaderFrameModel.m; sourceTree = "<group>"; };
 		05C87CC51CE3681E00BFBA0F /* KTopicDetailHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KTopicDetailHeader.h; sourceTree = "<group>"; };
 		05C87CC61CE3681E00BFBA0F /* KTopicDetailHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KTopicDetailHeader.m; sourceTree = "<group>"; };
+		05ECD85F1CE45E6B00A0582A /* KCommentCountView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KCommentCountView.h; sourceTree = "<group>"; };
+		05ECD8601CE45E6B00A0582A /* KCommentCountView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KCommentCountView.m; sourceTree = "<group>"; };
+		05ECD8621CE45E7A00A0582A /* KCommentCountView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = KCommentCountView.xib; sourceTree = "<group>"; };
+		05ECD8641CE4627F00A0582A /* KBottomCommentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KBottomCommentView.h; sourceTree = "<group>"; };
+		05ECD8651CE4627F00A0582A /* KBottomCommentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KBottomCommentView.m; sourceTree = "<group>"; };
+		05ECD8671CE4629000A0582A /* KBottomCommentView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = KBottomCommentView.xib; sourceTree = "<group>"; };
+		05ECD8691CE462BC00A0582A /* KCommentCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KCommentCell.h; sourceTree = "<group>"; };
+		05ECD86A1CE462BC00A0582A /* KCommentCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KCommentCell.m; sourceTree = "<group>"; };
+		05ECD86B1CE462BC00A0582A /* KCommentCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = KCommentCell.xib; sourceTree = "<group>"; };
+		05ECD86E1CE4666500A0582A /* KCommentModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KCommentModel.h; sourceTree = "<group>"; };
+		05ECD86F1CE4666500A0582A /* KCommentModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KCommentModel.m; sourceTree = "<group>"; };
 		0F1BB20647A92F384047403D /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		5216DB6B1CDECB5C00B06B3B /* kedashixunDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = kedashixunDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5216DB6F1CDECB5C00B06B3B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -798,6 +816,8 @@
 				057BDD3F1CDF47B400F03911 /* KTopicModel.m */,
 				05C87CBF1CE3679800BFBA0F /* KTopicHeaderFrameModel.h */,
 				05C87CC01CE3679800BFBA0F /* KTopicHeaderFrameModel.m */,
+				05ECD86E1CE4666500A0582A /* KCommentModel.h */,
+				05ECD86F1CE4666500A0582A /* KCommentModel.m */,
 			);
 			path = models;
 			sourceTree = "<group>";
@@ -811,6 +831,15 @@
 				057BDD3C1CDF479500F03911 /* KTopicCell.m */,
 				05C87CC51CE3681E00BFBA0F /* KTopicDetailHeader.h */,
 				05C87CC61CE3681E00BFBA0F /* KTopicDetailHeader.m */,
+				05ECD85F1CE45E6B00A0582A /* KCommentCountView.h */,
+				05ECD8601CE45E6B00A0582A /* KCommentCountView.m */,
+				05ECD8621CE45E7A00A0582A /* KCommentCountView.xib */,
+				05ECD8691CE462BC00A0582A /* KCommentCell.h */,
+				05ECD86A1CE462BC00A0582A /* KCommentCell.m */,
+				05ECD86B1CE462BC00A0582A /* KCommentCell.xib */,
+				05ECD8641CE4627F00A0582A /* KBottomCommentView.h */,
+				05ECD8651CE4627F00A0582A /* KBottomCommentView.m */,
+				05ECD8671CE4629000A0582A /* KBottomCommentView.xib */,
 			);
 			path = views;
 			sourceTree = "<group>";
@@ -1000,12 +1029,15 @@
 				527156831CE36EE9007F7821 /* WBMainCell2.xib in Resources */,
 				52A528A01CDF4AC600499AE7 /* background_blue@3x.png in Resources */,
 				52A528A21CDF4AE500499AE7 /* background_dream@3x.png in Resources */,
+				05ECD8681CE4629000A0582A /* KBottomCommentView.xib in Resources */,
 				52A5284F1CDF300500499AE7 /* Assets.xcassets in Resources */,
+				05ECD8631CE45E7A00A0582A /* KCommentCountView.xib in Resources */,
 				52A528511CDF301900499AE7 /* LaunchScreen.storyboard in Resources */,
 				52A5288D1CDF3A6700499AE7 /* WBMenuHeaderView.xib in Resources */,
 				527156881CE36F0D007F7821 /* WBMainCell3.xib in Resources */,
 				527156741CE35EEF007F7821 /* WBCustomNavView.xib in Resources */,
 				52A528431CDEDDCC00499AE7 /* navbar_back@3x.png in Resources */,
+				05ECD86D1CE462BC00A0582A /* KCommentCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1087,6 +1119,7 @@
 				52A528951CDF3A6700499AE7 /* UIView+WBLocation.m in Sources */,
 				527156781CE36E66007F7821 /* WBMainCell1.m in Sources */,
 				52A5280E1CDECD2000499AE7 /* UIColor+HexColor.m in Sources */,
+				05ECD86C1CE462BC00A0582A /* KCommentCell.m in Sources */,
 				057BDD401CDF47B400F03911 /* KTopicModel.m in Sources */,
 				52A528181CDECD2000499AE7 /* WBDBHelper.m in Sources */,
 				52A528921CDF3A6700499AE7 /* UIBarButtonItem+WBCustomButton.m in Sources */,
@@ -1104,6 +1137,7 @@
 				52A5281D1CDECD2000499AE7 /* WBUserRequest.m in Sources */,
 				057BDD3D1CDF479500F03911 /* KTopicCell.m in Sources */,
 				527156871CE36F0D007F7821 /* WBMainCell3.m in Sources */,
+				05ECD8701CE4666500A0582A /* KCommentModel.m in Sources */,
 				52A528911CDF3A6700499AE7 /* UINavigationBar+NavBar_WBCustomBackgroudImage.m in Sources */,
 				527156721CE35ED0007F7821 /* WBCustomNavView.m in Sources */,
 				52A5280F1CDECD2000499AE7 /* UIImage+WBGetWithColor.m in Sources */,
@@ -1111,6 +1145,7 @@
 				52A5288B1CDF3A6700499AE7 /* WBMenuViewController.m in Sources */,
 				52A528111CDECD2000499AE7 /* WBBaseViewController.m in Sources */,
 				52A528971CDF3A6700499AE7 /* WBMainViewController.m in Sources */,
+				05ECD8611CE45E6B00A0582A /* KCommentCountView.m in Sources */,
 				05C87CC11CE3679800BFBA0F /* KTopicHeaderFrameModel.m in Sources */,
 				52A528901CDF3A6700499AE7 /* CATransition+PageChangeAnimation.m in Sources */,
 				05C87CC71CE3681E00BFBA0F /* KTopicDetailHeader.m in Sources */,
@@ -1122,6 +1157,7 @@
 				52A5280D1CDECD2000499AE7 /* UIBarButtonItem+WBCustomButton.m in Sources */,
 				52A528161CDECD2000499AE7 /* WBTabBarViewController.m in Sources */,
 				52A5280B1CDECD2000499AE7 /* CATransition+PageChangeAnimation.m in Sources */,
+				05ECD8661CE4627F00A0582A /* KBottomCommentView.m in Sources */,
 				5216DB701CDECB5C00B06B3B /* main.m in Sources */,
 				52A5281B1CDECD2000499AE7 /* WBBaseRequest.m in Sources */,
 			);

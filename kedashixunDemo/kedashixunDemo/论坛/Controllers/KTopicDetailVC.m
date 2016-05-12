@@ -10,12 +10,17 @@
 #import "UIBarButtonItem+WBCustomButton.h"
 #import "Const.h"
 #import "KTopicDetailHeader.h"
+#import "KCommentCell.h"
+#import <MJExtension.h>
 
 #define space 10
 
 @interface KTopicDetailVC () <UITableViewDataSource ,UITableViewDelegate>
 
 @property (nonatomic, strong) UITableView *topicDetailTV;
+
+
+@property (nonatomic, strong) NSMutableArray *commentListArr;
 
 @end
 
@@ -28,17 +33,31 @@
     
     self.navigationItem.leftBarButtonItems = [UIBarButtonItem barButtonItemWithImageName:@"arrow_left"  withHighlightedImageName:nil  withTarget:self withAction:@selector(pop) WithNegativeSpacerWidth:-16];
     
+    self.view.backgroundColor = kBGDefaultColor;
     
     [self viewLayout];
-        
+    
+    //----------Test
+    
+    NSArray *commentList = @[@{@"icon":@"",@"name":@"卡兹克",@"time":@"2016-05-12",@"commentContent":@"家属就到了卡机的考拉姐圣诞节啊看来大家爱看洛杉矶的垃圾时打开垃圾收看了大家爱看了"}];
+    
+    self.commentListArr = [KCommentModel mj_objectArrayWithKeyValuesArray:commentList];
+    
+    //-----------
 }
 
 - (void)viewLayout{
     
-    _topicDetailTV = [[UITableView alloc] initWithFrame:CGRectMake(space, space, kWidth-2*space, kHeight-64-space) style:UITableViewStylePlain];
+    _topicDetailTV = [[UITableView alloc] initWithFrame:CGRectMake(0, space, kWidth, kHeight-64) style:UITableViewStylePlain];
     _topicDetailTV.delegate = self;
     _topicDetailTV.dataSource = self;
+    _topicDetailTV.rowHeight = UITableViewAutomaticDimension;
+    KTopicDetailHeader *topicDetailHeader = [[KTopicDetailHeader alloc] initWithFrame:CGRectMake(0, 64, kWidth, self.topicHeaderFrameModel.headerHeight)];
+    topicDetailHeader.topicHeaderFrameModel = self.topicHeaderFrameModel;
+    _topicDetailTV.tableHeaderView = topicDetailHeader;
     [self.view addSubview:_topicDetailTV];
+    
+
     
 }
 
@@ -46,31 +65,33 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     
-    return 20;
+    return 50;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     
+    static NSString *identifier = @"KCommentCell";
+    KCommentCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier];
     
-    return nil;
+    if (!cell) {
+        
+        cell = [[NSBundle mainBundle] loadNibNamed:@"KCommentCell" owner:nil options:nil].firstObject;
+    }
+    
+    //设置数据
+    //-------------Test
+    
+    cell.commentModel = self.commentListArr[0];
+    //-----------
+    
+    return cell;
 }
 
-- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+- (CGFloat)tableView:(UITableView *)tableView estimatedHeightForRowAtIndexPath:(NSIndexPath *)indexPath{
     
-    
-    return 80;
+    return 100;
 }
 
-- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section{
-    
-    
-    return nil;
-}
-
-- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
-    
-    return 40;
-}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

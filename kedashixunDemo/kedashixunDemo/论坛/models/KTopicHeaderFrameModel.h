@@ -29,6 +29,10 @@
 @property (nonatomic, readonly) CGRect praiseFrame;
 @property (nonatomic, readonly) CGRect commentFrame;
 
+@property (nonatomic, readonly) CGRect commentViewFrame;
+
+@property (nonatomic, readonly) CGFloat headerHeight;
 
 
+- (instancetype)initWithDict:(NSDictionary *)dict;
 @end

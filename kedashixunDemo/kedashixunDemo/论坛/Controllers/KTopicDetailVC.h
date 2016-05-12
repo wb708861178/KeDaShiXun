@@ -7,7 +7,10 @@
 //
 
 #import "WBBaseViewController.h"
+#import "KTopicHeaderFrameModel.h"
 
 @interface KTopicDetailVC : WBBaseViewController
+
+@property (nonatomic, strong) KTopicHeaderFrameModel *topicHeaderFrameModel;
 
 @end
