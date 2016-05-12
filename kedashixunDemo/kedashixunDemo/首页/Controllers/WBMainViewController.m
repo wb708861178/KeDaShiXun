@@ -10,6 +10,10 @@
 #import "WBCustomNavView.h"
 #import "Const.h"
 #import "RESideMenu.h"
+#import "WBMainCell1.h"
+#import "WBMainCell2.h"
+#import "WBMainCell3.h"
+#import "WBMainDetailViewController.h"
 
 
 @interface WBMainViewController ()<UITableViewDataSource,UITableViewDelegate>
@@ -43,24 +47,74 @@
 #pragma mark---UITableViewDataSource
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 10;
+    return 3;
 }
 
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell"];
-    if (!cell) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"cell"];
+        switch (indexPath.row) {
+        case 0:
+        {
+            WBMainCell1 *cell1 = [tableView dequeueReusableCellWithIdentifier:@"WBMainCell1" forIndexPath:indexPath];
+            return cell1;
+        }
+            break;
+        case 1:
+        {
+            WBMainCell2 *cell2 = [tableView dequeueReusableCellWithIdentifier:@"WBMainCell2" forIndexPath:indexPath];
+            
+            return cell2;
+        }
+            break;
+        case 2:
+        {
+            WBMainCell3 *cell3 = [tableView dequeueReusableCellWithIdentifier:@"WBMainCell3" forIndexPath:indexPath];
+            
+            return cell3;
+        }
+            break;
+            
+        default:
+                return nil;
+            break;
     }
-    return cell;
+    
+   
 }
 #pragma mark---UITableViewDelegate
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    switch (indexPath.row) {
+        case 0:
+        {
+            return 65;
+        }
+            break;
+        case 1:
+        {
+            return 90;
+        }
+            break;
+        case 2:
+        {
+            return 125;
+        }
+            break;
+            
+        default:
+            break;
+    }
+    return 0;
+}
 
 
-
-
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    WBMainDetailViewController *mainDetailVC = [[WBMainDetailViewController alloc] init];
+    [self.navigationController pushViewController:mainDetailVC animated:YES];
+}
 
 
 #pragma mark-
@@ -72,7 +126,7 @@
     UITableView *mainTableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, kWidth, kHeight) style:UITableViewStylePlain];
     mainTableView.delegate = self;
     mainTableView.dataSource = self;
-    
+    mainTableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     [self.view addSubview:mainTableView];
     self.mainTableView = mainTableView;
     
@@ -92,11 +146,16 @@
     UIView *customHeaderView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, kWidth, 230)];
     
     UIImageView *bannerImageView = [[UIImageView alloc] initWithFrame:customHeaderView.bounds];
-    bannerImageView.image = [UIImage imageNamed:@"banner_1"];
+    bannerImageView.image = [UIImage imageNamed:@"shouye_banner_1"];
     [customHeaderView addSubview:bannerImageView];
     
     mainTableView.tableHeaderView = customHeaderView;
 
+    
+    [mainTableView registerNib:[UINib nibWithNibName:@"WBMainCell1" bundle:nil] forCellReuseIdentifier:@"WBMainCell1"];
+    [mainTableView registerNib:[UINib nibWithNibName:@"WBMainCell2" bundle:nil] forCellReuseIdentifier:@"WBMainCell2"];
+    [mainTableView registerNib:[UINib nibWithNibName:@"WBMainCell3" bundle:nil] forCellReuseIdentifier:@"WBMainCell3"];
+    
     
 
 }

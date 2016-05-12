@@ -3,30 +3,19 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="86" id="KGk-i7-Jjw" customClass="WBMainCell1">
-            <rect key="frame" x="0.0" y="0.0" width="327" height="60"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="WBMainCell1" rowHeight="86" id="KGk-i7-Jjw" customClass="WBMainCell1">
+            <rect key="frame" x="0.0" y="0.0" width="327" height="65"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="327" height="59"/>
+                <rect key="frame" x="0.0" y="0.0" width="327" height="64"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="关于各学院已办理学生住宿费退款的通知" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cBi-Vn-6Br">
-                        <rect key="frame" x="28" y="14" width="250" height="20"/>
-                        <constraints>
-                            <constraint firstAttribute="width" constant="250" id="cXh-ka-E7u"/>
-                            <constraint firstAttribute="height" constant="20" id="gJp-Gn-w6v"/>
-                        </constraints>
-                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                        <nil key="highlightedColor"/>
-                    </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2015-09-06" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mPG-GE-dFz">
-                        <rect key="frame" x="28" y="34" width="100" height="20"/>
+                        <rect key="frame" x="20" y="30" width="100" height="20"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="20" id="Ikz-bo-VUK"/>
                             <constraint firstAttribute="height" constant="20" id="O01-oa-237"/>
@@ -37,7 +26,7 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="学工办" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8PL-dK-YbW">
-                        <rect key="frame" x="130" y="34" width="60" height="20"/>
+                        <rect key="frame" x="122" y="30" width="60" height="20"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="60" id="I5k-U3-xKG"/>
                         </constraints>
@@ -45,15 +34,34 @@
                         <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lCn-kF-Sv0">
+                        <rect key="frame" x="0.0" y="59" width="327" height="5"/>
+                        <color key="backgroundColor" red="0.96078431372549022" green="0.96078431372549022" blue="0.96078431372549022" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="5" id="bc7-Ir-Fb9"/>
+                        </constraints>
+                    </view>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="关于各学院已办理学生住宿费退款的通知" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cBi-Vn-6Br">
+                        <rect key="frame" x="20" y="10" width="250" height="20"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="250" id="cXh-ka-E7u"/>
+                            <constraint firstAttribute="height" constant="20" id="gJp-Gn-w6v"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <nil key="highlightedColor"/>
+                    </label>
                 </subviews>
                 <constraints>
                     <constraint firstItem="8PL-dK-YbW" firstAttribute="centerY" secondItem="mPG-GE-dFz" secondAttribute="centerY" id="F1I-Sn-u0W"/>
-                    <constraint firstItem="cBi-Vn-6Br" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="20" id="FQs-qQ-Yii"/>
                     <constraint firstItem="mPG-GE-dFz" firstAttribute="leading" secondItem="cBi-Vn-6Br" secondAttribute="leading" id="KfU-sG-ILP"/>
-                    <constraint firstItem="cBi-Vn-6Br" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="6" id="Ri3-f2-cPg"/>
+                    <constraint firstItem="lCn-kF-Sv0" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="TS3-HW-LP6"/>
+                    <constraint firstItem="cBi-Vn-6Br" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="U6I-Wf-SKL"/>
+                    <constraint firstAttribute="trailing" secondItem="lCn-kF-Sv0" secondAttribute="trailing" id="Y5G-j2-gcw"/>
+                    <constraint firstAttribute="bottom" secondItem="lCn-kF-Sv0" secondAttribute="bottom" id="Zhn-Fx-J8G"/>
                     <constraint firstItem="8PL-dK-YbW" firstAttribute="leading" secondItem="mPG-GE-dFz" secondAttribute="trailing" constant="2" id="dec-va-ksG"/>
                     <constraint firstItem="8PL-dK-YbW" firstAttribute="height" secondItem="mPG-GE-dFz" secondAttribute="height" id="kie-In-HiG"/>
                     <constraint firstItem="mPG-GE-dFz" firstAttribute="top" secondItem="cBi-Vn-6Br" secondAttribute="bottom" id="mtG-zQ-Lhq"/>
+                    <constraint firstItem="cBi-Vn-6Br" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="y8H-ZC-lpe"/>
                 </constraints>
             </tableViewCellContentView>
             <point key="canvasLocation" x="412.5" y="288"/>

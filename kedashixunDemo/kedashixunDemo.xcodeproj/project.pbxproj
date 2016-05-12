@@ -29,6 +29,11 @@
 		5216DB941CDECB5C00B06B3B /* kedashixunDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5216DB931CDECB5C00B06B3B /* kedashixunDemoUITests.m */; };
 		522968841CE472050043784A /* WBLoginMenuHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 522968831CE472050043784A /* WBLoginMenuHeaderView.m */; };
 		522968861CE472130043784A /* WBLoginMenuHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 522968851CE472130043784A /* WBLoginMenuHeaderView.xib */; };
+		5229688C1CE499BF0043784A /* WBMainDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5229688A1CE499BF0043784A /* WBMainDetailViewController.m */; };
+		522968D41CE4B4750043784A /* WBCustomPictureWall.m in Sources */ = {isa = PBXBuildFile; fileRef = 522968D31CE4B4750043784A /* WBCustomPictureWall.m */; };
+		522968D71CE4B7ED0043784A /* WBMainDetailBottomView.m in Sources */ = {isa = PBXBuildFile; fileRef = 522968D61CE4B7ED0043784A /* WBMainDetailBottomView.m */; };
+		522968D91CE4B8010043784A /* WBMainDetailBottomView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 522968D81CE4B8010043784A /* WBMainDetailBottomView.xib */; };
+		522968DB1CE4CEA20043784A /* View1.xib in Resources */ = {isa = PBXBuildFile; fileRef = 522968DA1CE4CEA20043784A /* View1.xib */; };
 		52379EED1CE1DD4900E93767 /* WBPersonalCenterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 52379EEC1CE1DD4900E93767 /* WBPersonalCenterViewController.m */; };
 		527156721CE35ED0007F7821 /* WBCustomNavView.m in Sources */ = {isa = PBXBuildFile; fileRef = 527156711CE35ED0007F7821 /* WBCustomNavView.m */; };
 		527156741CE35EEF007F7821 /* WBCustomNavView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 527156731CE35EEF007F7821 /* WBCustomNavView.xib */; };
@@ -141,6 +146,14 @@
 		522968821CE472050043784A /* WBLoginMenuHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WBLoginMenuHeaderView.h; sourceTree = "<group>"; };
 		522968831CE472050043784A /* WBLoginMenuHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WBLoginMenuHeaderView.m; sourceTree = "<group>"; };
 		522968851CE472130043784A /* WBLoginMenuHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WBLoginMenuHeaderView.xib; sourceTree = "<group>"; };
+		522968891CE499BF0043784A /* WBMainDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WBMainDetailViewController.h; sourceTree = "<group>"; };
+		5229688A1CE499BF0043784A /* WBMainDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WBMainDetailViewController.m; sourceTree = "<group>"; };
+		522968D21CE4B4750043784A /* WBCustomPictureWall.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WBCustomPictureWall.h; sourceTree = "<group>"; };
+		522968D31CE4B4750043784A /* WBCustomPictureWall.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WBCustomPictureWall.m; sourceTree = "<group>"; };
+		522968D51CE4B7ED0043784A /* WBMainDetailBottomView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WBMainDetailBottomView.h; sourceTree = "<group>"; };
+		522968D61CE4B7ED0043784A /* WBMainDetailBottomView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WBMainDetailBottomView.m; sourceTree = "<group>"; };
+		522968D81CE4B8010043784A /* WBMainDetailBottomView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WBMainDetailBottomView.xib; sourceTree = "<group>"; };
+		522968DA1CE4CEA20043784A /* View1.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = View1.xib; sourceTree = "<group>"; };
 		52379EEB1CE1DD4900E93767 /* WBPersonalCenterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WBPersonalCenterViewController.h; sourceTree = "<group>"; };
 		52379EEC1CE1DD4900E93767 /* WBPersonalCenterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WBPersonalCenterViewController.m; sourceTree = "<group>"; };
 		527156701CE35ED0007F7821 /* WBCustomNavView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WBCustomNavView.h; sourceTree = "<group>"; };
@@ -376,6 +389,7 @@
 		52379EE91CE1DCE200E93767 /* views */ = {
 			isa = PBXGroup;
 			children = (
+				522968DA1CE4CEA20043784A /* View1.xib */,
 			);
 			path = views;
 			sourceTree = "<group>";
@@ -899,6 +913,8 @@
 			children = (
 				52A528871CDF3A6700499AE7 /* WBMainViewController.h */,
 				52A528881CDF3A6700499AE7 /* WBMainViewController.m */,
+				522968891CE499BF0043784A /* WBMainDetailViewController.h */,
+				5229688A1CE499BF0043784A /* WBMainDetailViewController.m */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -916,6 +932,11 @@
 				527156701CE35ED0007F7821 /* WBCustomNavView.h */,
 				527156711CE35ED0007F7821 /* WBCustomNavView.m */,
 				527156731CE35EEF007F7821 /* WBCustomNavView.xib */,
+				522968D21CE4B4750043784A /* WBCustomPictureWall.h */,
+				522968D31CE4B4750043784A /* WBCustomPictureWall.m */,
+				522968D51CE4B7ED0043784A /* WBMainDetailBottomView.h */,
+				522968D61CE4B7ED0043784A /* WBMainDetailBottomView.m */,
+				522968D81CE4B8010043784A /* WBMainDetailBottomView.xib */,
 			);
 			path = views;
 			sourceTree = "<group>";
@@ -1046,6 +1067,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				527156791CE36E66007F7821 /* WBMainCell1.xib in Resources */,
+				522968D91CE4B8010043784A /* WBMainDetailBottomView.xib in Resources */,
+				522968DB1CE4CEA20043784A /* View1.xib in Resources */,
 				52A528451CDEE81E00499AE7 /* tabbar_books@3x.png in Resources */,
 				52A5289C1CDF3DB600499AE7 /* WBMenuTableViewCell.xib in Resources */,
 				527156831CE36EE9007F7821 /* WBMainCell2.xib in Resources */,
@@ -1157,16 +1180,19 @@
 				52A5288F1CDF3A6700499AE7 /* WBPhoneBookViewController.m in Sources */,
 				52A5282A1CDED65B00499AE7 /* UIViewController+RESideMenu.m in Sources */,
 				52A528411CDEDD8200499AE7 /* WBTools.m in Sources */,
+				522968D41CE4B4750043784A /* WBCustomPictureWall.m in Sources */,
 				52A5281D1CDECD2000499AE7 /* WBUserRequest.m in Sources */,
 				057BDD3D1CDF479500F03911 /* KTopicCell.m in Sources */,
 				05ECD8771CE4779800A0582A /* KUISegmentedControl.m in Sources */,
 				527156871CE36F0D007F7821 /* WBMainCell3.m in Sources */,
 				05ECD8701CE4666500A0582A /* KCommentModel.m in Sources */,
+				5229688C1CE499BF0043784A /* WBMainDetailViewController.m in Sources */,
 				52A528911CDF3A6700499AE7 /* UINavigationBar+NavBar_WBCustomBackgroudImage.m in Sources */,
 				527156721CE35ED0007F7821 /* WBCustomNavView.m in Sources */,
 				52A5280F1CDECD2000499AE7 /* UIImage+WBGetWithColor.m in Sources */,
 				52A528961CDF3A6700499AE7 /* WBForumViewController.m in Sources */,
 				52A5288B1CDF3A6700499AE7 /* WBMenuViewController.m in Sources */,
+				522968D71CE4B7ED0043784A /* WBMainDetailBottomView.m in Sources */,
 				52A528111CDECD2000499AE7 /* WBBaseViewController.m in Sources */,
 				52A528971CDF3A6700499AE7 /* WBMainViewController.m in Sources */,
 				05ECD8611CE45E6B00A0582A /* KCommentCountView.m in Sources */,

@@ -36,6 +36,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.view.backgroundColor = kBGDefaultColor;
     self.automaticallyAdjustsScrollViewInsets = NO;
     
     self.navigationItem.leftBarButtonItems = [UIBarButtonItem barButtonItemWithImageName:@"arrow_left" withHighlightedImageName:nil withTarget:self withAction:@selector(returnSideMenuBtnAction:) WithNegativeSpacerWidth:- 10];
@@ -45,7 +46,7 @@
 
 - (void)viewLayout
 {
-    _mainTableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 64,kWidth , kHeight - 64) style:UITableViewStylePlain];
+    _mainTableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 64 + 8,kWidth , kHeight - 64) style:UITableViewStylePlain];
     _mainTableView.delegate = self;
     _mainTableView.dataSource = self;
     [self.view addSubview:_mainTableView];

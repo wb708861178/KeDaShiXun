@@ -77,30 +77,31 @@
     _mainTableView.delegate = self;
     _mainTableView.dataSource = self;
     _mainTableView.backgroundColor = [UIColor clearColor];
+    _mainTableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     [self.view addSubview:_mainTableView];
     
-    //没登录
-    WBMenuHeaderView *menuHeaderView =   [[NSBundle mainBundle] loadNibNamed:@"WBMenuHeaderView" owner:nil options:nil].firstObject;
-    menuHeaderView.jumpToLoginVCBlock = ^{
-        NSLog(@"jumpToLoginVC");
-        
-    };
-    menuHeaderView.frame = CGRectMake(0, 0, kWidth,130 );
-        [self.view addSubview:menuHeaderView];
-    
-    
-    
-    
-//    //登录了
-//    WBLoginMenuHeaderView *loginMenuHeaderView =   [[NSBundle mainBundle] loadNibNamed:@"WBLoginMenuHeaderView" owner:nil options:nil].firstObject;
-//    loginMenuHeaderView.frame = CGRectMake(0, 0, kWidth,130 );
-//    [self.view addSubview:loginMenuHeaderView];
-//    loginMenuHeaderView.jumpToPersonalCenterVCBlock = ^{
-//        WBPersonalCenterViewController *personalCenterVC = [[WBPersonalCenterViewController alloc] init];
-//        [self.sideMenuViewController hideMenuViewController];
-//        WBTabBarViewController *tabBarVC = (WBTabBarViewController *)self.sideMenuViewController.contentViewController;
-//        [tabBarVC.selectedViewController pushViewController:personalCenterVC animated:NO];
+//    //没登录
+//    WBMenuHeaderView *menuHeaderView =   [[NSBundle mainBundle] loadNibNamed:@"WBMenuHeaderView" owner:nil options:nil].firstObject;
+//    menuHeaderView.jumpToLoginVCBlock = ^{
+//        NSLog(@"jumpToLoginVC");
+//        
 //    };
+//    menuHeaderView.frame = CGRectMake(0, 0, kWidth,130 );
+//        [self.view addSubview:menuHeaderView];
+    
+    
+    
+    
+    //登录了
+    WBLoginMenuHeaderView *loginMenuHeaderView =   [[NSBundle mainBundle] loadNibNamed:@"WBLoginMenuHeaderView" owner:nil options:nil].firstObject;
+    loginMenuHeaderView.frame = CGRectMake(0, 0, kWidth,130 );
+    [self.view addSubview:loginMenuHeaderView];
+    loginMenuHeaderView.jumpToPersonalCenterVCBlock = ^{
+        WBPersonalCenterViewController *personalCenterVC = [[WBPersonalCenterViewController alloc] init];
+        [self.sideMenuViewController hideMenuViewController];
+        WBTabBarViewController *tabBarVC = (WBTabBarViewController *)self.sideMenuViewController.contentViewController;
+        [tabBarVC.selectedViewController pushViewController:personalCenterVC animated:NO];
+    };
     
 }
 

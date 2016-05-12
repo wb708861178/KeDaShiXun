@@ -21,6 +21,7 @@
 {
     [super viewWillAppear:animated];
     self.navigationController.navigationBarHidden = NO;
+    
 }
 
 - (instancetype)initWithViewControllerNavItemStyle:(ViewControllerNavItemStyle)viewControllerNavItemStyle{
@@ -29,7 +30,7 @@
         //不让view受navbar的影响
       
         
-        self.automaticallyAdjustsScrollViewInsets = NO;
+       
         
         switch (viewControllerNavItemStyle) {
             case ViewControllerNavItemStyleMain:
