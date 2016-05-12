@@ -8,53 +8,61 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="WBMenuHeaderView">
-            <rect key="frame" x="0.0" y="0.0" width="290" height="105"/>
+            <rect key="frame" x="0.0" y="0.0" width="290" height="130"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tabbar_books.png" translatesAutoresizingMaskIntoConstraints="NO" id="ifp-Ia-Q2E">
-                    <rect key="frame" x="15" y="34" width="56" height="56"/>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="menu_touxiang-0" translatesAutoresizingMaskIntoConstraints="NO" id="ifp-Ia-Q2E">
+                    <rect key="frame" x="15" y="60" width="50" height="50"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="56" id="Nw3-ve-wyL"/>
-                        <constraint firstAttribute="width" constant="56" id="qLZ-iv-fHS"/>
+                        <constraint firstAttribute="height" constant="50" id="RWJ-Pz-6e5"/>
+                        <constraint firstAttribute="width" constant="50" id="T3I-VK-ipn"/>
                     </constraints>
                 </imageView>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="efN-QZ-f0Q">
-                    <rect key="frame" x="84" y="34" width="65" height="30"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="登录/注册" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yoK-K5-egu">
+                    <rect key="frame" x="75" y="70" width="100" height="30"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="30" id="7sy-22-c0j"/>
-                        <constraint firstAttribute="width" constant="65" id="Sty-zc-b5B"/>
+                        <constraint firstAttribute="width" constant="100" id="Y0x-fz-QhD"/>
+                        <constraint firstAttribute="height" constant="30" id="dku-6z-bwU"/>
                     </constraints>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yoK-K5-egu">
-                    <rect key="frame" x="84" y="70" width="174" height="20"/>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qit-Z5-Wkk">
+                    <rect key="frame" x="0.0" y="128" width="290" height="2"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <constraints>
-                        <constraint firstAttribute="width" constant="174" id="qJG-mc-5lf"/>
-                        <constraint firstAttribute="height" constant="20" id="tbN-HE-iUa"/>
+                        <constraint firstAttribute="height" constant="2" id="8eY-St-LSd"/>
                     </constraints>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                    <nil key="highlightedColor"/>
-                </label>
+                </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yAE-kJ-o5l">
+                    <rect key="frame" x="15" y="60" width="160" height="50"/>
+                    <connections>
+                        <action selector="jumpToLoginVCBtnAction:" destination="iN0-l3-epB" eventType="touchUpInside" id="HqR-2f-7QD"/>
+                    </connections>
+                </button>
             </subviews>
-            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             <constraints>
-                <constraint firstItem="yoK-K5-egu" firstAttribute="leading" secondItem="efN-QZ-f0Q" secondAttribute="leading" id="3MQ-ns-dsv"/>
-                <constraint firstItem="ifp-Ia-Q2E" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="15" id="TfK-Im-FWp"/>
-                <constraint firstItem="yoK-K5-egu" firstAttribute="bottom" secondItem="ifp-Ia-Q2E" secondAttribute="bottom" id="UrN-OQ-hUL"/>
-                <constraint firstAttribute="bottom" secondItem="ifp-Ia-Q2E" secondAttribute="bottom" constant="15" id="YC2-Rq-lcm"/>
-                <constraint firstItem="efN-QZ-f0Q" firstAttribute="leading" secondItem="ifp-Ia-Q2E" secondAttribute="trailing" constant="13" id="qNJ-Pg-Q8g"/>
-                <constraint firstItem="efN-QZ-f0Q" firstAttribute="top" secondItem="ifp-Ia-Q2E" secondAttribute="top" id="vJL-CO-uSY"/>
+                <constraint firstItem="Qit-Z5-Wkk" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="3ZA-NE-15W"/>
+                <constraint firstItem="yoK-K5-egu" firstAttribute="centerY" secondItem="ifp-Ia-Q2E" secondAttribute="centerY" id="9Cj-sc-nwW"/>
+                <constraint firstItem="yoK-K5-egu" firstAttribute="trailing" secondItem="yAE-kJ-o5l" secondAttribute="trailing" id="Bxt-1t-OiD"/>
+                <constraint firstItem="ifp-Ia-Q2E" firstAttribute="leading" secondItem="yAE-kJ-o5l" secondAttribute="leading" id="Gqb-5Q-RVF"/>
+                <constraint firstItem="ifp-Ia-Q2E" firstAttribute="bottom" secondItem="yAE-kJ-o5l" secondAttribute="bottom" id="NfZ-kP-YMd"/>
+                <constraint firstItem="ifp-Ia-Q2E" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="60" id="TA0-z7-J7a"/>
+                <constraint firstItem="ifp-Ia-Q2E" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="15" id="b5d-N6-0xP"/>
+                <constraint firstItem="Qit-Z5-Wkk" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="128" id="c2T-ol-1a7"/>
+                <constraint firstItem="ifp-Ia-Q2E" firstAttribute="top" secondItem="yAE-kJ-o5l" secondAttribute="top" id="c2x-rH-Zne"/>
+                <constraint firstItem="yoK-K5-egu" firstAttribute="leading" secondItem="ifp-Ia-Q2E" secondAttribute="trailing" constant="10" id="fBq-nk-Etx"/>
+                <constraint firstAttribute="trailing" secondItem="Qit-Z5-Wkk" secondAttribute="trailing" id="jj5-cZ-rBI"/>
             </constraints>
             <nil key="simulatedStatusBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-            <point key="canvasLocation" x="263" y="212.5"/>
+            <point key="canvasLocation" x="475" y="249"/>
         </view>
     </objects>
     <resources>
-        <image name="tabbar_books.png" width="37" height="37"/>
+        <image name="menu_touxiang-0" width="40" height="40"/>
     </resources>
 </document>

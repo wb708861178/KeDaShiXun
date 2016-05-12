@@ -11,6 +11,8 @@
 #import "WBPersonalCenterViewController.h"
 #import "RESideMenu.h"
 #import "WBTabBarViewController.h"
+#import "WBMenuHeaderView.h"
+#import "WBLoginMenuHeaderView.h"
 
 
 
@@ -37,7 +39,7 @@
 - (NSArray *)imageNameArr
 {
     if (!_imageNameArr) {
-        _imageNameArr = @[@"tabbar_books@3x",@"tabbar_books@3x",@"tabbar_books@3x",@"tabbar_books@3x",@"tabbar_books@3x"];
+        _imageNameArr = @[@"menu_xiaoli",@"menu_xiaoxi",@"menu_shoucang",@"menu_fatie",@"menu_shezhi"];
     }
     return _imageNameArr;
 }
@@ -68,12 +70,38 @@
 #pragma mark----view布局
 - (void)viewLayout
 {
+    UIImageView *bgImageView = [[UIImageView alloc] initWithFrame:self.view.bounds];
+    bgImageView.image = [UIImage imageNamed:@"menu_bg"];
+    [self.view addSubview:bgImageView];
     _mainTableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 200, kWidth, kHeight - 200 ) style:UITableViewStylePlain];
     _mainTableView.delegate = self;
     _mainTableView.dataSource = self;
     _mainTableView.backgroundColor = [UIColor clearColor];
     [self.view addSubview:_mainTableView];
-   
+    
+    //没登录
+    WBMenuHeaderView *menuHeaderView =   [[NSBundle mainBundle] loadNibNamed:@"WBMenuHeaderView" owner:nil options:nil].firstObject;
+    menuHeaderView.jumpToLoginVCBlock = ^{
+        NSLog(@"jumpToLoginVC");
+        
+    };
+    menuHeaderView.frame = CGRectMake(0, 0, kWidth,130 );
+        [self.view addSubview:menuHeaderView];
+    
+    
+    
+    
+//    //登录了
+//    WBLoginMenuHeaderView *loginMenuHeaderView =   [[NSBundle mainBundle] loadNibNamed:@"WBLoginMenuHeaderView" owner:nil options:nil].firstObject;
+//    loginMenuHeaderView.frame = CGRectMake(0, 0, kWidth,130 );
+//    [self.view addSubview:loginMenuHeaderView];
+//    loginMenuHeaderView.jumpToPersonalCenterVCBlock = ^{
+//        WBPersonalCenterViewController *personalCenterVC = [[WBPersonalCenterViewController alloc] init];
+//        [self.sideMenuViewController hideMenuViewController];
+//        WBTabBarViewController *tabBarVC = (WBTabBarViewController *)self.sideMenuViewController.contentViewController;
+//        [tabBarVC.selectedViewController pushViewController:personalCenterVC animated:NO];
+//    };
+    
 }
 
 #pragma mark-
@@ -114,14 +142,6 @@
 
 #pragma mark-按钮点击事件
 
-- (IBAction)jumpToPersonalCenterBtnAction:(id)sender {
-    WBPersonalCenterViewController *personalCenterVC = [[WBPersonalCenterViewController alloc] init];
-    [self.sideMenuViewController hideMenuViewController];
-    WBTabBarViewController *tabBarVC = (WBTabBarViewController *)self.sideMenuViewController.contentViewController;
-    [tabBarVC.selectedViewController pushViewController:personalCenterVC animated:NO];
-
-    
-}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

@@ -8,6 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
+typedef void(^JumpToVC)();
 @interface WBMenuHeaderView : UIView
+@property (nonatomic, copy) JumpToVC jumpToLoginVCBlock;
+
 
 @end
