@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		053AF2781CE21415000ACB9D /* KTopicDetailVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 053AF2771CE21415000ACB9D /* KTopicDetailVC.m */; };
-		057BDD3A1CDF430300F03911 /* WBCustonSegment.m in Sources */ = {isa = PBXBuildFile; fileRef = 057BDD391CDF430300F03911 /* WBCustonSegment.m */; };
 		057BDD3D1CDF479500F03911 /* KTopicCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 057BDD3C1CDF479500F03911 /* KTopicCell.m */; };
 		057BDD401CDF47B400F03911 /* KTopicModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 057BDD3F1CDF47B400F03911 /* KTopicModel.m */; };
 		057BDD431CDF47C200F03911 /* KTopicFrameModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 057BDD421CDF47C200F03911 /* KTopicFrameModel.m */; };
@@ -23,6 +22,10 @@
 		05ECD8701CE4666500A0582A /* KCommentModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 05ECD86F1CE4666500A0582A /* KCommentModel.m */; };
 		05ECD8731CE46BD700A0582A /* KTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 05ECD8721CE46BD700A0582A /* KTools.m */; };
 		05ECD8771CE4779800A0582A /* KUISegmentedControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 05ECD8761CE4779800A0582A /* KUISegmentedControl.m */; };
+		05ECD8A61CE49DB800A0582A /* GQBasePictureTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 05ECD89F1CE49DB800A0582A /* GQBasePictureTableView.m */; };
+		05ECD8A71CE49DB800A0582A /* GQImageViewer.m in Sources */ = {isa = PBXBuildFile; fileRef = 05ECD8A11CE49DB800A0582A /* GQImageViewer.m */; };
+		05ECD8A81CE49DB800A0582A /* GQPhotoScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 05ECD8A31CE49DB800A0582A /* GQPhotoScrollView.m */; };
+		05ECD8A91CE49DB800A0582A /* GQPhotoTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 05ECD8A51CE49DB800A0582A /* GQPhotoTableView.m */; };
 		25B72F0CD143B850B112A130 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F0D535423ED6E61946912108 /* libPods.a */; };
 		5216DB701CDECB5C00B06B3B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5216DB6F1CDECB5C00B06B3B /* main.m */; };
 		5216DB891CDECB5C00B06B3B /* kedashixunDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5216DB881CDECB5C00B06B3B /* kedashixunDemoTests.m */; };
@@ -100,8 +103,6 @@
 /* Begin PBXFileReference section */
 		053AF2761CE21415000ACB9D /* KTopicDetailVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KTopicDetailVC.h; sourceTree = "<group>"; };
 		053AF2771CE21415000ACB9D /* KTopicDetailVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KTopicDetailVC.m; sourceTree = "<group>"; };
-		057BDD381CDF430300F03911 /* WBCustonSegment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WBCustonSegment.h; sourceTree = "<group>"; };
-		057BDD391CDF430300F03911 /* WBCustonSegment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WBCustonSegment.m; sourceTree = "<group>"; };
 		057BDD3B1CDF479500F03911 /* KTopicCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KTopicCell.h; sourceTree = "<group>"; };
 		057BDD3C1CDF479500F03911 /* KTopicCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KTopicCell.m; sourceTree = "<group>"; };
 		057BDD3E1CDF47B400F03911 /* KTopicModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KTopicModel.h; sourceTree = "<group>"; };
@@ -127,6 +128,14 @@
 		05ECD8721CE46BD700A0582A /* KTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KTools.m; sourceTree = "<group>"; };
 		05ECD8751CE4779800A0582A /* KUISegmentedControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KUISegmentedControl.h; sourceTree = "<group>"; };
 		05ECD8761CE4779800A0582A /* KUISegmentedControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KUISegmentedControl.m; sourceTree = "<group>"; };
+		05ECD89E1CE49DB800A0582A /* GQBasePictureTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GQBasePictureTableView.h; sourceTree = "<group>"; };
+		05ECD89F1CE49DB800A0582A /* GQBasePictureTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GQBasePictureTableView.m; sourceTree = "<group>"; };
+		05ECD8A01CE49DB800A0582A /* GQImageViewer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GQImageViewer.h; sourceTree = "<group>"; };
+		05ECD8A11CE49DB800A0582A /* GQImageViewer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GQImageViewer.m; sourceTree = "<group>"; };
+		05ECD8A21CE49DB800A0582A /* GQPhotoScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GQPhotoScrollView.h; sourceTree = "<group>"; };
+		05ECD8A31CE49DB800A0582A /* GQPhotoScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GQPhotoScrollView.m; sourceTree = "<group>"; };
+		05ECD8A41CE49DB800A0582A /* GQPhotoTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GQPhotoTableView.h; sourceTree = "<group>"; };
+		05ECD8A51CE49DB800A0582A /* GQPhotoTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GQPhotoTableView.m; sourceTree = "<group>"; };
 		0F1BB20647A92F384047403D /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		5216DB6B1CDECB5C00B06B3B /* kedashixunDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = kedashixunDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5216DB6F1CDECB5C00B06B3B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -265,6 +274,21 @@
 				05ECD8761CE4779800A0582A /* KUISegmentedControl.m */,
 			);
 			path = KUISegment;
+			sourceTree = "<group>";
+		};
+		05ECD89D1CE49DB800A0582A /* GQImageViewer */ = {
+			isa = PBXGroup;
+			children = (
+				05ECD89E1CE49DB800A0582A /* GQBasePictureTableView.h */,
+				05ECD89F1CE49DB800A0582A /* GQBasePictureTableView.m */,
+				05ECD8A01CE49DB800A0582A /* GQImageViewer.h */,
+				05ECD8A11CE49DB800A0582A /* GQImageViewer.m */,
+				05ECD8A21CE49DB800A0582A /* GQPhotoScrollView.h */,
+				05ECD8A31CE49DB800A0582A /* GQPhotoScrollView.m */,
+				05ECD8A41CE49DB800A0582A /* GQPhotoTableView.h */,
+				05ECD8A51CE49DB800A0582A /* GQPhotoTableView.m */,
+			);
+			path = GQImageViewer;
 			sourceTree = "<group>";
 		};
 		5216DB621CDECB5C00B06B3B = {
@@ -569,6 +593,7 @@
 		52A528201CDED63400499AE7 /* 三方 */ = {
 			isa = PBXGroup;
 			children = (
+				05ECD89D1CE49DB800A0582A /* GQImageViewer */,
 				52A528211CDED65B00499AE7 /* RESideMenu */,
 			);
 			path = "三方";
@@ -843,8 +868,6 @@
 			isa = PBXGroup;
 			children = (
 				05ECD8741CE4776F00A0582A /* KUISegment */,
-				057BDD381CDF430300F03911 /* WBCustonSegment.h */,
-				057BDD391CDF430300F03911 /* WBCustonSegment.m */,
 				057BDD3B1CDF479500F03911 /* KTopicCell.h */,
 				057BDD3C1CDF479500F03911 /* KTopicCell.m */,
 				05C87CC51CE3681E00BFBA0F /* KTopicDetailHeader.h */,
@@ -1131,9 +1154,9 @@
 				52A528191CDECD2000499AE7 /* WBDBModel.m in Sources */,
 				52A528941CDF3A6700499AE7 /* UIImage+WBGetWithColor.m in Sources */,
 				057BDD431CDF47C200F03911 /* KTopicFrameModel.m in Sources */,
+				05ECD8A61CE49DB800A0582A /* GQBasePictureTableView.m in Sources */,
 				52A528931CDF3A6700499AE7 /* UIColor+HexColor.m in Sources */,
 				52A5284E1CDF300500499AE7 /* AppDelegate.m in Sources */,
-				057BDD3A1CDF430300F03911 /* WBCustonSegment.m in Sources */,
 				52A528951CDF3A6700499AE7 /* UIView+WBLocation.m in Sources */,
 				527156781CE36E66007F7821 /* WBMainCell1.m in Sources */,
 				52A5280E1CDECD2000499AE7 /* UIColor+HexColor.m in Sources */,
@@ -1142,6 +1165,7 @@
 				52A528181CDECD2000499AE7 /* WBDBHelper.m in Sources */,
 				52A528921CDF3A6700499AE7 /* UIBarButtonItem+WBCustomButton.m in Sources */,
 				52A5281C1CDECD2000499AE7 /* WBMessageRequest.m in Sources */,
+				05ECD8A71CE49DB800A0582A /* GQImageViewer.m in Sources */,
 				52A5288E1CDF3A6700499AE7 /* WBGuidanceViewController.m in Sources */,
 				527156821CE36EE9007F7821 /* WBMainCell2.m in Sources */,
 				52A5280C1CDECD2000499AE7 /* UINavigationBar+NavBar_WBCustomBackgroudImage.m in Sources */,
@@ -1151,7 +1175,9 @@
 				52A5289B1CDF3DB600499AE7 /* WBMenuTableViewCell.m in Sources */,
 				52A5288F1CDF3A6700499AE7 /* WBPhoneBookViewController.m in Sources */,
 				52A5282A1CDED65B00499AE7 /* UIViewController+RESideMenu.m in Sources */,
+				05ECD8A81CE49DB800A0582A /* GQPhotoScrollView.m in Sources */,
 				52A528411CDEDD8200499AE7 /* WBTools.m in Sources */,
+				05ECD8A91CE49DB800A0582A /* GQPhotoTableView.m in Sources */,
 				52A5281D1CDECD2000499AE7 /* WBUserRequest.m in Sources */,
 				057BDD3D1CDF479500F03911 /* KTopicCell.m in Sources */,
 				05ECD8771CE4779800A0582A /* KUISegmentedControl.m in Sources */,

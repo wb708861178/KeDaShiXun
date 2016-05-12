@@ -9,9 +9,10 @@
 #import <UIKit/UIKit.h>
 #import "KTopicHeaderFrameModel.h"
 
+
 @interface KTopicDetailHeader : UIView
 
 @property (nonatomic, strong) KTopicHeaderFrameModel *topicHeaderFrameModel;
 
-
+@property (nonatomic, copy) void(^showImageViewer)();
 @end
