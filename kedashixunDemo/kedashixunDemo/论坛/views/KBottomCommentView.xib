@@ -7,10 +7,52 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <view contentMode="scaleToFill" id="iN0-l3-epB">
-            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="KBottomCommentView">
+            <rect key="frame" x="0.0" y="0.0" width="399" height="44"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="说说你的看法！" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kCx-SK-SNf">
+                    <rect key="frame" x="10" y="4" width="334" height="36"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iA0-jh-JKf">
+                    <rect key="frame" x="349" y="0.0" width="50" height="44"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="50" id="Ghl-f0-7aK"/>
+                    </constraints>
+                    <state key="normal" title="发吧！">
+                        <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                </button>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0Fd-4p-7yz">
+                    <rect key="frame" x="0.0" y="0.0" width="399" height="1"/>
+                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="1" id="00s-4R-ypB"/>
+                    </constraints>
+                </view>
+            </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="iA0-jh-JKf" firstAttribute="leading" secondItem="kCx-SK-SNf" secondAttribute="trailing" constant="5" id="1ZO-Ea-YJq"/>
+                <constraint firstItem="kCx-SK-SNf" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="4" id="4BC-SS-vZL"/>
+                <constraint firstAttribute="bottom" secondItem="kCx-SK-SNf" secondAttribute="bottom" constant="4" id="5RP-aL-hL3"/>
+                <constraint firstItem="0Fd-4p-7yz" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="EaJ-gI-y8Q"/>
+                <constraint firstAttribute="trailing" secondItem="iA0-jh-JKf" secondAttribute="trailing" id="GtW-er-atI"/>
+                <constraint firstAttribute="bottom" secondItem="iA0-jh-JKf" secondAttribute="bottom" id="U0o-ux-Zhi"/>
+                <constraint firstAttribute="trailing" secondItem="0Fd-4p-7yz" secondAttribute="trailing" id="aLq-tQ-5wr"/>
+                <constraint firstItem="iA0-jh-JKf" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="hiR-dS-doa"/>
+                <constraint firstItem="kCx-SK-SNf" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="10" id="pKY-J5-UuU"/>
+                <constraint firstItem="0Fd-4p-7yz" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="vHy-cH-naS"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="commentTF" destination="kCx-SK-SNf" id="GEk-8Q-TxB"/>
+                <outlet property="sendComment" destination="iA0-jh-JKf" id="Oe8-bC-x8V"/>
+            </connections>
+            <point key="canvasLocation" x="346.5" y="378"/>
         </view>
     </objects>
 </document>

@@ -8,7 +8,23 @@
 
 #import "KBottomCommentView.h"
 
+@interface KBottomCommentView ()
+
+
+
+
+@end
+
 @implementation KBottomCommentView
+
+- (void)awakeFromNib{
+    
+    _commentTF.layer.cornerRadius = _commentTF.frame.size.height/2;
+    _commentTF.layer.masksToBounds = YES;
+    _commentTF.layer.borderWidth = 1.f;
+    _commentTF.layer.borderColor = [UIColor lightGrayColor].CGColor;
+    
+}
 
 /*
 // Only override drawRect: if you perform custom drawing.
