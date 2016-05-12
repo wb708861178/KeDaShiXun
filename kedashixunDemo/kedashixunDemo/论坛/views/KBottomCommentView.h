@@ -10,4 +10,7 @@
 
 @interface KBottomCommentView : UIView
 
+@property (weak, nonatomic) IBOutlet UITextField *commentTF;
+
+@property (weak, nonatomic) IBOutlet UIButton *sendComment;
 @end

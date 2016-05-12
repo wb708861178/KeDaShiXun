@@ -12,12 +12,14 @@
 #import "KTopicDetailHeader.h"
 #import "KCommentCell.h"
 #import <MJExtension.h>
+#import "KBottomCommentView.h"
 
 #define space 10
 
 @interface KTopicDetailVC () <UITableViewDataSource ,UITableViewDelegate>
 
 @property (nonatomic, strong) UITableView *topicDetailTV;
+@property (nonatomic, strong) KBottomCommentView *commentView;
 
 
 @property (nonatomic, strong) NSMutableArray *commentListArr;
@@ -44,20 +46,30 @@
     self.commentListArr = [KCommentModel mj_objectArrayWithKeyValuesArray:commentList];
     
     //-----------
+    
+    //注册键盘通知
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(bottomViewFrameShouldChange:) name:UIKeyboardWillChangeFrameNotification object:nil];
+    
 }
 
 - (void)viewLayout{
     
-    _topicDetailTV = [[UITableView alloc] initWithFrame:CGRectMake(0, space, kWidth, kHeight-64) style:UITableViewStylePlain];
+    _topicDetailTV = [[UITableView alloc] initWithFrame:CGRectMake(0, space, kWidth, kHeight-44) style:UITableViewStylePlain];
     _topicDetailTV.delegate = self;
     _topicDetailTV.dataSource = self;
     _topicDetailTV.rowHeight = UITableViewAutomaticDimension;
+    
+    //设置header
     KTopicDetailHeader *topicDetailHeader = [[KTopicDetailHeader alloc] initWithFrame:CGRectMake(0, 64, kWidth, self.topicHeaderFrameModel.headerHeight)];
     topicDetailHeader.topicHeaderFrameModel = self.topicHeaderFrameModel;
     _topicDetailTV.tableHeaderView = topicDetailHeader;
     [self.view addSubview:_topicDetailTV];
     
-
+    //底部的评论view
+    _commentView = [[NSBundle mainBundle] loadNibNamed:@"KBottomCommentView" owner:nil options:nil].firstObject;
+    _commentView.frame = CGRectMake(0, kHeight-44, kWidth, 44);
+    [_commentView.sendComment addTarget:self action:@selector(sendComment:) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:_commentView];
     
 }
 
@@ -92,6 +104,42 @@
     return 100;
 }
 
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+    
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+}
+
+//发送评论
+- (void)sendComment:(id)sender{
+    //空 直接返回
+    if (!_commentView.commentTF.text) {
+        return;
+    }
+    
+    //评论数据
+    
+    
+    
+}
+
+//键盘弹出消失  view的Frame变化
+- (void)bottomViewFrameShouldChange:(NSNotification *)notification{
+    
+    NSDictionary *dict = notification.userInfo;
+    CGRect endRect = [dict[UIKeyboardFrameEndUserInfoKey] CGRectValue];
+    CGFloat changeY = endRect.origin.y - self.view.frame.size.height;
+    
+    self.commentView.transform = CGAffineTransformMakeTranslation(0, changeY);
+    
+}
+
+- (void)dealloc{
+    
+    //移除通知
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:UIKeyboardWillChangeFrameNotification object:nil];
+    
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

@@ -21,6 +21,8 @@
 		05ECD86C1CE462BC00A0582A /* KCommentCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 05ECD86A1CE462BC00A0582A /* KCommentCell.m */; };
 		05ECD86D1CE462BC00A0582A /* KCommentCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 05ECD86B1CE462BC00A0582A /* KCommentCell.xib */; };
 		05ECD8701CE4666500A0582A /* KCommentModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 05ECD86F1CE4666500A0582A /* KCommentModel.m */; };
+		05ECD8731CE46BD700A0582A /* KTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 05ECD8721CE46BD700A0582A /* KTools.m */; };
+		05ECD8771CE4779800A0582A /* KUISegmentedControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 05ECD8761CE4779800A0582A /* KUISegmentedControl.m */; };
 		25B72F0CD143B850B112A130 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F0D535423ED6E61946912108 /* libPods.a */; };
 		5216DB701CDECB5C00B06B3B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5216DB6F1CDECB5C00B06B3B /* main.m */; };
 		5216DB891CDECB5C00B06B3B /* kedashixunDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5216DB881CDECB5C00B06B3B /* kedashixunDemoTests.m */; };
@@ -121,6 +123,10 @@
 		05ECD86B1CE462BC00A0582A /* KCommentCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = KCommentCell.xib; sourceTree = "<group>"; };
 		05ECD86E1CE4666500A0582A /* KCommentModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KCommentModel.h; sourceTree = "<group>"; };
 		05ECD86F1CE4666500A0582A /* KCommentModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KCommentModel.m; sourceTree = "<group>"; };
+		05ECD8711CE46BD700A0582A /* KTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KTools.h; sourceTree = "<group>"; };
+		05ECD8721CE46BD700A0582A /* KTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KTools.m; sourceTree = "<group>"; };
+		05ECD8751CE4779800A0582A /* KUISegmentedControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KUISegmentedControl.h; sourceTree = "<group>"; };
+		05ECD8761CE4779800A0582A /* KUISegmentedControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KUISegmentedControl.m; sourceTree = "<group>"; };
 		0F1BB20647A92F384047403D /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		5216DB6B1CDECB5C00B06B3B /* kedashixunDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = kedashixunDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5216DB6F1CDECB5C00B06B3B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -252,6 +258,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		05ECD8741CE4776F00A0582A /* KUISegment */ = {
+			isa = PBXGroup;
+			children = (
+				05ECD8751CE4779800A0582A /* KUISegmentedControl.h */,
+				05ECD8761CE4779800A0582A /* KUISegmentedControl.m */,
+			);
+			path = KUISegment;
+			sourceTree = "<group>";
+		};
 		5216DB621CDECB5C00B06B3B = {
 			isa = PBXGroup;
 			children = (
@@ -577,6 +592,8 @@
 			children = (
 				52A5283F1CDEDD8200499AE7 /* WBTools.h */,
 				52A528401CDEDD8200499AE7 /* WBTools.m */,
+				05ECD8711CE46BD700A0582A /* KTools.h */,
+				05ECD8721CE46BD700A0582A /* KTools.m */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -825,6 +842,7 @@
 		52A528831CDF3A6700499AE7 /* views */ = {
 			isa = PBXGroup;
 			children = (
+				05ECD8741CE4776F00A0582A /* KUISegment */,
 				057BDD381CDF430300F03911 /* WBCustonSegment.h */,
 				057BDD391CDF430300F03911 /* WBCustonSegment.m */,
 				057BDD3B1CDF479500F03911 /* KTopicCell.h */,
@@ -1136,6 +1154,7 @@
 				52A528411CDEDD8200499AE7 /* WBTools.m in Sources */,
 				52A5281D1CDECD2000499AE7 /* WBUserRequest.m in Sources */,
 				057BDD3D1CDF479500F03911 /* KTopicCell.m in Sources */,
+				05ECD8771CE4779800A0582A /* KUISegmentedControl.m in Sources */,
 				527156871CE36F0D007F7821 /* WBMainCell3.m in Sources */,
 				05ECD8701CE4666500A0582A /* KCommentModel.m in Sources */,
 				52A528911CDF3A6700499AE7 /* UINavigationBar+NavBar_WBCustomBackgroudImage.m in Sources */,
@@ -1153,6 +1172,7 @@
 				52A528281CDED65B00499AE7 /* RECommonFunctions.m in Sources */,
 				52A528291CDED65B00499AE7 /* RESideMenu.m in Sources */,
 				52379EED1CE1DD4900E93767 /* WBPersonalCenterViewController.m in Sources */,
+				05ECD8731CE46BD700A0582A /* KTools.m in Sources */,
 				52A5288C1CDF3A6700499AE7 /* WBMenuHeaderView.m in Sources */,
 				52A5280D1CDECD2000499AE7 /* UIBarButtonItem+WBCustomButton.m in Sources */,
 				52A528161CDECD2000499AE7 /* WBTabBarViewController.m in Sources */,

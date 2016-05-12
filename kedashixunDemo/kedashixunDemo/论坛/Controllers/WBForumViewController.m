@@ -14,10 +14,11 @@
 #import "KTopicCell.h"
 #import <MJExtension.h>
 #import "KTopicDetailVC.h"
+#import "KUISegmentedControl.h"
 
-@interface WBForumViewController () <UITableViewDataSource,UITableViewDelegate>
+@interface WBForumViewController () <UITableViewDataSource,UITableViewDelegate,KUISegmentedControlDelegate>
 
-@property (nonatomic, strong) WBCustonSegment *topSegment;
+@property (nonatomic, strong) KUISegmentedControl *topSegment;
 //帖子类型
 @property (nonatomic, strong) NSArray *topicTypeArr;
 @property (nonatomic, strong) UITableView *topicTV;
@@ -48,24 +49,22 @@
     KTopicFrameModel *topicFrameModel = [[KTopicFrameModel alloc] initWithDict:_dataArr.firstObject];
     
     [self.topicsArr addObject:topicFrameModel];
+//------------------------
 }
 
 
 - (void)viewLayout{
     
+    //选择器
     _topicTypeArr = @[@"全部帖子",@"精品帖子",@"我参与的"];
+    _topSegment = [[KUISegmentedControl alloc] initWithFrame:CGRectMake(0, 64, kWidth, 44)];
     
-    _topSegment = [[WBCustonSegment alloc] initWithFrame:CGRectMake(0, 64, kWidth, 44) WithItems:_topicTypeArr WithColor:[UIColor blackColor] WithSelectColor:[UIColor redColor]];
-    
-    // 切换数据
-    _topSegment.touchItemBlock = ^(NSInteger selectedIndex){
-        
-        
-        NSLog(@"%zi",selectedIndex);
-    };
+    [_topSegment AddSegumentArray:_topicTypeArr];
+    _topSegment.delegate = self;
     [self.view addSubview:_topSegment];
-
     
+    
+    //TableView
     CGFloat maxY = CGRectGetMaxY(_topSegment.frame);
     __weak typeof(self) mySelf = self;
     _topicTV = [[UITableView alloc] initWithFrame:CGRectMake(0, maxY, kWidth, kHeight-maxY-49) style:UITableViewStylePlain];
@@ -73,6 +72,7 @@
     _topicTV.dataSource = self;
     _topicTV.separatorStyle = UITableViewCellSeparatorStyleSingleLine;
     [self.view addSubview:_topicTV];
+    
     //添加头部刷新
     _topicTV.mj_header = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
        
@@ -80,11 +80,21 @@
         
     }];
     
+    //添加尾部刷新
     _topicTV.mj_footer = [MJRefreshBackNormalFooter footerWithRefreshingBlock:^{
        
         [mySelf.topicTV.mj_footer endRefreshing];
         
     }];
+    
+}
+
+#pragma mark --- KUISegmentedControlDelegate
+
+- (void)uisegumentSelectionChange:(NSInteger)selection{
+    
+    //更改当前数据 类型 并刷新数据
+    
     
 }
 
