@@ -30,7 +30,7 @@
    
     WBTabBarViewController *tabBarVC = [[WBTabBarViewController alloc] init];
     
-    WBMenuViewController *menuVC = [[WBMenuViewController alloc] initWithNibName:@"WBMenuViewController" bundle:nil];
+    WBMenuViewController *menuVC = [[WBMenuViewController alloc] init];
    
     
     RESideMenu *sideMenu = [[RESideMenu alloc] initWithContentViewController:tabBarVC leftMenuViewController:menuVC rightMenuViewController:nil];

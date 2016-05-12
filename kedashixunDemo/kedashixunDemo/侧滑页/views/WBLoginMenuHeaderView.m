@@ -1,14 +1,14 @@
 //
-//  WBMenuHeaderView.m
+//  WBLoginMenuHeaderView.m
 //  kedashixunDemo
 //
-//  Created by wangbing on 16/5/8.
+//  Created by wangbing on 16/5/12.
 //  Copyright © 2016年 wangbing. All rights reserved.
 //
 
-#import "WBMenuHeaderView.h"
+#import "WBLoginMenuHeaderView.h"
 
-@implementation WBMenuHeaderView
+@implementation WBLoginMenuHeaderView
 
 /*
 // Only override drawRect: if you perform custom drawing.
@@ -17,8 +17,10 @@
     // Drawing code
 }
 */
-- (IBAction)jumpToLoginVCBtnAction:(UIButton *)sender {
-    self.jumpToLoginVCBlock();
+
+- (IBAction)jumpToPersonalCenterVCBtnAction:(UIButton *)sender {
+    self.jumpToPersonalCenterVCBlock();
 }
+
 
 @end
