@@ -13,6 +13,8 @@
 #import "KCommentCell.h"
 #import <MJExtension.h>
 #import "KBottomCommentView.h"
+#import "GQImageViewer.h"
+
 
 #define space 10
 
@@ -60,8 +62,14 @@
     _topicDetailTV.rowHeight = UITableViewAutomaticDimension;
     
     //设置header
+    __weak typeof(self) mySelf = self;
     KTopicDetailHeader *topicDetailHeader = [[KTopicDetailHeader alloc] initWithFrame:CGRectMake(0, 64, kWidth, self.topicHeaderFrameModel.headerHeight)];
     topicDetailHeader.topicHeaderFrameModel = self.topicHeaderFrameModel;
+    topicDetailHeader.showImageViewer = ^(){
+        
+        [[GQImageViewer sharedInstance] showView:mySelf];
+      
+    };
     _topicDetailTV.tableHeaderView = topicDetailHeader;
     [self.view addSubview:_topicDetailTV];
     

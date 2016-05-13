@@ -9,7 +9,7 @@
 #import "KTopicDetailHeader.h"
 #import <UIImageView+WebCache.h>
 #import "KCommentCountView.h"
-
+#import "GQImageViewer.h"
 
 @interface KTopicDetailHeader ()
 
@@ -136,9 +136,13 @@
 
 //调出图片浏览器
 
-- (void)tap:(id)sender{
+- (void)tap:(UITapGestureRecognizer *)tap{
     
+    [[GQImageViewer sharedInstance] setImageArray:self.topicHeaderFrameModel.topicModel.imagesUrlArr];
+    [GQImageViewer sharedInstance].pageControl = NO;
+    [GQImageViewer sharedInstance].index = tap.view.tag;
     
+    self.showImageViewer();
 }
 
 /*

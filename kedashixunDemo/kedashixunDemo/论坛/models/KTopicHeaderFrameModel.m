@@ -11,8 +11,8 @@
 #import "Const.h"
 
 #define space 10
-#define margin 5
-#define MaxSize CGSizeMake(kWidth-2*space-2*margin,kHeight)
+#define margin 2
+#define MaxSize CGSizeMake(kWidth-2*space,kHeight)
 
 @implementation KTopicHeaderFrameModel
 
@@ -52,12 +52,12 @@
     //如果有图 则计算图片Frame
     NSInteger images = topicModel.imagesUrlArr.count;
     
-    CGFloat imageW = (kWidth-2*space-4*margin)/3;
+    CGFloat imageW = (kWidth-2*space-2*margin)/3;
     CGFloat imageH = imageW;
     for (NSInteger i = 0; i < images; i++) {
         
-        CGFloat imageX = i%3*(space+imageW)+space;
-        CGFloat imageY = i/3*(space+imageH)+space+CGRectGetMaxY(_contentFrame);
+        CGFloat imageX = i%3*(margin+imageW)+space;
+        CGFloat imageY = i/3*(margin+imageH)+space+CGRectGetMaxY(_contentFrame);
         
         CGRect imageFrame = CGRectMake(imageX, imageY, imageH, imageW);
         
