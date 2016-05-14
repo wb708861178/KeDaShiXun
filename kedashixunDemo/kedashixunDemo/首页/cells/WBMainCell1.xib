@@ -15,21 +15,13 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2015-09-06" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mPG-GE-dFz">
-                        <rect key="frame" x="20" y="30" width="100" height="20"/>
-                        <constraints>
-                            <constraint firstAttribute="height" constant="20" id="Ikz-bo-VUK"/>
-                            <constraint firstAttribute="height" constant="20" id="O01-oa-237"/>
-                            <constraint firstAttribute="width" constant="100" id="QLD-oW-JSL"/>
-                        </constraints>
+                        <rect key="frame" x="20" y="34" width="70" height="15"/>
                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                         <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="学工办" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8PL-dK-YbW">
-                        <rect key="frame" x="122" y="30" width="60" height="20"/>
-                        <constraints>
-                            <constraint firstAttribute="width" constant="60" id="I5k-U3-xKG"/>
-                        </constraints>
+                        <rect key="frame" x="92" y="34" width="36" height="15"/>
                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                         <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                         <nil key="highlightedColor"/>
@@ -60,7 +52,7 @@
                     <constraint firstAttribute="bottom" secondItem="lCn-kF-Sv0" secondAttribute="bottom" id="Zhn-Fx-J8G"/>
                     <constraint firstItem="8PL-dK-YbW" firstAttribute="leading" secondItem="mPG-GE-dFz" secondAttribute="trailing" constant="2" id="dec-va-ksG"/>
                     <constraint firstItem="8PL-dK-YbW" firstAttribute="height" secondItem="mPG-GE-dFz" secondAttribute="height" id="kie-In-HiG"/>
-                    <constraint firstItem="mPG-GE-dFz" firstAttribute="top" secondItem="cBi-Vn-6Br" secondAttribute="bottom" id="mtG-zQ-Lhq"/>
+                    <constraint firstItem="mPG-GE-dFz" firstAttribute="top" secondItem="cBi-Vn-6Br" secondAttribute="bottom" constant="4" id="mtG-zQ-Lhq"/>
                     <constraint firstItem="cBi-Vn-6Br" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="y8H-ZC-lpe"/>
                 </constraints>
             </tableViewCellContentView>

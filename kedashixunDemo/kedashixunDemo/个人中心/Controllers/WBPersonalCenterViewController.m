@@ -10,6 +10,7 @@
 #import "Const.h"
 #import "UIBarButtonItem+WBCustomButton.h"
 #import "UIColor+HexColor.h"
+#import "WBCustomBottomUpView.h"
 
 @interface WBPersonalCenterViewController ()<UITableViewDelegate,UITableViewDataSource>
 @property (nonatomic, strong) UITableView *mainTableView;
@@ -49,6 +50,8 @@
     _mainTableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 64 + 8,kWidth , kHeight - 64) style:UITableViewStylePlain];
     _mainTableView.delegate = self;
     _mainTableView.dataSource = self;
+    _mainTableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+    
     [self.view addSubview:_mainTableView];
 }
 #pragma mark-
@@ -66,26 +69,31 @@
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"cell"];
         
     }
-    
+    cell.selectionStyle = UITableViewCellSelectionStyleNone;
     cell.textLabel.text = self.titleArr[indexPath.row];
-    
+    cell.textLabel.textColor = [UIColor colorWithHexString:@"#333333"];
+    cell.textLabel.font = [UIFont systemFontOfSize:14];
     cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     
+    UIView *lineView = [[UIView alloc] initWithFrame:CGRectMake(0, 43, kWidth, 1)];
+    lineView.backgroundColor = [UIColor colorWithHexString:@"#dddddd"];
+    [cell.contentView addSubview:lineView];
     
     if (indexPath.row == 0){
         UIImageView *iconImageView = [[UIImageView alloc] init];
-        iconImageView.backgroundColor = [UIColor redColor];
-        CGFloat iconImageViewX = cell.contentView.frame.size.width + 45 - 40 ;
-        CGFloat iconImageViewY = (44 - 40 ) * 0.5;
-        iconImageView.frame = CGRectMake(iconImageViewX, iconImageViewY , 40, 40);
-        cell.contentView.backgroundColor = [UIColor cyanColor];
+//        iconImageView.backgroundColor = [UIColor redColor];
+        CGFloat iconImageViewX = cell.contentView.frame.size.width + 45 - 34 ;
+        CGFloat iconImageViewY = (44 - 34 ) * 0.5;
+        iconImageView.frame = CGRectMake(iconImageViewX, iconImageViewY , 34, 34);
+        iconImageView.image = [UIImage imageNamed:@"personal_icon"];
+//        cell.contentView.backgroundColor = [UIColor cyanColor];
         [cell.contentView addSubview:iconImageView];
         
          }else{
         UILabel *contentLbl = [[UILabel alloc] initWithFrame:CGRectMake( cell.contentView.frame.size.width + 45 - 100, 0, 100, 44)];
         contentLbl.text = self.titleArr[indexPath.row];
         contentLbl.font = [UIFont systemFontOfSize:12];
-        contentLbl.textColor = [UIColor lightGrayColor];
+        contentLbl.textColor = [UIColor colorWithHexString:@"#999999"];
         contentLbl.textAlignment = NSTextAlignmentRight;
         [cell.contentView addSubview:contentLbl];
         
@@ -115,6 +123,33 @@
         case 0:
         {
             
+            WBCustomBottomUpView *bottomView = [self createWBCustomBottomUpViewWithTextArr:@[@"从相册中选取",@"拍照",@"取消"]];
+                    bottomView.selectedIndexBlock = ^(NSInteger selectedIndex){
+                switch (selectedIndex) {
+                    case 0:
+                    {
+                        NSLog(@"相册");
+                    }
+                        break;
+                    case 1:
+                    {
+                         NSLog(@"拍照");
+                    }
+                        break;
+                    case 2:
+                    {
+                       NSLog(@"取消");
+                        
+                    }
+                        break;
+                        
+                    default:
+                        break;
+                }
+            };
+
+          
+            
         }
             break;
         case 1:
@@ -125,6 +160,31 @@
         case 2:
         {
             
+            WBCustomBottomUpView *bottomView = [self createWBCustomBottomUpViewWithTextArr:@[@"男",@"女",@"取消"]];
+            bottomView.selectedIndexBlock = ^(NSInteger selectedIndex){
+                switch (selectedIndex) {
+                    case 0:
+                    {
+                        NSLog(@"男");
+                    }
+                        break;
+                    case 1:
+                    {
+                        NSLog(@"女");
+                    }
+                        break;
+                    case 2:
+                    {
+                        NSLog(@"取消");
+                        
+                    }
+                        break;
+                        
+                    default:
+                        break;
+                }
+            };
+ 
         }
             break;
         case 3:
@@ -144,6 +204,17 @@
 }
 
 
+
+- (WBCustomBottomUpView *)createWBCustomBottomUpViewWithTextArr:(NSArray *)textArr
+{
+    WBCustomBottomUpView *bottomView = [[WBCustomBottomUpView alloc] initWithFrame:self.view.bounds];
+    
+    [bottomView setBgColor:[UIColor whiteColor] textColor:[UIColor blackColor] textFont:[UIFont systemFontOfSize:14] lineColor:[UIColor colorWithHexString:@"#dddddd"]];
+    
+    [bottomView setTextArr:textArr withBottomViewHeightRatio:0.25];
+      [self.view.window  addSubview:bottomView];
+    return bottomView;
+}
 
 #pragma mark-按钮单击事件
 - (void)returnSideMenuBtnAction:(UIButton *)sender

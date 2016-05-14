@@ -99,7 +99,7 @@
             break;
         case 2:
         {
-            return 125;
+            return 146;
         }
             break;
             
@@ -123,7 +123,7 @@
     
     
     
-    UITableView *mainTableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, kWidth, kHeight) style:UITableViewStylePlain];
+    UITableView *mainTableView = [[UITableView alloc] initWithFrame:CGRectMake(0,0, kWidth, kHeight) style:UITableViewStylePlain];
     mainTableView.delegate = self;
     mainTableView.dataSource = self;
     mainTableView.separatorStyle = UITableViewCellSeparatorStyleNone;
@@ -140,6 +140,7 @@
         NSLog(@"searchVC");
     };
     self.customNavView = customNavView;
+    
     [self.view addSubview:customNavView];
     
     
@@ -157,6 +158,7 @@
     [mainTableView registerNib:[UINib nibWithNibName:@"WBMainCell3" bundle:nil] forCellReuseIdentifier:@"WBMainCell3"];
     
     
+    [self.view bringSubviewToFront:customNavView];
 
 }
 

@@ -23,14 +23,14 @@
                                         <constraint firstAttribute="width" constant="50" id="J5m-tF-87F"/>
                                         <constraint firstAttribute="height" constant="20" id="vem-y1-hRL"/>
                                     </constraints>
-                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="shouye_fenxiang" translatesAutoresizingMaskIntoConstraints="NO" id="6Ba-9B-FX0">
-                                    <rect key="frame" x="15" y="5" width="20" height="20"/>
+                                    <rect key="frame" x="13" y="5" width="23" height="20"/>
                                     <constraints>
-                                        <constraint firstAttribute="width" constant="20" id="Hih-Up-8kX"/>
+                                        <constraint firstAttribute="width" constant="23" id="Hih-Up-8kX"/>
                                         <constraint firstAttribute="height" constant="20" id="gcV-8M-4dZ"/>
                                     </constraints>
                                 </imageView>
@@ -65,15 +65,15 @@
                                         <constraint firstAttribute="height" constant="20" id="D2M-MD-X9l"/>
                                         <constraint firstAttribute="width" constant="50" id="Rt7-lz-tMl"/>
                                     </constraints>
-                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="shouye_zan" translatesAutoresizingMaskIntoConstraints="NO" id="GMS-li-Bzv">
-                                    <rect key="frame" x="15" y="5" width="20" height="20"/>
+                                    <rect key="frame" x="13" y="5" width="23" height="20"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="20" id="8pT-q2-BJo"/>
-                                        <constraint firstAttribute="width" constant="20" id="rWQ-0y-DxT"/>
+                                        <constraint firstAttribute="width" constant="23" id="rWQ-0y-DxT"/>
                                     </constraints>
                                 </imageView>
                             </subviews>

@@ -73,7 +73,7 @@
     UIImageView *bgImageView = [[UIImageView alloc] initWithFrame:self.view.bounds];
     bgImageView.image = [UIImage imageNamed:@"menu_bg"];
     [self.view addSubview:bgImageView];
-    _mainTableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 200, kWidth, kHeight - 200 ) style:UITableViewStylePlain];
+    _mainTableView = [[UITableView alloc] initWithFrame:CGRectMake(10, 200, kWidth-10, kHeight - 200 ) style:UITableViewStylePlain];
     _mainTableView.delegate = self;
     _mainTableView.dataSource = self;
     _mainTableView.backgroundColor = [UIColor clearColor];
@@ -86,7 +86,7 @@
 //        NSLog(@"jumpToLoginVC");
 //        
 //    };
-//    menuHeaderView.frame = CGRectMake(0, 0, kWidth,130 );
+//    menuHeaderView.frame = CGRectMake(0, 0, kWidth,150 );
 //        [self.view addSubview:menuHeaderView];
     
     
@@ -94,7 +94,7 @@
     
     //登录了
     WBLoginMenuHeaderView *loginMenuHeaderView =   [[NSBundle mainBundle] loadNibNamed:@"WBLoginMenuHeaderView" owner:nil options:nil].firstObject;
-    loginMenuHeaderView.frame = CGRectMake(0, 0, kWidth,130 );
+    loginMenuHeaderView.frame = CGRectMake(0, 0, kWidth,150 );
     [self.view addSubview:loginMenuHeaderView];
     loginMenuHeaderView.jumpToPersonalCenterVCBlock = ^{
         WBPersonalCenterViewController *personalCenterVC = [[WBPersonalCenterViewController alloc] init];
@@ -102,6 +102,17 @@
         WBTabBarViewController *tabBarVC = (WBTabBarViewController *)self.sideMenuViewController.contentViewController;
         [tabBarVC.selectedViewController pushViewController:personalCenterVC animated:NO];
     };
+    
+    
+    //下划线
+    UIView *lineView = [[UIView alloc] initWithFrame:CGRectMake(0, 149, kWidth, 0.5)];
+    lineView.backgroundColor = kBGDefaultColor;
+    [self.view addSubview:lineView];
+    
+    
+    
+    
+    
     
 }
 
@@ -122,6 +133,7 @@
     cell.backgroundColor = [UIColor clearColor];
     cell.imageView.image = [UIImage imageNamed:self.imageNameArr[indexPath.row]];
     cell.textLabel.text = self.titleArr[indexPath.row];
+    cell.textLabel.textColor = [UIColor whiteColor];
 
     return cell;
 }

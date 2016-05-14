@@ -30,7 +30,7 @@
         //不让view受navbar的影响
       
         
-       
+        
         
         switch (viewControllerNavItemStyle) {
             case ViewControllerNavItemStyleMain:
@@ -112,7 +112,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+    self.automaticallyAdjustsScrollViewInsets = NO;
     // Do any additional setup after loading the view.
 }
 

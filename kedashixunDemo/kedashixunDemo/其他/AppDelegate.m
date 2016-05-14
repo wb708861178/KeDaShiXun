@@ -45,7 +45,7 @@
 //    //alpha变化
 //    sideMenu.fadeMenuView = NO;
 
-    sideMenu.contentViewScaleValue = 0.85;
+    sideMenu.contentViewScaleValue = 0.8;
     
     self.window.rootViewController = sideMenu;
     
@@ -54,7 +54,47 @@
     
     
     
+    //加载引导页
+    
+    [self loadGuideView];
+   
+    
+    
     return YES;
+}
+
+- (void)loadGuideView
+{
+//
+//    NSDictionary *infoDict =  [NSBundle mainBundle].infoDictionary;
+//    NSString *key = @"CFBundleShortVersionString";
+//    NSString *currentVersionStr = infoDict[key];
+//    
+//    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+//    NSString *versionStr = [defaults objectForKey:@"versionStr"];
+//    
+//    if (versionStr) {
+//        if (![currentVersionStr isEqualToString:versionStr])
+//        {
+//            [defaults setObject:currentVersionStr forKey:@"versionStr"];
+//            WBGuideView *guideView = [WBGuideView guideViewWithNib];
+//            guideView.frame = tabBarVC.view.bounds;
+//            
+//            [tabBarVC.view addSubview:guideView];
+//            
+//        }
+//        
+//    }else
+//    {
+//        
+//        [defaults setObject:currentVersionStr forKey:@"versionStr"];
+//        
+//        WBGuideView *guideView = [WBGuideView guideViewWithNib];
+//        guideView.frame = tabBarVC.view.bounds;
+//        
+//        [tabBarVC.view addSubview:guideView];
+//    }
+//
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {

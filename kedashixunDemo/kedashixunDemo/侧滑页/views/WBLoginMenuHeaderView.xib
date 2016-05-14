@@ -11,42 +11,35 @@
             <rect key="frame" x="0.0" y="0.0" width="334" height="130"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Z1Z-z0-q4L">
-                    <rect key="frame" x="0.0" y="128" width="334" height="2"/>
-                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="2" id="0aB-EU-Gai"/>
-                    </constraints>
-                </view>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="menu_touxiang-0" translatesAutoresizingMaskIntoConstraints="NO" id="NHs-bl-bpm">
-                    <rect key="frame" x="15" y="60" width="50" height="50"/>
+                    <rect key="frame" x="25" y="80" width="50" height="50"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="50" id="h2c-Zf-Fkh"/>
                         <constraint firstAttribute="width" constant="50" id="z4t-JQ-win"/>
                     </constraints>
                 </imageView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="我是谁" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PkH-Eo-7tD">
-                    <rect key="frame" x="75" y="60" width="100" height="21"/>
+                    <rect key="frame" x="85" y="80" width="100" height="21"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="100" id="FJg-iK-5e9"/>
                         <constraint firstAttribute="height" constant="21" id="xmH-qB-dRa"/>
                     </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="俺的未来不是梦" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hqc-Wf-T32">
-                    <rect key="frame" x="75" y="89" width="150" height="21"/>
+                    <rect key="frame" x="85" y="109" width="150" height="21"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="21" id="lh6-mK-Hle"/>
                         <constraint firstAttribute="width" constant="150" id="tg4-z1-vom"/>
                     </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M5Q-Ad-bdO">
-                    <rect key="frame" x="15" y="60" width="210" height="50"/>
+                    <rect key="frame" x="25" y="80" width="210" height="50"/>
                     <connections>
                         <action selector="jumpToPersonalCenterVCBtnAction:" destination="iN0-l3-epB" eventType="touchUpInside" id="rm0-ht-5Ne"/>
                     </connections>
@@ -57,14 +50,11 @@
                 <constraint firstItem="NHs-bl-bpm" firstAttribute="bottom" secondItem="M5Q-Ad-bdO" secondAttribute="bottom" id="0va-dG-TXz"/>
                 <constraint firstItem="Hqc-Wf-T32" firstAttribute="trailing" secondItem="M5Q-Ad-bdO" secondAttribute="trailing" id="5r4-sR-MTF"/>
                 <constraint firstItem="PkH-Eo-7tD" firstAttribute="leading" secondItem="NHs-bl-bpm" secondAttribute="trailing" constant="10" id="7WB-hm-BHe"/>
-                <constraint firstItem="NHs-bl-bpm" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="60" id="F0K-zm-163"/>
-                <constraint firstItem="NHs-bl-bpm" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="15" id="Ijl-ju-nUg"/>
+                <constraint firstItem="NHs-bl-bpm" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="80" id="F0K-zm-163"/>
+                <constraint firstItem="NHs-bl-bpm" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="25" id="Ijl-ju-nUg"/>
                 <constraint firstItem="NHs-bl-bpm" firstAttribute="leading" secondItem="M5Q-Ad-bdO" secondAttribute="leading" id="QEd-ZV-sse"/>
                 <constraint firstItem="NHs-bl-bpm" firstAttribute="top" secondItem="M5Q-Ad-bdO" secondAttribute="top" id="Rrq-lw-ikY"/>
-                <constraint firstItem="Z1Z-z0-q4L" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="dCA-22-ome"/>
-                <constraint firstAttribute="trailing" secondItem="Z1Z-z0-q4L" secondAttribute="trailing" id="fqL-OB-G9l"/>
                 <constraint firstItem="Hqc-Wf-T32" firstAttribute="leading" secondItem="PkH-Eo-7tD" secondAttribute="leading" id="iRP-Ve-KqL"/>
-                <constraint firstItem="Z1Z-z0-q4L" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="128" id="sZW-dW-OTh"/>
                 <constraint firstItem="Hqc-Wf-T32" firstAttribute="bottom" secondItem="NHs-bl-bpm" secondAttribute="bottom" id="yTV-fR-E9u"/>
                 <constraint firstItem="PkH-Eo-7tD" firstAttribute="top" secondItem="NHs-bl-bpm" secondAttribute="top" id="zut-uc-UvS"/>
             </constraints>

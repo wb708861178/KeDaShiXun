@@ -24,7 +24,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor whiteColor];
-     self.automaticallyAdjustsScrollViewInsets = NO;
+    
+    [self setNavBarTitleWithText:@"时讯详情" withFontSize:20 withTextColor:[UIColor whiteColor]];
     self.navigationItem.leftBarButtonItems = [UIBarButtonItem barButtonItemWithImageName:@"arrow_left" withHighlightedImageName:@"arrow_left" withTarget:self withAction:@selector(returnMainBtnAction:) WithNegativeSpacerWidth:-5];
     [self viewLayout];
    
