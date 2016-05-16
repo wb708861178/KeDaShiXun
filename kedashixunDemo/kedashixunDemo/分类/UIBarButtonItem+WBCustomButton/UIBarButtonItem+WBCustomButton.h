@@ -25,7 +25,19 @@
  */
 +(NSArray *)barButtonItemWithNum:(NSInteger)btnNum WithImageNameArr:(NSArray *)imageNameArr withHighlightedImageNameArr:(NSArray *)highlightedImageNameArr withTarget:(id)target withAction0:(SEL)action0 withAction1:(SEL)action1 withAction2:(SEL)action2  WithNegativeSpacerWidthArr:(NSArray *)negativeSpacerWidthArr;
 
-
+/**
+ *  添加按钮 只有文字
+ *
+ *  @param title               <#title description#>
+ *  @param titleColor          <#titleColor description#>
+ *  @param titleHighlightColor <#titleHighlightColor description#>
+ *  @param target              <#target description#>
+ *  @param action              <#action description#>
+ *  @param negativeSpacerWidth <#negativeSpacerWidth description#>
+ *
+ *  @return <#return value description#>
+ */
++(NSArray *)barButtonItemWithTitle:(NSString *)title WithTitleColor:(UIColor *)titleColor WithTitleHighlightColor:(UIColor *)titleHighlightColor withTarget:(id)target withAction:(SEL)action WithNegativeSpacerWidth:(CGFloat)negativeSpacerWidth;
 @end
 
 
