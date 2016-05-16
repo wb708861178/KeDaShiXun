@@ -57,6 +57,8 @@
         
         _praiseBtn = [[UIButton alloc] init];
         [_praiseBtn setImage:[UIImage imageNamed:@"dianzan"] forState:UIControlStateNormal];
+        [_praiseBtn addTarget:self action:@selector(praiseTopic) forControlEvents:UIControlEventTouchUpInside];
+        
         _commentBtn = [[UIButton alloc] init];
         [_commentBtn setImage:[UIImage imageNamed:@"pinglun"] forState:UIControlStateNormal];
         
@@ -138,6 +140,7 @@
 
 - (void)tap:(UITapGestureRecognizer *)tap{
     
+    
     [[GQImageViewer sharedInstance] setImageArray:self.topicHeaderFrameModel.topicModel.imagesUrlArr];
     [GQImageViewer sharedInstance].pageControl = NO;
     [GQImageViewer sharedInstance].index = tap.view.tag;
@@ -145,6 +148,27 @@
     self.showImageViewer();
 }
 
+
+- (void)praiseTopic{
+    
+    //判断用户是否赞过
+    
+    [UIView animateWithDuration:0.2 animations:^{
+        [_praiseBtn setImage:[UIImage imageNamed:@"pinglun"] forState:UIControlStateNormal];
+        _praiseBtn.transform = CGAffineTransformMakeScale(1.5, 1.5);
+        
+    } completion:^(BOOL finished) {
+        
+        [UIView animateWithDuration:0.2 animations:^{
+            _praiseBtn.transform = CGAffineTransformMakeScale(1, 1);
+        }];
+        
+    }];
+    
+    //改变参数
+    
+    
+}
 /*
 // Only override drawRect: if you perform custom drawing.
 // An empty implementation adversely affects performance during animation.

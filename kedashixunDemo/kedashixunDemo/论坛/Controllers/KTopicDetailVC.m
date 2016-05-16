@@ -14,17 +14,16 @@
 #import <MJExtension.h>
 #import "KBottomCommentView.h"
 #import "GQImageViewer.h"
-
+#import <MJRefresh.h>
 
 #define space 10
 
-@interface KTopicDetailVC () <UITableViewDataSource ,UITableViewDelegate>
+@interface KTopicDetailVC () <UITableViewDataSource ,UITableViewDelegate, UIGestureRecognizerDelegate>
 
 @property (nonatomic, strong) UITableView *topicDetailTV;
 @property (nonatomic, strong) KBottomCommentView *commentView;
-
-
 @property (nonatomic, strong) NSMutableArray *commentListArr;
+
 
 @end
 
@@ -52,11 +51,39 @@
     //注册键盘通知
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(bottomViewFrameShouldChange:) name:UIKeyboardWillChangeFrameNotification object:nil];
     
+    
+    //添加键盘回退手势
+    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(UIKeyBoardShouldReturn:)];
+    
+    tap.delegate = self;
+    [self.view addGestureRecognizer:tap];
 }
+
+#pragma mark --- 添加键盘回退手势
+
+- (void)UIKeyBoardShouldReturn:(UITapGestureRecognizer *)tap{
+    
+    
+    [_commentView.commentTF resignFirstResponder];
+}
+
+#pragma mark ---  是否拦截手势
+- (BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldReceiveTouch:(UITouch *)touch{
+    
+    //点击不在commentview上 键盘回退
+    if (!CGRectContainsPoint(_commentView.frame, [touch locationInView:self.view])) {
+        
+        [_commentView.commentTF resignFirstResponder];
+
+    }
+    
+    return YES;
+}
+
 
 - (void)viewLayout{
     
-    _topicDetailTV = [[UITableView alloc] initWithFrame:CGRectMake(0, space, kWidth, kHeight-44) style:UITableViewStylePlain];
+    _topicDetailTV = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, kWidth, kHeight-44) style:UITableViewStylePlain];
     _topicDetailTV.delegate = self;
     _topicDetailTV.dataSource = self;
     _topicDetailTV.rowHeight = UITableViewAutomaticDimension;
@@ -79,6 +106,23 @@
     [_commentView.sendComment addTarget:self action:@selector(sendComment:) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:_commentView];
     
+    
+    //头部刷新
+    _topicDetailTV.mj_header = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
+       
+        //重新加载页面数据
+        
+    }];
+    
+    
+    
+    //尾部刷新
+    _topicDetailTV.mj_footer = [MJRefreshBackNormalFooter footerWithRefreshingBlock:^{
+       
+        //加载评论
+        
+        
+    }];
 }
 
 #pragma mark --- UITableViewDataSource & UITableViewDelegate
@@ -120,14 +164,23 @@
 
 //发送评论
 - (void)sendComment:(id)sender{
+    
+    [_commentView.commentTF resignFirstResponder];
     //空 直接返回
     if (!_commentView.commentTF.text) {
         return;
     }
     
     //评论数据
+//-----------Test
+    KCommentModel *commentModel = [KCommentModel mj_objectWithKeyValues:@{@"icon":@"",@"name":@"卡兹克",@"time":@"2016-05-12",@"commentContent":_commentView.commentTF.text}];
+    [self.commentListArr insertObject:commentModel atIndex:0];
+    [self.topicDetailTV reloadData];
     
+//-----------
     
+    //然后清空输入内容
+    _commentView.commentTF.text = @"";
     
 }
 

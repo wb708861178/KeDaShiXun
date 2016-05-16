@@ -38,6 +38,30 @@
     
 }
 
++(NSArray *)barButtonItemWithTitle:(NSString *)title WithTitleColor:(UIColor *)titleColor WithTitleHighlightColor:(UIColor *)titleHighlightColor withTarget:(id)target withAction:(SEL)action WithNegativeSpacerWidth:(CGFloat)negativeSpacerWidth
+{
+    //UIBarButtonItem 的customView加view时会自动放在中心
+    UIButton *tempButton = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 50, 30)];
+
+    [tempButton setTitle:title forState:UIControlStateNormal];
+    [tempButton setTitleColor:titleColor forState:UIControlStateNormal];
+    [tempButton setTitleColor:titleHighlightColor forState:UIControlStateHighlighted];
+    
+    [tempButton addTarget:target action:action forControlEvents:UIControlEventTouchUpInside];
+    
+    UIBarButtonItem *barBtnItem = [[UIBarButtonItem alloc] initWithCustomView:tempButton];
+    
+    
+    
+    //设置left 和right 离左右的距离 negativeSpacer.width设为-20则刚好到边上
+    UIBarButtonItem *negativeSpacer = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFixedSpace target:nil action:nil];
+    negativeSpacer.width = negativeSpacerWidth;
+    
+    return [NSArray arrayWithObjects:negativeSpacer,barBtnItem, nil];
+    
+}
+
+
 - (void)setBarButtonItemWithTitle:(NSString *)title WithTitleColor:(UIColor *)titleColor WithTitleHighlightColor:(UIColor *)titleHighlightColor
 
 {

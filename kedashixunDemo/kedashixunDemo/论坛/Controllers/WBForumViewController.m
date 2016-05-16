@@ -14,6 +14,9 @@
 #import <MJExtension.h>
 #import "KTopicDetailVC.h"
 #import "KUISegmentedControl.h"
+#import "UIBarButtonItem+WBCustomButton.h"
+#import "KPublishTopicVC.h"
+
 
 @interface WBForumViewController () <UITableViewDataSource,UITableViewDelegate,KUISegmentedControlDelegate>
 
@@ -27,6 +30,10 @@
 //数据数组
 @property (nonatomic, strong) NSArray *dataArr;
 
+//默认选中第0个 全部帖子
+@property (nonatomic, assign) NSInteger currentIndex;
+
+
 @end
 
 @implementation WBForumViewController
@@ -35,12 +42,15 @@
     [super viewDidLoad];
 
     [self setNavBarTitleWithText:@"科大论坛" withFontSize:18 withTextColor:[UIColor whiteColor]];
+    self.navigationItem.rightBarButtonItems = [UIBarButtonItem barButtonItemWithImageName:@"fabu" withHighlightedImageName:nil withTarget:self withAction:@selector(publishTopic) WithNegativeSpacerWidth:-4];
     
     self.view.backgroundColor = kBGDefaultColor;
     
+    self.currentIndex = 0;
+    
     [self viewLayout];
     
-
+    
     
 //-------------------------Test
     _dataArr = @[@{@"iconName":@"",@"name":@"寇忠龙",@"time":@"2016-05-10",@"location":@"河南科技大学开元校区",@"content":@"P2P模式文件的群殴就到期我觉得去我家都快来群文件打开链接请我看了大家去看了文件的情况了解的考虑去叫我来的",@"viewCount":@"100",@"imagesUrlArr":@[@"http://easyread.ph.126.net/m01ZnaivFu8yR-lVjO62vg==/7917012585080905357.jpg",@"http://tu.webps.cn/tb/img/4/T1EyOuXg0KXXXxjqrb_122755.jpg",@"http://img3.douban.com/lpic/s24522376.jpg",@"http://img3.douban.com/lpic/s24522376.jpg",@"http://tu.webps.cn/tb/img/4/T1EyOuXg0KXXXxjqrb_122755.jpg",@"http://easyread.ph.126.net/m01ZnaivFu8yR-lVjO62vg==/7917012585080905357.jpg"]}];
@@ -93,7 +103,8 @@
 - (void)uisegumentSelectionChange:(NSInteger)selection{
     
     //更改当前数据 类型 并刷新数据
-    
+
+    [self.topicTV.mj_header beginRefreshing];
     
 }
 
@@ -143,7 +154,14 @@
 
 }
 
-
+#pragma mark ---  发表主题
+- (void)publishTopic{
+    
+    KPublishTopicVC *publishTopicVC = [[KPublishTopicVC alloc] init];
+    
+    [self.navigationController pushViewController:publishTopicVC animated:YES];
+    
+}
 
 - (NSMutableArray *)topicsArr{
     
