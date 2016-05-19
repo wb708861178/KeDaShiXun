@@ -83,7 +83,7 @@
 
 - (void)viewLayout{
     
-    _topicDetailTV = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, kWidth, kHeight-44) style:UITableViewStylePlain];
+    _topicDetailTV = [[UITableView alloc] initWithFrame:CGRectMake(0, 64, kWidth, kHeight-44) style:UITableViewStylePlain];
     _topicDetailTV.delegate = self;
     _topicDetailTV.dataSource = self;
     _topicDetailTV.rowHeight = UITableViewAutomaticDimension;
@@ -190,9 +190,8 @@
     NSDictionary *dict = notification.userInfo;
     CGRect endRect = [dict[UIKeyboardFrameEndUserInfoKey] CGRectValue];
     CGFloat changeY = endRect.origin.y - self.view.frame.size.height;
-    
-    self.commentView.transform = CGAffineTransformMakeTranslation(0, changeY);
-    
+    self.view.transform = CGAffineTransformMakeTranslation(0, changeY);
+
 }
 
 - (void)dealloc{

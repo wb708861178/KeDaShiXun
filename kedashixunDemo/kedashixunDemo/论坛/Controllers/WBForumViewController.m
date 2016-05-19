@@ -15,8 +15,8 @@
 #import "KTopicDetailVC.h"
 #import "KUISegmentedControl.h"
 #import "UIBarButtonItem+WBCustomButton.h"
-#import "KPublishTopicVC.h"
 
+#import "KPublishVC.h"
 
 @interface WBForumViewController () <UITableViewDataSource,UITableViewDelegate,KUISegmentedControlDelegate>
 
@@ -156,10 +156,15 @@
 
 #pragma mark ---  发表主题
 - (void)publishTopic{
+//    
+    KPublishVC *vc = [[KPublishVC alloc] init];
     
-    KPublishTopicVC *publishTopicVC = [[KPublishTopicVC alloc] init];
+    [self.navigationController pushViewController:vc animated:YES];
+//
     
-    [self.navigationController pushViewController:publishTopicVC animated:YES];
+//    KPublishTopicVC *publishTopicVC = [[KPublishTopicVC alloc] init];
+//    
+//    [self.navigationController pushViewController:publishTopicVC animated:YES];
     
 }
 

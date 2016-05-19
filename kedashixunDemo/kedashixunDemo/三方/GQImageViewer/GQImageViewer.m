@@ -96,16 +96,16 @@ __strong static GQImageViewer *imageViewerManager;
     
     [self initViewWithFrame:rect];
     
-//    self.frame = CGRectMake(0, CGRectGetMaxY(showView.frame), CGRectGetMaxX(showView.frame), CGRectGetMaxY(showView.frame));
+    self.frame = CGRectMake(0, CGRectGetMaxY(showView.frame), CGRectGetMaxX(showView.frame), CGRectGetMaxY(showView.frame));
 
-    self.frame = CGRectMake(CGRectGetMidX(showView.frame), CGRectGetMidY(showView.frame), 0, 0);
+//    self.frame = CGRectMake(CGRectGetMidX(showView.frame), CGRectGetMidY(showView.frame), 0, 0);
 
     
     [showView addSubview:self];
     [UIView animateWithDuration:0.3
                      animations:^{
+                         
                          self.frame = rect;
-//                         _tableView.frame = CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, [UIScreen mainScreen].bounds.size.height);
                          
                      } completion:^(BOOL finished) {
                      }];
