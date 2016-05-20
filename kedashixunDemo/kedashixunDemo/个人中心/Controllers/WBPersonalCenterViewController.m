@@ -11,6 +11,8 @@
 #import "UIBarButtonItem+WBCustomButton.h"
 #import "UIColor+HexColor.h"
 #import "WBCustomBottomUpView.h"
+#import "WBChangeNickNameViewController.h"
+#import "WBChangeMottoViewController.h"
 
 @interface WBPersonalCenterViewController ()<UITableViewDelegate,UITableViewDataSource>
 @property (nonatomic, strong) UITableView *mainTableView;
@@ -29,18 +31,14 @@
     return _titleArr;
 }
 
--(void)viewWillAppear:(BOOL)animated
-{
-    [super viewWillAppear:animated];
-    self.navigationController.navigationBarHidden = NO;
-}
+
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = kBGDefaultColor;
     self.automaticallyAdjustsScrollViewInsets = NO;
     
-    self.navigationItem.leftBarButtonItems = [UIBarButtonItem barButtonItemWithImageName:@"arrow_left" withHighlightedImageName:nil withTarget:self withAction:@selector(returnSideMenuBtnAction:) WithNegativeSpacerWidth:- 10];
+    self.navigationItem.leftBarButtonItems = [UIBarButtonItem barButtonItemWithImageName:@"arrow_left" withHighlightedImageName:@"arrow_left" withTarget:self withAction:@selector(returnSideMenuBtnAction:) WithNegativeSpacerWidth:-4];
     [self setNavBarTitleWithText:@"个人中心" withFontSize:20 withTextColor:[UIColor whiteColor]];
     [self viewLayout];
 }
@@ -93,7 +91,7 @@
         UILabel *contentLbl = [[UILabel alloc] initWithFrame:CGRectMake( cell.contentView.frame.size.width + 45 - 100, 0, 100, 44)];
         contentLbl.text = self.titleArr[indexPath.row];
         contentLbl.font = [UIFont systemFontOfSize:12];
-        contentLbl.textColor = [UIColor colorWithHexString:@"#999999"];
+        contentLbl.textColor = [UIColor colorWithHexString:@"#333333"];
         contentLbl.textAlignment = NSTextAlignmentRight;
         [cell.contentView addSubview:contentLbl];
         
@@ -154,6 +152,8 @@
             break;
         case 1:
         {
+            WBChangeNickNameViewController *changeNickNameVC = [[WBChangeNickNameViewController alloc] init];
+            [self.navigationController pushViewController:changeNickNameVC animated:YES];
             
         }
             break;
@@ -194,7 +194,8 @@
             break;
         case 4:
         {
-            
+            WBChangeMottoViewController *changeMottoVC = [[WBChangeMottoViewController alloc] init];
+            [self.navigationController pushViewController:changeMottoVC animated:YES];
         }
             break;
             
@@ -209,9 +210,9 @@
 {
     WBCustomBottomUpView *bottomView = [[WBCustomBottomUpView alloc] initWithFrame:self.view.bounds];
     
-    [bottomView setBgColor:[UIColor whiteColor] textColor:[UIColor blackColor] textFont:[UIFont systemFontOfSize:14] lineColor:[UIColor colorWithHexString:@"#dddddd"]];
+    [bottomView setBgColor:[UIColor whiteColor] textColor:[UIColor colorWithHexString:@"#333333"] textFont:[UIFont systemFontOfSize:14] lineColor:[UIColor colorWithHexString:@"#dddddd"]];
     
-    [bottomView setTextArr:textArr withBottomViewHeightRatio:0.25];
+    [bottomView setTextArr:textArr withBottomViewHeightRatio:0.2];
       [self.view.window  addSubview:bottomView];
     return bottomView;
 }

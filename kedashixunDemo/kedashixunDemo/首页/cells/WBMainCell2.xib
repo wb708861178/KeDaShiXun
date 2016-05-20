@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
     </dependencies>
     <objects>
@@ -14,42 +13,6 @@
                 <rect key="frame" x="0.0" y="0.0" width="400" height="89"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EMZ-dL-D56">
-                        <rect key="frame" x="95" y="20" width="300" height="45"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="河南科技大学2015级研究生开学典礼" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ryr-Qk-eVe">
-                                <rect key="frame" x="0.0" y="0.0" width="280" height="18"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2015-09-06" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Kl-fr-bnP">
-                                <rect key="frame" x="0.0" y="30" width="70" height="15"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="学工办" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="90W-8R-qoj">
-                                <rect key="frame" x="90" y="30" width="36" height="15"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstAttribute="width" constant="300" id="6cT-FD-N77"/>
-                            <constraint firstItem="90W-8R-qoj" firstAttribute="leading" secondItem="1Kl-fr-bnP" secondAttribute="trailing" constant="20" id="AjW-ge-5lL"/>
-                            <constraint firstItem="1Kl-fr-bnP" firstAttribute="leading" secondItem="EMZ-dL-D56" secondAttribute="leading" id="ESi-fo-lWI"/>
-                            <constraint firstAttribute="bottom" secondItem="1Kl-fr-bnP" secondAttribute="bottom" id="OCS-mG-uOt"/>
-                            <constraint firstAttribute="height" constant="45" id="UXE-ox-gbm"/>
-                            <constraint firstItem="Ryr-Qk-eVe" firstAttribute="leading" secondItem="EMZ-dL-D56" secondAttribute="leading" id="gGF-lZ-ccS"/>
-                            <constraint firstAttribute="trailing" secondItem="Ryr-Qk-eVe" secondAttribute="trailing" constant="20" id="jrg-tB-TRB"/>
-                            <constraint firstAttribute="bottom" secondItem="90W-8R-qoj" secondAttribute="bottom" id="uf7-W6-W1P"/>
-                            <constraint firstItem="Ryr-Qk-eVe" firstAttribute="top" secondItem="EMZ-dL-D56" secondAttribute="top" id="wnQ-MV-Eif"/>
-                        </constraints>
-                    </view>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="shouyeimage1" translatesAutoresizingMaskIntoConstraints="NO" id="K73-Mv-9X3">
                         <rect key="frame" x="20" y="10" width="65" height="65"/>
                         <constraints>
@@ -64,13 +27,49 @@
                             <constraint firstAttribute="height" constant="5" id="mSS-8r-uwn"/>
                         </constraints>
                     </view>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EMZ-dL-D56">
+                        <rect key="frame" x="95" y="10" width="305" height="65"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="河南科技大学2015级研究生开学典礼我哩个去" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ryr-Qk-eVe">
+                                <rect key="frame" x="0.0" y="0.0" width="285" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2015-09-06" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Kl-fr-bnP">
+                                <rect key="frame" x="0.0" y="50" width="70" height="15"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="学工办" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="90W-8R-qoj">
+                                <rect key="frame" x="80" y="50" width="36" height="15"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="90W-8R-qoj" firstAttribute="leading" secondItem="1Kl-fr-bnP" secondAttribute="trailing" constant="10" id="AjW-ge-5lL"/>
+                            <constraint firstItem="1Kl-fr-bnP" firstAttribute="leading" secondItem="EMZ-dL-D56" secondAttribute="leading" id="ESi-fo-lWI"/>
+                            <constraint firstAttribute="bottom" secondItem="1Kl-fr-bnP" secondAttribute="bottom" id="OCS-mG-uOt"/>
+                            <constraint firstAttribute="trailing" secondItem="Ryr-Qk-eVe" secondAttribute="trailing" constant="20" id="Tlz-uC-Mrr"/>
+                            <constraint firstItem="Ryr-Qk-eVe" firstAttribute="leading" secondItem="EMZ-dL-D56" secondAttribute="leading" id="gGF-lZ-ccS"/>
+                            <constraint firstAttribute="bottom" secondItem="90W-8R-qoj" secondAttribute="bottom" id="uf7-W6-W1P"/>
+                            <constraint firstItem="Ryr-Qk-eVe" firstAttribute="top" secondItem="EMZ-dL-D56" secondAttribute="top" id="wnQ-MV-Eif"/>
+                        </constraints>
+                    </view>
                 </subviews>
                 <constraints>
                     <constraint firstAttribute="trailing" secondItem="T8B-ZC-far" secondAttribute="trailing" id="3ek-zQ-yNE"/>
                     <constraint firstItem="EMZ-dL-D56" firstAttribute="leading" secondItem="K73-Mv-9X3" secondAttribute="trailing" constant="10" id="CSC-Do-p3N"/>
                     <constraint firstAttribute="bottom" secondItem="T8B-ZC-far" secondAttribute="bottom" id="Emy-FI-VNm"/>
+                    <constraint firstAttribute="trailing" secondItem="EMZ-dL-D56" secondAttribute="trailing" id="FGD-85-JWb"/>
                     <constraint firstItem="T8B-ZC-far" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="T8Z-hI-hON"/>
                     <constraint firstItem="EMZ-dL-D56" firstAttribute="centerY" secondItem="K73-Mv-9X3" secondAttribute="centerY" id="deE-gO-v0N"/>
+                    <constraint firstItem="EMZ-dL-D56" firstAttribute="height" secondItem="K73-Mv-9X3" secondAttribute="height" id="f06-5z-MnP"/>
                     <constraint firstItem="K73-Mv-9X3" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="sbH-vj-lSl"/>
                     <constraint firstItem="K73-Mv-9X3" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="uQr-Hu-jOh"/>
                 </constraints>

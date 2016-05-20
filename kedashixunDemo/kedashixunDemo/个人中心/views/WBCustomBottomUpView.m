@@ -7,7 +7,12 @@
 //
 
 #import "WBCustomBottomUpView.h"
-
+//下部之间的间隙
+#define bottomSpace  5
+//图片圆角对于高度的比率
+#define widthRate  0.02
+//阴影透明度
+#define shadowAlpha 0.3
 @interface WBCustomBottomUpView ()
 
 @property (nonatomic, strong) UIView *shadowView;
@@ -31,6 +36,8 @@
 //先传属性
 - (void)setBgColor:(UIColor *)bgColor textColor:(UIColor *)textColor textFont:(UIFont *)textFont lineColor:(UIColor *)lineColor
 {
+    
+    
     self.bgColor = bgColor;
     self.textColor = textColor;
     self.textFont = textFont;
@@ -63,28 +70,80 @@
     
     
     
+    CGFloat bottomViewW = self.frame.size.width * 9 / 10;
+    CGFloat bottomViewX = (self.frame.size.width - bottomViewW ) / 2;
     CGFloat bottomViewH = self.frame.size.height * self.bottomViewHeightRatio;
-    self.bottomView = [[UIView alloc] initWithFrame:CGRectMake(0, self.frame.size.height , self.frame.size.width, bottomViewH)];
+    self.bottomView = [[UIView alloc] initWithFrame:CGRectMake(bottomViewX, self.frame.size.height , bottomViewW, bottomViewH)];
         [self addSubview:self.bottomView];
     
-    self.bottomView.backgroundColor = [UIColor whiteColor];
-    if (self.bgColor) {
-        self.bottomView.backgroundColor = self.bgColor;
-    }
+    self.bottomView.backgroundColor = [UIColor clearColor];
+    
     [UIView animateWithDuration:0.5 animations:^{
-        _shadowView.alpha = 0.5;
-        self.bottomView.frame = CGRectMake(0, self.frame.size.height -  bottomViewH, self.frame.size.width, bottomViewH);
+        _shadowView.alpha = shadowAlpha;
+        self.bottomView.frame = CGRectMake(bottomViewX, self.frame.size.height -  bottomViewH, bottomViewW, bottomViewH);
        
     }];
+    //下面每个按钮的高度
+    CGFloat tempViewHeight = (bottomViewH - bottomSpace * 2) / self.textArr.count;
+   //底部分割线上面的view
+    UIView *bottomTopView = [[UIView alloc] initWithFrame:CGRectMake(0, 0,bottomViewW ,tempViewHeight * (self.textArr.count - 1 ) )];
     
-   
-    CGFloat tempViewHeight = bottomViewH / self.textArr.count;
     
-    for (int i = 0; i < self.textArr.count; i++) {
-        UIView *tempView = [[UIView alloc] initWithFrame:CGRectMake(0, i * tempViewHeight, self.frame.size.width, tempViewHeight)];
+    bottomTopView.layer.cornerRadius = bottomViewW *widthRate;
+    bottomTopView.backgroundColor = [UIColor redColor];
+    if (self.bgColor) {
+        bottomTopView.backgroundColor = self.bgColor;
+    }
+    [self.bottomView addSubview:bottomTopView];
+    
+    for (int i = 0; i < self.textArr.count ; i++) {
+       //对取消按钮单独处理
+        if (i == self.textArr.count -1 ) {
+            UIView *tempView = [[UIView alloc] initWithFrame:CGRectMake(0, i * tempViewHeight + bottomSpace, bottomTopView.frame.size.width, tempViewHeight)];
+            tempView.backgroundColor = [UIColor orangeColor];
+            if (self.bgColor) {
+                tempView.backgroundColor = self.bgColor;
+            }
+            tempView.layer.cornerRadius = bottomTopView.frame.size.width * widthRate;
+            tempView.tag = 100+i;
+            [self.bottomView addSubview:tempView];
+            UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tap:)];
+            [tempView addGestureRecognizer:tap];
+            CGFloat tempLabelH = tempViewHeight * 3 / 4;
+            CGFloat tempLabelW = tempView.frame.size.width * 3 / 4;
+            CGFloat tempLabelX = (tempView.frame.size.width - tempLabelW ) * 0.5;
+            CGFloat tempLabelY = (tempView.frame.size.height - tempLabelH ) * 0.5;
+            
+            UILabel *tempLabel = [[UILabel alloc] initWithFrame:CGRectMake(tempLabelX, tempLabelY, tempLabelW,tempLabelH)];
+            
+            
+            
+            tempLabel.textAlignment = NSTextAlignmentCenter;
+            tempLabel.text = self.textArr[i];
+            
+            tempLabel.textColor =[UIColor blackColor];
+            if (self.textColor) {
+                tempLabel.textColor = self.textColor;
+            }
+            if (self.textFont) {
+                tempLabel.font = self.textFont;
+            }
+            [tempView addSubview:tempLabel];
+
+
+            continue;
+            
+        }
+        
+        
+        UIView *tempView = [[UIView alloc] initWithFrame:CGRectMake(0, i * tempViewHeight, bottomTopView.frame.size.width, tempViewHeight)];
 
         tempView.tag = 100+i;
-        [self.bottomView addSubview:tempView];
+       
+        [bottomTopView addSubview:tempView];
+        
+        UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tap:)];
+        [tempView addGestureRecognizer:tap];
         
         CGFloat tempLabelH = tempViewHeight * 3 / 4;
         CGFloat tempLabelW = tempView.frame.size.width * 3 / 4;
@@ -97,7 +156,7 @@
     
         tempLabel.textAlignment = NSTextAlignmentCenter;
         tempLabel.text = self.textArr[i];
-        
+        tempLabel.backgroundColor = [UIColor clearColor];
         tempLabel.textColor =[UIColor blackColor];
         if (self.textColor) {
             tempLabel.textColor = self.textColor;
@@ -107,6 +166,10 @@
         }
         [tempView addSubview:tempLabel];
         
+        if (i == self.textArr.count -2) {
+            continue;
+        }
+        
         UIView *lineView = [[UIView alloc] initWithFrame:CGRectMake(0, tempView.frame.size.height - 1, tempView.frame.size.width, 1)];
         lineView.backgroundColor = [UIColor lightGrayColor];
         if (self.lineColor) {
@@ -115,8 +178,7 @@
         [tempView addSubview:lineView];
         
         
-        UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tap:)];
-        [tempView addGestureRecognizer:tap];
+       
         
     }
 }
@@ -145,10 +207,12 @@
 
 
 - (void)viewRemove{
+    CGFloat bottomViewW = self.frame.size.width * 9 / 10;
+    CGFloat bottomViewX = (self.frame.size.width - bottomViewW ) / 2;
     CGFloat bottomViewH = self.frame.size.height * self.bottomViewHeightRatio;
     [UIView animateWithDuration:0.5 animations:^{
         _shadowView.alpha = 0;
-        self.bottomView.frame = CGRectMake(0, self.frame.size.height , self.frame.size.width, bottomViewH);
+        self.bottomView.frame = CGRectMake(bottomViewX, self.frame.size.height , bottomViewW, bottomViewH);
     } completion:^(BOOL finished) {
          [self removeFromSuperview];
     }];

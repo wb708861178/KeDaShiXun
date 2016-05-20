@@ -13,6 +13,11 @@
 #import "WBTabBarViewController.h"
 #import "WBMenuHeaderView.h"
 #import "WBLoginMenuHeaderView.h"
+#import "WBSchoolCalendarViewController.h"
+#import "WBMessageCenterViewController.h"
+#import "WBMyCollectionViewController.h"
+#import "WBMyPublishViewController.h"
+#import "WBSettingViewController.h"
 
 
 
@@ -98,9 +103,7 @@
     [self.view addSubview:loginMenuHeaderView];
     loginMenuHeaderView.jumpToPersonalCenterVCBlock = ^{
         WBPersonalCenterViewController *personalCenterVC = [[WBPersonalCenterViewController alloc] init];
-        [self.sideMenuViewController hideMenuViewController];
-        WBTabBarViewController *tabBarVC = (WBTabBarViewController *)self.sideMenuViewController.contentViewController;
-        [tabBarVC.selectedViewController pushViewController:personalCenterVC animated:NO];
+        [self jumpToNextVC:personalCenterVC];
     };
     
     
@@ -134,7 +137,10 @@
     cell.imageView.image = [UIImage imageNamed:self.imageNameArr[indexPath.row]];
     cell.textLabel.text = self.titleArr[indexPath.row];
     cell.textLabel.textColor = [UIColor whiteColor];
-
+    cell.selectedBackgroundView = [[UIView alloc] initWithFrame:cell.frame];
+    cell.selectedBackgroundView.backgroundColor = [UIColor cyanColor];
+    
+//      cell.selectionStyle = UITableViewCellSelectionStyleNone;
     return cell;
 }
 
@@ -149,16 +155,79 @@
     return 60;
 }
 
+- (nullable NSIndexPath *)tableView:(UITableView *)tableView willSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return indexPath;
+}
 
 
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    
+    //消除cell选择痕迹
+    [self performSelector:@selector(deselect) withObject:nil afterDelay:0.2f];
+
+    switch (indexPath.row) {
+        case 0:
+        {
+            WBSchoolCalendarViewController *schoolCalendarVC = [[WBSchoolCalendarViewController alloc] init];
+            [self jumpToNextVC:schoolCalendarVC];
+           
+        }
+            break;
+        case 1:
+        {
+            WBMessageCenterViewController *messageCenterVC = [[WBMessageCenterViewController alloc] init];
+            [self jumpToNextVC:messageCenterVC];
+            
+        }
+            break;
+        case 2:
+        {
+            WBMyCollectionViewController *myCollectionVC = [[WBMyCollectionViewController alloc] init];
+            [self jumpToNextVC:myCollectionVC];
+        }
+            break;
+        case 3:
+        {
+            WBMyPublishViewController *myPublishVC = [[WBMyPublishViewController alloc] init];
+           [self jumpToNextVC:myPublishVC];
+
+        }
+            break;
+        case 4:
+        {
+            WBSettingViewController *settingVC = [[WBSettingViewController alloc] init];
+               [self jumpToNextVC:settingVC];
+        }
+            break;
+            
+        default:
+            break;
+    }
+}
 
 
+//取消cell点中状态
+- (void)deselect
+{
+    [self.mainTableView deselectRowAtIndexPath:[self.mainTableView indexPathForSelectedRow] animated:YES];
+}
 #pragma mark-按钮点击事件
 
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+
+
+- (void)jumpToNextVC:(UIViewController *)viewController
+{
+    [self.sideMenuViewController hideMenuViewController];
+    WBTabBarViewController *tabBarVC = (WBTabBarViewController *)self.sideMenuViewController.contentViewController;
+    [tabBarVC.selectedViewController pushViewController:viewController animated:NO];
 }
 
 /*

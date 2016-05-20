@@ -14,7 +14,7 @@
 #import "WBMainCell2.h"
 #import "WBMainCell3.h"
 #import "WBMainDetailViewController.h"
-
+#import "WBMainSearchViewController.h"
 
 @interface WBMainViewController ()<UITableViewDataSource,UITableViewDelegate>
 @property (nonatomic, strong) WBCustomNavView *customNavView;
@@ -29,7 +29,8 @@
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
-    self.navigationController.navigationBarHidden = YES;
+    [self.navigationController setNavigationBarHidden:YES animated:YES];
+
 }
 
 
@@ -54,10 +55,13 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    NSLog(@"---------------celll");
         switch (indexPath.row) {
         case 0:
         {
+           
             WBMainCell1 *cell1 = [tableView dequeueReusableCellWithIdentifier:@"WBMainCell1" forIndexPath:indexPath];
+             NSLog(@"%@",cell1);
             return cell1;
         }
             break;
@@ -86,6 +90,7 @@
 #pragma mark---UITableViewDelegate
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
+   
     switch (indexPath.row) {
         case 0:
         {
@@ -137,7 +142,8 @@
         [self.sideMenuViewController presentLeftMenuViewController];
     };
     customNavView.jumpToSearchVCBlock = ^{
-        NSLog(@"searchVC");
+        WBMainSearchViewController *mainSearchVC = [[WBMainSearchViewController alloc] init];
+        [self.navigationController pushViewController:mainSearchVC animated:YES];
     };
     self.customNavView = customNavView;
     

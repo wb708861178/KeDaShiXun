@@ -47,6 +47,13 @@
 		527156831CE36EE9007F7821 /* WBMainCell2.xib in Resources */ = {isa = PBXBuildFile; fileRef = 527156811CE36EE9007F7821 /* WBMainCell2.xib */; };
 		527156871CE36F0D007F7821 /* WBMainCell3.m in Sources */ = {isa = PBXBuildFile; fileRef = 527156851CE36F0D007F7821 /* WBMainCell3.m */; };
 		527156881CE36F0D007F7821 /* WBMainCell3.xib in Resources */ = {isa = PBXBuildFile; fileRef = 527156861CE36F0D007F7821 /* WBMainCell3.xib */; };
+		5271D45B1CE9FAF900108244 /* WBChangeNickNameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5271D45A1CE9FAF900108244 /* WBChangeNickNameViewController.m */; };
+		5271D45E1CEA02CE00108244 /* WBChangeMottoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5271D45D1CEA02CE00108244 /* WBChangeMottoViewController.m */; };
+		5271D4631CEA06CD00108244 /* WBSchoolCalendarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5271D4621CEA06CD00108244 /* WBSchoolCalendarViewController.m */; };
+		5271D46C1CEA0BC100108244 /* WBSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5271D46B1CEA0BC100108244 /* WBSettingViewController.m */; };
+		5271D46F1CEA0BF900108244 /* WBMyPublishViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5271D46E1CEA0BF900108244 /* WBMyPublishViewController.m */; };
+		5271D4721CEA0C1800108244 /* WBMyCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5271D4711CEA0C1800108244 /* WBMyCollectionViewController.m */; };
+		5271D4751CEA0C3000108244 /* WBMessageCenterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5271D4741CEA0C3000108244 /* WBMessageCenterViewController.m */; };
 		52A5280B1CDECD2000499AE7 /* CATransition+PageChangeAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 52A527CA1CDECD2000499AE7 /* CATransition+PageChangeAnimation.m */; };
 		52A5280C1CDECD2000499AE7 /* UINavigationBar+NavBar_WBCustomBackgroudImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 52A527CD1CDECD2000499AE7 /* UINavigationBar+NavBar_WBCustomBackgroudImage.m */; };
 		52A5280D1CDECD2000499AE7 /* UIBarButtonItem+WBCustomButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 52A527D01CDECD2000499AE7 /* UIBarButtonItem+WBCustomButton.m */; };
@@ -89,6 +96,9 @@
 		52A528A01CDF4AC600499AE7 /* background_blue@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 52A5289F1CDF4AC600499AE7 /* background_blue@3x.png */; };
 		52A528A21CDF4AE500499AE7 /* background_dream@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 52A528A11CDF4AE500499AE7 /* background_dream@3x.png */; };
 		52AD60411CE61BD90014DE9A /* WBCustomBottomUpView.m in Sources */ = {isa = PBXBuildFile; fileRef = 52AD60401CE61BD90014DE9A /* WBCustomBottomUpView.m */; };
+		52D2C49D1CEB07B100AA411F /* WBMainSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 52D2C49C1CEB07B100AA411F /* WBMainSearchViewController.m */; };
+		52D2C4E61CEB1D8A00AA411F /* WBCustomSearchBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 52D2C4E51CEB1D8A00AA411F /* WBCustomSearchBar.m */; };
+		52D2C4E91CEB53D400AA411F /* WBChangePasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 52D2C4E81CEB53D400AA411F /* WBChangePasswordViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -181,6 +191,20 @@
 		527156841CE36F0D007F7821 /* WBMainCell3.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WBMainCell3.h; sourceTree = "<group>"; };
 		527156851CE36F0D007F7821 /* WBMainCell3.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WBMainCell3.m; sourceTree = "<group>"; };
 		527156861CE36F0D007F7821 /* WBMainCell3.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WBMainCell3.xib; sourceTree = "<group>"; };
+		5271D4591CE9FAF900108244 /* WBChangeNickNameViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WBChangeNickNameViewController.h; sourceTree = "<group>"; };
+		5271D45A1CE9FAF900108244 /* WBChangeNickNameViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WBChangeNickNameViewController.m; sourceTree = "<group>"; };
+		5271D45C1CEA02CE00108244 /* WBChangeMottoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WBChangeMottoViewController.h; sourceTree = "<group>"; };
+		5271D45D1CEA02CE00108244 /* WBChangeMottoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WBChangeMottoViewController.m; sourceTree = "<group>"; };
+		5271D4611CEA06CD00108244 /* WBSchoolCalendarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WBSchoolCalendarViewController.h; sourceTree = "<group>"; };
+		5271D4621CEA06CD00108244 /* WBSchoolCalendarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WBSchoolCalendarViewController.m; sourceTree = "<group>"; };
+		5271D46A1CEA0BC100108244 /* WBSettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WBSettingViewController.h; sourceTree = "<group>"; };
+		5271D46B1CEA0BC100108244 /* WBSettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WBSettingViewController.m; sourceTree = "<group>"; };
+		5271D46D1CEA0BF900108244 /* WBMyPublishViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WBMyPublishViewController.h; sourceTree = "<group>"; };
+		5271D46E1CEA0BF900108244 /* WBMyPublishViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WBMyPublishViewController.m; sourceTree = "<group>"; };
+		5271D4701CEA0C1800108244 /* WBMyCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WBMyCollectionViewController.h; sourceTree = "<group>"; };
+		5271D4711CEA0C1800108244 /* WBMyCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WBMyCollectionViewController.m; sourceTree = "<group>"; };
+		5271D4731CEA0C3000108244 /* WBMessageCenterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WBMessageCenterViewController.h; sourceTree = "<group>"; };
+		5271D4741CEA0C3000108244 /* WBMessageCenterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WBMessageCenterViewController.m; sourceTree = "<group>"; };
 		52A527C91CDECD2000499AE7 /* CATransition+PageChangeAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CATransition+PageChangeAnimation.h"; sourceTree = "<group>"; };
 		52A527CA1CDECD2000499AE7 /* CATransition+PageChangeAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CATransition+PageChangeAnimation.m"; sourceTree = "<group>"; };
 		52A527CC1CDECD2000499AE7 /* UINavigationBar+NavBar_WBCustomBackgroudImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationBar+NavBar_WBCustomBackgroudImage.h"; sourceTree = "<group>"; };
@@ -259,6 +283,12 @@
 		52A528A11CDF4AE500499AE7 /* background_dream@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "background_dream@3x.png"; sourceTree = "<group>"; };
 		52AD603F1CE61BD90014DE9A /* WBCustomBottomUpView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WBCustomBottomUpView.h; sourceTree = "<group>"; };
 		52AD60401CE61BD90014DE9A /* WBCustomBottomUpView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WBCustomBottomUpView.m; sourceTree = "<group>"; };
+		52D2C49B1CEB07B100AA411F /* WBMainSearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WBMainSearchViewController.h; sourceTree = "<group>"; };
+		52D2C49C1CEB07B100AA411F /* WBMainSearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WBMainSearchViewController.m; sourceTree = "<group>"; };
+		52D2C4E41CEB1D8A00AA411F /* WBCustomSearchBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WBCustomSearchBar.h; sourceTree = "<group>"; };
+		52D2C4E51CEB1D8A00AA411F /* WBCustomSearchBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WBCustomSearchBar.m; sourceTree = "<group>"; };
+		52D2C4E71CEB53D400AA411F /* WBChangePasswordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WBChangePasswordViewController.h; sourceTree = "<group>"; };
+		52D2C4E81CEB53D400AA411F /* WBChangePasswordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WBChangePasswordViewController.m; sourceTree = "<group>"; };
 		5ABD5ADE04E1BB1D4220B79C /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		F0D535423ED6E61946912108 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -405,6 +435,10 @@
 			children = (
 				52379EEB1CE1DD4900E93767 /* WBPersonalCenterViewController.h */,
 				52379EEC1CE1DD4900E93767 /* WBPersonalCenterViewController.m */,
+				5271D4591CE9FAF900108244 /* WBChangeNickNameViewController.h */,
+				5271D45A1CE9FAF900108244 /* WBChangeNickNameViewController.m */,
+				5271D45C1CEA02CE00108244 /* WBChangeMottoViewController.h */,
+				5271D45D1CEA02CE00108244 /* WBChangeMottoViewController.m */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -430,6 +464,53 @@
 			children = (
 			);
 			path = cells;
+			sourceTree = "<group>";
+		};
+		5271D4601CEA065200108244 /* 校历 */ = {
+			isa = PBXGroup;
+			children = (
+				5271D4611CEA06CD00108244 /* WBSchoolCalendarViewController.h */,
+				5271D4621CEA06CD00108244 /* WBSchoolCalendarViewController.m */,
+			);
+			path = "校历";
+			sourceTree = "<group>";
+		};
+		5271D4641CEA080A00108244 /* 消息中心 */ = {
+			isa = PBXGroup;
+			children = (
+				5271D4731CEA0C3000108244 /* WBMessageCenterViewController.h */,
+				5271D4741CEA0C3000108244 /* WBMessageCenterViewController.m */,
+			);
+			path = "消息中心";
+			sourceTree = "<group>";
+		};
+		5271D4651CEA084400108244 /* 我的收藏 */ = {
+			isa = PBXGroup;
+			children = (
+				5271D4701CEA0C1800108244 /* WBMyCollectionViewController.h */,
+				5271D4711CEA0C1800108244 /* WBMyCollectionViewController.m */,
+			);
+			path = "我的收藏";
+			sourceTree = "<group>";
+		};
+		5271D4661CEA085500108244 /* 我的发帖 */ = {
+			isa = PBXGroup;
+			children = (
+				5271D46D1CEA0BF900108244 /* WBMyPublishViewController.h */,
+				5271D46E1CEA0BF900108244 /* WBMyPublishViewController.m */,
+			);
+			path = "我的发帖";
+			sourceTree = "<group>";
+		};
+		5271D4671CEA086A00108244 /* 设置 */ = {
+			isa = PBXGroup;
+			children = (
+				5271D46A1CEA0BC100108244 /* WBSettingViewController.h */,
+				5271D46B1CEA0BC100108244 /* WBSettingViewController.m */,
+				52D2C4E71CEB53D400AA411F /* WBChangePasswordViewController.h */,
+				52D2C4E81CEB53D400AA411F /* WBChangePasswordViewController.m */,
+			);
+			path = "设置";
 			sourceTree = "<group>";
 		};
 		52A527C71CDECD2000499AE7 /* 分类 */ = {
@@ -673,6 +754,11 @@
 			children = (
 				52A528551CDF3A6600499AE7 /* WBMenuViewController.h */,
 				52A528561CDF3A6600499AE7 /* WBMenuViewController.m */,
+				5271D4671CEA086A00108244 /* 设置 */,
+				5271D4661CEA085500108244 /* 我的发帖 */,
+				5271D4651CEA084400108244 /* 我的收藏 */,
+				5271D4641CEA080A00108244 /* 消息中心 */,
+				5271D4601CEA065200108244 /* 校历 */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -948,6 +1034,8 @@
 				52A528881CDF3A6700499AE7 /* WBMainViewController.m */,
 				522968891CE499BF0043784A /* WBMainDetailViewController.h */,
 				5229688A1CE499BF0043784A /* WBMainDetailViewController.m */,
+				52D2C49B1CEB07B100AA411F /* WBMainSearchViewController.h */,
+				52D2C49C1CEB07B100AA411F /* WBMainSearchViewController.m */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -970,6 +1058,8 @@
 				522968D51CE4B7ED0043784A /* WBMainDetailBottomView.h */,
 				522968D61CE4B7ED0043784A /* WBMainDetailBottomView.m */,
 				522968D81CE4B8010043784A /* WBMainDetailBottomView.xib */,
+				52D2C4E41CEB1D8A00AA411F /* WBCustomSearchBar.h */,
+				52D2C4E51CEB1D8A00AA411F /* WBCustomSearchBar.m */,
 			);
 			path = views;
 			sourceTree = "<group>";
@@ -1190,11 +1280,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				52A528191CDECD2000499AE7 /* WBDBModel.m in Sources */,
+				52D2C4E61CEB1D8A00AA411F /* WBCustomSearchBar.m in Sources */,
 				52A528941CDF3A6700499AE7 /* UIImage+WBGetWithColor.m in Sources */,
 				057BDD431CDF47C200F03911 /* KTopicFrameModel.m in Sources */,
 				05ECD8A61CE49DB800A0582A /* GQBasePictureTableView.m in Sources */,
+				5271D4751CEA0C3000108244 /* WBMessageCenterViewController.m in Sources */,
 				52A528931CDF3A6700499AE7 /* UIColor+HexColor.m in Sources */,
 				52A5284E1CDF300500499AE7 /* AppDelegate.m in Sources */,
+				5271D45B1CE9FAF900108244 /* WBChangeNickNameViewController.m in Sources */,
 				52A528951CDF3A6700499AE7 /* UIView+WBLocation.m in Sources */,
 				527156781CE36E66007F7821 /* WBMainCell1.m in Sources */,
 				52A5280E1CDECD2000499AE7 /* UIColor+HexColor.m in Sources */,
@@ -1207,24 +1300,24 @@
 				52A5288E1CDF3A6700499AE7 /* WBGuidanceViewController.m in Sources */,
 				527156821CE36EE9007F7821 /* WBMainCell2.m in Sources */,
 				52A5280C1CDECD2000499AE7 /* UINavigationBar+NavBar_WBCustomBackgroudImage.m in Sources */,
+				52D2C49D1CEB07B100AA411F /* WBMainSearchViewController.m in Sources */,
 				52A5281A1CDECD2000499AE7 /* WBRequestManager.m in Sources */,
 				52A528121CDECD2000499AE7 /* WBNavViewController.m in Sources */,
+				5271D46F1CEA0BF900108244 /* WBMyPublishViewController.m in Sources */,
 				053AF2781CE21415000ACB9D /* KTopicDetailVC.m in Sources */,
 				52A5289B1CDF3DB600499AE7 /* WBMenuTableViewCell.m in Sources */,
 				52A5288F1CDF3A6700499AE7 /* WBPhoneBookViewController.m in Sources */,
 				52A5282A1CDED65B00499AE7 /* UIViewController+RESideMenu.m in Sources */,
 				05ECD8A81CE49DB800A0582A /* GQPhotoScrollView.m in Sources */,
 				52A528411CDEDD8200499AE7 /* WBTools.m in Sources */,
-
-
 				057F1B1D1CE58B8C00BB49E3 /* KPublishTopicVC.m in Sources */,
-
 				522968D41CE4B4750043784A /* WBCustomPictureWall.m in Sources */,
 				05ECD8A91CE49DB800A0582A /* GQPhotoTableView.m in Sources */,
 				52A5281D1CDECD2000499AE7 /* WBUserRequest.m in Sources */,
 				057BDD3D1CDF479500F03911 /* KTopicCell.m in Sources */,
 				05ECD8771CE4779800A0582A /* KUISegmentedControl.m in Sources */,
 				527156871CE36F0D007F7821 /* WBMainCell3.m in Sources */,
+				52D2C4E91CEB53D400AA411F /* WBChangePasswordViewController.m in Sources */,
 				05ECD8701CE4666500A0582A /* KCommentModel.m in Sources */,
 				5229688C1CE499BF0043784A /* WBMainDetailViewController.m in Sources */,
 				52A528911CDF3A6700499AE7 /* UINavigationBar+NavBar_WBCustomBackgroudImage.m in Sources */,
@@ -1232,7 +1325,9 @@
 				52A5280F1CDECD2000499AE7 /* UIImage+WBGetWithColor.m in Sources */,
 				52A528961CDF3A6700499AE7 /* WBForumViewController.m in Sources */,
 				52A5288B1CDF3A6700499AE7 /* WBMenuViewController.m in Sources */,
+				5271D46C1CEA0BC100108244 /* WBSettingViewController.m in Sources */,
 				522968D71CE4B7ED0043784A /* WBMainDetailBottomView.m in Sources */,
+				5271D4631CEA06CD00108244 /* WBSchoolCalendarViewController.m in Sources */,
 				52A528111CDECD2000499AE7 /* WBBaseViewController.m in Sources */,
 				52A528971CDF3A6700499AE7 /* WBMainViewController.m in Sources */,
 				05ECD8611CE45E6B00A0582A /* KCommentCountView.m in Sources */,
@@ -1244,11 +1339,13 @@
 				52A528291CDED65B00499AE7 /* RESideMenu.m in Sources */,
 				52379EED1CE1DD4900E93767 /* WBPersonalCenterViewController.m in Sources */,
 				52AD60411CE61BD90014DE9A /* WBCustomBottomUpView.m in Sources */,
+				5271D4721CEA0C1800108244 /* WBMyCollectionViewController.m in Sources */,
 				05ECD8731CE46BD700A0582A /* KTools.m in Sources */,
 				52A5288C1CDF3A6700499AE7 /* WBMenuHeaderView.m in Sources */,
 				52A5280D1CDECD2000499AE7 /* UIBarButtonItem+WBCustomButton.m in Sources */,
 				522968841CE472050043784A /* WBLoginMenuHeaderView.m in Sources */,
 				52A528161CDECD2000499AE7 /* WBTabBarViewController.m in Sources */,
+				5271D45E1CEA02CE00108244 /* WBChangeMottoViewController.m in Sources */,
 				52A5280B1CDECD2000499AE7 /* CATransition+PageChangeAnimation.m in Sources */,
 				05ECD8661CE4627F00A0582A /* KBottomCommentView.m in Sources */,
 				5216DB701CDECB5C00B06B3B /* main.m in Sources */,

@@ -27,6 +27,9 @@ typedef NS_ENUM(NSInteger, ViewControllerNavItemStyle) {
 };
 
 @interface WBBaseViewController : UIViewController
+@property (nonatomic, assign) BOOL hasReturnArrow;
+
+
 
 - (instancetype)initWithViewControllerNavItemStyle:(ViewControllerNavItemStyle)viewControllerNavItemStyle;
 /**

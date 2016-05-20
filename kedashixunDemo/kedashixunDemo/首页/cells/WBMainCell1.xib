@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
     </dependencies>
     <objects>
@@ -21,7 +20,7 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="学工办" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8PL-dK-YbW">
-                        <rect key="frame" x="92" y="34" width="36" height="15"/>
+                        <rect key="frame" x="100" y="34" width="36" height="15"/>
                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                         <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                         <nil key="highlightedColor"/>
@@ -34,11 +33,7 @@
                         </constraints>
                     </view>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="关于各学院已办理学生住宿费退款的通知" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cBi-Vn-6Br">
-                        <rect key="frame" x="20" y="10" width="250" height="20"/>
-                        <constraints>
-                            <constraint firstAttribute="width" constant="250" id="cXh-ka-E7u"/>
-                            <constraint firstAttribute="height" constant="20" id="gJp-Gn-w6v"/>
-                        </constraints>
+                        <rect key="frame" x="20" y="10" width="287" height="16"/>
                         <fontDescription key="fontDescription" type="system" pointSize="13"/>
                         <nil key="highlightedColor"/>
                     </label>
@@ -46,13 +41,14 @@
                 <constraints>
                     <constraint firstItem="8PL-dK-YbW" firstAttribute="centerY" secondItem="mPG-GE-dFz" secondAttribute="centerY" id="F1I-Sn-u0W"/>
                     <constraint firstItem="mPG-GE-dFz" firstAttribute="leading" secondItem="cBi-Vn-6Br" secondAttribute="leading" id="KfU-sG-ILP"/>
+                    <constraint firstAttribute="trailing" secondItem="cBi-Vn-6Br" secondAttribute="trailing" constant="20" id="SLg-qi-F5Y"/>
                     <constraint firstItem="lCn-kF-Sv0" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="TS3-HW-LP6"/>
                     <constraint firstItem="cBi-Vn-6Br" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="U6I-Wf-SKL"/>
                     <constraint firstAttribute="trailing" secondItem="lCn-kF-Sv0" secondAttribute="trailing" id="Y5G-j2-gcw"/>
                     <constraint firstAttribute="bottom" secondItem="lCn-kF-Sv0" secondAttribute="bottom" id="Zhn-Fx-J8G"/>
-                    <constraint firstItem="8PL-dK-YbW" firstAttribute="leading" secondItem="mPG-GE-dFz" secondAttribute="trailing" constant="2" id="dec-va-ksG"/>
+                    <constraint firstItem="8PL-dK-YbW" firstAttribute="leading" secondItem="mPG-GE-dFz" secondAttribute="trailing" constant="10" id="dec-va-ksG"/>
                     <constraint firstItem="8PL-dK-YbW" firstAttribute="height" secondItem="mPG-GE-dFz" secondAttribute="height" id="kie-In-HiG"/>
-                    <constraint firstItem="mPG-GE-dFz" firstAttribute="top" secondItem="cBi-Vn-6Br" secondAttribute="bottom" constant="4" id="mtG-zQ-Lhq"/>
+                    <constraint firstItem="mPG-GE-dFz" firstAttribute="top" secondItem="cBi-Vn-6Br" secondAttribute="bottom" constant="8" id="mtG-zQ-Lhq"/>
                     <constraint firstItem="cBi-Vn-6Br" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="y8H-ZC-lpe"/>
                 </constraints>
             </tableViewCellContentView>
