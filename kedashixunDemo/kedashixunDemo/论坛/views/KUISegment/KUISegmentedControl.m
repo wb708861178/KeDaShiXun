@@ -71,7 +71,7 @@
     selectSeugment=0;
     self.ButtonArray=[NSMutableArray arrayWithCapacity:_ButtonArray.count];
     self.titleFont=[UIFont systemFontOfSize:17];
-    self=[super initWithFrame:CGRectMake(frame.origin.x, frame.origin.y, frame.size.width, 44)];
+    self=[super initWithFrame:CGRectMake(frame.origin.x, frame.origin.y, frame.size.width, frame.size.height)];
     self.KBackGroundColor = [UIColor whiteColor];
     self.titleColor = [UIColor blackColor];
     self.selectColor=[UIColor blackColor];

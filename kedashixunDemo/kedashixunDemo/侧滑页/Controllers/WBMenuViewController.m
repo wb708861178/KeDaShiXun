@@ -103,7 +103,14 @@
     [self.view addSubview:loginMenuHeaderView];
     loginMenuHeaderView.jumpToPersonalCenterVCBlock = ^{
         WBPersonalCenterViewController *personalCenterVC = [[WBPersonalCenterViewController alloc] init];
+
         [self jumpToNextVC:personalCenterVC];
+
+        [self.sideMenuViewController hideMenuViewController];
+        
+        WBTabBarViewController *tabBarVC = (WBTabBarViewController *)self.sideMenuViewController.contentViewController;
+        [tabBarVC.selectedViewController pushViewController:personalCenterVC animated:NO];
+
     };
     
     

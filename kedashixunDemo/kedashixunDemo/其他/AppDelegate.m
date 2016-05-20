@@ -37,13 +37,13 @@
 //    sideMenu.panFromEdge = YES;
 //    //距离屏幕中心的偏移X
     sideMenu.contentViewInPortraitOffsetCenterX = [UIScreen mainScreen].bounds.size.width*0.2;
-//    sideMenu.contentViewShadowEnabled = YES;
-//    sideMenu.contentViewShadowColor = [UIColor redColor];
-//    //缩放
-//    sideMenu.scaleContentView = NO;
-//    sideMenu.scaleMenuView = NO;
-//    //alpha变化
-//    sideMenu.fadeMenuView = NO;
+    sideMenu.contentViewShadowEnabled = YES;
+    sideMenu.contentViewShadowColor = [UIColor redColor];
+    //缩放
+    sideMenu.scaleContentView = NO;
+    sideMenu.scaleMenuView = NO;
+    //alpha变化
+    sideMenu.fadeMenuView = NO;
 
     sideMenu.contentViewScaleValue = 0.8;
     
