@@ -195,21 +195,21 @@
                     <exclude reference="Osd-oN-CDz"/>
                     <exclude reference="hlS-Tb-3n8"/>
                     <exclude reference="lcy-O4-cNj"/>
+                    <exclude reference="BkX-mh-YCp"/>
+                    <exclude reference="Pbh-sJ-QRt"/>
+                    <exclude reference="cXf-yi-tKF"/>
+                    <exclude reference="27u-qF-oKB"/>
+                    <exclude reference="JEz-Kg-Bce"/>
+                    <exclude reference="VoM-s8-nAb"/>
+                    <exclude reference="7Xt-h9-egq"/>
+                    <exclude reference="DMN-vo-fig"/>
+                    <exclude reference="IlG-kE-JMQ"/>
                     <exclude reference="7YN-9f-CkE"/>
                     <exclude reference="gah-VL-JPv"/>
                     <exclude reference="vNy-vp-h1c"/>
                     <exclude reference="F3e-1w-TCR"/>
                     <exclude reference="ded-Ma-TiG"/>
                     <exclude reference="wS6-qX-Lvp"/>
-                    <exclude reference="27u-qF-oKB"/>
-                    <exclude reference="JEz-Kg-Bce"/>
-                    <exclude reference="VoM-s8-nAb"/>
-                    <exclude reference="BkX-mh-YCp"/>
-                    <exclude reference="Pbh-sJ-QRt"/>
-                    <exclude reference="cXf-yi-tKF"/>
-                    <exclude reference="7Xt-h9-egq"/>
-                    <exclude reference="DMN-vo-fig"/>
-                    <exclude reference="IlG-kE-JMQ"/>
                 </mask>
             </variation>
             <variation key="widthClass=compact">
@@ -225,21 +225,21 @@
                     <include reference="Osd-oN-CDz"/>
                     <include reference="hlS-Tb-3n8"/>
                     <include reference="lcy-O4-cNj"/>
+                    <include reference="BkX-mh-YCp"/>
+                    <include reference="Pbh-sJ-QRt"/>
+                    <include reference="cXf-yi-tKF"/>
+                    <include reference="27u-qF-oKB"/>
+                    <include reference="JEz-Kg-Bce"/>
+                    <include reference="VoM-s8-nAb"/>
+                    <include reference="7Xt-h9-egq"/>
+                    <include reference="DMN-vo-fig"/>
+                    <include reference="IlG-kE-JMQ"/>
                     <include reference="7YN-9f-CkE"/>
                     <include reference="gah-VL-JPv"/>
                     <include reference="vNy-vp-h1c"/>
                     <include reference="F3e-1w-TCR"/>
                     <include reference="ded-Ma-TiG"/>
                     <include reference="wS6-qX-Lvp"/>
-                    <include reference="27u-qF-oKB"/>
-                    <include reference="JEz-Kg-Bce"/>
-                    <include reference="VoM-s8-nAb"/>
-                    <include reference="BkX-mh-YCp"/>
-                    <include reference="Pbh-sJ-QRt"/>
-                    <include reference="cXf-yi-tKF"/>
-                    <include reference="7Xt-h9-egq"/>
-                    <include reference="DMN-vo-fig"/>
-                    <include reference="IlG-kE-JMQ"/>
                 </mask>
             </variation>
             <point key="canvasLocation" x="388" y="312"/>
