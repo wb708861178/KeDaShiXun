@@ -8,6 +8,14 @@
 
 #import "WBMenuHeaderView.h"
 
+@interface WBMenuHeaderView ()
+@property (weak, nonatomic) IBOutlet UIImageView *iconImageView;
+
+
+
+@end
+
+
 @implementation WBMenuHeaderView
 
 /*

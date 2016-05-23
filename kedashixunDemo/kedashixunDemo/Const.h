@@ -29,6 +29,7 @@
 #define kBtnSelectedColor [UIColor colorWithHexString:@"#ed8a57"]
 #define kBGDefaultColor [UIColor colorWithHexString:@"#f5f5f5"]
 
+#define kTextDefaultColor [UIColor colorWithHexString:@"#333333"]
 
 
 #endif /* Const_h */

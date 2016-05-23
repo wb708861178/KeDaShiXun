@@ -14,31 +14,57 @@
 #import "WBMainCell2.h"
 #import "WBMainCell3.h"
 #import "WBMainDetailViewController.h"
+#import "WBMainSearchViewController.h"
+
+#import "WBKedaMessage.h"
+#import <MJExtension.h>
+#import "WBNetworking.h"
 
 
 @interface WBMainViewController ()<UITableViewDataSource,UITableViewDelegate>
 @property (nonatomic, strong) WBCustomNavView *customNavView;
 @property (nonatomic, strong) UITableView *mainTableView;
+@property (nonatomic, strong) NSMutableArray *dataSourceArr;
 
 
 @end
 
 @implementation WBMainViewController
-
+- (NSMutableArray *)dataSourceArr
+{
+    if (!_dataSourceArr) {
+        _dataSourceArr = [NSMutableArray array];
+        
+    }
+    return _dataSourceArr;
+}
 
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
-    self.navigationController.navigationBarHidden = YES;
+    [self.navigationController setNavigationBarHidden:YES animated:YES];
+    
+    
+   
 }
 
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self setNavBarTitleWithText:@"科大时讯" withFontSize:18 withTextColor:[UIColor whiteColor]];
-    // Do any additional setup after loading the view.
+    
     
        [self viewLayout];
+    
+    [WBNetworking networkRequstWithNetworkRequestMethod:GetNetworkRequest networkRequestStyle:NetType_getKedamessage params:nil successBlock:^(id returnData) {
+        NSMutableArray *tempArrM = [WBKedaMessage mj_objectArrayWithKeyValuesArray:returnData[@"data"]];
+        self.dataSourceArr = [[[tempArrM reverseObjectEnumerator] allObjects] mutableCopy];
+        [self.mainTableView reloadData];
+    } failureBlock:^(NSError *error) {
+          NSLog(@"%@",error);
+    }];
+    
+
     
     
 }
@@ -47,32 +73,38 @@
 #pragma mark---UITableViewDataSource
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 3;
+    return self.dataSourceArr.count;
 }
 
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-        switch (indexPath.row) {
-        case 0:
-        {
-            WBMainCell1 *cell1 = [tableView dequeueReusableCellWithIdentifier:@"WBMainCell1" forIndexPath:indexPath];
-            return cell1;
-        }
-            break;
+    WBKedaMessage *kedaMessage = self.dataSourceArr[indexPath.row];
+    
+   
+        switch (kedaMessage.type) {
         case 1:
         {
-            WBMainCell2 *cell2 = [tableView dequeueReusableCellWithIdentifier:@"WBMainCell2" forIndexPath:indexPath];
-            
-            return cell2;
+           
+            WBMainCell1 *cell1 = [tableView dequeueReusableCellWithIdentifier:@"WBMainCell1" forIndexPath:indexPath];
+            cell1.kedaMessage = self.dataSourceArr[indexPath.row];
+            return cell1;
         }
             break;
         case 2:
         {
+            WBMainCell2 *cell2 = [tableView dequeueReusableCellWithIdentifier:@"WBMainCell2" forIndexPath:indexPath];
+            cell2.kedaMessage = self.dataSourceArr[indexPath.row];
+            return cell2;
+        }
+            break;
+        case 3:
+        {
             WBMainCell3 *cell3 = [tableView dequeueReusableCellWithIdentifier:@"WBMainCell3" forIndexPath:indexPath];
-            
+            cell3.kedaMessage = self.dataSourceArr[indexPath.row];
             return cell3;
+            
         }
             break;
             
@@ -84,35 +116,23 @@
    
 }
 #pragma mark---UITableViewDelegate
-- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+
+- (CGFloat)tableView:(UITableView *)tableView estimatedHeightForRowAtIndexPath:(NSIndexPath *)indexPath NS_AVAILABLE_IOS(7_0)
 {
-    switch (indexPath.row) {
-        case 0:
-        {
-            return 65;
-        }
-            break;
-        case 1:
-        {
-            return 90;
-        }
-            break;
-        case 2:
-        {
-            return 146;
-        }
-            break;
-            
-        default:
-            break;
-    }
+   
     return 0;
+
 }
+
+
 
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    WBKedaMessage *kedaMessage = self.dataSourceArr[indexPath.row];
+    
     WBMainDetailViewController *mainDetailVC = [[WBMainDetailViewController alloc] init];
+    mainDetailVC.kedaMessage = kedaMessage;
     [self.navigationController pushViewController:mainDetailVC animated:YES];
 }
 
@@ -123,7 +143,7 @@
     
     
     
-    UITableView *mainTableView = [[UITableView alloc] initWithFrame:CGRectMake(0,0, kWidth, kHeight) style:UITableViewStylePlain];
+    UITableView *mainTableView = [[UITableView alloc] initWithFrame:CGRectMake(0,0, kWidth, kHeight - 49) style:UITableViewStylePlain];
     mainTableView.delegate = self;
     mainTableView.dataSource = self;
     mainTableView.separatorStyle = UITableViewCellSeparatorStyleNone;
@@ -137,7 +157,8 @@
         [self.sideMenuViewController presentLeftMenuViewController];
     };
     customNavView.jumpToSearchVCBlock = ^{
-        NSLog(@"searchVC");
+        WBMainSearchViewController *mainSearchVC = [[WBMainSearchViewController alloc] init];
+        [self.navigationController pushViewController:mainSearchVC animated:YES];
     };
     self.customNavView = customNavView;
     

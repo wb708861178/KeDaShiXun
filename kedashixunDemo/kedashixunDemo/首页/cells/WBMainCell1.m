@@ -8,7 +8,29 @@
 
 #import "WBMainCell1.h"
 
+@interface WBMainCell1 ()
+@property (weak, nonatomic) IBOutlet UILabel *dateLabel;
+
+@property (weak, nonatomic) IBOutlet UILabel *placeLabel;
+
+@property (weak, nonatomic) IBOutlet UILabel *titleLabel;
+
+
+@end
+
+
 @implementation WBMainCell1
+
+- (void)setKedaMessage:(WBKedaMessage *)kedaMessage
+{
+    _kedaMessage = kedaMessage;
+    self.titleLabel.text = kedaMessage.title;
+    self.placeLabel.text = kedaMessage.department;
+    self.dateLabel.text = kedaMessage.date;
+    
+    
+}
+
 
 - (void)awakeFromNib {
     // Initialization code

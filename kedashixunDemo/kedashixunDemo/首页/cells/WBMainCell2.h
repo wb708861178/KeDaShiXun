@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "WBKedaMessage.h"
 @interface WBMainCell2 : UITableViewCell
-
+@property (nonatomic, strong) WBKedaMessage *kedaMessage;
 @end
