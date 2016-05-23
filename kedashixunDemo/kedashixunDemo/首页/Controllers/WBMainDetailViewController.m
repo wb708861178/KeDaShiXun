@@ -12,6 +12,8 @@
 #import "UIColor+HexColor.h"
 #import "WBMainDetailBottomView.h"
 #import "UIBarButtonItem+WBCustomButton.h"
+#import "UIView+WBLocation.h"
+#import "UILabel+ResetContent.h"
 
 
 @interface WBMainDetailViewController ()
@@ -41,19 +43,31 @@
     self.mainScrollView = mainScrollView;
     
     
-    UILabel *titleLable = [[UILabel alloc] initWithFrame:CGRectMake(0, 20, kWidth, 20)];
-    titleLable.text = @"关于各学院已办理学生住宿费退款的通知";
+    CGFloat titleLableX = 20;
+    CGFloat titleLableW = (kWidth - titleLableX * 2) ;
+    NSDictionary *titleLableAttributes = @{NSFontAttributeName : [UIFont systemFontOfSize:17]};
+     CGRect  titleLableTextRect = [self.kedaMessage.title boundingRectWithSize:CGSizeMake(titleLableW, MAXFLOAT) options:NSStringDrawingUsesLineFragmentOrigin attributes:titleLableAttributes context:nil];
+    
+    UILabel *titleLable = [[UILabel alloc] initWithFrame:CGRectMake(titleLableX, 20, titleLableW, titleLableTextRect.size.height)];
+    titleLable.numberOfLines = 0;
+    titleLable.font = [UIFont systemFontOfSize:17];
+    titleLable.text = self.kedaMessage.title;
     titleLable.textAlignment = NSTextAlignmentCenter;
     [mainScrollView addSubview:titleLable];
     
     UILabel *dateLable = [[UILabel alloc] initWithFrame:CGRectMake(0, CGRectGetMaxY(titleLable.frame) +  15, kWidth, 20)];
-    dateLable.text = @"2015年10月26日";
+    dateLable.text = self.kedaMessage.date;
     dateLable.textAlignment = NSTextAlignmentCenter;
     [mainScrollView addSubview:dateLable];
     
+    NSArray *imageUrlArr = [self.kedaMessage.images componentsSeparatedByString:@"+"];
     
-    NSArray *imageNameArr = @[@"shouyeimage2",@"shouyeimage2",@"shouyeimage2",@"shouyeimage2",@"shouyeimage2",@"shouyeimage2",@"shouyeimage2",@"shouyeimage2",@"shouyeimage2",@"shouyeimage2",@"shouyeimage2",@"shouyeimage2"];
-    WBCustomPictureWall *customPictureWall = [[WBCustomPictureWall alloc] initWithFrame:CGRectMake(20, CGRectGetMaxY(dateLable.frame) + 20, kWidth - 40 , 0) withImageNameArr:imageNameArr withTopSpace:0 withLeftSpace:0 withHorizontalSpace:2 withVerticalSpace:2];
+    WBCustomPictureWall *customPictureWall = [[WBCustomPictureWall alloc] initWithFrame:CGRectMake(20, CGRectGetMaxY(dateLable.frame) + 20, kWidth - 40 , 0)withImageUrlArr:imageUrlArr withTopSpace:0 withLeftSpace:0 withHorizontalSpace:2 withVerticalSpace:2];
+  
+    if (imageUrlArr == nil) {
+        customPictureWall.frame = CGRectMake(customPictureWall.frameX, customPictureWall.frameY - 20, customPictureWall.frameW, 0);
+      
+    }
     
     customPictureWall.selectBlock = ^(NSInteger selectedIndex){
         NSLog(@"%zi",selectedIndex);
@@ -63,29 +77,32 @@
     
     [mainScrollView addSubview:customPictureWall];
     
-    UILabel *contentLable = [[UILabel alloc] init];
-    contentLable.backgroundColor = [UIColor redColor];
-    contentLable.font = [UIFont systemFontOfSize:15];
-   
-    contentLable.text = @"都是谁看见谁看见看大家快圣诞节的撒娇看就看大家看来大家快来打开的即可来得及爱空间的卡上的骄傲是看得见按时打卡上大家爱上暗示扩大时看到奥斯卡的萨克的骄傲开始大胜靠德按时打卡上加大是";
     
-    NSDictionary *attributes = @{NSFontAttributeName : [UIFont systemFontOfSize:15]};
-    CGRect  textRect = [contentLable.text boundingRectWithSize:CGSizeMake(customPictureWall.frame.size.width, MAXFLOAT) options:NSStringDrawingUsesLineFragmentOrigin attributes:attributes context:nil];
+    
+    UILabel *contentLable = [UILabel resetContentWithContent:self.kedaMessage.content withFontSize:15 withLineHeight:15 withLineSapce:20 withHeadIndent:15];
+
+    NSDictionary *contentLableAttributes = [contentLable.attributedText attributesAtIndex:0 effectiveRange:nil];
+    NSLog(@"%@",contentLableAttributes);
+    
+    
+    
+   
+    CGRect  textRect = [contentLable.text boundingRectWithSize:CGSizeMake(customPictureWall.frame.size.width, MAXFLOAT) options:NSStringDrawingUsesLineFragmentOrigin attributes:contentLableAttributes context:nil];
     
     
     contentLable.frame = CGRectMake(customPictureWall.frame.origin.x, CGRectGetMaxY(customPictureWall.frame) + 20, customPictureWall.frame.size.width, textRect.size.height);
     contentLable.numberOfLines = 0;
     [mainScrollView addSubview:contentLable];
     
-    UILabel *placeLabel = [[UILabel alloc] initWithFrame:CGRectMake(CGRectGetMaxX(contentLable.frame) - 100, CGRectGetMaxY(contentLable.frame) + 10, 100, 20)];
+    UILabel *placeLabel = [[UILabel alloc] initWithFrame:CGRectMake(CGRectGetMaxX(contentLable.frame) - 200, CGRectGetMaxY(contentLable.frame) + 10, 200, 20)];
     
-    placeLabel.text = @"学工办";
+    placeLabel.text = self.kedaMessage.department;
     placeLabel.textAlignment = NSTextAlignmentRight;
     placeLabel.font = [UIFont systemFontOfSize:12];
     placeLabel.textColor = [UIColor lightGrayColor];
     [mainScrollView addSubview:placeLabel];
     
-    NSLog(@"%@",placeLabel);
+    
     
     WBMainDetailBottomView *bottomView = [[NSBundle mainBundle] loadNibNamed:@"WBMainDetailBottomView" owner:nil options:nil].firstObject;
     bottomView.frame = CGRectMake(0, kHeight -50 , kWidth, 50);

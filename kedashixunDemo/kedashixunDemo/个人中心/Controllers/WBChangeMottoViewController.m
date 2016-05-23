@@ -9,6 +9,8 @@
 #import "WBChangeMottoViewController.h"
 #import "UIBarButtonItem+WBCustomButton.h"
 #import "Const.h"
+#import "WBUserInfo.h"
+#import "WBNetworking.h"
 @interface WBChangeMottoViewController ()
 @property (nonatomic, strong) UITextField *mottoTextField;
 @end
@@ -43,7 +45,7 @@
     [self.view addSubview:nickNameView];
     
     _mottoTextField = [[UITextField alloc] initWithFrame:CGRectMake(20, 0, 300, nickNameView.frame.size.height)];
-    _mottoTextField.text = @"出来混迟早要还的";
+    _mottoTextField.text = [WBUserInfo share].motto;
     _mottoTextField.font = [UIFont systemFontOfSize:14.f];
     _mottoTextField.textColor = [UIColor colorWithHexString:@"#333333"];
     [nickNameView addSubview:_mottoTextField];
@@ -52,6 +54,20 @@
 - (void)saveAction
 {
     NSLog(@"保存");
+     [self pop];
+    self.passValueBlock(self.mottoTextField.text);
+   
+    NSDictionary *params = @{@"userid":[NSString stringWithFormat:@"%d",[WBUserInfo share].userid],@"motto":self.mottoTextField.text};
+    [WBNetworking networkRequstWithNetworkRequestMethod:GetNetworkRequest networkRequestStyle:NetType_getUpdateMotto params:params successBlock:^(id returnData) {
+       
+        if ([returnData[@"status"] intValue] == 200) {
+            [[WBUserInfo share] saveUserInfoWithUserDict:returnData[@"data"][0]];
+        }
+    } failureBlock:^(NSError *error) {
+        
+    }];
+
+    
 }
 
 - (void)returnPersonalCenter

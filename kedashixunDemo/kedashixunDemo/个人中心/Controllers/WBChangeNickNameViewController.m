@@ -9,6 +9,8 @@
 #import "WBChangeNickNameViewController.h"
 #import "UIBarButtonItem+WBCustomButton.h"
 #import "Const.h"
+#import "WBUserInfo.h"
+#import "WBNetworking.h"
 
 @interface WBChangeNickNameViewController ()
 @property (nonatomic, strong) UITextField *nickNameTextField;
@@ -45,7 +47,7 @@
     [self.view addSubview:nickNameView];
     
     _nickNameTextField = [[UITextField alloc] initWithFrame:CGRectMake(20, 0, 100, nickNameView.frame.size.height)];
-    _nickNameTextField.text = @"我是谁";
+    _nickNameTextField.text = [WBUserInfo share].nickname;
     _nickNameTextField.font = [UIFont systemFontOfSize:14.f];
     _nickNameTextField.textColor = [UIColor colorWithHexString:@"#333333"];
     [nickNameView addSubview:_nickNameTextField];
@@ -57,12 +59,23 @@
 }
 - (void)saveAction
 {
-    NSLog(@"保存");
+    [self pop];
+    self.passValueBlock(self.nickNameTextField.text);
+    NSDictionary *params = @{@"userid":[NSString stringWithFormat:@"%d",[WBUserInfo share].userid],@"nickname":self.nickNameTextField.text};
+    [WBNetworking networkRequstWithNetworkRequestMethod:GetNetworkRequest networkRequestStyle:NetType_getUpdateNickname params:params successBlock:^(id returnData) {
+        NSLog(@"%@",returnData);
+        if ([returnData[@"status"] intValue] == 200) {
+            [[WBUserInfo share] saveUserInfoWithUserDict:returnData[@"data"][0]];
+        }
+    } failureBlock:^(NSError *error) {
+        
+    }];
 }
 
 - (void)returnPersonalCenter
 {
     [self pop];
+    
 }
 /*
 #pragma mark - Navigation

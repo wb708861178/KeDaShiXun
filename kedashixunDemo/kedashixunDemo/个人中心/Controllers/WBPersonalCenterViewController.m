@@ -13,16 +13,26 @@
 #import "WBCustomBottomUpView.h"
 #import "WBChangeNickNameViewController.h"
 #import "WBChangeMottoViewController.h"
-
+#import "WBUserInfo.h"
+#import "WBNetworking.h"
 @interface WBPersonalCenterViewController ()<UITableViewDelegate,UITableViewDataSource>
 @property (nonatomic, strong) UITableView *mainTableView;
 @property (nonatomic, strong) NSArray *titleArr;
+@property (nonatomic, strong) NSMutableArray *userInfoArr;
 
 
 
 @end
 
 @implementation WBPersonalCenterViewController
+
+- (NSMutableArray *)userInfoArr
+{
+    if (!_userInfoArr) {
+        _userInfoArr = [NSMutableArray array];
+    }
+    return _userInfoArr;
+}
 - (NSArray *)titleArr
 {
     if (!_titleArr) {
@@ -32,17 +42,58 @@
 }
 
 
+-(void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    
+}
+
+
+
+
+
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    [self initUserInfoArr];
+    
+    
     self.view.backgroundColor = kBGDefaultColor;
     self.automaticallyAdjustsScrollViewInsets = NO;
     
-    self.navigationItem.leftBarButtonItems = [UIBarButtonItem barButtonItemWithImageName:@"arrow_left" withHighlightedImageName:@"arrow_left" withTarget:self withAction:@selector(returnSideMenuBtnAction:) WithNegativeSpacerWidth:-4];
-    [self setNavBarTitleWithText:@"个人中心" withFontSize:20 withTextColor:[UIColor whiteColor]];
+    [self setNav];
+    
+   
     [self viewLayout];
 }
 
+- (void)setNav{
+    self.navigationItem.leftBarButtonItems = [UIBarButtonItem barButtonItemWithImageName:@"arrow_left" withHighlightedImageName:@"arrow_left" withTarget:self withAction:@selector(returnSideMenuBtnAction:) WithNegativeSpacerWidth:-4];
+    [self setNavBarTitleWithText:@"个人中心" withFontSize:20 withTextColor:[UIColor whiteColor]];
+}
+- (void)initUserInfoArr{
+    WBUserInfo *userInfo = [WBUserInfo share];
+    [self.userInfoArr addObjectsFromArray:@[userInfo.icon,userInfo.nickname,userInfo.sex,userInfo.phonenum,userInfo.motto]];
+    for (int i = 100; i < 100 + self.userInfoArr.count; i++) {
+        if (i == 100) {
+            continue;
+        }
+        UILabel *tempLable = [self.mainTableView viewWithTag:i];
+        if (i == 102) {
+            if ([self.userInfoArr[i-100] intValue] == 0) {
+                tempLable.text = @"男";
+            }else
+            {
+                tempLable.text = @"女";
+            }
+        }
+        
+        tempLable.text = self.userInfoArr[i- 100];
+        
+    }
+
+}
 - (void)viewLayout
 {
     _mainTableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 64 + 8,kWidth , kHeight - 64) style:UITableViewStylePlain];
@@ -89,12 +140,23 @@
         
          }else{
         UILabel *contentLbl = [[UILabel alloc] initWithFrame:CGRectMake( cell.contentView.frame.size.width + 45 - 100, 0, 100, 44)];
-        contentLbl.text = self.titleArr[indexPath.row];
+             if (indexPath.row == 2) {
+                 if ([self.userInfoArr[indexPath.row] intValue] == 0) {
+                   contentLbl.text = @"男";
+                 }else
+                 {
+                     contentLbl.text = @"女";
+                 }
+             }else
+             {
+                  contentLbl.text = self.userInfoArr[indexPath.row];
+             }
+       
         contentLbl.font = [UIFont systemFontOfSize:12];
         contentLbl.textColor = [UIColor colorWithHexString:@"#333333"];
         contentLbl.textAlignment = NSTextAlignmentRight;
         [cell.contentView addSubview:contentLbl];
-        
+             contentLbl.tag =indexPath.row + 100;
     }
     
     
@@ -153,6 +215,11 @@
         case 1:
         {
             WBChangeNickNameViewController *changeNickNameVC = [[WBChangeNickNameViewController alloc] init];
+            changeNickNameVC.passValueBlock = ^(NSString *nickName){
+                UILabel *tempLable = [self.mainTableView viewWithTag:101];
+               
+                tempLable.text = nickName;
+            };
             [self.navigationController pushViewController:changeNickNameVC animated:YES];
             
         }
@@ -165,24 +232,52 @@
                 switch (selectedIndex) {
                     case 0:
                     {
-                        NSLog(@"男");
+                        
+                        UILabel *tempLabel = [self.mainTableView viewWithTag:102];
+                        tempLabel.text = @"男";
+                        NSString *useridStr = [NSString stringWithFormat:@"%d",[WBUserInfo share].userid];
+                        NSDictionary *params = @{@"userid":useridStr ,@"sex":@"0"};
+                        [WBNetworking networkRequstWithNetworkRequestMethod:GetNetworkRequest networkRequestStyle:NetType_getUpdateSex params:params successBlock:^(id returnData) {
+                            NSLog(@"%@",returnData);
+                            if ([returnData[@"status"] intValue] ==200) {
+                                 [ [WBUserInfo share] saveUserInfoWithUserDict:returnData[@"data"][0] ];
+                            }
+                           
+                        } failureBlock:^(NSError *error) {
+                            
+                        }];
+                        
+                        
+                        
                     }
                         break;
                     case 1:
                     {
-                        NSLog(@"女");
+                        
+                        UILabel *tempLabel = [self.mainTableView viewWithTag:102];
+                        tempLabel.text = @"女";
+                        NSString *useridStr = [NSString stringWithFormat:@"%d",[WBUserInfo share].userid];
+                        NSDictionary *params = @{@"userid":useridStr ,@"sex":@"1"};
+                        [WBNetworking networkRequstWithNetworkRequestMethod:GetNetworkRequest networkRequestStyle:NetType_getUpdateSex params:params successBlock:^(id returnData) {
+                            NSLog(@"%@",returnData);
+                            if ([returnData[@"status"] intValue] ==200) {
+                                [ [WBUserInfo share] saveUserInfoWithUserDict:returnData[@"data"][0] ];
+                            }
+                            
+                        } failureBlock:^(NSError *error) {
+                            
+                        }];
+
+                      
                     }
                         break;
-                    case 2:
-                    {
-                        NSLog(@"取消");
-                        
-                    }
+                
                         break;
                         
                     default:
                         break;
                 }
+                
             };
  
         }
@@ -195,6 +290,12 @@
         case 4:
         {
             WBChangeMottoViewController *changeMottoVC = [[WBChangeMottoViewController alloc] init];
+            changeMottoVC.passValueBlock = ^(NSString *motto){
+                UILabel *tempLable = [self.mainTableView viewWithTag:104];
+               
+                tempLable.text = motto;
+ 
+            };
             [self.navigationController pushViewController:changeMottoVC animated:YES];
         }
             break;

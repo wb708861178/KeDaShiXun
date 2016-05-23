@@ -74,6 +74,12 @@
                     <constraint firstItem="K73-Mv-9X3" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="uQr-Hu-jOh"/>
                 </constraints>
             </tableViewCellContentView>
+            <connections>
+                <outlet property="dateLabel" destination="1Kl-fr-bnP" id="VF6-MJ-vEW"/>
+                <outlet property="leftImageview" destination="K73-Mv-9X3" id="hRm-0Y-3II"/>
+                <outlet property="placeLabel" destination="90W-8R-qoj" id="kkW-QQ-hW0"/>
+                <outlet property="titleLabel" destination="Ryr-Qk-eVe" id="3B4-Rg-XXs"/>
+            </connections>
             <point key="canvasLocation" x="257" y="275"/>
         </tableViewCell>
     </objects>

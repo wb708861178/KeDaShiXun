@@ -7,8 +7,11 @@
 //
 
 #import "WBMyPublishViewController.h"
+#import "KTopicCell.h"
+#import "Const.h"
 
-@interface WBMyPublishViewController ()
+@interface WBMyPublishViewController ()<UITableViewDataSource,UITableViewDelegate>
+@property (nonatomic, strong) UITableView *mainTableView;
 
 @end
 
@@ -18,8 +21,36 @@
     [super viewDidLoad];
      [self setNavBarTitleWithText:@"我的发帖" withFontSize:20.f withTextColor:[UIColor whiteColor]];
     self.hasReturnArrow = YES;
-    // Do any additional setup after loading the view.
+    [self viewLayout];
 }
+
+- (void)viewLayout
+{
+    _mainTableView = [[UITableView alloc] initWithFrame:CGRectMake(10, 74, kWidth - 10, kHeight - 64 - 10) style:UITableViewStylePlain];
+    
+    _mainTableView.delegate = self;
+    _mainTableView.dataSource = self;
+    _mainTableView.backgroundColor = kBGDefaultColor;
+    [self.view addSubview:_mainTableView];
+
+    [_mainTableView registerClass:[KTopicCell class] forCellReuseIdentifier:@"KTopicCell"];
+}
+#pragma mark----UITableViewDataSource
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+    return 3;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+            KTopicCell *topicCell = [tableView dequeueReusableCellWithIdentifier:@"KTopicCell" forIndexPath:indexPath];
+        return topicCell;
+  
+    
+    return nil;
+}
+
+#pragma mark----UITableViewDelegate
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

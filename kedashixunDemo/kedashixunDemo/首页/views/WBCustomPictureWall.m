@@ -7,6 +7,7 @@
 //
 
 #import "WBCustomPictureWall.h"
+#import <UIImageView+WebCache.h>
 
 @interface WBCustomPictureWall ()
 @property (nonatomic, assign) CGFloat topSpace;
@@ -16,12 +17,29 @@
 @property (nonatomic, assign) CGFloat verticalSpace;
 
 @property (nonatomic, strong) NSArray *imageNameArr;
+@property (nonatomic, strong) NSArray *imageUrlArr;
 
 @end
 
 @implementation WBCustomPictureWall
 
+- (instancetype)initWithFrame:(CGRect)frame withImageUrlArr:(NSArray *)imageUrlArr withTopSpace:(CGFloat)topSpace withLeftSpace:(CGFloat)leftSpace withHorizontalSpace:(CGFloat)horizontalSpace withVerticalSpace:(CGFloat)verticalSpace
+{
+    self = [super initWithFrame:frame];
+    if (self) {
+        self.imageUrlArr = imageUrlArr;
+        self.topSpace = topSpace;
+        self.leftSpace = leftSpace;
+        self.verticalSpace = verticalSpace;
+        self.horizontalSpace =horizontalSpace;
+        [self viewLayoutWithImageUrlArr];
+        
+        
+        
+    }
+    return self;
 
+}
 
 
 - (instancetype)initWithFrame:(CGRect)frame withImageNameArr:(NSArray *)imageNameArr withTopSpace:(CGFloat)topSpace withLeftSpace:(CGFloat)leftSpace withHorizontalSpace:(CGFloat)horizontalSpace withVerticalSpace:(CGFloat)verticalSpace
@@ -29,6 +47,7 @@
     self = [super initWithFrame:frame];
     if (self) {
         self.imageNameArr = imageNameArr;
+        
         self.topSpace = topSpace;
         self.leftSpace = leftSpace;
         self.verticalSpace = verticalSpace;
@@ -39,6 +58,45 @@
         
     }
     return self;
+}
+
+- (void)viewLayoutWithImageUrlArr
+{
+    CGFloat tempImageViewW = (self.frame.size.width - 2 * self.leftSpace - 2 * self.horizontalSpace) / 3;
+    
+    
+    for (int i = 0; i < self.imageUrlArr.count; i++) {
+        //行索引
+        NSInteger lineIdx = i / 3;
+        //列索引
+        NSInteger rowIdx = i % 3;
+        CGFloat tempImageViewX = self.leftSpace + rowIdx *(tempImageViewW + self.horizontalSpace);
+        CGFloat tempImageViewY = self.topSpace + lineIdx * (tempImageViewW + self.verticalSpace);
+        
+        UIImageView *tempImageView = [[UIImageView alloc] init];
+        
+        
+        tempImageView.frame = CGRectMake(tempImageViewX, tempImageViewY, tempImageViewW, tempImageViewW);
+        [tempImageView sd_setImageWithURL:[NSURL URLWithString:self.imageUrlArr[i]]];
+       
+        tempImageView.tag = 100 + i;
+        
+        [self addSubview:tempImageView];
+        
+        UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapAction:)];
+        [tempImageView addGestureRecognizer:tap];
+        tempImageView.userInteractionEnabled = YES;
+        
+    }
+    
+    
+    
+  
+    //重新设定view的frame
+    CGFloat viewHeight = self.topSpace + (self.imageUrlArr.count + 2) / 3  * (tempImageViewW + self.verticalSpace) + self.topSpace;
+    self.frame = CGRectMake(self.frame.origin.x, self.frame.origin.y, self.frame.size.width, viewHeight);
+    
+
 }
 
 
@@ -75,7 +133,7 @@
     
     
     //重新设定view的frame
-    CGFloat viewHeight = self.topSpace + self.imageNameArr.count / 3.0 * (tempImageViewW + self.verticalSpace) + self.topSpace;
+    CGFloat viewHeight = self.topSpace + (self.imageNameArr.count + 2) / 3.0 * (tempImageViewW + self.verticalSpace) + self.topSpace;
     self.frame = CGRectMake(self.frame.origin.x, self.frame.origin.y, self.frame.size.width, viewHeight);
    
     

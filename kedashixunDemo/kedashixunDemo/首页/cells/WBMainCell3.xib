@@ -75,6 +75,14 @@
                     <constraint firstItem="hO2-Jk-Jeb" firstAttribute="height" secondItem="awC-HQ-ZUv" secondAttribute="height" id="s6p-PR-bRu"/>
                 </constraints>
             </tableViewCellContentView>
+            <connections>
+                <outlet property="dateLabel" destination="p72-hR-HkR" id="YN2-ce-GES"/>
+                <outlet property="imageView1" destination="awC-HQ-ZUv" id="hlZ-Es-uUu"/>
+                <outlet property="imageView2" destination="hO2-Jk-Jeb" id="b6b-IP-jv2"/>
+                <outlet property="imageView3" destination="6PE-XE-dwe" id="iXA-be-akx"/>
+                <outlet property="placeLabel" destination="NyD-HM-nyQ" id="xTJ-rb-7cf"/>
+                <outlet property="titleLabel" destination="pPr-Ou-pAD" id="qrf-Dn-7IC"/>
+            </connections>
             <point key="canvasLocation" x="285" y="308.5"/>
         </tableViewCell>
     </objects>

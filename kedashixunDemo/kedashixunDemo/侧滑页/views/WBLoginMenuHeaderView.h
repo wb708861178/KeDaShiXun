@@ -10,4 +10,6 @@
 typedef void(^JumpToVC)();
 @interface WBLoginMenuHeaderView : UIView
 @property (nonatomic, copy) JumpToVC jumpToPersonalCenterVCBlock;
+
+- (void) updateData;
 @end

@@ -23,6 +23,7 @@
 
 
 @interface WBMenuViewController ()<UITableViewDataSource,UITableViewDelegate>
+@property (nonatomic, strong) WBLoginMenuHeaderView *loginMenuHeaderView;
 @property (nonatomic, strong) UITableView *mainTableView;
 @property (nonatomic, strong) NSArray *titleArr;
 @property (nonatomic, strong) NSArray *imageNameArr;
@@ -58,6 +59,7 @@
 {
     [super viewWillAppear:animated];
     self.navigationController.navigationBarHidden = YES;
+    [self.loginMenuHeaderView updateData];
 }
 
 
@@ -101,17 +103,17 @@
     WBLoginMenuHeaderView *loginMenuHeaderView =   [[NSBundle mainBundle] loadNibNamed:@"WBLoginMenuHeaderView" owner:nil options:nil].firstObject;
     loginMenuHeaderView.frame = CGRectMake(0, 0, kWidth,150 );
     [self.view addSubview:loginMenuHeaderView];
+    __weak typeof (self) mySelf = self;
     loginMenuHeaderView.jumpToPersonalCenterVCBlock = ^{
         WBPersonalCenterViewController *personalCenterVC = [[WBPersonalCenterViewController alloc] init];
 
-        [self jumpToNextVC:personalCenterVC];
+        [mySelf jumpToNextVC:personalCenterVC];
 
-        [self.sideMenuViewController hideMenuViewController];
+        [mySelf.sideMenuViewController hideMenuViewController];
         
-        WBTabBarViewController *tabBarVC = (WBTabBarViewController *)self.sideMenuViewController.contentViewController;
-        [tabBarVC.selectedViewController pushViewController:personalCenterVC animated:NO];
 
     };
+    self.loginMenuHeaderView = loginMenuHeaderView;
     
     
     //下划线

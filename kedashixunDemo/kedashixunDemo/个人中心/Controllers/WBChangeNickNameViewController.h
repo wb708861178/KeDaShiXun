@@ -8,6 +8,9 @@
 
 #import "WBBaseViewController.h"
 
+
+typedef void (^PassValueBlock)(NSString *nickName);
 @interface WBChangeNickNameViewController : WBBaseViewController
 
+@property (nonatomic, copy) PassValueBlock passValueBlock;
 @end

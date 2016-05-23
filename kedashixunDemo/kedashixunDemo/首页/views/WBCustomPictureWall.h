@@ -15,7 +15,7 @@ typedef void(^SelectBlock) (NSInteger selectedIndex);
 - (instancetype)initWithFrame:(CGRect)frame withImageNameArr:(NSArray *)imageNameArr withTopSpace:(CGFloat)topSpace withLeftSpace:(CGFloat)leftSpace withHorizontalSpace:(CGFloat)horizontalSpace withVerticalSpace:(CGFloat)verticalSpace;
 
 
-
+- (instancetype)initWithFrame:(CGRect)frame withImageUrlArr:(NSArray *)imageUrlArr withTopSpace:(CGFloat)topSpace withLeftSpace:(CGFloat)leftSpace withHorizontalSpace:(CGFloat)horizontalSpace withVerticalSpace:(CGFloat)verticalSpace;
 
 
 @end

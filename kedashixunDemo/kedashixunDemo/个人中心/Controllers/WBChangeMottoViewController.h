@@ -7,7 +7,7 @@
 //
 
 #import "WBBaseViewController.h"
-
+typedef void (^PassValueBlock)(NSString *motto);
 @interface WBChangeMottoViewController : WBBaseViewController
-
+@property (nonatomic, copy) PassValueBlock passValueBlock;
 @end

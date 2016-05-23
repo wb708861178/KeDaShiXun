@@ -32,7 +32,7 @@
                             <constraint firstAttribute="height" constant="5" id="bc7-Ir-Fb9"/>
                         </constraints>
                     </view>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="关于各学院已办理学生住宿费退款的通知" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cBi-Vn-6Br">
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="关于各学院已办理学生住宿费退款的通知" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cBi-Vn-6Br">
                         <rect key="frame" x="20" y="10" width="287" height="16"/>
                         <fontDescription key="fontDescription" type="system" pointSize="13"/>
                         <nil key="highlightedColor"/>
@@ -40,6 +40,7 @@
                 </subviews>
                 <constraints>
                     <constraint firstItem="8PL-dK-YbW" firstAttribute="centerY" secondItem="mPG-GE-dFz" secondAttribute="centerY" id="F1I-Sn-u0W"/>
+                    <constraint firstItem="lCn-kF-Sv0" firstAttribute="top" secondItem="mPG-GE-dFz" secondAttribute="bottom" constant="10" id="K8A-uF-RWW"/>
                     <constraint firstItem="mPG-GE-dFz" firstAttribute="leading" secondItem="cBi-Vn-6Br" secondAttribute="leading" id="KfU-sG-ILP"/>
                     <constraint firstAttribute="trailing" secondItem="cBi-Vn-6Br" secondAttribute="trailing" constant="20" id="SLg-qi-F5Y"/>
                     <constraint firstItem="lCn-kF-Sv0" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="TS3-HW-LP6"/>
@@ -52,7 +53,12 @@
                     <constraint firstItem="cBi-Vn-6Br" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="y8H-ZC-lpe"/>
                 </constraints>
             </tableViewCellContentView>
-            <point key="canvasLocation" x="412.5" y="288"/>
+            <connections>
+                <outlet property="dateLabel" destination="mPG-GE-dFz" id="N8L-3C-va0"/>
+                <outlet property="placeLabel" destination="8PL-dK-YbW" id="Zgg-NF-wUB"/>
+                <outlet property="titleLabel" destination="cBi-Vn-6Br" id="XZ6-pP-jS4"/>
+            </connections>
+            <point key="canvasLocation" x="412.5" y="287.5"/>
         </tableViewCell>
     </objects>
 </document>

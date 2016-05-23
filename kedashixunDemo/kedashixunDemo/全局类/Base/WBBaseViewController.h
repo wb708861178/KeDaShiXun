@@ -28,6 +28,7 @@ typedef NS_ENUM(NSInteger, ViewControllerNavItemStyle) {
 
 @interface WBBaseViewController : UIViewController
 @property (nonatomic, assign) BOOL hasReturnArrow;
+@property (nonatomic, assign) BOOL hideReturnBtn;
 
 
 

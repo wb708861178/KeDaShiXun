@@ -7,14 +7,16 @@
 //
 
 #import "AppDelegate.h"
-#import "RESideMenu.h"
-#import "WBMainViewController.h"
-#import "WBMenuViewController.h"
-#import "WBTabBarViewController.h"
-#import "WBNavViewController.h"
+
+
+#import "WBGuidePageNav.h"
+#import "Const.h"
+#import <SMS_SDK/SMSSDK.h>
+#import "WBUserInfo.h"
 
 
 @interface AppDelegate ()
+
 
 @end
 
@@ -22,80 +24,21 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+               self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+            WBGuidePageNav *guideNav = [[WBGuidePageNav alloc] init];
+        self.window.rootViewController = guideNav;
+       [self.window makeKeyAndVisible];
     
-   
-    
-    self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
-    
-   
-    WBTabBarViewController *tabBarVC = [[WBTabBarViewController alloc] init];
-    
-    WBMenuViewController *menuVC = [[WBMenuViewController alloc] init];
-   
-    
-    RESideMenu *sideMenu = [[RESideMenu alloc] initWithContentViewController:tabBarVC leftMenuViewController:menuVC rightMenuViewController:nil];
-//    sideMenu.panFromEdge = YES;
-//    //距离屏幕中心的偏移X
-    sideMenu.contentViewInPortraitOffsetCenterX = [UIScreen mainScreen].bounds.size.width*0.2;
-    sideMenu.contentViewShadowEnabled = YES;
-    sideMenu.contentViewShadowColor = [UIColor redColor];
-    //缩放
-    sideMenu.scaleContentView = NO;
-    sideMenu.scaleMenuView = NO;
-    //alpha变化
-    sideMenu.fadeMenuView = NO;
+    [[WBUserInfo share] getUserInfo];
 
-    sideMenu.contentViewScaleValue = 0.8;
     
-    self.window.rootViewController = sideMenu;
-    
-    [self.window makeKeyAndVisible];
-    
-    
-    
-    
-    //加载引导页
-    
-    [self loadGuideView];
    
-    
+    [SMSSDK registerApp:SMS_AppKey withSecret:SMS_AppSecret];
     
     return YES;
 }
 
-- (void)loadGuideView
-{
-//
-//    NSDictionary *infoDict =  [NSBundle mainBundle].infoDictionary;
-//    NSString *key = @"CFBundleShortVersionString";
-//    NSString *currentVersionStr = infoDict[key];
-//    
-//    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-//    NSString *versionStr = [defaults objectForKey:@"versionStr"];
-//    
-//    if (versionStr) {
-//        if (![currentVersionStr isEqualToString:versionStr])
-//        {
-//            [defaults setObject:currentVersionStr forKey:@"versionStr"];
-//            WBGuideView *guideView = [WBGuideView guideViewWithNib];
-//            guideView.frame = tabBarVC.view.bounds;
-//            
-//            [tabBarVC.view addSubview:guideView];
-//            
-//        }
-//        
-//    }else
-//    {
-//        
-//        [defaults setObject:currentVersionStr forKey:@"versionStr"];
-//        
-//        WBGuideView *guideView = [WBGuideView guideViewWithNib];
-//        guideView.frame = tabBarVC.view.bounds;
-//        
-//        [tabBarVC.view addSubview:guideView];
-//    }
-//
-}
+
 
 - (void)applicationWillResignActive:(UIApplication *)application {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.

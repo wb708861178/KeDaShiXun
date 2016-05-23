@@ -27,6 +27,15 @@
     
 }
 
+- (void)setHideReturnBtn:(BOOL)hideReturnBtn
+{
+    _hideReturnBtn = hideReturnBtn;
+    if (hideReturnBtn) {
+         self.navigationItem.hidesBackButton = YES;
+    }
+   
+}
+
 
 - (void)viewWillAppear:(BOOL)animated
 {
