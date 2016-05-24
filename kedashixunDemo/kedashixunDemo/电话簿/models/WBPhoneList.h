@@ -12,5 +12,6 @@
 @property (nonatomic, assign) int phoneListid;
 @property (nonatomic, copy) NSString *place;
 @property (nonatomic, copy) NSString *phonenum;
+@property (nonatomic, assign) BOOL isOpen;
 
 @end

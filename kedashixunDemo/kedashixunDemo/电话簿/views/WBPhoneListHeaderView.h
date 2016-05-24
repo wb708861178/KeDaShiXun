@@ -9,7 +9,12 @@
 #import <UIKit/UIKit.h>
 #import "WBPhoneList.h"
 
+typedef void(^ReloadTableView) ();
 @interface WBPhoneListHeaderView : UITableViewHeaderFooterView
 @property (nonatomic, strong) WBPhoneList *phoneList;
+@property (nonatomic, copy) ReloadTableView reloadTableView;
 
+@property (strong, nonatomic)  UILabel *titleLabel;
+
+@property (strong, nonatomic) UIImageView *arrowImageView;
 @end

@@ -16,7 +16,8 @@
 
 @interface WBPhoneBookViewController ()<UITableViewDataSource,UITableViewDelegate>
 @property (nonatomic, strong) UITableView *mainTableView;
-@property (nonatomic, strong) NSMutableArray *dataSourceArr;
+@property (nonatomic, strong) NSArray *dataSourceArr;
+@property (nonatomic, strong)  WBPhoneListHeaderView *headerView;
 
 
 @end
@@ -38,6 +39,8 @@
        NSLog(@"%@",returnData);
         self.dataSourceArr = [WBPhoneList mj_objectArrayWithKeyValuesArray:returnData[@"data"]];
         NSLog(@"%@",self.dataSourceArr);
+        
+      
         [self.mainTableView reloadData];
     } failureBlock:^(NSError *error) {
         NSLog(@"%@",error);
@@ -65,7 +68,9 @@
 {
     WBPhoneListCell *phoneListCell = [self.mainTableView dequeueReusableCellWithIdentifier:@"WBPhoneListCell" forIndexPath:indexPath];
     phoneListCell.phoneList = self.dataSourceArr[indexPath.section];
+    //作用：决定了子视图的显示范围。具体的说，就是当取值为YES时，剪裁超出父视图范围的子视图部分；当取值为NO时，不剪裁子视图。默认值为NO。
     
+    phoneListCell.clipsToBounds = YES;
     
     return phoneListCell;
     
@@ -73,15 +78,60 @@
 
 - (nullable UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
 {
-   WBPhoneListHeaderView *headerView = [self.mainTableView dequeueReusableHeaderFooterViewWithIdentifier:@"WBPhoneListHeaderView"];
-    headerView.phoneList = self.dataSourceArr[section];
-    return headerView;
+    _headerView = [self.mainTableView dequeueReusableHeaderFooterViewWithIdentifier:@"WBPhoneListHeaderView"];
+    _headerView.phoneList = self.dataSourceArr[section];
+    if (_headerView.phoneList.isOpen) {
+        _headerView.arrowImageView.transform = CGAffineTransformMakeRotation(M_PI_2);
+        
+    }else
+    {
+        _headerView.arrowImageView.transform = CGAffineTransformMakeRotation(-M_PI_2);
+    }
+    
+    _headerView.tag = section + 100;
+    __weak typeof(self) mySelf = self;
+    _headerView.reloadTableView = ^(){
+        
+        
+        NSIndexSet *indexSet = [NSIndexSet indexSetWithIndex:section];
+        [mySelf.mainTableView reloadSections:indexSet withRowAnimation:UITableViewRowAnimationAutomatic];
+        
+        
+       
+    };
+    return _headerView;
     
     
 }
 
 
 #pragma mark---UITableViewDelegate
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    _headerView = [tableView viewWithTag:indexPath.section+100];
+    if(_headerView.phoneList.isOpen==YES)
+    {
+        return 60;
+    }
+    
+    return 0;
+}
+- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
+{
+    return 60;
+}
+- (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section
+{
+    return 2;
+}
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    WBPhoneList *phoneList = self.dataSourceArr[indexPath.section];
+    NSString *phoneStr = [NSString stringWithFormat:@"tel://%@",phoneList.phonenum];
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:phoneStr]];
+    NSLog(@"%zi",indexPath.section);
+}
+
 #pragma mark-
 - (void)viewLayout
 {
@@ -92,7 +142,7 @@
     [self.view addSubview:_mainTableView];
     
     [self.mainTableView registerNib:[UINib nibWithNibName:@"WBPhoneListCell" bundle:nil] forCellReuseIdentifier:@"WBPhoneListCell"];
-    
+    self.mainTableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     
     [self.mainTableView registerClass:[WBPhoneListHeaderView class] forHeaderFooterViewReuseIdentifier:@"WBPhoneListHeaderView"];
    

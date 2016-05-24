@@ -7,29 +7,44 @@
 //
 
 #import "WBPhoneListHeaderView.h"
+#import "Const.h"
 
 @interface WBPhoneListHeaderView ()
-@property (strong, nonatomic)  UILabel *titleLabel;
 
-@property (strong, nonatomic) UIImageView *arrowImageView;
 
 
 @end
 
 @implementation WBPhoneListHeaderView
 
+
+
+
+
 - (instancetype)initWithReuseIdentifier:(NSString *)reuseIdentifier
 {
     self = [super initWithReuseIdentifier:reuseIdentifier];
     if (self) {
-        self.backgroundColor = [UIColor whiteColor];
-        _titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(20,(self.frame.size.height - 20) * 0.5 , 200, 20)];
+        
+        self.contentView.backgroundColor = kBtnSelectedColor;
+        _titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(20,(60 - 20) * 0.5 , 200, 20)];
+        _titleLabel.textColor = [UIColor whiteColor];
+        
+        
         [self addSubview:_titleLabel];
         
-        _arrowImageView = [[UIImageView alloc] initWithFrame:CGRectMake(self.frame.size.width - 10 - 10 , (self.frame.size.height - 15 ) * 0.5, 10, 15)];
-        _arrowImageView.image = [UIImage imageNamed:@"arrow"];
+        _arrowImageView = [[UIImageView alloc] initWithFrame:CGRectMake([UIScreen mainScreen].bounds.size.width - 20 - 8 , (60 - 10 ) * 0.5, 8, 10)];
+        _arrowImageView.image = [UIImage imageNamed:@"arrow_left"];
+      
         
-        [self addSubview:_arrowImageView];
+      
+        
+       
+        [self.contentView addSubview:_arrowImageView];
+        
+        
+        UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapAction:)];
+        [self addGestureRecognizer:tap];
         
         
     }
@@ -41,9 +56,18 @@
 {
     _phoneList = phoneList;
     self.titleLabel.text = phoneList.place;
+ 
+   
 }
 
-- (void)tapHeadAction:(UITapGestureRecognizer *)sender {
+- (void)tapAction:(UITapGestureRecognizer *)sender {
+   //修改的是数据源，当header刷新后，属性都是刷新的，但数据源已经改变
+    self.phoneList.isOpen = !self.phoneList.isOpen;
+
+  _arrowImageView.transform = CGAffineTransformMakeRotation(M_PI_2);
+   
+
+    self.reloadTableView();
 }
 
 
