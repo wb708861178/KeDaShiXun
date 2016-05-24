@@ -36,7 +36,7 @@
 - (NSArray *)titleArr
 {
     if (!_titleArr) {
-        _titleArr = @[@"头像",@"昵称",@"性别",@"手机号码",@"签名"];
+        _titleArr = @[@"头像",@"昵称",@"性别",@"签名"];
     }
     return _titleArr;
 }
@@ -74,7 +74,7 @@
 }
 - (void)initUserInfoArr{
     WBUserInfo *userInfo = [WBUserInfo share];
-    [self.userInfoArr addObjectsFromArray:@[userInfo.icon,userInfo.nickname,userInfo.sex,userInfo.phonenum,userInfo.motto]];
+    [self.userInfoArr addObjectsFromArray:@[userInfo.icon,userInfo.nickname,userInfo.sex,userInfo.motto]];
     for (int i = 100; i < 100 + self.userInfoArr.count; i++) {
         if (i == 100) {
             continue;
@@ -122,7 +122,10 @@
     cell.textLabel.text = self.titleArr[indexPath.row];
     cell.textLabel.textColor = [UIColor colorWithHexString:@"#333333"];
     cell.textLabel.font = [UIFont systemFontOfSize:14];
-    cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+    
+        cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+ 
+    
     
     UIView *lineView = [[UIView alloc] initWithFrame:CGRectMake(0, 43, kWidth, 1)];
     lineView.backgroundColor = [UIColor colorWithHexString:@"#dddddd"];
@@ -284,21 +287,17 @@
             break;
         case 3:
         {
-            
-        }
-            break;
-        case 4:
-        {
             WBChangeMottoViewController *changeMottoVC = [[WBChangeMottoViewController alloc] init];
             changeMottoVC.passValueBlock = ^(NSString *motto){
-                UILabel *tempLable = [self.mainTableView viewWithTag:104];
-               
+                UILabel *tempLable = [self.mainTableView viewWithTag:103];
+                
                 tempLable.text = motto;
- 
+                
             };
             [self.navigationController pushViewController:changeMottoVC animated:YES];
         }
             break;
+       
             
         default:
             break;

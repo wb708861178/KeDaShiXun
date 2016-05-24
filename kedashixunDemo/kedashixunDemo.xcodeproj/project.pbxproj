@@ -72,6 +72,9 @@
 		5271D4721CEA0C1800108244 /* WBMyCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5271D4711CEA0C1800108244 /* WBMyCollectionViewController.m */; };
 		5271D4751CEA0C3000108244 /* WBMessageCenterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5271D4741CEA0C3000108244 /* WBMessageCenterViewController.m */; };
 		527BAF011CEF2A6200664FBE /* WBCustonSegment.m in Sources */ = {isa = PBXBuildFile; fileRef = 527BAF001CEF2A6200664FBE /* WBCustonSegment.m */; };
+		529AE3B71CF344A000685349 /* WBPhoneList.m in Sources */ = {isa = PBXBuildFile; fileRef = 529AE3B61CF344A000685349 /* WBPhoneList.m */; };
+		529AE3C01CF3486600685349 /* WBPhoneListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 529AE3BE1CF3486600685349 /* WBPhoneListCell.m */; };
+		529AE3C11CF3486600685349 /* WBPhoneListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 529AE3BF1CF3486600685349 /* WBPhoneListCell.xib */; };
 		52A3718A1CF1BEB400E80FAD /* WBDBHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 52A371871CF1BEB400E80FAD /* WBDBHelper.m */; };
 		52A3718B1CF1BEB400E80FAD /* WBDBModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 52A371891CF1BEB400E80FAD /* WBDBModel.m */; };
 		52A371911CF1BEC600E80FAD /* WBNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 52A371901CF1BEC600E80FAD /* WBNetworking.m */; };
@@ -111,6 +114,8 @@
 		52A5289C1CDF3DB600499AE7 /* WBMenuTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 52A5289A1CDF3DB600499AE7 /* WBMenuTableViewCell.xib */; };
 		52A528A01CDF4AC600499AE7 /* background_blue@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 52A5289F1CDF4AC600499AE7 /* background_blue@3x.png */; };
 		52A528A21CDF4AE500499AE7 /* background_dream@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 52A528A11CDF4AE500499AE7 /* background_dream@3x.png */; };
+		52A630681CF4146E000D2D4D /* WBPhoneListHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 52A630671CF4146E000D2D4D /* WBPhoneListHeaderView.m */; };
+		52A6306A1CF4147F000D2D4D /* WBPhoneListHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 52A630691CF4147F000D2D4D /* WBPhoneListHeaderView.xib */; };
 		52AD60411CE61BD90014DE9A /* WBCustomBottomUpView.m in Sources */ = {isa = PBXBuildFile; fileRef = 52AD60401CE61BD90014DE9A /* WBCustomBottomUpView.m */; };
 		52B6111D1CF2C2C700072CF0 /* UILabel+ResetContent.m in Sources */ = {isa = PBXBuildFile; fileRef = 52B6111C1CF2C2C700072CF0 /* UILabel+ResetContent.m */; };
 		52D2C49D1CEB07B100AA411F /* WBMainSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 52D2C49C1CEB07B100AA411F /* WBMainSearchViewController.m */; };
@@ -281,6 +286,11 @@
 		5271D4741CEA0C3000108244 /* WBMessageCenterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WBMessageCenterViewController.m; sourceTree = "<group>"; };
 		527BAEFF1CEF2A6200664FBE /* WBCustonSegment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WBCustonSegment.h; sourceTree = "<group>"; };
 		527BAF001CEF2A6200664FBE /* WBCustonSegment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WBCustonSegment.m; sourceTree = "<group>"; };
+		529AE3B51CF3449F00685349 /* WBPhoneList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WBPhoneList.h; sourceTree = "<group>"; };
+		529AE3B61CF344A000685349 /* WBPhoneList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WBPhoneList.m; sourceTree = "<group>"; };
+		529AE3BD1CF3486600685349 /* WBPhoneListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WBPhoneListCell.h; sourceTree = "<group>"; };
+		529AE3BE1CF3486600685349 /* WBPhoneListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WBPhoneListCell.m; sourceTree = "<group>"; };
+		529AE3BF1CF3486600685349 /* WBPhoneListCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WBPhoneListCell.xib; sourceTree = "<group>"; };
 		52A371861CF1BEB400E80FAD /* WBDBHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WBDBHelper.h; sourceTree = "<group>"; };
 		52A371871CF1BEB400E80FAD /* WBDBHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WBDBHelper.m; sourceTree = "<group>"; };
 		52A371881CF1BEB400E80FAD /* WBDBModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WBDBModel.h; sourceTree = "<group>"; };
@@ -352,6 +362,9 @@
 		52A5289A1CDF3DB600499AE7 /* WBMenuTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WBMenuTableViewCell.xib; sourceTree = "<group>"; };
 		52A5289F1CDF4AC600499AE7 /* background_blue@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "background_blue@3x.png"; sourceTree = "<group>"; };
 		52A528A11CDF4AE500499AE7 /* background_dream@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "background_dream@3x.png"; sourceTree = "<group>"; };
+		52A630661CF4146E000D2D4D /* WBPhoneListHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WBPhoneListHeaderView.h; sourceTree = "<group>"; };
+		52A630671CF4146E000D2D4D /* WBPhoneListHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WBPhoneListHeaderView.m; sourceTree = "<group>"; };
+		52A630691CF4147F000D2D4D /* WBPhoneListHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WBPhoneListHeaderView.xib; sourceTree = "<group>"; };
 		52AD603F1CE61BD90014DE9A /* WBCustomBottomUpView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WBCustomBottomUpView.h; sourceTree = "<group>"; };
 		52AD60401CE61BD90014DE9A /* WBCustomBottomUpView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WBCustomBottomUpView.m; sourceTree = "<group>"; };
 		52B6111B1CF2C2C700072CF0 /* UILabel+ResetContent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILabel+ResetContent.h"; sourceTree = "<group>"; };
@@ -1025,6 +1038,9 @@
 		52A528641CDF3A6700499AE7 /* cells */ = {
 			isa = PBXGroup;
 			children = (
+				529AE3BD1CF3486600685349 /* WBPhoneListCell.h */,
+				529AE3BE1CF3486600685349 /* WBPhoneListCell.m */,
+				529AE3BF1CF3486600685349 /* WBPhoneListCell.xib */,
 			);
 			path = cells;
 			sourceTree = "<group>";
@@ -1041,6 +1057,8 @@
 		52A528681CDF3A6700499AE7 /* models */ = {
 			isa = PBXGroup;
 			children = (
+				529AE3B51CF3449F00685349 /* WBPhoneList.h */,
+				529AE3B61CF344A000685349 /* WBPhoneList.m */,
 			);
 			path = models;
 			sourceTree = "<group>";
@@ -1048,6 +1066,9 @@
 		52A528691CDF3A6700499AE7 /* views */ = {
 			isa = PBXGroup;
 			children = (
+				52A630661CF4146E000D2D4D /* WBPhoneListHeaderView.h */,
+				52A630671CF4146E000D2D4D /* WBPhoneListHeaderView.m */,
+				52A630691CF4147F000D2D4D /* WBPhoneListHeaderView.xib */,
 			);
 			path = views;
 			sourceTree = "<group>";
@@ -1457,6 +1478,7 @@
 				52E574921CF0A12B006E012D /* WBForgetPasswordViewController.xib in Resources */,
 				522968861CE472130043784A /* WBLoginMenuHeaderView.xib in Resources */,
 				05ECD8631CE45E7A00A0582A /* KCommentCountView.xib in Resources */,
+				52A6306A1CF4147F000D2D4D /* WBPhoneListHeaderView.xib in Resources */,
 				52A528511CDF301900499AE7 /* LaunchScreen.storyboard in Resources */,
 				52A5288D1CDF3A6700499AE7 /* WBMenuHeaderView.xib in Resources */,
 				527156881CE36F0D007F7821 /* WBMainCell3.xib in Resources */,
@@ -1465,6 +1487,7 @@
 				05ECD86D1CE462BC00A0582A /* KCommentCell.xib in Resources */,
 				52E574621CF0461F006E012D /* WBWriteUserInfoViewController.xib in Resources */,
 				52E5745D1CF044F1006E012D /* WBLoginViewController.xib in Resources */,
+				529AE3C11CF3486600685349 /* WBPhoneListCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1542,6 +1565,7 @@
 				0579B06C1CE9F71D00DE11D6 /* JKAssetsCollectionFooterView.m in Sources */,
 				057BDD431CDF47C200F03911 /* KTopicFrameModel.m in Sources */,
 				52E5745C1CF044F1006E012D /* WBLoginViewController.m in Sources */,
+				529AE3B71CF344A000685349 /* WBPhoneList.m in Sources */,
 				05ECD8A61CE49DB800A0582A /* GQBasePictureTableView.m in Sources */,
 				5271D4751CEA0C3000108244 /* WBMessageCenterViewController.m in Sources */,
 				52A528931CDF3A6700499AE7 /* UIColor+HexColor.m in Sources */,
@@ -1557,8 +1581,10 @@
 				52A528921CDF3A6700499AE7 /* UIBarButtonItem+WBCustomButton.m in Sources */,
 				0579B0741CE9F71D00DE11D6 /* JKPromptView.m in Sources */,
 				0579B0751CE9F71D00DE11D6 /* JKUtil.m in Sources */,
+				52A630681CF4146E000D2D4D /* WBPhoneListHeaderView.m in Sources */,
 				05ECD8A71CE49DB800A0582A /* GQImageViewer.m in Sources */,
 				52A5288E1CDF3A6700499AE7 /* WBGuidanceViewController.m in Sources */,
+				529AE3C01CF3486600685349 /* WBPhoneListCell.m in Sources */,
 				0579B0701CE9F71D00DE11D6 /* JKAssetsViewCell.m in Sources */,
 				52E574911CF0A12B006E012D /* WBForgetPasswordViewController.m in Sources */,
 				52A371911CF1BEC600E80FAD /* WBNetworking.m in Sources */,

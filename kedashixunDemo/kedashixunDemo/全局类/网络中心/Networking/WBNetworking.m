@@ -62,6 +62,13 @@
             [tempParams setObject:@"getComment" forKey:@"act"];
         }
             break;
+        case NetType_getPhonelist:
+        {
+            [tempParams setObject:@"getPhonelist" forKey:@"act"];
+        }
+            break;
+            
+            
             
         default:
             break;
