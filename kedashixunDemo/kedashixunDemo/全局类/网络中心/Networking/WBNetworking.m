@@ -67,9 +67,17 @@
             [tempParams setObject:@"getPhonelist" forKey:@"act"];
         }
             break;
-            
-            
-            
+        case NetType_getHistory:
+        {
+            [tempParams setObject:@"getHistory" forKey:@"act"];
+        }
+            break;
+        case NetType_getForumPartIn:
+        {
+            [tempParams setObject:@"getForumPartIn" forKey:@"act"];
+        }
+            break;
+         
         default:
             break;
     }

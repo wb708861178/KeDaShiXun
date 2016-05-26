@@ -54,14 +54,14 @@
     [self.view addSubview:_mainTableView];
     
     
-    CGFloat logoutBtnW = kWidth * 3 / 4;
-    CGFloat logoutBtnH = logoutBtnW * 0.125;
+    CGFloat logoutBtnW = kWidth * 4 /5;
+    CGFloat logoutBtnH = logoutBtnW * 0.15;
     CGFloat logoutBtnX =( kWidth - logoutBtnW ) * 0.5;
-    CGFloat logoutBtnY = CGRectGetMaxY(self.mainTableView.frame)+ 80;
+    CGFloat logoutBtnY = CGRectGetMaxY(self.mainTableView.frame)+ 60;
     UIButton *logoutBtn = [[UIButton alloc] initWithFrame:CGRectMake(logoutBtnX, logoutBtnY, logoutBtnW, logoutBtnH)];
     logoutBtn.backgroundColor = [UIColor colorWithHexString:@"#ed8a57"];
     [logoutBtn setTitle:@"退出登录" forState:UIControlStateNormal];
-    logoutBtn.titleLabel.font = [UIFont systemFontOfSize:16];
+    logoutBtn.titleLabel.font = [UIFont systemFontOfSize:20];
     [logoutBtn addTarget:self action:@selector(logoutBtn) forControlEvents:UIControlEventTouchUpInside];
     logoutBtn.layer.cornerRadius = logoutBtnH * 0.1;
     [self.view addSubview:logoutBtn];

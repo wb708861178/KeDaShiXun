@@ -11,6 +11,8 @@
 #import "WBCustomSearchBar.h"
 #import "Const.h"
 #import "UIView+WBLocation.h"
+#import "WBNetworking.h"
+#import <MJExtension.h>
 
 #define cellHeight 40
 @interface WBMainSearchViewController ()<UITableViewDataSource,UITableViewDelegate>

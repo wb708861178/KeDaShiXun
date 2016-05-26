@@ -27,13 +27,13 @@
     if (self) {
         
         self.contentView.backgroundColor = kBtnSelectedColor;
-        _titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(20,(60 - 20) * 0.5 , 200, 20)];
+        _titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(40,(50 - 20) * 0.5 , 200, 20)];
         _titleLabel.textColor = [UIColor whiteColor];
         
         
         [self addSubview:_titleLabel];
         
-        _arrowImageView = [[UIImageView alloc] initWithFrame:CGRectMake([UIScreen mainScreen].bounds.size.width - 20 - 8 , (60 - 10 ) * 0.5, 8, 10)];
+        _arrowImageView = [[UIImageView alloc] initWithFrame:CGRectMake([UIScreen mainScreen].bounds.size.width - 20 - 8 , (50 - 8 ) * 0.5, 8, 8)];
         _arrowImageView.image = [UIImage imageNamed:@"arrow_left"];
       
         

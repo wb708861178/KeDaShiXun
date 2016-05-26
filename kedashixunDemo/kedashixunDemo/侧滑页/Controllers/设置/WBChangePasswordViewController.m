@@ -75,14 +75,14 @@
     
     
     
-    CGFloat ensureBtnW = kWidth * 3 / 4;
-    CGFloat ensureBtnH = ensureBtnW * 0.125;
+    CGFloat ensureBtnW = kWidth * 4 / 5;
+    CGFloat ensureBtnH = ensureBtnW * 0.15;
     CGFloat ensureBtnX =( kWidth - ensureBtnW ) * 0.5;
-    CGFloat ensureBtnY = CGRectGetMaxY(ensurePwdView.frame)+ 80;
+    CGFloat ensureBtnY = CGRectGetMaxY(ensurePwdView.frame)+ 60;
     UIButton *ensureBtn = [[UIButton alloc] initWithFrame:CGRectMake(ensureBtnX, ensureBtnY, ensureBtnW, ensureBtnH)];
     ensureBtn.backgroundColor = [UIColor colorWithHexString:@"#ed8a57"];
     [ensureBtn setTitle:@"确认" forState:UIControlStateNormal];
-    ensureBtn.titleLabel.font = [UIFont systemFontOfSize:16];
+    ensureBtn.titleLabel.font = [UIFont systemFontOfSize:20];
     [ensureBtn addTarget:self action:@selector(ensureBtn) forControlEvents:UIControlEventTouchUpInside];
     ensureBtn.layer.cornerRadius = ensureBtnH * 0.1;
     [self.view addSubview:ensureBtn];

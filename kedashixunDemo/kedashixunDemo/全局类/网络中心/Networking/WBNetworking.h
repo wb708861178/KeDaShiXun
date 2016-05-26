@@ -24,9 +24,10 @@ typedef enum {
     NetType_getUpdateMotto,//修改签名
     NetType_getKedamessage,//科大时讯
     NetType_getForum,//论坛
+    NetType_getForumPartIn,//自己发表的论坛
     NetType_getComment,//评论
-    NetType_getPhonelist//电话簿
-    
+    NetType_getPhonelist,//电话簿
+    NetType_getHistory //搜索历史记录
 
 
     
