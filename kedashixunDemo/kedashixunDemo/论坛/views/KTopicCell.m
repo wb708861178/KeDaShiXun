@@ -109,12 +109,7 @@
     KTopicModel *topicModel = topicFrameModel.topicModel;
     
     _iconImgView.frame = topicFrameModel.iconFrame;
-    [_iconImgView sd_setImageWithURL:[NSURL URLWithString:topicModel.iconName]];
-//    ------------------Test
-    
-    _iconImgView.image = [UIImage imageNamed:@"luntan_icon2"];
-//    ------------------Test
-    
+    [_iconImgView sd_setImageWithURL:[NSURL URLWithString:topicModel.iconName]];    
 
     _namelbl.frame = topicFrameModel.nameFrame;
     _namelbl.text = topicModel.name;

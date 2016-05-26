@@ -21,5 +21,7 @@
 @property (nonatomic, strong) NSArray *imagesUrlArr;
 @property (nonatomic, copy) NSString *viewCount;
 
+@property (nonatomic, copy) NSString *supportnum;
 
+- (instancetype)initWithDict:(NSDictionary *)dict;
 @end

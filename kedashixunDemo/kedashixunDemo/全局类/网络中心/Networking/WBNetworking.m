@@ -54,7 +54,7 @@
             break;
         case NetType_getForum:
         {
-            [tempParams setObject:@"NetType_getForum" forKey:@"act"];
+            [tempParams setObject:@"getForum" forKey:@"act"];
         }
             break;
         case NetType_getComment:

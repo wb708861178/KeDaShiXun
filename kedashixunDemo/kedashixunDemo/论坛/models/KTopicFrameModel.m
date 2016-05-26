@@ -20,7 +20,7 @@
     
     if (self = [super init]) {
         
-        self.topicModel = [KTopicModel mj_objectWithKeyValues:dict];
+        self.topicModel = [[KTopicModel alloc] initWithDict:dict];
         
     }
     return self;
@@ -29,14 +29,7 @@
 - (void)setTopicModel:(KTopicModel *)topicModel{
     
     _topicModel = topicModel;
-    
-//--------------------Test
-    
-    NSString *str1 = @"QQ邮箱QQ邮箱QQ邮箱QQ邮箱QQ邮箱QQ邮箱QQ邮箱QQ邮箱QQ邮箱QQ邮箱QQ邮箱";
-    CGSize size = [str1 boundingRectWithSize:MaxSize options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName:[UIFont systemFontOfSize:17]} context:nil].size;
-    NSLog(@"--%@",NSStringFromCGSize(size));
-    
-//--------------------
+
     //计算坐标
     CGFloat iconW = 36,iconH = iconW;
     
