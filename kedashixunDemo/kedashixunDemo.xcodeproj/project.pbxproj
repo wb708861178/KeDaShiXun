@@ -56,6 +56,7 @@
 		522968D71CE4B7ED0043784A /* WBMainDetailBottomView.m in Sources */ = {isa = PBXBuildFile; fileRef = 522968D61CE4B7ED0043784A /* WBMainDetailBottomView.m */; };
 		522968D91CE4B8010043784A /* WBMainDetailBottomView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 522968D81CE4B8010043784A /* WBMainDetailBottomView.xib */; };
 		52379EED1CE1DD4900E93767 /* WBPersonalCenterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 52379EEC1CE1DD4900E93767 /* WBPersonalCenterViewController.m */; };
+		523873FD1CF6DD2D0036C978 /* WBSearchResultViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 523873FC1CF6DD2D0036C978 /* WBSearchResultViewController.m */; };
 		527156721CE35ED0007F7821 /* WBCustomNavView.m in Sources */ = {isa = PBXBuildFile; fileRef = 527156711CE35ED0007F7821 /* WBCustomNavView.m */; };
 		527156741CE35EEF007F7821 /* WBCustomNavView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 527156731CE35EEF007F7821 /* WBCustomNavView.xib */; };
 		527156781CE36E66007F7821 /* WBMainCell1.m in Sources */ = {isa = PBXBuildFile; fileRef = 527156761CE36E66007F7821 /* WBMainCell1.m */; };
@@ -115,7 +116,9 @@
 		52A528A01CDF4AC600499AE7 /* background_blue@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 52A5289F1CDF4AC600499AE7 /* background_blue@3x.png */; };
 		52A528A21CDF4AE500499AE7 /* background_dream@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 52A528A11CDF4AE500499AE7 /* background_dream@3x.png */; };
 		52A630681CF4146E000D2D4D /* WBPhoneListHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 52A630671CF4146E000D2D4D /* WBPhoneListHeaderView.m */; };
-		52A6306A1CF4147F000D2D4D /* WBPhoneListHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 52A630691CF4147F000D2D4D /* WBPhoneListHeaderView.xib */; };
+		52A630741CF48192000D2D4D /* BQLCalendar.m in Sources */ = {isa = PBXBuildFile; fileRef = 52A6306E1CF48192000D2D4D /* BQLCalendar.m */; };
+		52A630751CF48192000D2D4D /* UIView+Frame.m in Sources */ = {isa = PBXBuildFile; fileRef = 52A630701CF48192000D2D4D /* UIView+Frame.m */; };
+		52A630761CF48192000D2D4D /* popView.m in Sources */ = {isa = PBXBuildFile; fileRef = 52A630731CF48192000D2D4D /* popView.m */; };
 		52AD60411CE61BD90014DE9A /* WBCustomBottomUpView.m in Sources */ = {isa = PBXBuildFile; fileRef = 52AD60401CE61BD90014DE9A /* WBCustomBottomUpView.m */; };
 		52B6111D1CF2C2C700072CF0 /* UILabel+ResetContent.m in Sources */ = {isa = PBXBuildFile; fileRef = 52B6111C1CF2C2C700072CF0 /* UILabel+ResetContent.m */; };
 		52D2C49D1CEB07B100AA411F /* WBMainSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 52D2C49C1CEB07B100AA411F /* WBMainSearchViewController.m */; };
@@ -258,6 +261,8 @@
 		522968D81CE4B8010043784A /* WBMainDetailBottomView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WBMainDetailBottomView.xib; sourceTree = "<group>"; };
 		52379EEB1CE1DD4900E93767 /* WBPersonalCenterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WBPersonalCenterViewController.h; sourceTree = "<group>"; };
 		52379EEC1CE1DD4900E93767 /* WBPersonalCenterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WBPersonalCenterViewController.m; sourceTree = "<group>"; };
+		523873FB1CF6DD2D0036C978 /* WBSearchResultViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WBSearchResultViewController.h; sourceTree = "<group>"; };
+		523873FC1CF6DD2D0036C978 /* WBSearchResultViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WBSearchResultViewController.m; sourceTree = "<group>"; };
 		527156701CE35ED0007F7821 /* WBCustomNavView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WBCustomNavView.h; sourceTree = "<group>"; };
 		527156711CE35ED0007F7821 /* WBCustomNavView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WBCustomNavView.m; sourceTree = "<group>"; };
 		527156731CE35EEF007F7821 /* WBCustomNavView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WBCustomNavView.xib; sourceTree = "<group>"; };
@@ -364,7 +369,12 @@
 		52A528A11CDF4AE500499AE7 /* background_dream@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "background_dream@3x.png"; sourceTree = "<group>"; };
 		52A630661CF4146E000D2D4D /* WBPhoneListHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WBPhoneListHeaderView.h; sourceTree = "<group>"; };
 		52A630671CF4146E000D2D4D /* WBPhoneListHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WBPhoneListHeaderView.m; sourceTree = "<group>"; };
-		52A630691CF4147F000D2D4D /* WBPhoneListHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WBPhoneListHeaderView.xib; sourceTree = "<group>"; };
+		52A6306D1CF48192000D2D4D /* BQLCalendar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BQLCalendar.h; sourceTree = "<group>"; };
+		52A6306E1CF48192000D2D4D /* BQLCalendar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BQLCalendar.m; sourceTree = "<group>"; };
+		52A6306F1CF48192000D2D4D /* UIView+Frame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Frame.h"; sourceTree = "<group>"; };
+		52A630701CF48192000D2D4D /* UIView+Frame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Frame.m"; sourceTree = "<group>"; };
+		52A630721CF48192000D2D4D /* popView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = popView.h; sourceTree = "<group>"; };
+		52A630731CF48192000D2D4D /* popView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = popView.m; sourceTree = "<group>"; };
 		52AD603F1CE61BD90014DE9A /* WBCustomBottomUpView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WBCustomBottomUpView.h; sourceTree = "<group>"; };
 		52AD60401CE61BD90014DE9A /* WBCustomBottomUpView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WBCustomBottomUpView.m; sourceTree = "<group>"; };
 		52B6111B1CF2C2C700072CF0 /* UILabel+ResetContent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILabel+ResetContent.h"; sourceTree = "<group>"; };
@@ -895,6 +905,7 @@
 		52A528201CDED63400499AE7 /* 三方 */ = {
 			isa = PBXGroup;
 			children = (
+				52A6306B1CF48158000D2D4D /* 日历 */,
 				52E574931CF0AF58006E012D /* SMS_SDK */,
 				0579B0501CE9F71D00DE11D6 /* JKImagePicker */,
 				05ECD89D1CE49DB800A0582A /* GQImageViewer */,
@@ -1068,7 +1079,6 @@
 			children = (
 				52A630661CF4146E000D2D4D /* WBPhoneListHeaderView.h */,
 				52A630671CF4146E000D2D4D /* WBPhoneListHeaderView.m */,
-				52A630691CF4147F000D2D4D /* WBPhoneListHeaderView.xib */,
 			);
 			path = views;
 			sourceTree = "<group>";
@@ -1246,6 +1256,8 @@
 				5229688A1CE499BF0043784A /* WBMainDetailViewController.m */,
 				52D2C49B1CEB07B100AA411F /* WBMainSearchViewController.h */,
 				52D2C49C1CEB07B100AA411F /* WBMainSearchViewController.m */,
+				523873FB1CF6DD2D0036C978 /* WBSearchResultViewController.h */,
+				523873FC1CF6DD2D0036C978 /* WBSearchResultViewController.m */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -1274,6 +1286,35 @@
 				52D2C4E51CEB1D8A00AA411F /* WBCustomSearchBar.m */,
 			);
 			path = views;
+			sourceTree = "<group>";
+		};
+		52A6306B1CF48158000D2D4D /* 日历 */ = {
+			isa = PBXGroup;
+			children = (
+				52A6306C1CF48192000D2D4D /* BQLCalendar */,
+				52A630711CF48192000D2D4D /* POPView */,
+			);
+			path = "日历";
+			sourceTree = "<group>";
+		};
+		52A6306C1CF48192000D2D4D /* BQLCalendar */ = {
+			isa = PBXGroup;
+			children = (
+				52A6306D1CF48192000D2D4D /* BQLCalendar.h */,
+				52A6306E1CF48192000D2D4D /* BQLCalendar.m */,
+				52A6306F1CF48192000D2D4D /* UIView+Frame.h */,
+				52A630701CF48192000D2D4D /* UIView+Frame.m */,
+			);
+			path = BQLCalendar;
+			sourceTree = "<group>";
+		};
+		52A630711CF48192000D2D4D /* POPView */ = {
+			isa = PBXGroup;
+			children = (
+				52A630721CF48192000D2D4D /* popView.h */,
+				52A630731CF48192000D2D4D /* popView.m */,
+			);
+			path = POPView;
 			sourceTree = "<group>";
 		};
 		52B6111A1CF2C27000072CF0 /* UILabel+ResetContent */ = {
@@ -1478,7 +1519,6 @@
 				52E574921CF0A12B006E012D /* WBForgetPasswordViewController.xib in Resources */,
 				522968861CE472130043784A /* WBLoginMenuHeaderView.xib in Resources */,
 				05ECD8631CE45E7A00A0582A /* KCommentCountView.xib in Resources */,
-				52A6306A1CF4147F000D2D4D /* WBPhoneListHeaderView.xib in Resources */,
 				52A528511CDF301900499AE7 /* LaunchScreen.storyboard in Resources */,
 				52A5288D1CDF3A6700499AE7 /* WBMenuHeaderView.xib in Resources */,
 				527156881CE36F0D007F7821 /* WBMainCell3.xib in Resources */,
@@ -1568,13 +1608,16 @@
 				529AE3B71CF344A000685349 /* WBPhoneList.m in Sources */,
 				05ECD8A61CE49DB800A0582A /* GQBasePictureTableView.m in Sources */,
 				5271D4751CEA0C3000108244 /* WBMessageCenterViewController.m in Sources */,
+				523873FD1CF6DD2D0036C978 /* WBSearchResultViewController.m in Sources */,
 				52A528931CDF3A6700499AE7 /* UIColor+HexColor.m in Sources */,
+				52A630761CF48192000D2D4D /* popView.m in Sources */,
 				52A5284E1CDF300500499AE7 /* AppDelegate.m in Sources */,
 				5271D45B1CE9FAF900108244 /* WBChangeNickNameViewController.m in Sources */,
 				0579B04F1CE9EE2700DE11D6 /* KPhotoViewCell.m in Sources */,
 				52A528951CDF3A6700499AE7 /* UIView+WBLocation.m in Sources */,
 				527156781CE36E66007F7821 /* WBMainCell1.m in Sources */,
 				0579B06B1CE9F71D00DE11D6 /* JKAssets.m in Sources */,
+				52A630741CF48192000D2D4D /* BQLCalendar.m in Sources */,
 				52A5280E1CDECD2000499AE7 /* UIColor+HexColor.m in Sources */,
 				05ECD86C1CE462BC00A0582A /* KCommentCell.m in Sources */,
 				057BDD401CDF47B400F03911 /* KTopicModel.m in Sources */,
@@ -1607,6 +1650,7 @@
 				0579B0711CE9F71D00DE11D6 /* JKImagePickerController.m in Sources */,
 				52A5282A1CDED65B00499AE7 /* UIViewController+RESideMenu.m in Sources */,
 				05ECD8A81CE49DB800A0582A /* GQPhotoScrollView.m in Sources */,
+				52A630751CF48192000D2D4D /* UIView+Frame.m in Sources */,
 				52A3718A1CF1BEB400E80FAD /* WBDBHelper.m in Sources */,
 				52A528411CDEDD8200499AE7 /* WBTools.m in Sources */,
 				522968D41CE4B4750043784A /* WBCustomPictureWall.m in Sources */,

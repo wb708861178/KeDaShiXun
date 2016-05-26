@@ -11,6 +11,11 @@
 
 @interface WBTool : NSObject
 
+
+
+
+
+
 //判断版本是否更新  或者 第一次进入
 + (BOOL)isVersionUpdate;
 
