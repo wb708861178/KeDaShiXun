@@ -57,6 +57,10 @@
 		522968D91CE4B8010043784A /* WBMainDetailBottomView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 522968D81CE4B8010043784A /* WBMainDetailBottomView.xib */; };
 		52379EED1CE1DD4900E93767 /* WBPersonalCenterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 52379EEC1CE1DD4900E93767 /* WBPersonalCenterViewController.m */; };
 		523873FD1CF6DD2D0036C978 /* WBSearchResultViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 523873FC1CF6DD2D0036C978 /* WBSearchResultViewController.m */; };
+		523874001CF6ECF00036C978 /* WBHistory.m in Sources */ = {isa = PBXBuildFile; fileRef = 523873FF1CF6ECF00036C978 /* WBHistory.m */; };
+		523874031CF7411D0036C978 /* WBRelatedSearchTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 523874021CF7411D0036C978 /* WBRelatedSearchTableView.m */; };
+		525D05D71CF95237003FBC6B /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 525D05D61CF95237003FBC6B /* QuartzCore.framework */; };
+		525D05D91CF95251003FBC6B /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 525D05D81CF95251003FBC6B /* MobileCoreServices.framework */; };
 		527156721CE35ED0007F7821 /* WBCustomNavView.m in Sources */ = {isa = PBXBuildFile; fileRef = 527156711CE35ED0007F7821 /* WBCustomNavView.m */; };
 		527156741CE35EEF007F7821 /* WBCustomNavView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 527156731CE35EEF007F7821 /* WBCustomNavView.xib */; };
 		527156781CE36E66007F7821 /* WBMainCell1.m in Sources */ = {isa = PBXBuildFile; fileRef = 527156761CE36E66007F7821 /* WBMainCell1.m */; };
@@ -263,6 +267,12 @@
 		52379EEC1CE1DD4900E93767 /* WBPersonalCenterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WBPersonalCenterViewController.m; sourceTree = "<group>"; };
 		523873FB1CF6DD2D0036C978 /* WBSearchResultViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WBSearchResultViewController.h; sourceTree = "<group>"; };
 		523873FC1CF6DD2D0036C978 /* WBSearchResultViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WBSearchResultViewController.m; sourceTree = "<group>"; };
+		523873FE1CF6ECF00036C978 /* WBHistory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WBHistory.h; sourceTree = "<group>"; };
+		523873FF1CF6ECF00036C978 /* WBHistory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WBHistory.m; sourceTree = "<group>"; };
+		523874011CF7411D0036C978 /* WBRelatedSearchTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WBRelatedSearchTableView.h; sourceTree = "<group>"; };
+		523874021CF7411D0036C978 /* WBRelatedSearchTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WBRelatedSearchTableView.m; sourceTree = "<group>"; };
+		525D05D61CF95237003FBC6B /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		525D05D81CF95251003FBC6B /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		527156701CE35ED0007F7821 /* WBCustomNavView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WBCustomNavView.h; sourceTree = "<group>"; };
 		527156711CE35ED0007F7821 /* WBCustomNavView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WBCustomNavView.m; sourceTree = "<group>"; };
 		527156731CE35EEF007F7821 /* WBCustomNavView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WBCustomNavView.xib; sourceTree = "<group>"; };
@@ -427,6 +437,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				525D05D91CF95251003FBC6B /* MobileCoreServices.framework in Frameworks */,
+				525D05D71CF95237003FBC6B /* QuartzCore.framework in Frameworks */,
 				52E574A81CF0B0BC006E012D /* AddressBook.framework in Frameworks */,
 				52E574A91CF0B0BC006E012D /* AddressBookUI.framework in Frameworks */,
 				52E574A51CF0B0AB006E012D /* libstdc++.tbd in Frameworks */,
@@ -1267,6 +1279,8 @@
 			children = (
 				52E574631CF05B3D006E012D /* WBKedaMessage.h */,
 				52E574641CF05B3D006E012D /* WBKedaMessage.m */,
+				523873FE1CF6ECF00036C978 /* WBHistory.h */,
+				523873FF1CF6ECF00036C978 /* WBHistory.m */,
 			);
 			path = models;
 			sourceTree = "<group>";
@@ -1284,6 +1298,8 @@
 				522968D81CE4B8010043784A /* WBMainDetailBottomView.xib */,
 				52D2C4E41CEB1D8A00AA411F /* WBCustomSearchBar.h */,
 				52D2C4E51CEB1D8A00AA411F /* WBCustomSearchBar.m */,
+				523874011CF7411D0036C978 /* WBRelatedSearchTableView.h */,
+				523874021CF7411D0036C978 /* WBRelatedSearchTableView.m */,
 			);
 			path = views;
 			sourceTree = "<group>";
@@ -1374,6 +1390,8 @@
 		59E59F729B36E56D7B03D9D5 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				525D05D81CF95251003FBC6B /* MobileCoreServices.framework */,
+				525D05D61CF95237003FBC6B /* QuartzCore.framework */,
 				52E574A61CF0B0BC006E012D /* AddressBook.framework */,
 				52E574A71CF0B0BC006E012D /* AddressBookUI.framework */,
 				52E574A41CF0B0AB006E012D /* libstdc++.tbd */,
@@ -1661,6 +1679,7 @@
 				527156871CE36F0D007F7821 /* WBMainCell3.m in Sources */,
 				52D2C4E91CEB53D400AA411F /* WBChangePasswordViewController.m in Sources */,
 				0579B0761CE9F71D00DE11D6 /* PhotoAlbumManager.m in Sources */,
+				523874001CF6ECF00036C978 /* WBHistory.m in Sources */,
 				05ECD8701CE4666500A0582A /* KCommentModel.m in Sources */,
 				5229688C1CE499BF0043784A /* WBMainDetailViewController.m in Sources */,
 				52A528911CDF3A6700499AE7 /* UINavigationBar+NavBar_WBCustomBackgroudImage.m in Sources */,
@@ -1685,6 +1704,7 @@
 				52A528101CDECD2000499AE7 /* UIView+WBLocation.m in Sources */,
 				52A528281CDED65B00499AE7 /* RECommonFunctions.m in Sources */,
 				0579B0721CE9F71D00DE11D6 /* JKPhotoBrowser.m in Sources */,
+				523874031CF7411D0036C978 /* WBRelatedSearchTableView.m in Sources */,
 				0579B06F1CE9F71D00DE11D6 /* JKAssetsThumbnailView.m in Sources */,
 				52A528291CDED65B00499AE7 /* RESideMenu.m in Sources */,
 				52379EED1CE1DD4900E93767 /* WBPersonalCenterViewController.m in Sources */,

@@ -77,14 +77,41 @@
             [tempParams setObject:@"getForumPartIn" forKey:@"act"];
         }
             break;
-         
+        case NetType_getHistoryDelete:
+        {
+            [tempParams setObject:@"getHistoryDelete" forKey:@"act"];
+        }
+            break;
+        case NetType_getSearch:
+        {
+            [tempParams setObject:@"getSearch" forKey:@"act"];
+        }
+            break;
+        case NetType_getSearchresult:
+        {
+            [tempParams setObject:@"getSearchresult" forKey:@"act"];
+        }
+            break;
+        case NetType_getIsaddhistory:
+        {
+            [tempParams setObject:@"getIsaddhistory" forKey:@"act"];
+        }
+            break;
+            
+        case NetType_getAddhistory:
+        {
+            [tempParams setObject:@"getAddhistory" forKey:@"act"];
+        }
+            break;
+
+        
         default:
             break;
     }
     
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
    
-    manager.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"text/html",@"application/json", nil];
+    manager.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"text/html",@"application/json", @"text/plain",nil];
 
 
     

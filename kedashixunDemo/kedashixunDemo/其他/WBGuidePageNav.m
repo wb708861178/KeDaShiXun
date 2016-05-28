@@ -25,6 +25,7 @@
 - (UIStatusBarStyle)preferredStatusBarStyle
 {
     return UIStatusBarStyleLightContent;
+     
 }
 - (instancetype)init
 {

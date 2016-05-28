@@ -27,8 +27,12 @@ typedef enum {
     NetType_getForumPartIn,//自己发表的论坛
     NetType_getComment,//评论
     NetType_getPhonelist,//电话簿
-    NetType_getHistory //搜索历史记录
-
+    NetType_getHistory, //历史记录
+    NetType_getHistoryDelete,//删除历史记录
+    NetType_getSearch, //搜索相关时讯
+   NetType_getSearchresult,//点击相关时讯
+    NetType_getIsaddhistory,
+    NetType_getAddhistory //增加历史记录
 
     
 }NetworkRequestStyle;

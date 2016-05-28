@@ -82,7 +82,7 @@
     UILabel *contentLable = [UILabel resetContentWithContent:self.kedaMessage.content withFontSize:15 withLineHeight:15 withLineSapce:20 withHeadIndent:15];
 
     NSDictionary *contentLableAttributes = [contentLable.attributedText attributesAtIndex:0 effectiveRange:nil];
-    NSLog(@"%@",contentLableAttributes);
+   
     
     
     
