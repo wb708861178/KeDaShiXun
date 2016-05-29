@@ -15,12 +15,21 @@
 #import "WBChangeMottoViewController.h"
 #import "WBUserInfo.h"
 #import "WBNetworking.h"
-@interface WBPersonalCenterViewController ()<UITableViewDelegate,UITableViewDataSource>
+
+
+#pragma mark--拍照
+#import <QuartzCore/QuartzCore.h>
+#import <QuartzCore/CoreAnimation.h>
+#import <MobileCoreServices/UTCoreTypes.h>
+@interface WBPersonalCenterViewController ()<UITableViewDelegate,UITableViewDataSource,UINavigationControllerDelegate, UIImagePickerControllerDelegate>
 @property (nonatomic, strong) UITableView *mainTableView;
 @property (nonatomic, strong) NSArray *titleArr;
 @property (nonatomic, strong) NSMutableArray *userInfoArr;
 
 
+#pragma mark--拍照
+@property (nonatomic, copy) NSString *lastChosenMediaType;
+@property (nonatomic, strong) UIImageView *iconImageView ;
 
 @end
 
@@ -139,6 +148,7 @@
         iconImageView.frame = CGRectMake(iconImageViewX, iconImageViewY , 34, 34);
         iconImageView.image = [UIImage imageNamed:@"personal_icon"];
 //        cell.contentView.backgroundColor = [UIColor cyanColor];
+        self.iconImageView = iconImageView;
         [cell.contentView addSubview:iconImageView];
         
          }else{
@@ -191,12 +201,15 @@
                 switch (selectedIndex) {
                     case 0:
                     {
-                        NSLog(@"相册");
+                        [self selectExistingPictureOrVideo];
+                        
+                       
+                        
                     }
                         break;
                     case 1:
                     {
-                         NSLog(@"拍照");
+                        [self shootPictureOrVideo];
                     }
                         break;
                     case 2:
@@ -322,6 +335,78 @@
 {
     [self.navigationController popViewControllerAnimated:YES];
 }
+
+
+
+
+
+
+#pragma  mark- 拍照模块
+ //从相机上选择
+ -(void)shootPictureOrVideo{
+         [self getMediaFromSource:UIImagePickerControllerSourceTypeCamera];
+     }
+ //从相册中选择
+ -(void)selectExistingPictureOrVideo{
+         [self getMediaFromSource:UIImagePickerControllerSourceTypePhotoLibrary];
+     }
+ #pragma 拍照模块
+-(void) imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info{
+         self.lastChosenMediaType=[info objectForKey:UIImagePickerControllerMediaType];
+         if([self.lastChosenMediaType isEqual:(NSString *) kUTTypeImage])
+             {
+                     UIImage *chosenImage=[info objectForKey:UIImagePickerControllerEditedImage];
+                     self.iconImageView.image=chosenImage;
+                 }
+        if([self.lastChosenMediaType isEqual:(NSString *) kUTTypeMovie])
+             {
+                     UIAlertView *alert=[[UIAlertView alloc] initWithTitle:@"提示信息!" message:@"系统只支持图片格式" delegate:nil cancelButtonTitle:@"确认" otherButtonTitles: nil];
+                     [alert show];
+            
+                 }
+    [picker dismissViewControllerAnimated:YES completion:nil];
+
+     }
+ -(void) imagePickerControllerDidCancel:(UIImagePickerController *)picker{
+     [picker dismissViewControllerAnimated:YES completion:nil];
+     }
+ -(void)getMediaFromSource:(UIImagePickerControllerSourceType)sourceType
+ {
+        NSArray *mediatypes=[UIImagePickerController availableMediaTypesForSourceType:sourceType];
+         if([UIImagePickerController isSourceTypeAvailable:sourceType] &&[mediatypes count]>0){
+        
+                 UIImagePickerController *picker=[[UIImagePickerController alloc] init];
+                 picker.mediaTypes=mediatypes;
+                 picker.delegate=self;
+                 picker.allowsEditing=YES;
+                 picker.sourceType=sourceType;
+                 NSString *requiredmediatype=(NSString *)kUTTypeImage;
+                 NSArray *arrmediatypes=[NSArray arrayWithObject:requiredmediatype];
+                 [picker setMediaTypes:arrmediatypes];
+             [self presentViewController:picker animated:YES completion:nil];
+             
+             }
+         else{
+                 UIAlertView *alert=[[UIAlertView alloc] initWithTitle:@"错误信息!" message:@"当前设备不支持拍摄功能" delegate:nil cancelButtonTitle:@"确认" otherButtonTitles: nil];
+                 [alert show];
+             }
+     }
+// static UIImage *shrinkImage(UIImage *orignal,CGSize size)
+// {
+//         CGFloat scale=[UIScreen mainScreen].scale;
+//         CGColorSpaceRef colorSpace=CGColorSpaceCreateDeviceRGB();
+//        CGContextRef context=CGBitmapContextCreate(NULL, size.width *scale,size.height*scale, 8, 0, colorSpace, kCGImageAlphaPremultipliedFirst);
+//        CGContextDrawImage(context, CGRectMake(0, 0, size.width*scale, size.height*scale), orignal.CGImage);
+//       CGImageRef shrunken=CGBitmapContextCreateImage(context);
+//        UIImage *final=[UIImage imageWithCGImage:shrunken];
+//         CGContextRelease(context);
+//        CGImageRelease(shrunken);
+//        return  final;
+//   }
+
+ 
+
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

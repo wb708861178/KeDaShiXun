@@ -10,4 +10,6 @@
 
 @interface WBSearchResultViewController : WBBaseViewController
 
+
+@property (nonatomic, copy) NSString *searchText;
 @end

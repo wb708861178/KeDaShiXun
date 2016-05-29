@@ -29,6 +29,9 @@
         
         self.leftView = searchIcon;
         self.leftViewMode = UITextFieldViewModeAlways;
+        
+       
+        
     }
     return self;
 }
