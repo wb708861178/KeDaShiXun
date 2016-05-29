@@ -6,8 +6,8 @@
 //  Copyright © 2016年 wangbing. All rights reserved.
 //
 
-#import "WBBaseViewController.h"
+#import <UIKit/UIKit.h>
 
-@interface KPublishVC : WBBaseViewController
+@interface KPublishVC : UIViewController
 
 @end

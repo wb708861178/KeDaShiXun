@@ -22,7 +22,7 @@
 @property (nonatomic, strong) UILabel *locationlbl;
 @property (nonatomic, strong) UILabel *viewCountlbl;
 @property (nonatomic, strong) UIButton *praiseBtn;
-@property (nonatomic, strong) UIButton *commentBtn;
+@property (nonatomic, strong) UIButton *collectBtn;
 
 @property (nonatomic, strong) KCommentCountView *commentCountView;
 @end
@@ -59,8 +59,8 @@
         [_praiseBtn setImage:[UIImage imageNamed:@"dianzan"] forState:UIControlStateNormal];
         [_praiseBtn addTarget:self action:@selector(praiseTopic) forControlEvents:UIControlEventTouchUpInside];
         
-        _commentBtn = [[UIButton alloc] init];
-        [_commentBtn setImage:[UIImage imageNamed:@"pinglun"] forState:UIControlStateNormal];
+        _collectBtn = [[UIButton alloc] init];
+        [_collectBtn setImage:[UIImage imageNamed:@"shoucang"] forState:UIControlStateNormal];
         
         _commentCountView = [[NSBundle mainBundle] loadNibNamed:@"KCommentCountView" owner:nil options:nil].firstObject;
         
@@ -72,7 +72,7 @@
         [self addSubview:_locationlbl];
         [self addSubview:_viewCountlbl];
         [self addSubview:_praiseBtn];
-        [self addSubview:_commentBtn];
+        [self addSubview:_collectBtn];
         [self addSubview:_commentCountView];
         
     }
@@ -129,11 +129,16 @@
     _viewCountlbl.frame = topicHeaderFrameModel.viewCountFrame;
     _viewCountlbl.text = [NSString stringWithFormat:@"%@人浏览",topicModel.viewCount];
     _praiseBtn.frame = topicHeaderFrameModel.praiseFrame;
-    _commentBtn.frame = topicHeaderFrameModel.commentFrame;
+    _collectBtn.frame = topicHeaderFrameModel.commentFrame;
 
 
     _commentCountView.frame = topicHeaderFrameModel.commentViewFrame;
-    _commentCountView.commentCount.text = [NSString stringWithFormat:@"评论 %@",topicModel.viewCount];
+}
+
+- (void)setCommentCount:(NSUInteger)commentCount{
+    _commentCount = commentCount;
+    _commentCountView.commentCount.text = [NSString stringWithFormat:@"评论 %ld",commentCount];
+
 }
 
 //调出图片浏览器
@@ -154,9 +159,8 @@
     //判断用户是否赞过
     
     [UIView animateWithDuration:0.2 animations:^{
-        [_praiseBtn setImage:[UIImage imageNamed:@"pinglun"] forState:UIControlStateNormal];
         _praiseBtn.transform = CGAffineTransformMakeScale(1.5, 1.5);
-        
+        _praiseBtn.tintColor = [UIColor orangeColor];
     } completion:^(BOOL finished) {
         
         [UIView animateWithDuration:0.2 animations:^{

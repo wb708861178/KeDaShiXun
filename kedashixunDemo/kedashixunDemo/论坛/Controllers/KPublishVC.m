@@ -35,10 +35,12 @@
 
 @implementation KPublishVC
 
+
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-    [self setNavBarTitleWithText:@"发布主题" withFontSize:20 withTextColor:[UIColor whiteColor]];
+//    
+//    [self setNavBarTitleWithText:@"发布主题" withFontSize:20 withTextColor:[UIColor whiteColor]];
     
     self.navigationItem.leftBarButtonItems = [UIBarButtonItem barButtonItemWithImageName:@"arrow_left"  withHighlightedImageName:nil  withTarget:self withAction:@selector(pop) WithNegativeSpacerWidth:-16];
     
@@ -110,6 +112,11 @@
     
 }
 
+
+- (void)pop{
+    
+    [self.navigationController popViewControllerAnimated:YES];
+}
 
 #pragma mark --- 发布帖子
 

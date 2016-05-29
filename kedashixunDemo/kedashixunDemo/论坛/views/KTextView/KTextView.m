@@ -8,6 +8,8 @@
 
 #import "KTextView.h"
 #import "UIView+Extension.h"
+#import "UIColor+HexColor.h"
+
 
 @interface KTextView ()
 
@@ -33,7 +35,7 @@
         self.placeholderLabel = placehoderLabel;
         
         //设置默认文字颜色
-        self.placeholderColor = [UIColor lightGrayColor];
+        self.placeholderColor = [UIColor colorWithHexString:@"#BBBBBB"];
         
         //设置默认字体
         self.font = [UIFont systemFontOfSize:17];
@@ -65,7 +67,7 @@
         self.placeholderLabel = placehoderLabel;
         
         //设置默认文字颜色
-        self.placeholderColor = [UIColor lightGrayColor];
+        self.placeholderColor = [UIColor colorWithHexString:@"#666666"];
         
         //设置默认字体
         self.font = [UIFont systemFontOfSize:17];

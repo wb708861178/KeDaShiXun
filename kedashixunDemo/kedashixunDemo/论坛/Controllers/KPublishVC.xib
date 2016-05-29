@@ -6,12 +6,12 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="KPublishVC">
             <connections>
-                <outlet property="contentTextView" destination="vbc-V7-ACo" id="Yi1-Fs-Mpk"/>
-                <outlet property="locationView" destination="cph-GJ-rXP" id="3VP-il-5Hm"/>
-                <outlet property="locationlbl" destination="wwj-PI-w5U" id="Esq-RF-VO5"/>
-                <outlet property="photoView" destination="6zC-6s-zOO" id="lw3-IN-GPK"/>
+                <outlet property="contentTextView" destination="vbc-V7-ACo" id="mXR-Sh-4Up"/>
+                <outlet property="locationView" destination="cph-GJ-rXP" id="B09-SE-Jso"/>
+                <outlet property="locationlbl" destination="wwj-PI-w5U" id="jul-uL-C8s"/>
+                <outlet property="photoView" destination="6zC-6s-zOO" id="yxG-W1-Uqf"/>
                 <outlet property="photoViewH" destination="2li-CT-Diw" id="hUL-HD-0S7"/>
-                <outlet property="titleTF" destination="q5D-TC-yu4" id="eqv-Nj-iXt"/>
+                <outlet property="titleTF" destination="q5D-TC-yu4" id="lRk-Rh-1Jt"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -160,18 +160,21 @@
                     </variation>
                 </view>
             </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstItem="6zC-6s-zOO" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="27u-qF-oKB"/>
                 <constraint firstAttribute="trailing" secondItem="cph-GJ-rXP" secondAttribute="trailing" id="7Xt-h9-egq"/>
                 <constraint firstItem="e4X-di-6HA" firstAttribute="top" secondItem="q5D-TC-yu4" secondAttribute="bottom" constant="10" id="7YN-9f-CkE"/>
                 <constraint firstItem="4ot-f3-6T7" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="BkX-mh-YCp"/>
-                <constraint firstItem="cph-GJ-rXP" firstAttribute="top" secondItem="4ot-f3-6T7" secondAttribute="bottom" id="DMN-vo-fig"/>
+                <constraint firstItem="cph-GJ-rXP" firstAttribute="top" secondItem="4ot-f3-6T7" secondAttribute="bottom" id="DMN-vo-fig">
+                    <variation key="widthClass=compact" constant="10"/>
+                </constraint>
                 <constraint firstAttribute="trailing" secondItem="vbc-V7-ACo" secondAttribute="trailing" constant="20" id="F3e-1w-TCR"/>
                 <constraint firstItem="cph-GJ-rXP" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="IlG-kE-JMQ"/>
                 <constraint firstAttribute="trailing" secondItem="6zC-6s-zOO" secondAttribute="trailing" id="JEz-Kg-Bce"/>
                 <constraint firstAttribute="trailing" secondItem="q5D-TC-yu4" secondAttribute="trailing" constant="20" id="Osd-oN-CDz"/>
                 <constraint firstItem="4ot-f3-6T7" firstAttribute="top" secondItem="6zC-6s-zOO" secondAttribute="bottom" id="Pbh-sJ-QRt">
-                    <variation key="widthClass=compact" constant="1"/>
+                    <variation key="widthClass=compact" constant="10"/>
                 </constraint>
                 <constraint firstItem="6zC-6s-zOO" firstAttribute="top" secondItem="vbc-V7-ACo" secondAttribute="bottom" id="VoM-s8-nAb"/>
                 <constraint firstAttribute="trailing" secondItem="4ot-f3-6T7" secondAttribute="trailing" id="cXf-yi-tKF"/>

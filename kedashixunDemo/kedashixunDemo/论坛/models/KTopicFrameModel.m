@@ -20,7 +20,7 @@
     
     if (self = [super init]) {
         
-        self.topicModel = [KTopicModel mj_objectWithKeyValues:dict];
+        self.topicModel = [[KTopicModel alloc] initWithDict:dict];
         
     }
     return self;
@@ -29,14 +29,7 @@
 - (void)setTopicModel:(KTopicModel *)topicModel{
     
     _topicModel = topicModel;
-    
-//--------------------Test
-    
-    NSString *str1 = @"QQ邮箱QQ邮箱QQ邮箱QQ邮箱QQ邮箱QQ邮箱QQ邮箱QQ邮箱QQ邮箱QQ邮箱QQ邮箱";
-    CGSize size = [str1 boundingRectWithSize:MaxSize options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName:[UIFont systemFontOfSize:17]} context:nil].size;
-    NSLog(@"--%@",NSStringFromCGSize(size));
-    
-//--------------------
+
     //计算坐标
     CGFloat iconW = 36,iconH = iconW;
     
@@ -52,6 +45,7 @@
     
     CGSize contentSize = [topicModel.content boundingRectWithSize:MaxSize options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName:[UIFont systemFontOfSize:14]} context:nil].size;
     _contentFrame = CGRectMake(space, CGRectGetMaxY(_iconFrame)+space, contentSize.width, contentSize.height);
+    
     
     //如果有图 则计算图片Frame
     if (topicModel.imagesUrlArr.count) {
@@ -92,8 +86,8 @@
     CGFloat btnW = 40;
     CGFloat btnY = CGRectGetMidY(_viewCountFrame)-btnH/2;
     _commentFrame = CGRectMake(kWidth-space-btnW, btnY, btnW, btnH);
-    _praiseFrame = CGRectMake(kWidth-space-btnW*2, btnY, btnW, btnH);
-    _collectFrame = CGRectMake(kWidth-space-btnW*3, btnY, btnW, btnH);
+    _praiseFrame = CGRectMake(kWidth-space-btnW*2-margin, btnY, btnW, btnH);
+
     
     _cellHeight = CGRectGetMaxY(_commentFrame)+space;
 }

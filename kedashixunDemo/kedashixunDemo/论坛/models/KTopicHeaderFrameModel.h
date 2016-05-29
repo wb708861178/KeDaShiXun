@@ -33,6 +33,5 @@
 
 @property (nonatomic, readonly) CGFloat headerHeight;
 
-
-- (instancetype)initWithDict:(NSDictionary *)dict;
+- (instancetype)initWithTopicModel:(KTopicModel *)topicModel;
 @end

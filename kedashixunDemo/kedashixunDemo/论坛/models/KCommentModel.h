@@ -12,9 +12,9 @@
 
 @property (nonatomic, copy) NSString *icon;
 
-@property (nonatomic, copy) NSString *name;
+@property (nonatomic, copy) NSString *nickname;
 
-@property (nonatomic, copy) NSString *time;
+@property (nonatomic, copy) NSString *date;
 
-@property (nonatomic, copy) NSString *commentContent;
+@property (nonatomic, copy) NSString *content;
 @end

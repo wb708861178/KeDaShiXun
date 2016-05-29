@@ -25,9 +25,9 @@
         UIImage  *img = [UIImage imageNamed:@"jia"];
         UIButton   *button = [UIButton buttonWithType:UIButtonTypeCustom];
         //CGFloat collectionY = CGRectGetMaxY(self.collectionView.frame);
-        button.frame = CGRectMake(15, 70, img.size.width+10, img.size.height+10);
-        [button setBackgroundImage:img forState:UIControlStateNormal];
-        button.layer.borderColor = kBGDefaultColor.CGColor;
+        button.frame = CGRectMake(15, 70, img.size.width+20, img.size.height+20);
+        [button setImage:img forState:UIControlStateNormal];
+        button.layer.borderColor = [UIColor colorWithHexString:@"#DDDDDD"].CGColor;
         button.layer.borderWidth = 1.f;
         self.addButton = button;
         [self addSubview:button];
