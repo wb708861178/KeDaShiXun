@@ -125,8 +125,49 @@
         }
             break;
             
+        case NetType_getUpdateKedamCollectionStatus://更改科大时讯收藏状态
+        {
+            [tempParams setObject:@"getUpdateKedamCollectionStatus" forKey:@"act"];
+        }
+            break;
+        case NetType_getForumsupportstatus://得到点赞和收藏状态（空时400插入）
+        {
+            [tempParams setObject:@"getForumsupportstatus" forKey:@"act"];
+        }
+            break;
+        case NetType_getForumaddsupport://增加论坛收藏点赞用户状态
+        {
+            [tempParams setObject:@"getForumaddsupport" forKey:@"act"];
+        }
+            break;
+        case NetType_getUpdateForumCollectStatus://修改论坛收藏状态
+        {
+            [tempParams setObject:@"getUpdateForumCollectStatus" forKey:@"act"];
+        }
+            break;
+        case NetType_getUpdateForumSupportStatus://修改论坛点赞状态
+        {
+            [tempParams setObject:@"getUpdateForumSupportStatus" forKey:@"act"];
+        }
+            break;
+        case NetType_getAddforum://增加论坛帖子
+        {
+            [tempParams setObject:@"getAddforum" forKey:@"act"];
+        }
+            break;
+        case  NetType_getUpdatesupportnum://修改论坛点赞量
+        {
+            [tempParams setObject:@"getUpdatesupportnum" forKey:@"act"];
+        }
+            break;
+         
             
-            
+           
+        
+        
+        
+        
+       
             
         default:
             break;
