@@ -104,7 +104,30 @@
         }
             break;
 
-        
+        case NetType_getKedamessageCollection:
+        {
+            [tempParams setObject:@"getKedamessageCollection" forKey:@"act"];
+        }
+            break;
+        case NetType_getAddKedamcollection:
+        {
+            [tempParams setObject:@"getAddKedamcollection" forKey:@"act"];
+        }
+            break;
+        case NetType_getKedamcollectionstatus://得到科大时讯收藏状态
+        {
+            [tempParams setObject:@"getKedamcollectionstatus" forKey:@"act"];
+        }
+            break;
+        case NetType_getAddkedamcollectionstatus://增加科大时讯收藏状态
+        {
+            [tempParams setObject:@"getAddkedamcollectionstatus" forKey:@"act"];
+        }
+            break;
+            
+            
+            
+            
         default:
             break;
     }

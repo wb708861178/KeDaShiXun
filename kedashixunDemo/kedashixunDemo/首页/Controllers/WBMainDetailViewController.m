@@ -14,6 +14,9 @@
 #import "UIBarButtonItem+WBCustomButton.h"
 #import "UIView+WBLocation.h"
 #import "UILabel+ResetContent.h"
+#import "WBNetworking.h"
+#import "WBUserInfo.h"
+#import <MJExtension.h>
 
 
 @interface WBMainDetailViewController ()
@@ -30,6 +33,11 @@
     [self setNavBarTitleWithText:@"时讯详情" withFontSize:20 withTextColor:[UIColor whiteColor]];
     self.navigationItem.leftBarButtonItems = [UIBarButtonItem barButtonItemWithImageName:@"arrow_left" withHighlightedImageName:@"arrow_left" withTarget:self withAction:@selector(returnMainBtnAction:) WithNegativeSpacerWidth:-5];
     [self viewLayout];
+    
+    //先得到收藏状态，如果收藏则换图片不可点击,没收藏则可以点击 ，为空时增加状态
+    [self requestWithCollectionStatus];
+    
+    
    
 }
 
@@ -99,6 +107,7 @@
     placeLabel.text = self.kedaMessage.department;
     placeLabel.textAlignment = NSTextAlignmentRight;
     placeLabel.font = [UIFont systemFontOfSize:12];
+    
     placeLabel.textColor = [UIColor lightGrayColor];
     [mainScrollView addSubview:placeLabel];
     
@@ -138,11 +147,45 @@
 }
 
 - (void)praiseViewTap:(UITapGestureRecognizer *)praiseViewTap{
-    NSLog(@"点赞");
+    
+    
+    
+    
+    NSDictionary *params = @{@"kedamid":[NSString stringWithFormat:@"%d",self.kedaMessage.kedamessageid],@"uid":[NSString stringWithFormat:@"%d",[WBUserInfo share].userid]};
+    [WBNetworking networkRequstWithNetworkRequestMethod:GetNetworkRequest networkRequestStyle:NetType_getAddKedamcollection params:params successBlock:^(id returnData) {
+        NSLog(@"%@",returnData);
+    } failureBlock:^(NSError *error) {
+        NSLog(@"%@",error);
+    }];
 }
 
 - (void)shareViewTap:(UITapGestureRecognizer *)shareViewTap{
     NSLog(@"分享");
+}
+
+
+
+
+#pragma mark---请求数据
+ - (void)requestWithCollectionStatus
+{
+    
+    NSDictionary *params = @{@"uid":[NSString stringWithFormat:@"%d",[WBUserInfo share].userid],@"kid":[NSString stringWithFormat:@"%d",self.kedaMessage.kedamessageid]};
+    [WBNetworking networkRequstWithNetworkRequestMethod:GetNetworkRequest networkRequestStyle:NetType_getKedamcollectionstatus params:params successBlock:^(id returnData) {
+        NSLog(@"-----%@",returnData);
+        if ([returnData[@"status"] intValue] == 400) {
+             NSDictionary *addStatusParams = @{@"uid":[NSString stringWithFormat:@"%d",[WBUserInfo share].userid],@"kid":[NSString stringWithFormat:@"%d",self.kedaMessage.kedamessageid],@"collectionstatus":@"0"};
+            NSLog(@"======%@",addStatusParams);
+
+            [WBNetworking networkRequstWithNetworkRequestMethod:GetNetworkRequest networkRequestStyle:NetType_getAddkedamcollectionstatus params:addStatusParams successBlock:^(id returnData) {
+                NSLog(@"%@",returnData);
+            } failureBlock:^(NSError *error) {
+                NSLog(@"%@",error);
+            }];
+        }
+    } failureBlock:^(NSError *error) {
+        NSLog(@"%@",error);
+    }];
 }
 #pragma mark--UITableViewDelegate
 - (void)didReceiveMemoryWarning {

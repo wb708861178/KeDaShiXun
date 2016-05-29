@@ -120,7 +120,7 @@
 - (CGFloat)tableView:(UITableView *)tableView estimatedHeightForRowAtIndexPath:(NSIndexPath *)indexPath NS_AVAILABLE_IOS(7_0)
 {
    
-    return 0;
+    return 1000;
 
 }
 
