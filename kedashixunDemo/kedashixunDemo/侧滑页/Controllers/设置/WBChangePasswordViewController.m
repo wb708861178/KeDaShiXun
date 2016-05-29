@@ -102,18 +102,51 @@
 - (void)ensureBtn
 {
     //先判断原始密码是否正确
-    NSString *deleteSapceNewStr = [self.oldPwdTextField.text stringByReplacingOccurrencesOfString:@" " withString:@""];
-    if ([deleteSapceNewStr isEqualToString:@""] ) {
+    NSString *deleteSapceOldPwdStr = [self.oldPwdTextField.text stringByReplacingOccurrencesOfString:@" " withString:@""];
+    if ([deleteSapceOldPwdStr isEqualToString:@""] ) {
         NSLog(@"请输入密码");
         return;
     }
     
-    if (![deleteSapceNewStr isEqualToString:[WBUserInfo share].password]) {
+    if (![deleteSapceOldPwdStr isEqualToString:[WBUserInfo share].password]) {
         NSLog(@"原始密码不正确");
         return;
     }
     
-   
+    NSString *deleteSapceNewPwdStr = [self.freshPwdTextField.text stringByReplacingOccurrencesOfString:@" " withString:@""];
+    
+    if ([deleteSapceNewPwdStr isEqualToString:@""] ) {
+        NSLog(@"请输入新密码");
+        return;
+    }
+    
+    if ([deleteSapceNewPwdStr isEqualToString:deleteSapceOldPwdStr] ) {
+        NSLog(@"新密码和原始密码不能一样");
+        return;
+    }
+    
+    
+    
+    NSString *deleteSapceEnsureNewPwdStr = [self.ensurePwdTextField.text stringByReplacingOccurrencesOfString:@" " withString:@""];
+    if (![deleteSapceNewPwdStr isEqualToString:deleteSapceEnsureNewPwdStr] ) {
+        NSLog(@"新密码不一致");
+        return;
+    }
+
+    NSDictionary *updatePwdParams = @{@"userid":[NSString stringWithFormat:@"%d",[WBUserInfo share].userid],@"pwd":self.freshPwdTextField.text};
+    [WBNetworking networkRequstWithNetworkRequestMethod:GetNetworkRequest networkRequestStyle:NetType_getUpdateUserPwd params:updatePwdParams successBlock:^(id returnData) {
+        if ([returnData[@"status"] intValue] == 200) {
+            [[WBUserInfo share] saveUserInfoWithUserDict:returnData[@"data"][0] ];
+            
+           
+            [self.navigationController.navigationController popToRootViewControllerAnimated:YES];
+             [self.navigationController popToRootViewControllerAnimated:YES];
+        }
+        
+    } failureBlock:^(NSError *error) {
+        NSLog(@"%@",error);
+    }];
+    
     
     
     

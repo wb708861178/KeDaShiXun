@@ -47,6 +47,20 @@
             [tempParams setObject:@"getUpdateMotto" forKey:@"act"];
         }
             break;
+        case NetType_getUpdateUserPwd:
+        {
+            [tempParams setObject:@"getUpdateUserPwd" forKey:@"act"];
+        }
+            break;
+         
+            
+            
+            
+            
+            
+            
+            
+            
         case NetType_getKedamessage:
         {
             [tempParams setObject:@"getKedamessage" forKey:@"act"];

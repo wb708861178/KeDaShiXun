@@ -176,7 +176,8 @@
 #pragma mark---按钮单击事件
 - (void)logoutBtn
 {
-    NSLog(@"退出");
+    [self.navigationController.navigationController popToRootViewControllerAnimated:YES];
+    [self.navigationController popToRootViewControllerAnimated:NO];
 }
 
 

@@ -22,6 +22,7 @@ typedef enum {
     NetType_getUpdateNickname,//修改昵称
     NetType_getUpdateSex,//修改性别
     NetType_getUpdateMotto,//修改签名
+    NetType_getUpdateUserPwd,//修改密码
     
     
     NetType_getKedamessage,//科大时讯
