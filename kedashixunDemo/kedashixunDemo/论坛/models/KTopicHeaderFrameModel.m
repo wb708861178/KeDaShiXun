@@ -16,17 +16,14 @@
 
 @implementation KTopicHeaderFrameModel
 
-- (instancetype)initWithDict:(NSDictionary *)dict{
+- (instancetype)initWithTopicModel:(KTopicModel *)topicModel{
     
     if (self = [super init]) {
         
-        self.topicModel = [KTopicModel mj_objectWithKeyValues:dict];
-        
+        self.topicModel = topicModel;
     }
     return self;
 }
-
-
 
 
 - (void)setTopicModel:(KTopicModel *)topicModel{

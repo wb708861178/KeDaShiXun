@@ -8,6 +8,8 @@
 
 #import "KTopicCell.h"
 #import <UIImageView+WebCache.h>
+#import "UIColor+HexColor.h"
+
 
 @interface KTopicCell ()
 
@@ -83,16 +85,17 @@
         _viewCountlbl.font = [UIFont systemFontOfSize:12];
         [self addSubview:_viewCountlbl];
 
-        _collectBtn = [[UIButton alloc] init];
-        [_collectBtn setImage:[UIImage imageNamed:@"shoucang"] forState:UIControlStateNormal];
-        [self addSubview:_collectBtn];
-
         _praiseBtn = [[UIButton alloc] init];
         [_praiseBtn setImage:[UIImage imageNamed:@"dianzan"] forState:UIControlStateNormal];
+        [_praiseBtn setTitleColor:[UIColor colorWithHexString:@"#666666"] forState:UIControlStateNormal];
+        _praiseBtn.titleLabel.font = [UIFont systemFontOfSize:15];
         [self addSubview:_praiseBtn];
 
         _commentBtn = [[UIButton alloc] init];
         [_commentBtn setImage:[UIImage imageNamed:@"pinglun"] forState:UIControlStateNormal];
+        [_commentBtn setTitleColor:[UIColor colorWithHexString:@"#666666"] forState:UIControlStateNormal];
+        _commentBtn.titleLabel.font = [UIFont systemFontOfSize:15];
+
         [self addSubview:_commentBtn];
 
         
@@ -109,6 +112,8 @@
     KTopicModel *topicModel = topicFrameModel.topicModel;
     
     _iconImgView.frame = topicFrameModel.iconFrame;
+    _iconImgView.layer.cornerRadius = _iconImgView.frame.size.width/2;
+    _iconImgView.layer.masksToBounds = YES;
     [_iconImgView sd_setImageWithURL:[NSURL URLWithString:topicModel.iconName]];    
 
     _namelbl.frame = topicFrameModel.nameFrame;
@@ -160,12 +165,18 @@
 
     _viewCountlbl.frame = topicFrameModel.viewCountFrame;
     _viewCountlbl.text = [NSString stringWithFormat:@"%@人浏览",topicModel.viewCount];
-    _collectBtn.frame = topicFrameModel.collectFrame;
+
     _praiseBtn.frame = topicFrameModel.praiseFrame;
+    [_praiseBtn setTitle:topicModel.supportnum forState:UIControlStateNormal];
+    
     _commentBtn.frame = topicFrameModel.commentFrame;
 }
 
-
+- (void)setCommentCount:(NSString *)commentCount{
+    
+    _commentCount = commentCount;
+    [_commentBtn setTitle:commentCount forState:UIControlStateNormal];
+}
 
 - (void)prepareForReuse{
     

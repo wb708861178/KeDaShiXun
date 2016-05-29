@@ -16,7 +16,7 @@
 @property (nonatomic, strong) KTopicFrameModel *topicFrameModel;
 
 
-
+@property (nonatomic, copy) NSString *commentCount;
 
 
 @end

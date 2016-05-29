@@ -28,7 +28,6 @@
 
 
 @property (nonatomic, readonly) CGRect viewCountFrame;
-@property (nonatomic, readonly) CGRect collectFrame;
 @property (nonatomic, readonly) CGRect praiseFrame;
 @property (nonatomic, readonly) CGRect commentFrame;
 @property (nonatomic, readonly) CGFloat cellHeight;

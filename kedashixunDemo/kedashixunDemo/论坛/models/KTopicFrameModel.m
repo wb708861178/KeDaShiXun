@@ -46,6 +46,7 @@
     CGSize contentSize = [topicModel.content boundingRectWithSize:MaxSize options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName:[UIFont systemFontOfSize:14]} context:nil].size;
     _contentFrame = CGRectMake(space, CGRectGetMaxY(_iconFrame)+space, contentSize.width, contentSize.height);
     
+    
     //如果有图 则计算图片Frame
     if (topicModel.imagesUrlArr.count) {
         
@@ -85,8 +86,8 @@
     CGFloat btnW = 40;
     CGFloat btnY = CGRectGetMidY(_viewCountFrame)-btnH/2;
     _commentFrame = CGRectMake(kWidth-space-btnW, btnY, btnW, btnH);
-    _praiseFrame = CGRectMake(kWidth-space-btnW*2, btnY, btnW, btnH);
-    _collectFrame = CGRectMake(kWidth-space-btnW*3, btnY, btnW, btnH);
+    _praiseFrame = CGRectMake(kWidth-space-btnW*2-margin, btnY, btnW, btnH);
+
     
     _cellHeight = CGRectGetMaxY(_commentFrame)+space;
 }

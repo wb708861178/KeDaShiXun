@@ -114,8 +114,16 @@
     [self.navigationController pushViewController:registerVC animated:YES];
 }
 - (IBAction)qqBtnAction:(UIButton *)sender {
+    
+    
+    
 }
 - (IBAction)sinaBtnAction:(UIButton *)sender {
+    
+    
+    
+    
+    
 }
 
 

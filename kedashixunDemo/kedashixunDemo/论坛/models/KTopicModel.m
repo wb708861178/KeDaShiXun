@@ -22,8 +22,11 @@
         self.location = dict[@"place"];
         self.content = dict[@"content"];
         self.viewCount = dict[@"looknum"];
-        self.supportnum = dict[@"supportnum"];
-        self.imagesUrlArr = [dict[@"images"] componentsSeparatedByString:@","];
+        self.supportnum = [NSString stringWithFormat:@" %@",dict[@"supportnum"]];
+        if (![dict[@"images"] isEqualToString:@""]) {
+             self.imagesUrlArr = [dict[@"images"] componentsSeparatedByString:@","];
+        }
+       
     }
     
     return self;

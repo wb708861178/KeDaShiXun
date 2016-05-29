@@ -14,5 +14,7 @@
 
 @property (nonatomic, strong) KTopicHeaderFrameModel *topicHeaderFrameModel;
 
+@property (nonatomic, assign) NSUInteger commentCount;
+
 @property (nonatomic, copy) void(^showImageViewer)();
 @end

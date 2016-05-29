@@ -17,7 +17,7 @@
 #import "UIBarButtonItem+WBCustomButton.h"
 #import "KPublishVC.h"
 #import "WBNetworking.h"
-
+#import "WBUserInfo.h"
 
 @interface WBForumViewController () <UITableViewDataSource,UITableViewDelegate,KUISegmentedControlDelegate>
 
@@ -39,7 +39,7 @@
 //默认选中第0个 全部帖子
 @property (nonatomic, assign) NSInteger currentIndex;
 
-
+@property (nonatomic, strong) NSMutableArray *commentNumArr;
 @end
 
 @implementation WBForumViewController
@@ -71,7 +71,7 @@
             [self.topicsArr addObject:topicFrame];
         }
         
-        [self.allTopicTV reloadData];
+        [self commentCountWithTV:self.allTopicTV];
         
     } failureBlock:^(NSError *error) {
         
@@ -83,7 +83,7 @@
 //精品帖子
 - (void)goodTopicData{
     
-    [WBNetworking networkRequstWithNetworkRequestMethod:GetNetworkRequest networkRequestStyle:NetType_getForum params:nil successBlock:^(id returnData) {
+    [WBNetworking networkRequstWithNetworkRequestMethod:GetNetworkRequest networkRequestStyle:NetType_getForum params:@{@"uid":[NSString stringWithFormat:@"%d",[WBUserInfo share].userid]} successBlock:^(id returnData) {
         
         self.topicsArr = [NSMutableArray array];
         for (NSDictionary *dict in returnData[@"data"]) {
@@ -103,7 +103,7 @@
             
         }];
         self.topicsArr = array;
-        [self.goodTopicTV reloadData];
+        [self commentCountWithTV:self.goodTopicTV];
         
     } failureBlock:^(NSError *error) {
         
@@ -113,8 +113,46 @@
 
 - (void)jionedTopicData{
     
+    WBUserInfo *userInfo = [WBUserInfo share];
+        [WBNetworking networkRequstWithNetworkRequestMethod:GetNetworkRequest networkRequestStyle:NetType_getForumPartIn params:@{@"userid":[NSString stringWithFormat:@"%d",userInfo.userid]} successBlock:^(id returnData) {
+            self.topicsArr = [NSMutableArray array];
+            for (NSDictionary *dict in returnData[@"data"]) {
+                KTopicFrameModel *topicFrame = [[KTopicFrameModel alloc] initWithDict:dict];
+                [self.topicsArr addObject:topicFrame];
+            }
+
+            [self commentCountWithTV:self.joinedTopicTV];
+
+        
+    } failureBlock:^(NSError *error) {
+        
+    }];
     
+}
+
+
+- (void)commentCountWithTV:(UITableView *)tv{
     
+    self.commentNumArr = [NSMutableArray array];
+    for (int i = 0; i< self.topicsArr.count; i++) {
+        KTopicFrameModel *frameModel = self.topicsArr[i];
+        [WBNetworking networkRequstWithNetworkRequestMethod:GetNetworkRequest networkRequestStyle:NetType_getComment params:@{@"fid":frameModel.topicModel.topicId} successBlock:^(id returnData) {
+            NSString *str;
+            if ([returnData[@"data"] count] == 0) {
+                
+                str = @" 0";
+            }
+            
+            str = [NSString stringWithFormat:@" %ld",[returnData[@"data"] count]];
+            [self.commentNumArr addObject:str];
+            [tv reloadData];
+            
+        } failureBlock:^(NSError *error) {
+            
+        }];
+
+        
+    }
 }
 
 #pragma mark --- KUISegmentedControlDelegate
@@ -139,7 +177,7 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     
     
-    return self.topicsArr.count;
+    return self.commentNumArr.count;
 }
 
 
@@ -154,6 +192,7 @@
     }
     
     cell.topicFrameModel = self.topicsArr[indexPath.row];
+    cell.commentCount = [NSString stringWithFormat:@"%@",self.commentNumArr[indexPath.row]];
     return cell;
 }
 
@@ -164,7 +203,7 @@
     topicDetailVC.hidesBottomBarWhenPushed = YES;
     
     //------数据 传递
-    topicDetailVC.topicHeaderFrameModel.topicModel = [self.topicsArr[indexPath.row] topicModel];
+    topicDetailVC.topicHeaderFrameModel = [[KTopicHeaderFrameModel alloc] initWithTopicModel:[self.topicsArr[indexPath.row] topicModel]];
     
     // -------------
     [self.navigationController pushViewController:topicDetailVC animated:YES];
@@ -183,8 +222,8 @@
 
 #pragma mark ---  发表主题
 - (void)publishTopic{
-//    
-    KPublishVC *vc = [[KPublishVC alloc] init];
+    
+    KPublishVC *vc = [[KPublishVC alloc] initWithNibName:@"KPublishVC" bundle:nil];
     
     [self.navigationController pushViewController:vc animated:YES];
 }

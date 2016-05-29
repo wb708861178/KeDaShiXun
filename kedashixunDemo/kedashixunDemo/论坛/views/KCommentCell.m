@@ -25,6 +25,9 @@
 
 - (void)awakeFromNib {
     // Initialization code
+    _iconImgView.layer.cornerRadius = _iconImgView.frame.size.width/2;
+    _iconImgView.layer.masksToBounds = YES;
+    
 }
 
 
@@ -33,15 +36,10 @@
     _commentModel = commentModel;
     
     [_iconImgView sd_setImageWithURL:[NSURL URLWithString:commentModel.icon]];
-    //----------Test
     
-    _iconImgView.image = [UIImage imageNamed:@"personal_icon"];
-    
-    //-----------
-    
-    _namelbl.text = commentModel.name;
-    _timelbl.text = commentModel.time;
-    _commentContent.text = commentModel.commentContent;
+    _namelbl.text = commentModel.nickname;
+    _timelbl.text = commentModel.date;
+    _commentContent.text = commentModel.content;
     
 }
 
