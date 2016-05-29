@@ -111,7 +111,11 @@
             <nil key="simulatedStatusBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <connections>
+                <outlet property="praiseImageView" destination="GMS-li-Bzv" id="O2T-WC-Aqt"/>
+                <outlet property="praiseLabel" destination="C3I-B0-tm6" id="jsI-yR-Ye5"/>
                 <outlet property="praiseView" destination="jwa-3t-gUi" id="bz4-ut-z46"/>
+                <outlet property="shareImageView" destination="6Ba-9B-FX0" id="Hw6-6q-cxr"/>
+                <outlet property="shareLabel" destination="bNb-bO-PNL" id="dxt-VA-yRj"/>
                 <outlet property="shareView" destination="uP8-Ke-xH4" id="YMY-KU-XbC"/>
             </connections>
             <point key="canvasLocation" x="470.5" y="116"/>

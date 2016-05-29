@@ -160,7 +160,11 @@
             [tempParams setObject:@"getUpdatesupportnum" forKey:@"act"];
         }
             break;
-         
+        case  NetType_getAddforumcomment://增加评论
+        {
+            [tempParams setObject:@"getAddforumcomment" forKey:@"act"];
+        }
+            break;
             
            
         
