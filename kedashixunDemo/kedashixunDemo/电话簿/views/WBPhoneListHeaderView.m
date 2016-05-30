@@ -26,7 +26,7 @@
     self = [super initWithReuseIdentifier:reuseIdentifier];
     if (self) {
         
-        self.contentView.backgroundColor = kBtnSelectedColor;
+        self.contentView.backgroundColor = kBtnDefaultColor;
         _titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(40,(50 - 20) * 0.5 , 200, 20)];
         _titleLabel.textColor = [UIColor whiteColor];
         

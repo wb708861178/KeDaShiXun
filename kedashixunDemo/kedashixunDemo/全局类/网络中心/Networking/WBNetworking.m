@@ -22,6 +22,12 @@
 {
     NSMutableDictionary *tempParams = [NSMutableDictionary dictionaryWithDictionary:params];
     switch (networkRequestStyle) {
+           
+        case  NetType_getIsRegiste://是否注册
+        {
+            [tempParams setObject:@"getIsRegiste" forKey:@"act"];
+        }
+            break;
         case NetType_getRegister:
         {
             [tempParams setObject:@"getRegister" forKey:@"act"];

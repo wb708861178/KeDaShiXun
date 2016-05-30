@@ -248,7 +248,7 @@
     }
     else
     {
-        return YES; //暂时不做检查
+        return NO; //暂时不做检查
     }
 }
 

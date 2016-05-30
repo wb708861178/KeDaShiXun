@@ -11,8 +11,22 @@
 
 @interface WBTool : NSObject
 
+/**
+ *  去除字符串里的空格
+ *
+ *  @param string 原始字符串
+ *
+ *  @return 新的字符串
+ */
++(NSString *)deleteSapceWithString:(NSString *)string;
 
-
+/**
+ *  判断是不是手机号
+ *
+ *  @param mobileNum 手机号
+ *
+ */
++ (BOOL)isMobileNumber:(NSString *)mobileNum;
 
 
 

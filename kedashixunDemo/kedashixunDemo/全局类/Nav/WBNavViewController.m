@@ -21,6 +21,8 @@
     [super viewDidLoad];
     self.navigationBar.barTintColor = kMainColor;
     
+//    self.navigationBar.translucent = NO;
+    
   
 }
 
