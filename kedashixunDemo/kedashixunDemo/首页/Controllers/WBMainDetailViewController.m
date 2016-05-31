@@ -191,7 +191,7 @@
             self.kedamCollectionStatus = [WBKedamCollectionStatus mj_objectWithKeyValues:returnData[@"data"][0]];
             if ([self.kedamCollectionStatus.collectionstatus intValue] == 1) {
                 
-                self.bottomView.praiseImageView.backgroundColor = [UIColor redColor];
+                self.bottomView.praiseImageView.image = [UIImage imageNamed:@"shoucang_selected"];
                 self.bottomView.praiseLabel.text = @"已收藏";
                 self.bottomView.praiseView.userInteractionEnabled = NO;
             }
