@@ -22,6 +22,12 @@
 {
     NSMutableDictionary *tempParams = [NSMutableDictionary dictionaryWithDictionary:params];
     switch (networkRequestStyle) {
+           
+        case  NetType_getIsRegiste://是否注册
+        {
+            [tempParams setObject:@"getIsRegiste" forKey:@"act"];
+        }
+            break;
         case NetType_getRegister:
         {
             [tempParams setObject:@"getRegister" forKey:@"act"];
@@ -47,6 +53,20 @@
             [tempParams setObject:@"getUpdateMotto" forKey:@"act"];
         }
             break;
+        case NetType_getUpdateUserPwd:
+        {
+            [tempParams setObject:@"getUpdateUserPwd" forKey:@"act"];
+        }
+            break;
+         
+            
+            
+            
+            
+            
+            
+            
+            
         case NetType_getKedamessage:
         {
             [tempParams setObject:@"getKedamessage" forKey:@"act"];
@@ -160,7 +180,11 @@
             [tempParams setObject:@"getUpdatesupportnum" forKey:@"act"];
         }
             break;
-         
+        case  NetType_getAddforumcomment://增加评论
+        {
+            [tempParams setObject:@"getAddforumcomment" forKey:@"act"];
+        }
+            break;
             
            
         

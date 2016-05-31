@@ -17,11 +17,13 @@ typedef enum{
 typedef enum {
    
 
+    NetType_getIsRegiste,//是否注册
     NetType_getRegister,//注册
     NetType_getLogin,//登录
     NetType_getUpdateNickname,//修改昵称
     NetType_getUpdateSex,//修改性别
     NetType_getUpdateMotto,//修改签名
+    NetType_getUpdateUserPwd,//修改密码
     
     
     NetType_getKedamessage,//科大时讯
@@ -41,7 +43,7 @@ typedef enum {
     NetType_getUpdateForumSupportStatus,//修改论坛点赞状态
     NetType_getAddforum,//增加论坛帖子
     NetType_getUpdatesupportnum,//修改论坛点赞量
-    
+    NetType_getAddforumcomment,//增加评论
     
     NetType_getPhonelist,//电话簿
     

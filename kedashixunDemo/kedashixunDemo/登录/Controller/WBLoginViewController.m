@@ -17,6 +17,8 @@
 #import "WBUserInfo.h"
 #import "WBNetworking.h"
 #import <MJExtension.h>
+#import "WBTool.h"
+#import "UIAlertTool.h"
 @interface WBLoginViewController ()
 @property (nonatomic, strong) RESideMenu *sideMenu;
 
@@ -79,30 +81,33 @@
 
 - (IBAction)loginBtnAction:(UIButton *)sender {
     
-    NSDictionary *params = @{@"account":self.phoneNumTextField.text,@"password":self.passwordTextField.text};
-    [WBNetworking networkRequstWithNetworkRequestMethod:GetNetworkRequest networkRequestStyle:NetType_getLogin params:params successBlock:^(id returnData) {
+    
+    
+    
+    NSString *deleteSpacePhoneStr = [self.phoneNumTextField.text stringByReplacingOccurrencesOfString:@" " withString:@""];
+     NSString *deleteSpacePwdStr = [self.passwordTextField.text stringByReplacingOccurrencesOfString:@" " withString:@""];
+    if ([deleteSpacePhoneStr isEqualToString:@""]) {
         
-        switch ([returnData[@"status"] intValue]) {
-            case 200:{
-                [[WBUserInfo share] saveUserInfoWithUserDict:returnData[@"data"][0]];
-                [self.navigationController pushViewController:self.sideMenu animated:YES];
-            }
-                break;
-            case 400:{
-                NSLog(@"账号或密码不对");
-            }
-                break;
-            default:
-                break;
-        }
-       
-
-    } failureBlock:^(NSError *error) {
-         NSLog(@"------error = %@",error);
-    }];
+        [[UIAlertTool alloc] showAlertView:self title:@"提示信息" message:@"账号为空" cancelButtonTitle:@"取消" otherButtonTitle:@"确定" confirm:nil cancle:nil];
+        return;
+    }
     
+    if ([deleteSpacePwdStr isEqualToString:@""]) {
+        NSLog(@"密码为空");
+         [[UIAlertTool alloc] showAlertView:self title:@"提示信息" message:@"密码为空" cancelButtonTitle:@"取消" otherButtonTitle:@"确定" confirm:nil cancle:nil];
+        return;
+    }
     
+    if ( ![WBTool isMobileNumber:deleteSpacePhoneStr]&& deleteSpacePhoneStr.length != 11) {
+        NSLog(@"输入手机号不正确");
+        [[UIAlertTool alloc] showAlertView:self title:@"提示信息" message:@"输入手机号不正确" cancelButtonTitle:@"取消" otherButtonTitle:@"确定" confirm:^{
+            self.phoneNumTextField.text = nil;
+        } cancle:nil];
+        return;
+    }
+   
     
+    [self requestWithLogin];
    
 }
 - (IBAction)forgetBtnAction:(UIButton *)sender {
@@ -127,10 +132,62 @@
 }
 
 
+
+
+#pragma mark---请求网络
+
+
+- (void)requestWithLogin
+{
+    NSDictionary *params = @{@"account":self.phoneNumTextField.text,@"password":self.passwordTextField.text};
+    [WBNetworking networkRequstWithNetworkRequestMethod:GetNetworkRequest networkRequestStyle:NetType_getLogin params:params successBlock:^(id returnData) {
+        
+        switch ([returnData[@"status"] intValue]) {
+            case 200:{
+                [[WBUserInfo share] saveUserInfoWithUserDict:returnData[@"data"][0]];
+                [self.navigationController pushViewController:self.sideMenu animated:YES];
+            }
+                break;
+            case 400:{
+                [[UIAlertTool alloc] showAlertView:self title:@"提示信息" message:@"密码不正确" cancelButtonTitle:@"取消" otherButtonTitle:@"确定" confirm:^{
+                    self.passwordTextField.text = nil;
+                } cancle:nil];
+            }
+                break;
+            default:
+                break;
+        }
+        
+        
+    } failureBlock:^(NSError *error) {
+        NSLog(@"------error = %@",error);
+    }];
+    
+
+}
+
+
+
+#pragma mark---键盘处理
+
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
+{
+    [self.phoneNumTextField resignFirstResponder];
+    [self.passwordTextField resignFirstResponder];
+}
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+
+
+
+
+
+
+
 
 /*
 #pragma mark - Navigation

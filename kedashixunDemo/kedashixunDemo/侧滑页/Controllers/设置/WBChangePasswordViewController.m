@@ -9,7 +9,13 @@
 #import "WBChangePasswordViewController.h"
 
 #import "Const.h"
+#import "WBUserInfo.h"
+#import "WBNetworking.h"
+#import <MJExtension.h>
 @interface WBChangePasswordViewController ()
+@property (nonatomic, strong) UITextField *oldPwdTextField ;
+@property (nonatomic, strong) UITextField *freshPwdTextField;
+@property (nonatomic, strong) UITextField *ensurePwdTextField ;
 
 @end
 
@@ -38,7 +44,7 @@
     oldPwdTextField.placeholder = @"输入原始密码";
 //    oldPwdTextField.backgroundColor = kBGDefaultColor;
     [oldPwdView addSubview:oldPwdTextField];
-    
+    self.oldPwdTextField = oldPwdTextField;
     
     UIView *newPwdView = [[UIView alloc] initWithFrame:CGRectMake(0, CGRectGetMaxY(oldPwdView.frame)+ 1 , kWidth, oldPwdView.frame.size.height)];
     newPwdView.backgroundColor = [UIColor whiteColor];
@@ -53,7 +59,7 @@
     newPwdTextField.placeholder = @"输入新密码";
     //    oldPwdTextField.backgroundColor = kBGDefaultColor;
     [newPwdView addSubview:newPwdTextField];
-    
+    self.freshPwdTextField = newPwdTextField;
     
     
     UIView *ensurePwdView = [[UIView alloc] initWithFrame:CGRectMake(0, CGRectGetMaxY(newPwdView.frame) + 1, kWidth, oldPwdView.frame.size.height)];
@@ -69,7 +75,7 @@
     ensurePwdTextField.placeholder = @"再次输入新密码";
     //    oldPwdTextField.backgroundColor = kBGDefaultColor;
     [ensurePwdView addSubview:ensurePwdTextField];
-    
+    self.ensurePwdTextField = ensurePwdTextField;
     
    
     
@@ -95,7 +101,55 @@
 
 - (void)ensureBtn
 {
-    NSLog(@"确认");
+    //先判断原始密码是否正确
+    NSString *deleteSapceOldPwdStr = [self.oldPwdTextField.text stringByReplacingOccurrencesOfString:@" " withString:@""];
+    if ([deleteSapceOldPwdStr isEqualToString:@""] ) {
+        NSLog(@"请输入密码");
+        return;
+    }
+    
+    if (![deleteSapceOldPwdStr isEqualToString:[WBUserInfo share].password]) {
+        NSLog(@"原始密码不正确");
+        return;
+    }
+    
+    NSString *deleteSapceNewPwdStr = [self.freshPwdTextField.text stringByReplacingOccurrencesOfString:@" " withString:@""];
+    
+    if ([deleteSapceNewPwdStr isEqualToString:@""] ) {
+        NSLog(@"请输入新密码");
+        return;
+    }
+    
+    if ([deleteSapceNewPwdStr isEqualToString:deleteSapceOldPwdStr] ) {
+        NSLog(@"新密码和原始密码不能一样");
+        return;
+    }
+    
+    
+    
+    NSString *deleteSapceEnsureNewPwdStr = [self.ensurePwdTextField.text stringByReplacingOccurrencesOfString:@" " withString:@""];
+    if (![deleteSapceNewPwdStr isEqualToString:deleteSapceEnsureNewPwdStr] ) {
+        NSLog(@"新密码不一致");
+        return;
+    }
+
+    NSDictionary *updatePwdParams = @{@"userid":[NSString stringWithFormat:@"%d",[WBUserInfo share].userid],@"pwd":self.freshPwdTextField.text};
+    [WBNetworking networkRequstWithNetworkRequestMethod:GetNetworkRequest networkRequestStyle:NetType_getUpdateUserPwd params:updatePwdParams successBlock:^(id returnData) {
+        if ([returnData[@"status"] intValue] == 200) {
+            [[WBUserInfo share] saveUserInfoWithUserDict:returnData[@"data"][0] ];
+            
+           
+            [self.navigationController.navigationController popToRootViewControllerAnimated:YES];
+             [self.navigationController popToRootViewControllerAnimated:YES];
+        }
+        
+    } failureBlock:^(NSError *error) {
+        NSLog(@"%@",error);
+    }];
+    
+    
+    
+    
 }
 
 - (void)didReceiveMemoryWarning {

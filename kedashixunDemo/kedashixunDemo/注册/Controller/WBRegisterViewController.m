@@ -9,6 +9,8 @@
 #import "WBRegisterViewController.h"
 #import <SMS_SDK/SMSSDK.h>
 #import "WBWriteUserInfoViewController.h"
+#import "UIAlertTool.h"
+#import "WBTool.h"
 
 static int count = 60;
 @interface WBRegisterViewController ()
@@ -36,13 +38,38 @@ static int count = 60;
 
 #pragma mark--按钮单击事件
 - (IBAction)getVertifyBtnAction:(UIButton *)sender {
-    [SMSSDK getVerificationCodeByMethod:SMSGetCodeMethodSMS phoneNumber:self.phoneNumTextField.text zone:@"86" customIdentifier:nil result:^(NSError *error) {
+   NSString *newPhone = [WBTool deleteSapceWithString:self.phoneNumTextField.text];
+    
+    if ([newPhone isEqualToString:@""]) {
+        [[UIAlertTool alloc] showAlertView:self title:@"提示信息" message:@"手机号为空" cancelButtonTitle:@"取消" otherButtonTitle:@"确定" confirm:nil cancle:nil];
+        return;
+    }
+    if (newPhone.length != 11) {
+        [[UIAlertTool alloc] showAlertView:self title:@"提示信息" message:@"手机号为11位" cancelButtonTitle:@"取消" otherButtonTitle:@"确定" confirm:^{
+            
+        } cancle:nil];
+        return;
+
+    }
+    
+    
+    if (newPhone.length == 11&&(![WBTool isMobileNumber:newPhone])  ) {
+       [[UIAlertTool alloc] showAlertView:self title:@"提示信息" message:@"手机号错误" cancelButtonTitle:@"取消" otherButtonTitle:@"确定" confirm:^{
+          
+       } cancle:nil];
+        return;
+    }
+    
+    
+    
+    
+    [SMSSDK getVerificationCodeByMethod:SMSGetCodeMethodSMS phoneNumber:newPhone zone:@"86" customIdentifier:nil result:^(NSError *error) {
         if (error) {
             NSLog(@"得不到验证码");
-//            [self initAlertControllerWithMessage:@"手机号不对" withObjectFlag:1];
-            
+            [[UIAlertTool alloc] showAlertView:self title:@"提示信息" message:@"手机号错误" cancelButtonTitle:@"取消" otherButtonTitle:@"确定" confirm:nil cancle:nil];
+            return ;
         }else{
-            NSLog(@"得到验证码");
+            
             [self initTimer];
         }
         
@@ -54,21 +81,25 @@ static int count = 60;
 
 - (IBAction)registerBtnAction:(UIButton *)sender {
     
-    [SMSSDK commitVerificationCode:self.vertifyCodeTextField.text phoneNumber:self.phoneNumTextField.text zone:@"86" result:^(NSError *error) {
+    NSString *newCode = [WBTool deleteSapceWithString:self.vertifyCodeTextField.text];
+  
+    if ([newCode isEqualToString:@""]) {
+        [[UIAlertTool alloc] showAlertView:self title:@"提示信息" message:@"验证码不能为空" cancelButtonTitle:@"取消" otherButtonTitle:@"确定" confirm:nil cancle:nil];
+        return;
+    }
+    
+    
+    [SMSSDK commitVerificationCode:newCode phoneNumber:[WBTool deleteSapceWithString:self.phoneNumTextField.text] zone:@"86" result:^(NSError *error) {
         
         if (error) {
             NSLog(@"验证码不对");
-//             [self initAlertControllerWithMessage:@"验证码不对" withObjectFlag:2];
-            
-            WBWriteUserInfoViewController *writeUserInfoVC = [[WBWriteUserInfoViewController alloc] initWithNibName:@"WBWriteUserInfoViewController" bundle:nil];
-            [self.navigationController pushViewController:writeUserInfoVC animated:YES];
-            writeUserInfoVC.passPhoneNum = self.phoneNumTextField.text;
+            [[UIAlertTool alloc]showAlertView:self title:@"提示信息" message:@"验证码不对" cancelButtonTitle:@"取消" otherButtonTitle:@"确定" confirm:nil cancle:nil];
             
         }else{
             NSLog(@"验证码是对的");
             WBWriteUserInfoViewController *writeUserInfoVC = [[WBWriteUserInfoViewController alloc] initWithNibName:@"WBWriteUserInfoViewController" bundle:nil];
             [self.navigationController pushViewController:writeUserInfoVC animated:YES];
-             writeUserInfoVC.passPhoneNum = self.phoneNumTextField.text;
+             writeUserInfoVC.passPhoneNum = [WBTool deleteSapceWithString:self.phoneNumTextField.text];
         }
         
     }];
@@ -104,32 +135,6 @@ static int count = 60;
 
 
 
-#pragma mark---弹出框
-
-//验证码错误则弹出提示框
-- (void)initAlertControllerWithMessage:(NSString *)message withObjectFlag:(NSInteger)flag
-{
-    UIAlertAction *alertActionCancle = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
-        
-        
-        
-    }];
-    UIAlertAction *alertActionEnsure = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
-        if (flag == 1) {
-            self.phoneNumTextField.text = nil;
-        }
-        if (flag == 2) {
-            self.vertifyCodeTextField.text = nil;
-        }
-        
-    }];
-    UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"提示" message:message preferredStyle:UIAlertControllerStyleAlert];
-    [alertController addAction:alertActionCancle];
-    [alertController addAction:alertActionEnsure];
-    [self presentViewController:alertController animated:YES completion:^{
-        
-    }];
-}
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
    

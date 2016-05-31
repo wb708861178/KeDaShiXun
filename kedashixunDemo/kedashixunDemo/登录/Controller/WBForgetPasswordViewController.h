@@ -10,4 +10,11 @@
 
 @interface WBForgetPasswordViewController : WBBaseViewController
 
+@property (weak, nonatomic) IBOutlet UITextField *phoneNumTextField;
+
+@property (weak, nonatomic) IBOutlet UITextField *vertifyCodeTextField;
+@property (weak, nonatomic) IBOutlet UIButton *getVertifyCodeBtn;
+
+@property (weak, nonatomic) IBOutlet UITextField *resetPwdTextField;
+
 @end

@@ -28,10 +28,10 @@
                                 <constraint firstAttribute="width" constant="16" id="qAj-h9-jY1"/>
                             </constraints>
                         </imageView>
-                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="请输入手机号码" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="j1U-nT-V1Q">
+                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="请输入手机号码" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="j1U-nT-V1Q">
                             <rect key="frame" x="36" y="0.0" width="395" height="50"/>
                             <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                            <textInputTraits key="textInputTraits"/>
+                            <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                         </textField>
                     </subviews>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -54,10 +54,10 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IWb-KN-OzO" userLabel="passwordView">
                     <rect key="frame" x="20" y="215" width="431" height="50"/>
                     <subviews>
-                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="请输入验证码" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vGz-Rv-bfG">
+                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="请输入验证码" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vGz-Rv-bfG">
                             <rect key="frame" x="36" y="0.0" width="265" height="50"/>
                             <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                            <textInputTraits key="textInputTraits"/>
+                            <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                         </textField>
                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="password" translatesAutoresizingMaskIntoConstraints="NO" id="xXH-5D-ZFR">
                             <rect key="frame" x="15" y="15" width="16" height="20"/>

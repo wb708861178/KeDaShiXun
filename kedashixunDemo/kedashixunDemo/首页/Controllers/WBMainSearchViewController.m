@@ -54,6 +54,10 @@
 - (void)viewWillDisappear:(BOOL)animated
 {
     [super viewWillDisappear:animated];
+    if (self.relatedSearchTableView) {
+        [self.relatedSearchTableView removeFromSuperview];
+        self.relatedSearchTableView = nil;
+    }
     
 }
 

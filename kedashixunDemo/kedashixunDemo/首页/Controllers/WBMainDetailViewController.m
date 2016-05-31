@@ -17,10 +17,13 @@
 #import "WBNetworking.h"
 #import "WBUserInfo.h"
 #import <MJExtension.h>
+#import "WBKedamCollectionStatus.h"
 
 
 @interface WBMainDetailViewController ()
 @property (nonatomic, strong) UIScrollView *mainScrollView;
+@property (nonatomic, strong) WBKedamCollectionStatus *kedamCollectionStatus;
+@property (nonatomic, strong) WBMainDetailBottomView *bottomView ;
 
 @end
 
@@ -46,7 +49,7 @@
 - (void)viewLayout{
     
     
-    UIScrollView *mainScrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 64, kWidth, kHeight - 50 - 64) ];
+    UIScrollView *mainScrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 64, kWidth, kHeight - 50 - 64)];
     [self.view addSubview:mainScrollView];
     self.mainScrollView = mainScrollView;
     
@@ -122,7 +125,7 @@
     [bottomView.shareView addGestureRecognizer:shareViewTap];
 
     [self.view addSubview:bottomView];
-  
+    self.bottomView = bottomView;
     
    
     //设置mainScroll的内容
@@ -147,10 +150,20 @@
 }
 
 - (void)praiseViewTap:(UITapGestureRecognizer *)praiseViewTap{
+    //改变按钮 的图片和下面view手势可交互
+    self.bottomView.praiseImageView.backgroundColor = [UIColor redColor];
+    self.bottomView.praiseLabel.text = @"已收藏";
+    self.bottomView.praiseView.userInteractionEnabled = NO;
+    //改变收藏状态
+     NSDictionary *updateStatusParams = @{@"uid":[NSString stringWithFormat:@"%d",[WBUserInfo share].userid],@"kid":[NSString stringWithFormat:@"%d",self.kedaMessage.kedamessageid],@"collectionstatus":@"1"};
+    [WBNetworking networkRequstWithNetworkRequestMethod:GetNetworkRequest networkRequestStyle:NetType_getUpdateKedamCollectionStatus params:updateStatusParams successBlock:^(id returnData) {
+        NSLog(@"%@",returnData);
+    } failureBlock:^(NSError *error) {
+        NSLog(@"%@",error);
+    }];
     
     
-    
-    
+    //增加时讯收藏记录
     NSDictionary *params = @{@"kedamid":[NSString stringWithFormat:@"%d",self.kedaMessage.kedamessageid],@"uid":[NSString stringWithFormat:@"%d",[WBUserInfo share].userid]};
     [WBNetworking networkRequstWithNetworkRequestMethod:GetNetworkRequest networkRequestStyle:NetType_getAddKedamcollection params:params successBlock:^(id returnData) {
         NSLog(@"%@",returnData);
@@ -169,10 +182,26 @@
 #pragma mark---请求数据
  - (void)requestWithCollectionStatus
 {
-    
+    //得到收藏状态 如果为空，则需要加入状态
     NSDictionary *params = @{@"uid":[NSString stringWithFormat:@"%d",[WBUserInfo share].userid],@"kid":[NSString stringWithFormat:@"%d",self.kedaMessage.kedamessageid]};
     [WBNetworking networkRequstWithNetworkRequestMethod:GetNetworkRequest networkRequestStyle:NetType_getKedamcollectionstatus params:params successBlock:^(id returnData) {
-        NSLog(@"-----%@",returnData);
+        if ([returnData[@"status"] intValue] == 200) {
+            self.kedamCollectionStatus = [WBKedamCollectionStatus mj_objectWithKeyValues:returnData[@"data"][0]];
+            if ([self.kedamCollectionStatus.collectionstatus intValue] == 1) {
+                
+                self.bottomView.praiseImageView.backgroundColor = [UIColor redColor];
+                self.bottomView.praiseLabel.text = @"已收藏";
+                self.bottomView.praiseView.userInteractionEnabled = NO;
+            }
+
+        }
+        
+        
+        
+        
+        
+        
+        //为空时是400状态
         if ([returnData[@"status"] intValue] == 400) {
              NSDictionary *addStatusParams = @{@"uid":[NSString stringWithFormat:@"%d",[WBUserInfo share].userid],@"kid":[NSString stringWithFormat:@"%d",self.kedaMessage.kedamessageid],@"collectionstatus":@"0"};
             NSLog(@"======%@",addStatusParams);
@@ -182,6 +211,9 @@
             } failureBlock:^(NSError *error) {
                 NSLog(@"%@",error);
             }];
+            
+            
+            
         }
     } failureBlock:^(NSError *error) {
         NSLog(@"%@",error);

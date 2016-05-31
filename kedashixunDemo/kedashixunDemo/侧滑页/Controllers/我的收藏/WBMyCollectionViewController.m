@@ -17,6 +17,7 @@
 #import <MJExtension.h>
 #import "WBKedaMessage.h"
 #import "WBUserInfo.h"
+#import "WBMainDetailViewController.h"
 
 @interface WBMyCollectionViewController ()<UITableViewDataSource,UITableViewDelegate>
 @property (nonatomic, strong) UITableView *mainTableView;
@@ -129,7 +130,15 @@
     return 1000;
 }
 
-
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    WBKedaMessage *kedaMessage = self.dataSourceArr[indexPath.row];
+    WBMainDetailViewController *mainDetailVC = [[WBMainDetailViewController alloc] init];
+    mainDetailVC.kedaMessage = kedaMessage;
+    
+    [self.navigationController pushViewController:mainDetailVC animated:YES];
+   
+}
 
 
 
