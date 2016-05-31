@@ -89,11 +89,9 @@
     KTopicModel *topicModel = topicHeaderFrameModel.topicModel;
     
     _iconImgView.frame = topicHeaderFrameModel.iconFrame;
+    _iconImgView.layer.cornerRadius = _iconImgView.frame.size.width/2;
+    _iconImgView.layer.masksToBounds = YES;
     [_iconImgView sd_setImageWithURL:[NSURL URLWithString:topicModel.iconName]];
-    //    ------------------Test
-    
-    _iconImgView.image = [UIImage imageNamed:@"luntan_icon2"];
-    //    ------------------Test
     
     
     _namelbl.frame = topicHeaderFrameModel.nameFrame;

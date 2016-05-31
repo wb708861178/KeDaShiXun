@@ -9,9 +9,15 @@
 #import "WBMyPublishViewController.h"
 #import "KTopicCell.h"
 #import "Const.h"
+#import "WBUserInfo.h"
+#import "WBNetworking.h"
+#import "KTopicDetailVC.h"
+
 
 @interface WBMyPublishViewController ()<UITableViewDataSource,UITableViewDelegate>
 @property (nonatomic, strong) UITableView *mainTableView;
+
+@property (nonatomic, strong) NSMutableArray *topicsArr;
 
 @end
 
@@ -26,7 +32,7 @@
 
 - (void)viewLayout
 {
-    _mainTableView = [[UITableView alloc] initWithFrame:CGRectMake(10, 74, kWidth - 10, kHeight - 64 - 10) style:UITableViewStylePlain];
+    _mainTableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 74, kWidth, kHeight - 64 - 10) style:UITableViewStylePlain];
     
     _mainTableView.delegate = self;
     _mainTableView.dataSource = self;
@@ -34,20 +40,61 @@
     [self.view addSubview:_mainTableView];
 
     [_mainTableView registerClass:[KTopicCell class] forCellReuseIdentifier:@"KTopicCell"];
+
+    [self joinedData];
 }
+
+
+- (void)joinedData{
+    
+    WBUserInfo *userInfo = [WBUserInfo share];
+    [WBNetworking networkRequstWithNetworkRequestMethod:GetNetworkRequest networkRequestStyle:NetType_getForumPartIn params:@{@"userid":[NSString stringWithFormat:@"%d",userInfo.userid]} successBlock:^(id returnData) {
+        self.topicsArr = [NSMutableArray array];
+        for (NSDictionary *dict in returnData[@"data"]) {
+            KTopicFrameModel *topicFrame = [[KTopicFrameModel alloc] initWithDict:dict];
+            [self.topicsArr addObject:topicFrame];
+        }
+        
+        [self.mainTableView reloadData];
+        
+        
+    } failureBlock:^(NSError *error) {
+        
+    }];
+
+}
+
 #pragma mark----UITableViewDataSource
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return 3;
+    return self.topicsArr.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-            KTopicCell *topicCell = [tableView dequeueReusableCellWithIdentifier:@"KTopicCell" forIndexPath:indexPath];
-        return topicCell;
+    KTopicCell *topicCell = [tableView dequeueReusableCellWithIdentifier:@"KTopicCell" forIndexPath:indexPath];
+    topicCell.topicFrameModel = self.topicsArr[indexPath.row];
+    return topicCell;
   
-    
-    return nil;
 }
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+    KTopicFrameModel *topicFrame = self.topicsArr[indexPath.row];
+    return topicFrame.cellHeight;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+    KTopicDetailVC *topicDetail = [[KTopicDetailVC alloc] init];
+    topicDetail.topicHeaderFrameModel = [[KTopicHeaderFrameModel alloc] initWithTopicModel:[self.topicsArr[indexPath.row] topicModel]];
+    
+    [self.navigationController pushViewController:topicDetail animated:YES];
+    
+    
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    
+}
+
 
 #pragma mark----UITableViewDelegate
 

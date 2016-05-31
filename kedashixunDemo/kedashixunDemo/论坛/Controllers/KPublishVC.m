@@ -12,9 +12,10 @@
 #import "Const.h"
 #import "KTextView.h"
 #import "KPhotoView.h"
-
 #import "JKImagePickerController.h"
-
+#import "WBNetworking.h"
+#import "WBUserInfo.h"
+#import "KTools.h"
 
 @interface KPublishVC () <JKImagePickerControllerDelegate>
 
@@ -35,12 +36,19 @@
 
 @implementation KPublishVC
 
+- (void)viewWillAppear:(BOOL)animated{
+    
+    [super viewWillAppear:animated];
+    
+    [_contentTextView becomeFirstResponder];
+}
+
 
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-//    
-//    [self setNavBarTitleWithText:@"发布主题" withFontSize:20 withTextColor:[UIColor whiteColor]];
+    
+    [self setNavBarTitleWithText:@"发布主题" withFontSize:20 withTextColor:[UIColor whiteColor]];
     
     self.navigationItem.leftBarButtonItems = [UIBarButtonItem barButtonItemWithImageName:@"arrow_left"  withHighlightedImageName:nil  withTarget:self withAction:@selector(pop) WithNegativeSpacerWidth:-16];
     
@@ -122,8 +130,23 @@
 
 - (void)publishTopic{
     
-    
-    
+    if (_contentTextView.text.length | (self.assetsArray.count>0)) {
+        
+        NSDictionary *dic = @{@"uid":[NSString stringWithFormat:@"%d",[WBUserInfo share].userid],@"date":[KTools currentDate],@"place":@"河南科技大学",@"content":_contentTextView.text,@"images":@"",@"looknum":@"0",@"supportnum":@"0"};
+        
+        [WBNetworking networkRequstWithNetworkRequestMethod:GetNetworkRequest networkRequestStyle:NetType_getAddforum params:dic successBlock:^(id returnData) {
+            
+            //pop
+            [self pop];
+            
+        } failureBlock:^(NSError *error) {
+            
+        }];
+        
+    }else{
+        
+        
+    }
 }
 
 

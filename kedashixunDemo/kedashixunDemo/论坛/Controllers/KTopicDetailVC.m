@@ -17,6 +17,8 @@
 #import <MJRefresh.h>
 #import "WBNetworking.h"
 #import "WBUserInfo.h"
+#import "KTools.h"
+
 
 #define space 10
 
@@ -34,6 +36,10 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
+    
+    NSLog(@"-%@",[KTools currentDate]);
+    
+    
     [self setNavBarTitleWithText:@"话题详情" withFontSize:20 withTextColor:[UIColor whiteColor]];
     
     self.navigationItem.leftBarButtonItems = [UIBarButtonItem barButtonItemWithImageName:@"arrow_left"  withHighlightedImageName:nil  withTarget:self withAction:@selector(pop) WithNegativeSpacerWidth:-16];
@@ -84,15 +90,17 @@
 - (void)pariseOrCollect{
     [WBNetworking networkRequstWithNetworkRequestMethod:GetNetworkRequest networkRequestStyle:NetType_getForumsupportstatus params:@{@"uid":[NSString stringWithFormat:@"%d",[WBUserInfo share].userid],@"fid":self.topicHeaderFrameModel.topicModel.topicId} successBlock:^(id returnData) {
        
-        NSLog(@"-- %@",returnData);
-        if ([returnData[@"data"][0] isEqualToNumber:@0]) {
-             [self addStatus];
+        if ([returnData[@"status"] isEqualToNumber:@204]) {
+            
+            //数据库中无此数据
+            //添加一条数据
+            [self addStatus];
+            
             _topicDetailHeader.ispraise = @"0";
             _topicDetailHeader.iscollect = @"0";
-            
         }else{
-            _topicDetailHeader.ispraise = returnData[@"data"][@"supportstatus"];
-            _topicDetailHeader.iscollect = returnData[@"data"][@"collectstatus"];
+            _topicDetailHeader.ispraise = returnData[@"data"][0][@"supportstatus"];
+            _topicDetailHeader.iscollect = returnData[@"data"][0][@"collectstatus"];
         }
        
         
@@ -200,11 +208,15 @@
     
     //评论数据
 //-----------Test
-    KCommentModel *commentModel = [KCommentModel mj_objectWithKeyValues:@{@"icon":@"",@"nickname":@"卡兹克",@"date":@"2016-05-12",@"content":_commentView.commentTF.text}];
+    KCommentModel *commentModel = [KCommentModel mj_objectWithKeyValues:@{@"icon":[WBUserInfo share].icon,@"nickname":[WBUserInfo share].nickname,@"date":[KTools currentDate],@"content":_commentView.commentTF.text}];
     [self.commentListArr insertObject:commentModel atIndex:0];
     [self.topicDetailTV reloadData];
     
-//    WBNetworking networkRequstWithNetworkRequestMethod:GetNetworkRequest networkRequestStyle:net params:<#(NSDictionary *)#> successBlock:<#^(id returnData)successBlock#> failureBlock:<#^(NSError *error)failureBlock#>
+    [WBNetworking networkRequstWithNetworkRequestMethod:GetNetworkRequest networkRequestStyle:NetType_getAddforumcomment params:@{@"uid":[NSString stringWithFormat:@"%d",[WBUserInfo share].userid],@"fid":self.topicHeaderFrameModel.topicModel.topicId,@"date":[KTools currentDate],@"content":_commentView.commentTF.text} successBlock:^(id returnData) {
+        
+    } failureBlock:^(NSError *error) {
+        
+    }];
     
     
 //-----------
@@ -221,7 +233,7 @@
     NSDictionary *dict = notification.userInfo;
     CGRect endRect = [dict[UIKeyboardFrameEndUserInfoKey] CGRectValue];
     CGFloat changeY = endRect.origin.y - self.view.frame.size.height;
-    self.view.transform = CGAffineTransformMakeTranslation(0, changeY);
+    self.commentView.transform = CGAffineTransformMakeTranslation(0, changeY);
 
 }
 

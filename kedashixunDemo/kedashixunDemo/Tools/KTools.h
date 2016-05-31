@@ -11,6 +11,10 @@
 @interface KTools : NSObject
 
 
-
-
+/**
+ *  获取并格式化输出当前日期
+ *
+ *  @return <#return value description#>
+ */
++ (NSString *)currentDate;
 @end
