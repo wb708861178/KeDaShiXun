@@ -80,17 +80,18 @@
 
 
 - (void)forumMessage{
-//    [WBNetworking networkRequstWithNetworkRequestMethod:GetNetworkRequest networkRequestStyle:NetType_getFcollection params:@{@"uid":[NSString stringWithFormat:@"%d",[WBUserInfo share].userid]} successBlock:^(id returnData) {
-//        self.dataSourceArr = [NSMutableArray array];
+    
+    [WBNetworking networkRequstWithNetworkRequestMethod:GetNetworkRequest networkRequestStyle:NetType_getFcollection params:@{@"uid":[NSString stringWithFormat:@"%d",[WBUserInfo share].userid]} successBlock:^(id returnData) {
+        self.dataSourceArr = [NSMutableArray array];
 //        for (NSDictionary *dict in returnData[@"data"]) {
 //            KTopicFrameModel *topicFrame = [[KTopicFrameModel alloc] initWithDict:dict];
 //            [self.dataSourceArr addObject:topicFrame];
 //        }
-//        [self.mainTableView reloadData];
-//        
-//    } failureBlock:^(NSError *error) {
-//        
-//    }];
+        [self.mainTableView reloadData];
+        
+    } failureBlock:^(NSError *error) {
+        
+    }];
     
 }
 
