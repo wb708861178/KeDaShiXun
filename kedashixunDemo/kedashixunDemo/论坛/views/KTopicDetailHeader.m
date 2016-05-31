@@ -190,7 +190,7 @@
             
             [UIView animateWithDuration:0.2 animations:^{
                 _praiseBtn.transform = CGAffineTransformMakeScale(1, 1);
-                _praiseBtn.backgroundColor = [UIColor redColor];
+
                 _praiseBtn.userInteractionEnabled = NO;
             }];
             
@@ -215,7 +215,7 @@
         
         [UIView animateWithDuration:0.2 animations:^{
             _collectBtn.transform = CGAffineTransformMakeScale(1, 1);
-            _collectBtn.backgroundColor = [UIColor redColor];
+
             _collectBtn.userInteractionEnabled = NO;
         }];
         
