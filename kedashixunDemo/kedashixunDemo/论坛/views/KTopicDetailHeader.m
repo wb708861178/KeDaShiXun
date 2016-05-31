@@ -141,7 +141,7 @@
     if ([ispraise boolValue]) {
         
         _praiseBtn.userInteractionEnabled = NO;
-        
+        [_praiseBtn setImage:[UIImage imageNamed:@"zan_selected"] forState:UIControlStateNormal];
     }
     
 }
@@ -153,7 +153,7 @@
     if ([iscollect boolValue]) {
         
         _collectBtn.userInteractionEnabled = NO;
-        
+        [_collectBtn setImage:[UIImage imageNamed:@"shoucang_selected"] forState:UIControlStateNormal];
     }
 
     
