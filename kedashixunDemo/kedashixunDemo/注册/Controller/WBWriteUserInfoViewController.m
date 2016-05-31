@@ -12,7 +12,7 @@
 #import "WBUserInfo.h"
 #import <MJExtension.h>
 
-@interface WBWriteUserInfoViewController ()<UINavigationControllerDelegate, UIImagePickerControllerDelegate>
+@interface WBWriteUserInfoViewController ()<NSURLSessionStreamDelegate,NSURLSessionTaskDelegate,UINavigationControllerDelegate, UIImagePickerControllerDelegate>
 
 
 @property (weak, nonatomic) IBOutlet UIButton *userIcon;
@@ -54,7 +54,7 @@
     self.womanBtn.layer.borderWidth = 1.0;
     self.womanBtn.layer.borderColor = [UIColor colorWithHexString:@"#999999"].CGColor;
    
-    self.hideReturnBtn = YES;
+    self.hasReturnArrow = YES;
     // Do any additional setup after loading the view from its nib.
 }
 
@@ -125,17 +125,96 @@
     
 
 }
+
+
+
+
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary<NSString *,id> *)info
 {
-    NSLog(@"%@",info);
+    
+    
+    
+    
     UIImage *editImage = info[@"UIImagePickerControllerEditedImage"];
+    CGSize imagesize = editImage.size;
     [self.userIcon setBackgroundImage:editImage forState:UIControlStateNormal];
+    imagesize.height =80;
+    imagesize.width =80;
+    //对图片大小进行压缩--
+    UIImage *imageNew = [self imageWithImage:editImage scaledToSize:imagesize];
+    
+    
+    
+    NSData *imageData = UIImagePNGRepresentation(imageNew);
+    
+    [self uploadImageData:imageData];
+    
+    NSDictionary *params = @{@"uid":[NSString stringWithFormat:@"%d",[WBUserInfo share].userid]};
+    [WBNetworking networkRequstWithNetworkRequestMethod:GetNetworkRequest networkRequestStyle:NetType_getUserInfo params:params successBlock:^(id returnData) {
+        NSLog(@"%@",returnData);
+    } failureBlock:^(NSError *error) {
+        NSLog(@"%@",error);
+    }];
+   
     [self.imagePicker dismissViewControllerAnimated:YES completion:nil];
     
     
     
 }
-
+- (void)uploadImageData:(NSData *)data{
+    NSString *bodyStr = [NSString stringWithFormat:@"uid=%@",[NSString stringWithFormat:@"%d",[WBUserInfo share].userid]];
+    
+    NSString *Str = @"http://115.28.87.147/phpfile/kedashixun/upload.php?";
+    
+    NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"%@%@",Str,bodyStr]];
+    
+    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url];
+    
+    [request setHTTPMethod:@"POST"];
+    
+    NSLog(@"-----%ld",data.length);
+    
+    NSMutableData *bodyData = [NSMutableData data];
+    
+    [bodyData appendData:data];
+    
+    [request setHTTPBody:bodyData];
+    
+    
+    NSString *strLength = [NSString stringWithFormat:@"%ld", (long)data.length];
+    [request setValue:strLength forHTTPHeaderField:@"Content-Length"];
+    
+    NSString *strContentType = [NSString stringWithFormat:@"image/png; boundary=%@", @"homeSchoolChain"];
+    [request setValue:strContentType forHTTPHeaderField:@"Content-Type"];
+    
+    
+    NSURLSession *session = [NSURLSession sessionWithConfiguration:[NSURLSessionConfiguration defaultSessionConfiguration] delegate:self delegateQueue:[NSOperationQueue mainQueue]];
+    
+    NSURLSessionUploadTask *uploadTask = [session uploadTaskWithRequest:request fromData:bodyData];
+    //
+    [uploadTask resume];
+    
+    
+}
+//对图片尺寸进行压缩--
+-(UIImage*)imageWithImage:(UIImage*)image scaledToSize:(CGSize)newSize
+{
+    // Create a graphics image context
+    UIGraphicsBeginImageContext(newSize);
+    
+    // Tell the old image to draw in this new context, with the desired
+    // new size
+    [image drawInRect:CGRectMake(0,0,newSize.width,newSize.height)];
+    
+    // Get the new image from the context
+    UIImage* newImage = UIGraphicsGetImageFromCurrentImageContext();
+    
+    // End the context
+    UIGraphicsEndImageContext();
+    
+    // Return the new image.
+    return newImage;
+}
 
 /*
 #pragma mark - Navigation

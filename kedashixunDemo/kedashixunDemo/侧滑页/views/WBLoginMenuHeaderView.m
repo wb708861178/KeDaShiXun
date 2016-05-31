@@ -8,6 +8,7 @@
 
 #import "WBLoginMenuHeaderView.h"
 #import "WBUserInfo.h"
+#import <UIImageView+WebCache.h>
 
 @interface WBLoginMenuHeaderView ()
 @property (weak, nonatomic) IBOutlet UIImageView *iconImageView;
@@ -23,6 +24,7 @@
 {
     self.nickLabel.text = [WBUserInfo share].nickname;
     self.mottoLabel.text = [WBUserInfo share].motto;
+    [self.iconImageView sd_setImageWithURL:[NSURL URLWithString:[WBUserInfo share].icon]];
 }
 
 

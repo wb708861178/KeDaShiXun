@@ -21,7 +21,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gzY-VA-Quh" userLabel="mimaView">
-                    <rect key="frame" x="44" y="211" width="329" height="50"/>
+                    <rect key="frame" x="44" y="111" width="329" height="50"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="密码：" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bcO-hb-14u">
                             <rect key="frame" x="0.0" y="0.0" width="70" height="50"/>
@@ -57,7 +57,7 @@
                     </userDefinedRuntimeAttributes>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="d6X-Z5-ImT" userLabel="nichengView">
-                    <rect key="frame" x="44" y="283" width="329" height="50"/>
+                    <rect key="frame" x="44" y="183" width="329" height="50"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="昵称：" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iIr-Vd-PrP">
                             <rect key="frame" x="0.0" y="0.0" width="70" height="50"/>
@@ -92,7 +92,7 @@
                     </userDefinedRuntimeAttributes>
                 </view>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9nc-ME-5Wm">
-                    <rect key="frame" x="44" y="436" width="329" height="40"/>
+                    <rect key="frame" x="44" y="336" width="329" height="40"/>
                     <color key="backgroundColor" red="1" green="0.72156862745098038" blue="0.59607843137254901" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="40" id="VUu-ki-Aa7"/>
@@ -112,7 +112,7 @@
                     </connections>
                 </button>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bjN-db-hvB" userLabel="xingbieView">
-                    <rect key="frame" x="44" y="353" width="329" height="50"/>
+                    <rect key="frame" x="44" y="253" width="329" height="50"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="性别：" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UtT-Gl-jYk">
                             <rect key="frame" x="0.0" y="0.0" width="70" height="50"/>
@@ -177,8 +177,8 @@
                         <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
                     </userDefinedRuntimeAttributes>
                 </view>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iHM-xc-mlq" userLabel="icon">
-                    <rect key="frame" x="158" y="80" width="100" height="100"/>
+                <button opaque="NO" alpha="0.0" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iHM-xc-mlq" userLabel="icon">
+                    <rect key="frame" x="158" y="-20" width="100" height="100"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="100" id="2t6-Bv-HCy"/>
                         <constraint firstAttribute="width" constant="100" id="xAX-EN-ZHF"/>
@@ -199,7 +199,7 @@
             <constraints>
                 <constraint firstItem="d6X-Z5-ImT" firstAttribute="top" secondItem="gzY-VA-Quh" secondAttribute="bottom" constant="22" id="1Aw-bq-ZFG"/>
                 <constraint firstItem="d6X-Z5-ImT" firstAttribute="height" secondItem="gzY-VA-Quh" secondAttribute="height" id="9Tz-om-iIC"/>
-                <constraint firstItem="iHM-xc-mlq" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="80" id="Epy-iE-BtB"/>
+                <constraint firstItem="iHM-xc-mlq" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="-20" id="Epy-iE-BtB"/>
                 <constraint firstItem="9nc-ME-5Wm" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="FZn-CG-CNZ"/>
                 <constraint firstItem="9nc-ME-5Wm" firstAttribute="top" secondItem="bjN-db-hvB" secondAttribute="bottom" constant="33" id="Jkd-tj-zJb"/>
                 <constraint firstItem="gzY-VA-Quh" firstAttribute="top" secondItem="iHM-xc-mlq" secondAttribute="bottom" constant="31" id="Mj5-kc-o4c"/>

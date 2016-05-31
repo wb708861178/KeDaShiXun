@@ -19,8 +19,7 @@
     if (self) {
         self.delegate = self;
         self.dataSource = self;
-        UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tap:)];
-        [self addGestureRecognizer:tap];
+       
         self.separatorStyle = UITableViewCellSeparatorStyleNone;
     }
     return self;
@@ -88,7 +87,7 @@
 #pragma mark--键盘处理
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView
 {
-    self.hiddenKeyBoardBlock();
+//    self.hiddenKeyBoardBlock();
 }
 
 

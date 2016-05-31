@@ -16,7 +16,7 @@ typedef enum{
 
 typedef enum {
    
-
+    NetType_getUserInfo,//得到用户信息
     NetType_getIsRegiste,//是否注册
     NetType_getRegister,//注册
     NetType_getLogin,//登录

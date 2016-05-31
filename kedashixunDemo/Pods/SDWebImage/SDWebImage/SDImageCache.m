@@ -126,7 +126,7 @@ FOUNDATION_STATIC_INLINE NSUInteger SDCacheCostForImage(UIImage *image) {
             _fileManager = [NSFileManager new];
         });
 
-#if TARGET_OS_IOS
+#if TARGET_OS_IPHONE
         // Subscribe to app events
         [[NSNotificationCenter defaultCenter] addObserver:self
                                                  selector:@selector(clearMemory)
@@ -241,7 +241,23 @@ FOUNDATION_STATIC_INLINE NSUInteger SDCacheCostForImage(UIImage *image) {
 #endif
             }
 
-            [self storeImageDataToDisk:data forKey:key];
+            if (data) {
+                if (![_fileManager fileExistsAtPath:_diskCachePath]) {
+                    [_fileManager createDirectoryAtPath:_diskCachePath withIntermediateDirectories:YES attributes:nil error:NULL];
+                }
+
+                // get cache Path for image key
+                NSString *cachePathForKey = [self defaultCachePathForKey:key];
+                // transform to NSUrl
+                NSURL *fileURL = [NSURL fileURLWithPath:cachePathForKey];
+
+                [_fileManager createFileAtPath:cachePathForKey contents:data attributes:nil];
+
+                // disable iCloud backup
+                if (self.shouldDisableiCloud) {
+                    [fileURL setResourceValue:[NSNumber numberWithBool:YES] forKey:NSURLIsExcludedFromBackupKey error:nil];
+                }
+            }
         });
     }
 }
@@ -254,41 +270,12 @@ FOUNDATION_STATIC_INLINE NSUInteger SDCacheCostForImage(UIImage *image) {
     [self storeImage:image recalculateFromImage:YES imageData:nil forKey:key toDisk:toDisk];
 }
 
-- (void)storeImageDataToDisk:(NSData *)imageData forKey:(NSString *)key {
-    
-    if (!imageData) {
-        return;
-    }
-    
-    if (![_fileManager fileExistsAtPath:_diskCachePath]) {
-        [_fileManager createDirectoryAtPath:_diskCachePath withIntermediateDirectories:YES attributes:nil error:NULL];
-    }
-    
-    // get cache Path for image key
-    NSString *cachePathForKey = [self defaultCachePathForKey:key];
-    // transform to NSUrl
-    NSURL *fileURL = [NSURL fileURLWithPath:cachePathForKey];
-    
-    [_fileManager createFileAtPath:cachePathForKey contents:imageData attributes:nil];
-    
-    // disable iCloud backup
-    if (self.shouldDisableiCloud) {
-        [fileURL setResourceValue:[NSNumber numberWithBool:YES] forKey:NSURLIsExcludedFromBackupKey error:nil];
-    }
-}
-
 - (BOOL)diskImageExistsWithKey:(NSString *)key {
     BOOL exists = NO;
     
     // this is an exception to access the filemanager on another queue than ioQueue, but we are using the shared instance
     // from apple docs on NSFileManager: The methods of the shared NSFileManager object can be called from multiple threads safely.
     exists = [[NSFileManager defaultManager] fileExistsAtPath:[self defaultCachePathForKey:key]];
-
-    // fallback because of https://github.com/rs/SDWebImage/pull/976 that added the extension to the disk file name
-    // checking the key with and without the extension
-    if (!exists) {
-        exists = [[NSFileManager defaultManager] fileExistsAtPath:[[self defaultCachePathForKey:key] stringByDeletingPathExtension]];
-    }
     
     return exists;
 }
@@ -296,13 +283,6 @@ FOUNDATION_STATIC_INLINE NSUInteger SDCacheCostForImage(UIImage *image) {
 - (void)diskImageExistsWithKey:(NSString *)key completion:(SDWebImageCheckCacheCompletionBlock)completionBlock {
     dispatch_async(_ioQueue, ^{
         BOOL exists = [_fileManager fileExistsAtPath:[self defaultCachePathForKey:key]];
-
-        // fallback because of https://github.com/rs/SDWebImage/pull/976 that added the extension to the disk file name
-        // checking the key with and without the extension
-        if (!exists) {
-            exists = [_fileManager fileExistsAtPath:[[self defaultCachePathForKey:key] stringByDeletingPathExtension]];
-        }
-
         if (completionBlock) {
             dispatch_async(dispatch_get_main_queue(), ^{
                 completionBlock(exists);
@@ -340,24 +320,10 @@ FOUNDATION_STATIC_INLINE NSUInteger SDCacheCostForImage(UIImage *image) {
         return data;
     }
 
-    // fallback because of https://github.com/rs/SDWebImage/pull/976 that added the extension to the disk file name
-    // checking the key with and without the extension
-    data = [NSData dataWithContentsOfFile:[defaultPath stringByDeletingPathExtension]];
-    if (data) {
-        return data;
-    }
-
     NSArray *customPaths = [self.customPaths copy];
     for (NSString *path in customPaths) {
         NSString *filePath = [self cachePathForKey:key inPath:path];
         NSData *imageData = [NSData dataWithContentsOfFile:filePath];
-        if (imageData) {
-            return imageData;
-        }
-
-        // fallback because of https://github.com/rs/SDWebImage/pull/976 that added the extension to the disk file name
-        // checking the key with and without the extension
-        imageData = [NSData dataWithContentsOfFile:[filePath stringByDeletingPathExtension]];
         if (imageData) {
             return imageData;
         }

@@ -141,6 +141,8 @@
     
     
     
+    
+    
 }
 
 
@@ -151,7 +153,7 @@
 
 - (void)praiseViewTap:(UITapGestureRecognizer *)praiseViewTap{
     //改变按钮 的图片和下面view手势可交互
-    self.bottomView.praiseImageView.backgroundColor = [UIColor redColor];
+    self.bottomView.praiseImageView.image = [UIImage imageNamed:@"shoucang_selected"];
     self.bottomView.praiseLabel.text = @"已收藏";
     self.bottomView.praiseView.userInteractionEnabled = NO;
     //改变收藏状态

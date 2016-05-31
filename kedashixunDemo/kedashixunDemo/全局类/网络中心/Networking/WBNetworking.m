@@ -22,7 +22,12 @@
 {
     NSMutableDictionary *tempParams = [NSMutableDictionary dictionaryWithDictionary:params];
     switch (networkRequestStyle) {
-           
+         
+        case NetType_getUserInfo://得到用户信息
+        {
+            [tempParams setObject:@"getUserInfo" forKey:@"act"];
+        }
+            break;
         case  NetType_getIsRegiste://是否注册
         {
             [tempParams setObject:@"getIsRegiste" forKey:@"act"];
