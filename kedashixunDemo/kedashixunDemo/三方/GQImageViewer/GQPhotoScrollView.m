@@ -11,6 +11,10 @@
 #import "GQImageViewer.h"
 #import <MBProgressHUD.h>
 
+@interface GQImageViewer ()
+
+@end
+
 @implementation GQPhotoScrollView
 
 - (id)initWithFrame:(CGRect)frame

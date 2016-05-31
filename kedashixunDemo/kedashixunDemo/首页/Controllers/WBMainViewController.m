@@ -129,6 +129,8 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    //消除cell选择痕迹
+    [self performSelector:@selector(deselect) withObject:nil afterDelay:0.2f];
     WBKedaMessage *kedaMessage = self.dataSourceArr[indexPath.row];
     
     WBMainDetailViewController *mainDetailVC = [[WBMainDetailViewController alloc] init];
@@ -187,7 +189,11 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
+//取消cell点中状态
+- (void)deselect
+{
+    [self.mainTableView deselectRowAtIndexPath:[self.mainTableView indexPathForSelectedRow] animated:YES];
+}
 /*
 #pragma mark - Navigation
 

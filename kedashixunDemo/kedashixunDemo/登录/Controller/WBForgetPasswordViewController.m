@@ -96,6 +96,7 @@ static int count = 60;
         return;
     }
     
+  
     
     [SMSSDK commitVerificationCode:newCode phoneNumber:[WBTool deleteSapceWithString:self.phoneNumTextField.text] zone:@"86" result:^(NSError *error) {
         
@@ -106,9 +107,14 @@ static int count = 60;
         }else{
             
             NSString *deleteSpaceNewPwd = [WBTool deleteSapceWithString:self.resetPwdTextField.text];
+            if ([deleteSpaceNewPwd isEqualToString:@""]) {
+                [[UIAlertTool alloc] showAlertView:self title:@"提示信息" message:@"密码不能为空" cancelButtonTitle:@"取消" otherButtonTitle:@"确定" confirm:nil cancle:nil];
+                return;
+            }
             NSDictionary *updatePwdParams = @{@"userid":[NSString stringWithFormat:@"%d",[WBUserInfo share].userid],@"pwd":deleteSpaceNewPwd};
             [WBNetworking networkRequstWithNetworkRequestMethod:GetNetworkRequest networkRequestStyle:NetType_getUpdateUserPwd params:updatePwdParams successBlock:^(id returnData) {
-                NSLog(@"%@",returnData);
+                [[WBUserInfo share] saveUserInfoWithUserDict:returnData[@"data"][0]];
+                [self pop];
             } failureBlock:^(NSError *error) {
                 NSLog(@"%@",error);
             }];

@@ -15,13 +15,14 @@
 #import "WBChangeMottoViewController.h"
 #import "WBUserInfo.h"
 #import "WBNetworking.h"
+#import <UIImageView+WebCache.h>
 
 
 #pragma mark--拍照
 #import <QuartzCore/QuartzCore.h>
 #import <QuartzCore/CoreAnimation.h>
 #import <MobileCoreServices/UTCoreTypes.h>
-@interface WBPersonalCenterViewController ()<UITableViewDelegate,UITableViewDataSource,UINavigationControllerDelegate, UIImagePickerControllerDelegate>
+@interface WBPersonalCenterViewController ()<NSURLSessionStreamDelegate,NSURLSessionTaskDelegate,UITableViewDelegate,UITableViewDataSource,UINavigationControllerDelegate, UIImagePickerControllerDelegate>
 @property (nonatomic, strong) UITableView *mainTableView;
 @property (nonatomic, strong) NSArray *titleArr;
 @property (nonatomic, strong) NSMutableArray *userInfoArr;
@@ -146,10 +147,20 @@
         CGFloat iconImageViewX = cell.contentView.frame.size.width + 45 - 34 ;
         CGFloat iconImageViewY = (44 - 34 ) * 0.5;
         iconImageView.frame = CGRectMake(iconImageViewX, iconImageViewY , 34, 34);
-        iconImageView.image = [UIImage imageNamed:@"personal_icon"];
-//        cell.contentView.backgroundColor = [UIColor cyanColor];
+        iconImageView.layer.cornerRadius = 17;
+        iconImageView.layer.masksToBounds=  YES;
         self.iconImageView = iconImageView;
-        [cell.contentView addSubview:iconImageView];
+
+        
+        if (![[WBUserInfo share].icon isEqualToString:@""]) {
+            [self.iconImageView sd_setImageWithURL:[NSURL URLWithString:[WBUserInfo share].icon]];
+            
+        }else
+        {
+            iconImageView.image = [UIImage imageNamed:@"personal_icon"];
+        }
+//        cell.contentView.backgroundColor = [UIColor cyanColor];
+              [cell.contentView addSubview:iconImageView];
         
          }else{
         UILabel *contentLbl = [[UILabel alloc] initWithFrame:CGRectMake( cell.contentView.frame.size.width + 45 - 100, 0, 100, 44)];
@@ -352,12 +363,63 @@
      }
  #pragma 拍照模块
 -(void) imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info{
+    
+    
+    
+    UIImage *editImage = info[@"UIImagePickerControllerEditedImage"];
+    CGSize imagesize = editImage.size;
+    self.iconImageView.image = editImage;
+    imagesize.height =80;
+    imagesize.width =80;
+    //对图片大小进行压缩--
+    UIImage *imageNew = [self imageWithImage:editImage scaledToSize:imagesize];
+    
+    
+    
+    NSData *imageData = UIImagePNGRepresentation(imageNew);
+    
+    
+    
+    [self uploadImageData:imageData];
+   
+    [self performSelector:@selector(requestUserInfo) withObject:imageData afterDelay:1.0];
+    
+   
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
          self.lastChosenMediaType=[info objectForKey:UIImagePickerControllerMediaType];
          if([self.lastChosenMediaType isEqual:(NSString *) kUTTypeImage])
              {
-                     UIImage *chosenImage=[info objectForKey:UIImagePickerControllerEditedImage];
-                     self.iconImageView.image=chosenImage;
-                 }
+                 UIImage *editImage = info[@"UIImagePickerControllerEditedImage"];
+                 CGSize imagesize = editImage.size;
+                 self.iconImageView.image = editImage;
+                 imagesize.height =80;
+                 imagesize.width =80;
+                 //对图片大小进行压缩--
+                 UIImage *imageNew = [self imageWithImage:editImage scaledToSize:imagesize];
+                 
+                 
+                 
+                 NSData *imageData = UIImagePNGRepresentation(imageNew);
+                 
+                 [self uploadImageData:imageData];
+                 
+                 
+                 
+                                }
         if([self.lastChosenMediaType isEqual:(NSString *) kUTTypeMovie])
              {
                      UIAlertView *alert=[[UIAlertView alloc] initWithTitle:@"提示信息!" message:@"系统只支持图片格式" delegate:nil cancelButtonTitle:@"确认" otherButtonTitles: nil];
@@ -407,6 +469,70 @@
  
 
 
+- (void)uploadImageData:(NSData *)data{
+    NSString *bodyStr = [NSString stringWithFormat:@"uid=%@",[NSString stringWithFormat:@"%d",[WBUserInfo share].userid]];
+    
+    NSString *Str = @"http://115.28.87.147/phpfile/kedashixun/upload.php?";
+    
+    NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"%@%@",Str,bodyStr]];
+    
+    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url];
+    
+    [request setHTTPMethod:@"POST"];
+    
+    NSLog(@"-----%ld",data.length);
+    
+    NSMutableData *bodyData = [NSMutableData data];
+    
+    [bodyData appendData:data];
+    
+    [request setHTTPBody:bodyData];
+    
+    
+    NSString *strLength = [NSString stringWithFormat:@"%ld", (long)data.length];
+    [request setValue:strLength forHTTPHeaderField:@"Content-Length"];
+    
+    NSString *strContentType = [NSString stringWithFormat:@"image/png; boundary=%@", @"homeSchoolChain"];
+    [request setValue:strContentType forHTTPHeaderField:@"Content-Type"];
+    
+    
+    NSURLSession *session = [NSURLSession sessionWithConfiguration:[NSURLSessionConfiguration defaultSessionConfiguration] delegate:self delegateQueue:[NSOperationQueue mainQueue]];
+    
+    NSURLSessionUploadTask *uploadTask = [session uploadTaskWithRequest:request fromData:bodyData];
+    //
+    [uploadTask resume];
+    
+    
+}
+//对图片尺寸进行压缩--
+-(UIImage*)imageWithImage:(UIImage*)image scaledToSize:(CGSize)newSize
+{
+    // Create a graphics image context
+    UIGraphicsBeginImageContext(newSize);
+    
+    // Tell the old image to draw in this new context, with the desired
+    // new size
+    [image drawInRect:CGRectMake(0,0,newSize.width,newSize.height)];
+    
+    // Get the new image from the context
+    UIImage* newImage = UIGraphicsGetImageFromCurrentImageContext();
+    
+    // End the context
+    UIGraphicsEndImageContext();
+    
+    // Return the new image.
+    return newImage;
+}
+
+- (void)requestUserInfo
+{
+     NSDictionary *params = @{@"uid":[NSString stringWithFormat:@"%d",[WBUserInfo share].userid]};
+    [WBNetworking networkRequstWithNetworkRequestMethod:GetNetworkRequest networkRequestStyle:NetType_getUserInfo params:params successBlock:^(id returnData) {
+        [[WBUserInfo share] saveUserInfoWithUserDict:returnData[@"data"][0]];
+    } failureBlock:^(NSError *error) {
+        NSLog(@"%@",error);
+    }];
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

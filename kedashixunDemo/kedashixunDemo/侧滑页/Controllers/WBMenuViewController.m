@@ -147,9 +147,9 @@
     cell.textLabel.text = self.titleArr[indexPath.row];
     cell.textLabel.textColor = [UIColor whiteColor];
     cell.selectedBackgroundView = [[UIView alloc] initWithFrame:cell.frame];
-    cell.selectedBackgroundView.backgroundColor = [UIColor cyanColor];
+//    cell.selectedBackgroundView.backgroundColor = kMainColor;
     
-//      cell.selectionStyle = UITableViewCellSelectionStyleNone;
+      cell.selectionStyle = UITableViewCellSelectionStyleNone;
     return cell;
 }
 
@@ -238,6 +238,9 @@
     WBTabBarViewController *tabBarVC = (WBTabBarViewController *)self.sideMenuViewController.contentViewController;
     [tabBarVC.selectedViewController pushViewController:viewController animated:NO];
 }
+
+
+
 
 /*
 #pragma mark - Navigation

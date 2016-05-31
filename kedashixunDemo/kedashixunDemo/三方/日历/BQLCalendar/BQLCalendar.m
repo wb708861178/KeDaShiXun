@@ -195,7 +195,7 @@
         NSString *nowDate = [self getChineseCalendarWithDate:chineseCalendarDate];
         UILabel *chineseCalendar = [[UILabel alloc] initWithFrame:CGRectMake(0, dayButton.bottom, view.width, 17)];
         [view addSubview:chineseCalendar];
-        chineseCalendar.textAlignment = 1;
+        chineseCalendar.textAlignment = NSTextAlignmentCenter;
         chineseCalendar.textColor = [UIColor colorWithHexString:@"#999999"];
         chineseCalendar.font = [UIFont systemFontOfSize:10.f];
         chineseCalendar.text = nowDate;

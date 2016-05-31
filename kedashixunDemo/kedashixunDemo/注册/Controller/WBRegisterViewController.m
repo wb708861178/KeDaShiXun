@@ -80,6 +80,9 @@ static int count = 60;
 }
 
 - (IBAction)registerBtnAction:(UIButton *)sender {
+   
+    
+    
     
     NSString *newCode = [WBTool deleteSapceWithString:self.vertifyCodeTextField.text];
   

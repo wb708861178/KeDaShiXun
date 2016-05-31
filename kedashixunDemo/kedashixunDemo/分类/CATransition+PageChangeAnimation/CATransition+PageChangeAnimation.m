@@ -129,7 +129,7 @@
     }
     
     //设置运动速度
-    animation.timingFunction = UIViewAnimationOptionCurveEaseInOut;
+//    animation.timingFunction = UIViewAnimationOptionCurveEaseInOut;
     
     [view.layer addAnimation:animation forKey:@"animation"];
 }
