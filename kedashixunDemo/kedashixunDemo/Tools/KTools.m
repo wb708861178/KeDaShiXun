@@ -10,4 +10,15 @@
 
 @implementation KTools
 
+
++ (NSString *)currentDate{
+    
+    NSDate *currentDate = [NSDate date];
+    
+    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+    formatter.dateFormat = @"YYYY-MM-dd";
+    
+    return [formatter stringFromDate:currentDate];
+}
+
 @end

@@ -51,9 +51,12 @@
        
         if (selectedIndex == 0) {
            
+            [self requestWithKedaMessage];
+        }else{
+            //论坛
+            [self forumMessage];
         }
         self.selectedIndex = selectedIndex;
-        [_mainTableView reloadData];
     };
     [self.view addSubview:custonsegment];
     
@@ -72,9 +75,24 @@
     [_mainTableView registerNib:[UINib nibWithNibName:@"WBMainCell3" bundle:nil] forCellReuseIdentifier:@"WBMainCell3"];
     
     
-        [_mainTableView registerClass:[KTopicCell class] forCellReuseIdentifier:@"KTopicCell"];
+    [_mainTableView registerClass:[KTopicCell class] forCellReuseIdentifier:@"KTopicCell"];
 }
 
+
+- (void)forumMessage{
+//    [WBNetworking networkRequstWithNetworkRequestMethod:GetNetworkRequest networkRequestStyle:NetType_getFcollection params:@{@"uid":[NSString stringWithFormat:@"%d",[WBUserInfo share].userid]} successBlock:^(id returnData) {
+//        self.dataSourceArr = [NSMutableArray array];
+//        for (NSDictionary *dict in returnData[@"data"]) {
+//            KTopicFrameModel *topicFrame = [[KTopicFrameModel alloc] initWithDict:dict];
+//            [self.dataSourceArr addObject:topicFrame];
+//        }
+//        [self.mainTableView reloadData];
+//        
+//    } failureBlock:^(NSError *error) {
+//        
+//    }];
+    
+}
 
 #pragma mark----UITableViewDataSource
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
@@ -118,6 +136,7 @@
      
     }else if(self.selectedIndex == 1){
         KTopicCell *topicCell = [tableView dequeueReusableCellWithIdentifier:@"KTopicCell" forIndexPath:indexPath];
+        topicCell.topicFrameModel = self.dataSourceArr[indexPath.row];
         return topicCell;
     }
         
@@ -132,6 +151,7 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
+
     WBKedaMessage *kedaMessage = self.dataSourceArr[indexPath.row];
     WBMainDetailViewController *mainDetailVC = [[WBMainDetailViewController alloc] init];
     mainDetailVC.kedaMessage = kedaMessage;

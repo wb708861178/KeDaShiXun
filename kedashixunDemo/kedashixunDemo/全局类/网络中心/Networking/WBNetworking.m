@@ -71,7 +71,11 @@
             
             
             
-            
+        case NetType_getFcollection:
+        {
+            [tempParams setObject:@"getFcollection" forKey:@"act"];
+        }
+   
         case NetType_getKedamessage:
         {
             [tempParams setObject:@"getKedamessage" forKey:@"act"];

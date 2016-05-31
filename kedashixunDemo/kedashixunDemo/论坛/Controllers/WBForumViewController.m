@@ -48,7 +48,7 @@
     [super viewDidLoad];
 
     [self setNavBarTitleWithText:@"科大论坛" withFontSize:18 withTextColor:[UIColor whiteColor]];
-    self.navigationItem.rightBarButtonItems = [UIBarButtonItem barButtonItemWithImageName:@"fabu" withHighlightedImageName:nil withTarget:self withAction:@selector(publishTopic) WithNegativeSpacerWidth:-4];
+    self.navigationItem.rightBarButtonItems = [UIBarButtonItem barButtonItemWithImageName:@"fabu" withHighlightedImageName:nil withTarget:self withAction:@selector(publish) WithNegativeSpacerWidth:-4];
     
     self.view.backgroundColor = kBGDefaultColor;
     
@@ -68,7 +68,9 @@
         self.topicsArr = [NSMutableArray array];
         for (NSDictionary *dict in returnData[@"data"]) {
             KTopicFrameModel *topicFrame = [[KTopicFrameModel alloc] initWithDict:dict];
-            [self.topicsArr addObject:topicFrame];
+//            [self.topicsArr addObject:topicFrame];
+            
+            [self.topicsArr insertObject:topicFrame atIndex:0];
         }
         
         [self commentCountWithTV:self.allTopicTV];
@@ -221,7 +223,7 @@
 }
 
 #pragma mark ---  发表主题
-- (void)publishTopic{
+- (void)publish{
     
     KPublishVC *vc = [[KPublishVC alloc] initWithNibName:@"KPublishVC" bundle:nil];
     

@@ -44,6 +44,7 @@ typedef enum {
     NetType_getAddforum,//增加论坛帖子
     NetType_getUpdatesupportnum,//修改论坛点赞量
     NetType_getAddforumcomment,//增加评论
+    NetType_getFcollection,//论坛收藏
     
     NetType_getPhonelist,//电话簿
     

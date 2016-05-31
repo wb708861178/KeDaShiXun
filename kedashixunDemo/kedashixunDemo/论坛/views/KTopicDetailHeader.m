@@ -10,6 +10,8 @@
 #import <UIImageView+WebCache.h>
 #import "KCommentCountView.h"
 #import "GQImageViewer.h"
+#import "WBNetworking.h"
+#import "WBUserInfo.h"
 
 @interface KTopicDetailHeader ()
 
@@ -61,7 +63,7 @@
         
         _collectBtn = [[UIButton alloc] init];
         [_collectBtn setImage:[UIImage imageNamed:@"shoucang"] forState:UIControlStateNormal];
-        
+        [_collectBtn addTarget:self action:@selector(collectTopic) forControlEvents:UIControlEventTouchUpInside];
         _commentCountView = [[NSBundle mainBundle] loadNibNamed:@"KCommentCountView" owner:nil options:nil].firstObject;
         
         [self addSubview:_iconImgView];
@@ -87,11 +89,9 @@
     KTopicModel *topicModel = topicHeaderFrameModel.topicModel;
     
     _iconImgView.frame = topicHeaderFrameModel.iconFrame;
+    _iconImgView.layer.cornerRadius = _iconImgView.frame.size.width/2;
+    _iconImgView.layer.masksToBounds = YES;
     [_iconImgView sd_setImageWithURL:[NSURL URLWithString:topicModel.iconName]];
-    //    ------------------Test
-    
-    _iconImgView.image = [UIImage imageNamed:@"luntan_icon2"];
-    //    ------------------Test
     
     
     _namelbl.frame = topicHeaderFrameModel.nameFrame;
@@ -135,6 +135,30 @@
     _commentCountView.frame = topicHeaderFrameModel.commentViewFrame;
 }
 
+- (void)setIspraise:(NSString *)ispraise{
+    
+    _ispraise = ispraise;
+    if ([ispraise boolValue]) {
+        
+        _praiseBtn.userInteractionEnabled = NO;
+        
+    }
+    
+}
+
+
+- (void)setIscollect:(NSString *)iscollect{
+    
+    _iscollect = iscollect;
+    if ([iscollect boolValue]) {
+        
+        _collectBtn.userInteractionEnabled = NO;
+        
+    }
+
+    
+}
+
 - (void)setCommentCount:(NSUInteger)commentCount{
     _commentCount = commentCount;
     _commentCountView.commentCount.text = [NSString stringWithFormat:@"评论 %ld",commentCount];
@@ -156,23 +180,53 @@
 
 - (void)praiseTopic{
     
+    
+    [WBNetworking networkRequstWithNetworkRequestMethod:GetNetworkRequest networkRequestStyle:NetType_getUpdateForumSupportStatus params:@{@"uid":[NSString stringWithFormat:@"%d",[WBUserInfo share].userid],@"fid":self.topicHeaderFrameModel.topicModel.topicId,@"supportstatus":@"1"} successBlock:^(id returnData) {
+        
+        [UIView animateWithDuration:0.2 animations:^{
+            _praiseBtn.transform = CGAffineTransformMakeScale(1.5, 1.5);
+            
+        } completion:^(BOOL finished) {
+            
+            [UIView animateWithDuration:0.2 animations:^{
+                _praiseBtn.transform = CGAffineTransformMakeScale(1, 1);
+                _praiseBtn.backgroundColor = [UIColor redColor];
+                _praiseBtn.userInteractionEnabled = NO;
+            }];
+            
+        }];
+        
+    } failureBlock:^(NSError *error) {
+        
+    }];
+    
+     //改变参数
+    
+    
+}
+
+- (void)collectTopic{
+    
     //判断用户是否赞过
     
     [UIView animateWithDuration:0.2 animations:^{
-        _praiseBtn.transform = CGAffineTransformMakeScale(1.5, 1.5);
-        _praiseBtn.tintColor = [UIColor orangeColor];
+        _collectBtn.transform = CGAffineTransformMakeScale(1.5, 1.5);
     } completion:^(BOOL finished) {
         
         [UIView animateWithDuration:0.2 animations:^{
-            _praiseBtn.transform = CGAffineTransformMakeScale(1, 1);
+            _collectBtn.transform = CGAffineTransformMakeScale(1, 1);
+            _collectBtn.backgroundColor = [UIColor redColor];
+            _collectBtn.userInteractionEnabled = NO;
         }];
         
     }];
     
     //改变参数
+
     
     
 }
+
 /*
 // Only override drawRect: if you perform custom drawing.
 // An empty implementation adversely affects performance during animation.
