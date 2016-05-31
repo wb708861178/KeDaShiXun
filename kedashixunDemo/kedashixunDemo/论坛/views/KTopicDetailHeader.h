@@ -17,4 +17,8 @@
 @property (nonatomic, assign) NSUInteger commentCount;
 
 @property (nonatomic, copy) void(^showImageViewer)();
+
+@property (nonatomic, copy) NSString *ispraise;
+@property (nonatomic, copy) NSString *iscollect;
+
 @end

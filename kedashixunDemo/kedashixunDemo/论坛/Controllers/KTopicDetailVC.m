@@ -16,7 +16,7 @@
 #import "GQImageViewer.h"
 #import <MJRefresh.h>
 #import "WBNetworking.h"
-
+#import "WBUserInfo.h"
 
 #define space 10
 
@@ -42,8 +42,11 @@
     
     [self viewLayout];
     
+   
     
     [self commemtData];
+    
+    [self pariseOrCollect];
     
     //注册键盘通知
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(bottomViewFrameShouldChange:) name:UIKeyboardWillChangeFrameNotification object:nil];
@@ -56,6 +59,16 @@
     [self.view addGestureRecognizer:tap];
 }
 
+- (void)addStatus{
+    
+    [WBNetworking networkRequstWithNetworkRequestMethod:GetNetworkRequest networkRequestStyle:NetType_getForumaddsupport params:@{@"uid":[NSString stringWithFormat:@"%d",[WBUserInfo share].userid],@"fid":self.topicHeaderFrameModel.topicModel.topicId,@"supportstatus":@"0",@"collectstatus":@"0"} successBlock:^(id returnData) {
+        
+    } failureBlock:^(NSError *error) {
+        
+    }];
+    
+}
+
 - (void)commemtData{
     
     [WBNetworking networkRequstWithNetworkRequestMethod:GetNetworkRequest networkRequestStyle:NetType_getComment params:@{@"fid":self.topicHeaderFrameModel.topicModel.topicId} successBlock:^(id returnData) {
@@ -66,6 +79,28 @@
     } failureBlock:^(NSError *error) {
         
     }];
+}
+
+- (void)pariseOrCollect{
+    [WBNetworking networkRequstWithNetworkRequestMethod:GetNetworkRequest networkRequestStyle:NetType_getForumsupportstatus params:@{@"uid":[NSString stringWithFormat:@"%d",[WBUserInfo share].userid],@"fid":self.topicHeaderFrameModel.topicModel.topicId} successBlock:^(id returnData) {
+       
+        NSLog(@"-- %@",returnData);
+        if ([returnData[@"data"][0] isEqualToNumber:@0]) {
+             [self addStatus];
+            _topicDetailHeader.ispraise = @"0";
+            _topicDetailHeader.iscollect = @"0";
+            
+        }else{
+            _topicDetailHeader.ispraise = returnData[@"data"][@"supportstatus"];
+            _topicDetailHeader.iscollect = returnData[@"data"][@"collectstatus"];
+        }
+       
+        
+    } failureBlock:^(NSError *error) {
+        
+    }];
+    
+    
 }
 
 #pragma mark --- 添加键盘回退手势
@@ -168,6 +203,9 @@
     KCommentModel *commentModel = [KCommentModel mj_objectWithKeyValues:@{@"icon":@"",@"nickname":@"卡兹克",@"date":@"2016-05-12",@"content":_commentView.commentTF.text}];
     [self.commentListArr insertObject:commentModel atIndex:0];
     [self.topicDetailTV reloadData];
+    
+//    WBNetworking networkRequstWithNetworkRequestMethod:GetNetworkRequest networkRequestStyle:net params:<#(NSDictionary *)#> successBlock:<#^(id returnData)successBlock#> failureBlock:<#^(NSError *error)failureBlock#>
+    
     
 //-----------
     self.topicDetailHeader.commentCount = self.commentListArr.count;
